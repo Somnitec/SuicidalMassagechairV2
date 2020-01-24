@@ -2,19 +2,27 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Events;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class UserInterfaceButtons : MonoBehaviour
 {
     public GameObject buttonPrefab;
-    public UserInterfaceMicroController controller;
+    private UserInterfaceMicroController controller;
 
     private List<GameObject> initializedButtons = new List<GameObject>();
+
+    private void Start()
+    {
+        controller = FindObjectOfType<UserInterfaceMicroController>();
+    }
 
     [Button]
     public void SetupButtons()
     {
+        Start();
         DeleteButtons();
         CreateButtonsFromUserInterFaceButtonValues();
     }
@@ -23,13 +31,23 @@ public class UserInterfaceButtons : MonoBehaviour
     {
         foreach (UserInterfaceMicroControllerData.UserInterfaceButtonValue buttonValue in Enum.GetValues(typeof(UserInterfaceMicroControllerData.UserInterfaceButtonValue)))
         {
+            // Create game object
             GameObject newButton = GameObject.Instantiate(buttonPrefab);
-            newButton.transform.parent = transform;
+            newButton.transform.SetParent(transform);
             newButton.name = buttonValue.ToString();
+
+            // Set enum value
+            UserInterfaceButton userInterfaceButton = newButton.GetComponent<UserInterfaceButton>();
+            userInterfaceButton.UserInterfaceButtonValue = buttonValue;
+
+            // Set event
             Button button = newButton.GetComponent<Button>();
-            button.onClick.AddListener(delegate () { controller.SendButton(buttonValue); });
+            UnityEventTools.AddPersistentListener(button.onClick, new UnityAction(userInterfaceButton.SendButtonToController));
+
+            // Set text
             TMPro.TextMeshProUGUI textMeshPro = newButton.GetComponentInChildren<TMPro.TextMeshProUGUI>();
             textMeshPro.text = buttonValue.ToString();
+
             initializedButtons.Add(newButton);
         }
     }
@@ -37,9 +55,14 @@ public class UserInterfaceButtons : MonoBehaviour
     [Button]
     public void DeleteButtons()
     {
-        foreach (GameObject b in initializedButtons)
+        List<Transform> children =new List<Transform>();
+        foreach (Transform b in transform)
         {
-            GameObject.DestroyImmediate(b);
+            children.Add(b);
+        }
+        foreach (Transform b in children)
+        {
+            GameObject.DestroyImmediate(b.gameObject);
         }
         initializedButtons.Clear();
     }
