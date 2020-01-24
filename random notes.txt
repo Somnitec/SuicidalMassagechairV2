@@ -1,0 +1,31 @@
+What we would want in a dialogue system:
+-make it easy for writers to use
+-keep an overview of the content(spot unconnected nodes, see where more content needs to be added etc.)
+-be able to easily add responses to (multiple) default buttons as well as the three custom buttons
+-be able to make branches that return hook back into other branches
+-be able to add a list of timed massage commands 
+-be able to have translations (and have it easy to manage, ie not have two seperate databases)
+-be able to attach audio files
+-be able to have some side branches yet come back to a specific node (for example when interrupted)
+-for interruption, count how many times it got interrupted, to get increasingly agitated (also for repeat)
+-choose random variation of a dialogue part (for example at the start, or for interruptions)
+
+
+
+~Research on alternative dialogue systems~
+https://writer.inklestudios.com/
+free, but is going to be unsupported, has different views (map, dropdown), poops out a nice JSON that we'll have to parse ourselves, maybe with ink?
+https://www.chatmapper.com/
+$99/y license for indie devs, might be a bit overkill and might still need to write unity logic depending on the licence
+
+https://www.articy.com/
+5.99€/month for cheapest option
+
+Dialogue System for Unity
+$65, disco elysium used it, Evaluation Version has watermarks so maybe we can just use that? Editing only within unity (less friendly for writers) a lot of extra option for emotion etc. Many UI and interaction features we will not need
+
+Runemark Dialogue System
+similar to above but cheaper $15 and slightly less advance. Has translation support
+
+Phoenix Dialogue System
+$10, auto translation. nodes seem complex. no ratings
