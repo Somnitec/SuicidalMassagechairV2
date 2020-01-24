@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class UserInterfaceMicroController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public UserInterfaceMicroControllerData data;
 
-    // Update is called once per frame
-    void Update()
+    public void SendButton(UserInterfaceMicroControllerData.UserInterfaceButtonValue pressed)
     {
-        
+        Debug.Log(pressed.ToString());
     }
 }

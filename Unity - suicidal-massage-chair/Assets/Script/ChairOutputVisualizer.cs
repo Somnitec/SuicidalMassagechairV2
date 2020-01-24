@@ -11,6 +11,8 @@ public class ChairOutputVisualizer : MonoBehaviour
     public float chair_estimated_position;
     public Sprite chair_up_on;
     public Sprite chair_down_on;
+    public Sprite chair_status_up;
+    public Sprite chair_status_down;
     [Header("Roller")]
     public Sprite roller_kneading_on;
     public float roller_kneading_speed;
@@ -18,7 +20,6 @@ public class ChairOutputVisualizer : MonoBehaviour
     public float roller_pounding_speed;
     public Sprite roller_up_on;
     public Sprite roller_down_on;
-    public Sprite roller;
     public Sprite roller_top_sensor;
     public Sprite roller_bottom_sensor;
     [Range(0, 1)]
@@ -40,19 +41,4 @@ public class ChairOutputVisualizer : MonoBehaviour
     public Color backlight_color;
     public Sprite redgreen_statuslight_red;
     public Sprite redgreen_statuslight_green;
-   
-
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
