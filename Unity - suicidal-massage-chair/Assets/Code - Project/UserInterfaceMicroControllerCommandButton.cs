@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UserInterfaceButton : MonoBehaviour
+public class UserInterfaceMicroControllerCommandButton : MonoBehaviour
 {
     public UserInterfaceMicroControllerData.UserInterfaceButtonValue UserInterfaceButtonValue;
 
@@ -15,6 +15,6 @@ public class UserInterfaceButton : MonoBehaviour
 
     public void SendButtonToController()
     {
-        controller.SendButton(UserInterfaceButtonValue);
+        controller.SendCommand(UserInterfaceButtonValue);
     }
 }

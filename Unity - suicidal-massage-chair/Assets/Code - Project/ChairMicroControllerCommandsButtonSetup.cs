@@ -7,16 +7,14 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-public class UserInterfaceButtons : MonoBehaviour
+public class ChairMicroControllerCommandsButtonSetup : MonoBehaviour
 {
     public GameObject buttonPrefab;
-    private UserInterfaceMicroController controller;
-
-    private List<GameObject> initializedButtons = new List<GameObject>();
+    private ChairMicroController controller;
 
     private void Start()
     {
-        controller = FindObjectOfType<UserInterfaceMicroController>();
+        controller = FindObjectOfType<ChairMicroController>();
     }
 
     [Button]
@@ -29,7 +27,7 @@ public class UserInterfaceButtons : MonoBehaviour
 
     private void CreateButtonsFromUserInterFaceButtonValues()
     {
-        foreach (UserInterfaceMicroControllerData.UserInterfaceButtonValue buttonValue in Enum.GetValues(typeof(UserInterfaceMicroControllerData.UserInterfaceButtonValue)))
+        foreach (ChairMicroController.Commands buttonValue in Enum.GetValues(typeof(ChairMicroController.Commands)))
         {
             // Create game object
             GameObject newButton = GameObject.Instantiate(buttonPrefab);
@@ -37,33 +35,31 @@ public class UserInterfaceButtons : MonoBehaviour
             newButton.name = buttonValue.ToString();
 
             // Set enum value
-            UserInterfaceButton userInterfaceButton = newButton.GetComponent<UserInterfaceButton>();
-            userInterfaceButton.UserInterfaceButtonValue = buttonValue;
+            ChairMicroControllerCommandButton chairMicroControllerCommandButton = newButton.GetComponent<ChairMicroControllerCommandButton>();
+            chairMicroControllerCommandButton.Command = buttonValue;
 
             // Set event
             Button button = newButton.GetComponent<Button>();
-            UnityEventTools.AddPersistentListener(button.onClick, new UnityAction(userInterfaceButton.SendButtonToController));
+            UnityEventTools.AddPersistentListener(button.onClick, new UnityAction(chairMicroControllerCommandButton.SendButtonToController));
 
             // Set text
             TMPro.TextMeshProUGUI textMeshPro = newButton.GetComponentInChildren<TMPro.TextMeshProUGUI>();
             textMeshPro.text = buttonValue.ToString();
-
-            initializedButtons.Add(newButton);
         }
     }
 
     [Button]
     public void DeleteButtons()
     {
-        List<Transform> children =new List<Transform>();
+        List<Transform> children = new List<Transform>();
         foreach (Transform b in transform)
         {
-            children.Add(b);
+            if (b.GetComponent<Button>() != null)
+                children.Add(b);
         }
         foreach (Transform b in children)
         {
             GameObject.DestroyImmediate(b.gameObject);
         }
-        initializedButtons.Clear();
     }
 }
