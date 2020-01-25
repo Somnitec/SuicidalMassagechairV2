@@ -9,10 +9,19 @@ public class ChairOutputVisualizer : MonoBehaviour
     public ChairMicroControllerState data;
     public ChairOutputImages images;
 
+    public Slider chair_estimated_position_slider;
+    public Slider roller_kneading_speed_slider;
+    public Slider roller_pounding_speed_slider;
+    public Slider feet_roller_speed_slider;
+    public TMPro.TextMeshProUGUI roller_kneading_speed_text;
+    public TMPro.TextMeshProUGUI roller_pounding_speed_text;
+    public TMPro.TextMeshProUGUI feet_roller_speed_text;
+
     public int cursorMin = -6;
     public int cursorMax = 74;
 
-    // TODO: speeds, position
+    private const string KneadingText = "Kneading speed: ";
+    private const string PoundingText = "Pounding speed: ";
 
     public void Update()
     {
@@ -20,10 +29,19 @@ public class ChairOutputVisualizer : MonoBehaviour
         images.chair_down_on.gameObject.SetActive(data.chair_down_on);
         images.chair_status_up.gameObject.SetActive(data.chair_status_up);
         images.chair_status_down.gameObject.SetActive(data.chair_status_down);
+        chair_estimated_position_slider.value = data.chair_estimated_position;
 
         // Roller
         images.roller_kneading_on.gameObject.SetActive(data.roller_kneading_on);
+        float roller_kneading_speed = !data.roller_kneading_on ? 0 : (float)data.roller_kneading_speed;
+        roller_kneading_speed_text.text = KneadingText + roller_kneading_speed;
+        roller_kneading_speed_slider.value = roller_kneading_speed / ChairMicroControllerState.MaxSpeed;
+
         images.roller_pounding_on.gameObject.SetActive(data.roller_pounding_on);
+        float roller_pounding_speed = !data.roller_pounding_on ? 0 : (float)data.roller_kneading_speed;
+        roller_pounding_speed_text.text = PoundingText + roller_pounding_speed;
+        roller_pounding_speed_slider.value = roller_pounding_speed / ChairMicroControllerState.MaxSpeed;
+
         images.roller_up_on.gameObject.SetActive(data.roller_up_on);
         images.roller_down_on.gameObject.SetActive(data.roller_down_on);
         images.roller_sensor_top.gameObject.SetActive(data.roller_sensor_top);
@@ -33,6 +51,9 @@ public class ChairOutputVisualizer : MonoBehaviour
 
         // Feet roller
         images.feet_roller_on.gameObject.SetActive(data.feet_roller_on);
+        float feet_roller_speed = !data.feet_roller_on ? 0 : (float)data.roller_kneading_speed;
+        feet_roller_speed_text.text = KneadingText + feet_roller_speed;
+        feet_roller_speed_slider.value = feet_roller_speed / ChairMicroControllerState.MaxSpeed;
 
         // Airpump
         images.airpump_on.gameObject.SetActive(data.airpump_on);

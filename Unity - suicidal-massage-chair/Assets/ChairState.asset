@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: ChairState
+  m_EditorClassIdentifier: Assembly-CSharp::ChairMicroControllerState
+  chair_estimated_position: 0
+  chair_up_on: 0
+  chair_down_on: 0
+  roller_kneading_on: 0
+  roller_kneading_speed: 127
+  roller_pounding_on: 0
+  roller_pounding_speed: 127
+  roller_up_on: 0
+  roller_down_on: 0
+  roller_sensor_top: 1
+  roller_sensor_bottom: 1
+  roller_position: 1
+  feet_roller_on: 0
+  feet_roller_speed: 127
+  airpump_on: 0
+  airbag_shoulders_on: 0
+  airbag_arms_on: 0
+  airbag_legs_on: 0
+  airbag_outside_on: 0
+  butt_vibration_on: 0
+  backlight_on: 0
+  backlight_color: {r: 0.7122642, g: 0.90692246, b: 1, a: 1}
+  redgreen_statuslight_red: 1
+  redgreen_statuslight_green: 0

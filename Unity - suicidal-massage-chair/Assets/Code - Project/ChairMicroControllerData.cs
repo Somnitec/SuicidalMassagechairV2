@@ -3,19 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class ChairMicroControllerState
+[CreateAssetMenu]
+public class ChairMicroControllerState : ScriptableObject
 {
+    public const int MaxSpeed = 127;
+
+    [Range(0, 1)]
     public float chair_estimated_position;
     public bool chair_up_on;
     public bool chair_down_on;
-    public bool chair_status_up;
-    public bool chair_status_down;
+    public bool chair_status_up { get { return chair_estimated_position <= 0.1f; } }
+    public bool chair_status_down { get { return chair_estimated_position >= 0.9f; } }
 
     [Header("Roller")]
     public bool roller_kneading_on;
-    public float roller_kneading_speed;
+    [Range(0, MaxSpeed)]
+    public int roller_kneading_speed;
     public bool roller_pounding_on;
-    public float roller_pounding_speed;
+    [Range(0, MaxSpeed)]
+    public int roller_pounding_speed;
     public bool roller_up_on;
     public bool roller_down_on;
     public bool roller_sensor_top;
@@ -23,10 +29,10 @@ public class ChairMicroControllerState
     [Range(0, 1)]
     public float roller_position;
     [Header("Feet Roller")]
-    public bool feet_roller;
+    //public bool feet_roller;
     public bool feet_roller_on;
-    [Range(0, 1)]
-    public float feet_roller_speed;
+    [Range(0, MaxSpeed)]
+    public int feet_roller_speed;
     [Header("Airpump")]
     public bool airpump_on;
     public bool airbag_shoulders_on;
@@ -36,7 +42,7 @@ public class ChairMicroControllerState
     [Header("Other")]
     public bool butt_vibration_on;
     public bool backlight_on;
-    public Color backlight_color;
+    public Color backlight_color = Color.blue;
     public bool redgreen_statuslight_red;
     public bool redgreen_statuslight_green;
 }
