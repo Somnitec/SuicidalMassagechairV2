@@ -1,44 +1,38 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ChairOutputVisualizer : MonoBehaviour
 {
     public ChairMicroControllerState data;
-    public Sprite chair;
+    public Image chair;
     [Header("Chair Vertical Position")]
-    [Range(0, 1)]
-    public float chair_estimated_position;
-    public Sprite chair_up_on;
-    public Sprite chair_down_on;
-    public Sprite chair_status_up;
-    public Sprite chair_status_down;
+    public Image chair_up_on;
+    public Image chair_down_on;
+    public Image chair_status_up;
+    public Image chair_status_down;
     [Header("Roller")]
-    public Sprite roller_kneading_on;
-    public float roller_kneading_speed;
-    public Sprite roller_pounding_on;
-    public float roller_pounding_speed;
-    public Sprite roller_up_on;
-    public Sprite roller_down_on;
-    public Sprite roller_top_sensor;
-    public Sprite roller_bottom_sensor;
-    [Range(0, 1)]
-    public float roller_position;
+    public Image roller_kneading_on;
+    public Image roller_pounding_on;
+    public Image roller_up_on;
+    public Image roller_down_on;
+    public Image roller_sensor_top;
+    public Image roller_sensor_bottom;
+    public Image roller_position_cursor;
     [Header("Feet Roller")]
-    public Sprite feet_roller;
-    public Sprite feet_roller_on;
-    [Range(0, 1)]
-    public float feet_roller_speed;
+    //public Image feet_roller; // Are we missing this?
+    public Image feet_roller_on;
     [Header("Airpump")]
-    public Sprite airpump_on;
-    public Sprite airbag_shoulders_on;
-    public Sprite airbag_arms_on;
-    public Sprite airbag_legs_on;
-    public Sprite airbag_outside_on;
+    public Image airpump_on;
+    public Image airbag_shoulders_on;
+    public Image airbag_arms_on;
+    public Image airbag_legs_on;
+    public Image airbag_outside_on;
     [Header("Other")]
-    public Sprite butt_vibration_on;
-    public Sprite backlight_on;
-    public Color backlight_color;
-    public Sprite redgreen_statuslight_red;
-    public Sprite redgreen_statuslight_green;
+    public Image butt_vibration_on;
+    public Image backlight_on;
+    public Image backlight_color;
+    public Image redgreen_statuslight_red;
+    public Image redgreen_statuslight_green;
 }
