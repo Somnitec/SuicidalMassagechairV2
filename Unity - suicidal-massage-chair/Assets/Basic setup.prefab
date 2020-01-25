@@ -1425,6 +1425,8 @@ MonoBehaviour:
     chair_estimated_position: 0
     chair_up_on: 0
     chair_down_on: 0
+    chair_status_up: 0
+    chair_status_down: 0
     roller_kneading_on: 0
     roller_kneading_speed: 0
     roller_pounding_on: 0
@@ -1433,7 +1435,7 @@ MonoBehaviour:
     roller_down_on: 0
     roller_sensor_top: 0
     roller_sensor_bottom: 0
-    roller_position: 0
+    roller_position: 1
     feet_roller: 0
     feet_roller_on: 0
     feet_roller_speed: 1
@@ -1444,7 +1446,7 @@ MonoBehaviour:
     airbag_outside_on: 0
     butt_vibration_on: 0
     backlight_on: 0
-    backlight_color: {r: 1, g: 1, b: 1, a: 0}
+    backlight_color: {r: 0.4669811, g: 0.67293733, b: 1, a: 1}
     redgreen_statuslight_red: 0
     redgreen_statuslight_green: 0
   images:
@@ -1471,6 +1473,8 @@ MonoBehaviour:
     backlight_color: {fileID: 462497387562432845}
     redgreen_statuslight_red: {fileID: 7976742997215836485}
     redgreen_statuslight_green: {fileID: 48404824382484310}
+  cursorMin: -6
+  cursorMax: 74
 --- !u!1 &965941146946338921
 GameObject:
   m_ObjectHideFlags: 0
@@ -1994,7 +1998,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5057798059912615233}
-  - component: {fileID: 4643130295954476425}
   - component: {fileID: 4626823943060138122}
   - component: {fileID: 4833109944861661433}
   m_Layer: 0
@@ -2018,68 +2021,6 @@ Transform:
   m_Father: {fileID: 5668926047663194297}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4643130295954476425
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1364606457896213419}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fb8275e860a8c24f8577365289962c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  data:
-    chair_estimated_position: 0
-    chair_up_on: 0
-    chair_down_on: 0
-    roller_kneading_on: 0
-    roller_kneading_speed: 0
-    roller_pounding_on: 0
-    roller_pounding_speed: 0
-    roller_up_on: 0
-    roller_down_on: 0
-    roller_sensor_top: 0
-    roller_sensor_bottom: 0
-    roller_position: 0
-    feet_roller: 0
-    feet_roller_on: 0
-    feet_roller_speed: 0
-    airpump_on: 0
-    airbag_shoulders_on: 0
-    airbag_arms_on: 0
-    airbag_legs_on: 0
-    airbag_outside_on: 0
-    butt_vibration_on: 0
-    backlight_on: 0
-    backlight_color: {r: 0, g: 0, b: 0, a: 0}
-    redgreen_statuslight_red: 0
-    redgreen_statuslight_green: 0
-  images:
-    chair: {fileID: 0}
-    chair_up_on: {fileID: 0}
-    chair_down_on: {fileID: 0}
-    chair_status_up: {fileID: 0}
-    chair_status_down: {fileID: 0}
-    roller_kneading_on: {fileID: 0}
-    roller_pounding_on: {fileID: 0}
-    roller_up_on: {fileID: 0}
-    roller_down_on: {fileID: 0}
-    roller_sensor_top: {fileID: 0}
-    roller_sensor_bottom: {fileID: 0}
-    roller_position_cursor: {fileID: 0}
-    feet_roller_on: {fileID: 0}
-    airpump_on: {fileID: 0}
-    airbag_shoulders_on: {fileID: 0}
-    airbag_arms_on: {fileID: 0}
-    airbag_legs_on: {fileID: 0}
-    airbag_outside_on: {fileID: 0}
-    butt_vibration_on: {fileID: 0}
-    backlight_on: {fileID: 0}
-    backlight_color: {fileID: 0}
-    redgreen_statuslight_red: {fileID: 0}
-    redgreen_statuslight_green: {fileID: 0}
 --- !u!114 &4626823943060138122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4825,7 +4766,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 0.4669811, g: 0.67293733, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -9116,7 +9057,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7129127284506236204}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 40.12741}
   m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children: []
   m_Father: {fileID: 7175281068553190822}
@@ -9124,7 +9065,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -28.347351, y: 2.4217377}
+  m_AnchoredPosition: {x: -29, y: 74}
   m_SizeDelta: {x: 799, y: 1740}
   m_Pivot: {x: 0.46452147, y: 0.5050389}
 --- !u!222 &3332492615594223614
@@ -10220,7 +10161,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6033245336368585659
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11075,7 +11016,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &749751116522203621
 RectTransform:
   m_ObjectHideFlags: 0

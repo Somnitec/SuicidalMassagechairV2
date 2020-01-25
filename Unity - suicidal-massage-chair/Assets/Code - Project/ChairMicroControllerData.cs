@@ -8,6 +8,9 @@ public class ChairMicroControllerState
     public float chair_estimated_position;
     public bool chair_up_on;
     public bool chair_down_on;
+    public bool chair_status_up;
+    public bool chair_status_down;
+
     [Header("Roller")]
     public bool roller_kneading_on;
     public float roller_kneading_speed;

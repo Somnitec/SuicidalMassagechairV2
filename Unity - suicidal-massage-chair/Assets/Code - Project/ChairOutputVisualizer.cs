@@ -9,13 +9,17 @@ public class ChairOutputVisualizer : MonoBehaviour
     public ChairMicroControllerState data;
     public ChairOutputImages images;
 
+    public int cursorMin = -6;
+    public int cursorMax = 74;
+
     // TODO: speeds, position
 
     public void Update()
     {
-        
         images.chair_up_on.gameObject.SetActive(data.chair_up_on);
         images.chair_down_on.gameObject.SetActive(data.chair_down_on);
+        images.chair_status_up.gameObject.SetActive(data.chair_status_up);
+        images.chair_status_down.gameObject.SetActive(data.chair_status_down);
 
         // Roller
         images.roller_kneading_on.gameObject.SetActive(data.roller_kneading_on);
@@ -24,6 +28,8 @@ public class ChairOutputVisualizer : MonoBehaviour
         images.roller_down_on.gameObject.SetActive(data.roller_down_on);
         images.roller_sensor_top.gameObject.SetActive(data.roller_sensor_top);
         images.roller_sensor_bottom.gameObject.SetActive(data.roller_sensor_bottom);
+
+        SetRollerCursorHeight();
 
         // Feet roller
         images.feet_roller_on.gameObject.SetActive(data.feet_roller_on);
@@ -42,6 +48,17 @@ public class ChairOutputVisualizer : MonoBehaviour
         images.backlight_color.color = data.backlight_color;
         images.redgreen_statuslight_red.gameObject.SetActive(data.redgreen_statuslight_red);
         images.redgreen_statuslight_green.gameObject.SetActive(data.redgreen_statuslight_green);
+    }
+
+    private void SetRollerCursorHeight()
+    {
+        Vector3 oldPos = images.roller_position_cursor.rectTransform.localPosition;
+        // no negative ranges plz
+        float range = Mathf.Abs(cursorMax - cursorMin);
+        // prevent division by zero
+        range = range == 0f ? 0.1f : range;
+        float y = data.roller_position * range + cursorMin;
+        images.roller_position_cursor.rectTransform.localPosition = new Vector3(oldPos.x, y, oldPos.z);
     }
 
     [System.Serializable]
