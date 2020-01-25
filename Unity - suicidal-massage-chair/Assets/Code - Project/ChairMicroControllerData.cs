@@ -15,8 +15,8 @@ public class ChairMicroControllerState
     public float roller_pounding_speed;
     public bool roller_up_on;
     public bool roller_down_on;
-    public bool roller_top_sensor;
-    public bool roller_bottom_sensor;
+    public bool roller_sensor_top;
+    public bool roller_sensor_bottom;
     [Range(0, 1)]
     public float roller_position;
     [Header("Feet Roller")]
