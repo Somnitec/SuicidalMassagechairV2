@@ -38,7 +38,7 @@ public class ChairOutputVisualizer : MonoBehaviour
         roller_kneading_speed_slider.value = roller_kneading_speed / ChairMicroControllerState.MaxSpeed;
 
         images.roller_pounding_on.gameObject.SetActive(data.roller_pounding_on);
-        float roller_pounding_speed = !data.roller_pounding_on ? 0 : (float)data.roller_kneading_speed;
+        float roller_pounding_speed = !data.roller_pounding_on ? 0 : (float)data.roller_pounding_speed;
         roller_pounding_speed_text.text = PoundingText + roller_pounding_speed;
         roller_pounding_speed_slider.value = roller_pounding_speed / ChairMicroControllerState.MaxSpeed;
 
@@ -51,7 +51,7 @@ public class ChairOutputVisualizer : MonoBehaviour
 
         // Feet roller
         images.feet_roller_on.gameObject.SetActive(data.feet_roller_on);
-        float feet_roller_speed = !data.feet_roller_on ? 0 : (float)data.roller_kneading_speed;
+        float feet_roller_speed = !data.feet_roller_on ? 0 : (float)data.feet_roller_speed;
         feet_roller_speed_text.text = KneadingText + feet_roller_speed;
         feet_roller_speed_slider.value = feet_roller_speed / ChairMicroControllerState.MaxSpeed;
 
