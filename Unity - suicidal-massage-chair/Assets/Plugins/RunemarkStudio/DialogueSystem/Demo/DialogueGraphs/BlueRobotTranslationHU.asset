@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 692a5fa8253f24847ac48d8d4621336b, type: 3}
+  m_Name: BlueRobotTranslationHU
+  m_EditorClassIdentifier: 
+  Language: 1
+  Original: {fileID: 11400000, guid: b3adb68b0fae3f24e924a12a1746a319, type: 2}
+  translatedTexts:
+  - OriginalID: Text-4/8/2019 11:20:20 AM-3898
+    isOriginalTextChanged: 0
+    _translatedText: "Itt tesztelheted, hogyan m\u0171k\xF6dik a ford\xEDt\xE1s a
+      Dialogue Systemben."
+    _originalText: Here you can test how does the translation work in the Dialogue
+      System.
+    Actor: 
+    Answers:
+    - OriginalID: AnswerVariableInput_0
+      isOriginalTextChanged: 0
+      _translatedText: Mutasd az angolt (Show English)
+      _originalText: 
+    - OriginalID: AnswerVariableInput_3
+      isOriginalTextChanged: 0
+      _translatedText: "Kil\xE9p\xE9s (Exit)"
+      _originalText: 
+  - OriginalID: Text-5/8/2019 2:40:57 PM-6829
+    isOriginalTextChanged: 0
+    _translatedText: "Ford\xEDt\xE1s..."
+    _originalText: Translating...
+    Actor: 
+    Answers: []
+  isInitialized: 1
