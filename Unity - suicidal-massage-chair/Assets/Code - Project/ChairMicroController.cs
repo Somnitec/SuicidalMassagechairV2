@@ -34,14 +34,14 @@ public class ChairMicroController : MonoBehaviour
     public void SendCommand(Commands command)
     {
         Debug.Log("The " + command.ToString() + " has been send");
-        switch (command)
-        {
-            case Commands.Reset:
-                ChairEvents.Instance.Raise(new ChairReset());
-                break;
-            default:
-                Debug.LogWarning(command.ToString() + " has no implementation yet");
-                break;
-        }
+        // switch (command)
+        // {
+        //     case Commands.Reset:
+        //         ChairEvents.Instance.Raise(new ChairReset());
+        //         break;
+        //     default:
+        //         Debug.LogWarning(command.ToString() + " has no implementation yet");
+        //         break;
+        // }
     }
 }

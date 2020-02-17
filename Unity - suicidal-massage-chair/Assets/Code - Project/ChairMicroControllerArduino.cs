@@ -9,17 +9,22 @@ public class ChairMicroControllerArduino  : AbstractChairMicroController
     {
     }
 
-    protected override void Down(ChairDown args)
+    protected override void Reset(ResetChair args)
     {
         throw new System.NotImplementedException();
     }
 
-    protected override void Reset(ChairReset args)
+    protected override void Airbag(AirBag args)
     {
         throw new System.NotImplementedException();
     }
 
-    protected override void Up(ChairUp args)
+    protected override void ChairPosition(ChairPosition args)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    protected override void AirPump(AirPump args)
     {
         throw new System.NotImplementedException();
     }

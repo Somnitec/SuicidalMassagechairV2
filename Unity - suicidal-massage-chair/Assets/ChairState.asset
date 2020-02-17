@@ -12,27 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: ChairState
   m_EditorClassIdentifier: Assembly-CSharp::ChairMicroControllerState
-  chair_estimated_position: 1
-  chair_up_on: 0
-  chair_down_on: 0
+  chair_estimated_position: 0
+  chair_up_on: 1
+  chair_down_on: 1
   roller_kneading_on: 1
-  roller_kneading_speed: 80
+  roller_kneading_speed: 48
   roller_pounding_on: 1
-  roller_pounding_speed: 40
-  roller_up_on: 0
-  roller_down_on: 0
-  roller_sensor_top: 0
-  roller_sensor_bottom: 0
-  roller_position: 0.594
+  roller_pounding_speed: 57
+  roller_up_on: 1
+  roller_down_on: 1
+  roller_sensor_top: 1
+  roller_sensor_bottom: 1
+  roller_position: 0.3
   feet_roller_on: 1
-  feet_roller_speed: 102
-  airpump_on: 0
-  airbag_shoulders_on: 0
-  airbag_arms_on: 0
-  airbag_legs_on: 0
-  airbag_outside_on: 0
-  butt_vibration_on: 0
+  feet_roller_speed: 42
+  airpump_on: 1
+  airbag_shoulders_on: 1
+  airbag_arms_on: 1
+  airbag_legs_on: 1
+  airbag_outside_on: 1
+  butt_vibration_on: 1
   backlight_on: 1
-  backlight_color: {r: 0.9098039, g: 0.4235294, b: 0.8919283, a: 1}
+  backlight_color: {r: 1, g: 0.71112674, b: 0.1462264, a: 1}
   redgreen_statuslight_red: 1
-  redgreen_statuslight_green: 0
+  redgreen_statuslight_green: 1

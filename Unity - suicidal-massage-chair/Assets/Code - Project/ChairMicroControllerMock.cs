@@ -9,8 +9,9 @@ public class ChairMicroControllerMock : AbstractChairMicroController
     {
     }
 
-    protected override void Reset(ChairReset args)
+    protected override void Reset(ResetChair args)
     {
+        Debug.Log($"RESET");
         state.airbag_arms_on = false;
         state.airbag_legs_on = false;
         state.airbag_outside_on = false;
@@ -37,13 +38,18 @@ public class ChairMicroControllerMock : AbstractChairMicroController
         state.roller_up_on = false;
     }
 
-    protected override void Up(ChairUp args)
+    protected override void Airbag(AirBag args)
     {
-        throw new System.NotImplementedException();
+       Debug.Log($"AIRBAG :D {args.AirBagsOff} {args.AirBagsOn}");
     }
 
-    protected override void Down(ChairDown args)
+    protected override void ChairPosition(ChairPosition args)
     {
-        throw new System.NotImplementedException();
+       Debug.Log($"ChairPosition :D {args.Duration} {args.Direction.ToString()}");
+    }
+
+    protected override void AirPump(AirPump args)
+    {
+        Debug.Log($"AirPump :D");
     }
 }
