@@ -16,13 +16,15 @@ MonoBehaviour:
   Description: This is the first node
   AudioClip: {fileID: 0}
   Functions:
-  - Time: 2
-    Function: {fileID: 11400000, guid: 41dbb5cb522ede04787476d437f93557, type: 2}
-  - Time: 0
-    Function: {fileID: 11400000, guid: 41dbb5cb522ede04787476d437f93557, type: 2}
-  - Time: 2
-    Function: {fileID: 11400000, guid: 29604aad265185e43b58b3c3d245361f, type: 2}
   - Time: 0.1
+    Function: {fileID: 11400000, guid: 99a59b8929652b443a2760144f4dd58c, type: 2}
+  - Time: 3
+    Function: {fileID: 11400000, guid: 41dbb5cb522ede04787476d437f93557, type: 2}
+  - Time: 4
+    Function: {fileID: 11400000, guid: 99a59b8929652b443a2760144f4dd58c, type: 2}
+  - Time: 5
+    Function: {fileID: 11400000, guid: 41dbb5cb522ede04787476d437f93557, type: 2}
+  - Time: 1
     Function: {fileID: 11400000, guid: d092f47c27b6d684dbe48f913dd6aa83, type: 2}
-  - Time: 10
-    Function: {fileID: 11400000, guid: 29604aad265185e43b58b3c3d245361f, type: 2}
+  - Time: 2
+    Function: {fileID: 11400000, guid: bd381d211c7596441a02ceacff52a305, type: 2}

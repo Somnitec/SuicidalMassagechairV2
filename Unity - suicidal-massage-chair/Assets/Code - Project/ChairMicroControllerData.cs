@@ -6,7 +6,7 @@ using UnityEngine;
 [CreateAssetMenu]
 public class ChairMicroControllerState : ScriptableObject
 {
-    public const int MaxSpeed = 127;
+    public const int MaxSpeed = 1;
 
     [Range(0, 1)]
     public float chair_estimated_position;
@@ -18,10 +18,10 @@ public class ChairMicroControllerState : ScriptableObject
     [Header("Roller")]
     public bool roller_kneading_on;
     [Range(0, MaxSpeed)]
-    public int roller_kneading_speed;
+    public float roller_kneading_speed;
     public bool roller_pounding_on;
     [Range(0, MaxSpeed)]
-    public int roller_pounding_speed;
+    public float roller_pounding_speed;
     public bool roller_up_on;
     public bool roller_down_on;
     public bool roller_sensor_top;
@@ -32,7 +32,7 @@ public class ChairMicroControllerState : ScriptableObject
     //public bool feet_roller;
     public bool feet_roller_on;
     [Range(0, MaxSpeed)]
-    public int feet_roller_speed;
+    public float feet_roller_speed;
     [Header("Airpump")]
     public bool airpump_on;
     public bool airbag_shoulders_on;

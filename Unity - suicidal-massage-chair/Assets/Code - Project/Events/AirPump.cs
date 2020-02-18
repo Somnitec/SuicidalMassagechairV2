@@ -8,5 +8,5 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "NodeScript/AirPump")]
 public class AirPump : NodeScriptFunction
 {
-
+    public Boolean AirPumpOn;
 }

@@ -40,16 +40,27 @@ public class ChairMicroControllerMock : AbstractChairMicroController
 
     protected override void Airbag(AirBag args)
     {
-       Debug.Log($"AIRBAG :D {args.AirBagsOff} {args.AirBagsOn}");
+        Debug.Log($"~ AIRBAG :D {args.AirBagsOff} {args.AirBagsOn}\n");
+        if( args.AirBagsOn.HasFlag(AirBagFlag.Arms)) state.airbag_arms_on = true;
+        if (args.AirBagsOff.HasFlag(AirBagFlag.Arms)) state.airbag_arms_on = false;
+        if (args.AirBagsOn.HasFlag(AirBagFlag.Legs)) state.airbag_legs_on = true;
+        if (args.AirBagsOff.HasFlag(AirBagFlag.Legs)) state.airbag_legs_on = false;
+        if (args.AirBagsOn.HasFlag(AirBagFlag.Shoulders)) state.airbag_shoulders_on = true;
+        if (args.AirBagsOff.HasFlag(AirBagFlag.Shoulders)) state.airbag_shoulders_on = false;
+        if (args.AirBagsOn.HasFlag(AirBagFlag.Outside)) state.airbag_outside_on = true;
+        if (args.AirBagsOff.HasFlag(AirBagFlag.Outside)) state.airbag_outside_on = false;
     }
 
     protected override void ChairPosition(ChairPosition args)
     {
-       Debug.Log($"ChairPosition :D {args.Duration} {args.Direction.ToString()}");
+       Debug.Log($"~ ChairPosition :D {args.Duration} {args.Direction.ToString()}\n");
+
     }
 
     protected override void AirPump(AirPump args)
     {
-        Debug.Log($"AirPump :D");
+        Debug.Log($"~ AirPump :D\n");
+        if (args.AirPumpOn) state.airpump_on = true;
+        else state.airpump_on = false;
     }
 }
