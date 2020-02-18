@@ -3,10 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Framework;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using Event = Framework.Event;
 
-[CreateAssetMenu]
+[CreateAssetMenu, InlineEditor(InlineEditorModes.FullEditor)]
 public class Node : ScriptableObject
 {
     public String Name;
