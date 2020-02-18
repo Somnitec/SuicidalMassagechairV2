@@ -1,13 +1,39 @@
 ﻿using EasyButtons;
 using UnityEngine;
 
-public class NodePlayer : MonoBehaviour
+public class NodePlayer : SingletonMonoBehavior<NodePlayer>
 {
-    public Node node;
+    public Node Node;
+
+    public void GoToNode(Node node)
+    {
+        node.Disable();
+        this.Node = node;
+        node.Enable();
+        PlayNode();
+    }
 
     [Button]
-    public void PlayNode()
+    private void PlayNode()
     {
-        StartCoroutine(node.InvokeFunctions());
+        StartCoroutine(Node.Data.InvokeFunctions());
+    }
+
+    [Button]
+    private void EnableNode()
+    {
+        Node.Enable();
+    }
+
+    [Button]
+    private void OnDataFinished()
+    {
+        Node.OnDataFinished();
+    }
+
+    [Button]
+    private void DisableNode()
+    {
+        Node.Disable();
     }
 }
