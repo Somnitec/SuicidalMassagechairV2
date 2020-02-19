@@ -10,10 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c3f3993e9c5055549b26c13737068a1f, type: 3}
-  m_Name: FirstNode
+  m_Name: SecondNode
   m_EditorClassIdentifier: 
-  Name: Test balbjla
-  Data: {fileID: 11400000, guid: f027d79181da9ff4b927d5ca7ac16f7e, type: 2}
-  ActionsAfterDataPlay:
-  - Action: {fileID: 11400000, guid: ee8b4e9fe10bb1d449b2f8eaf8fd07c9, type: 2}
-  - Action: {fileID: 11400000, guid: ee8b4e9fe10bb1d449b2f8eaf8fd07c9, type: 2}
+  Name: Twee
+  Data: {fileID: 0}
+  ActionsAfterDataPlay: []

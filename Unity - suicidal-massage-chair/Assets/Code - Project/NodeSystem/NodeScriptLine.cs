@@ -19,7 +19,6 @@ public abstract class NodeScriptFunction : ScriptableObject
 {
     public virtual void RaiseEvent()
     {
-        Debug.Log($"Raising: {this.GetType()}");
         ScriptEvent.Instance.Raise(this);
     }
 }

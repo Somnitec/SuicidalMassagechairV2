@@ -1,26 +1,28 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 
 namespace Framework
 {
-    public class GameEvent
+    [Serializable]
+    public class Event
     {
     }
 
-    [System.Serializable]
-    public class Events : GenericEvents<GameEvent>
+    [Serializable]
+    public class Events : GenericEvents<Event>
     {
     }
 
 
-    [System.Serializable]
+    [Serializable]
     public class GenericEvents<J> : Singleton<GenericEvents<J>>
     {
         public delegate void EventDelegate<T>(T e) where T : J;
         private delegate void EventDelegate(J e);
 
-        private Dictionary<System.Type, EventDelegate> delegates = new Dictionary<System.Type, EventDelegate>();
-        private Dictionary<System.Delegate, EventDelegate> delegateLookup = new Dictionary<System.Delegate, EventDelegate>();
+        private Dictionary<Type, EventDelegate> delegates = new Dictionary<Type, EventDelegate>();
+        private Dictionary<Delegate, EventDelegate> delegateLookup = new Dictionary<Delegate, EventDelegate>();
 
         public void AddListener<T>(EventDelegate<T> del) where T : J
         {
@@ -33,8 +35,7 @@ namespace Framework
             EventDelegate internalDelegate = (e) => del((T)e);
             delegateLookup[del] = internalDelegate;
 
-            EventDelegate tempDel;
-            if (delegates.TryGetValue(typeof(T), out tempDel))
+            if (delegates.TryGetValue(typeof(T), out EventDelegate tempDel))
             {
                 delegates[typeof(T)] = tempDel += internalDelegate;
             }
@@ -44,13 +45,16 @@ namespace Framework
             }
         }
 
+        public void AddListener<T>(T type, EventDelegate<T> del) where T : J
+        {
+            AddListener<T>(del);
+        }
+
         public void RemoveListener<T>(EventDelegate<T> del) where T : J
         {
-            EventDelegate internalDelegate;
-            if (delegateLookup.TryGetValue(del, out internalDelegate))
+            if (delegateLookup.TryGetValue(del, out EventDelegate internalDelegate))
             {
-                EventDelegate tempDel;
-                if (delegates.TryGetValue(typeof(T), out tempDel))
+                if (delegates.TryGetValue(typeof(T), out EventDelegate tempDel))
                 {
                     tempDel -= internalDelegate;
                     if (tempDel == null)
@@ -65,6 +69,11 @@ namespace Framework
 
                 delegateLookup.Remove(del);
             }
+        }
+
+        public void RemoveListener<T>(T type, EventDelegate<T> del) where T : J
+        {
+            RemoveListener<T>(del);
         }
 
         public void Raise(J e)
