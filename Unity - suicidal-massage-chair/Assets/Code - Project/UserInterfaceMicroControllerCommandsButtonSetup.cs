@@ -27,7 +27,7 @@ public class UserInterfaceMicroControllerCommandsButtonSetup : MonoBehaviour
 
     private void CreateButtonsFromUserInterFaceButtonValues()
     {
-        foreach (UserInterfaceButtonValue buttonValue in Enum.GetValues(typeof(UserInterfaceButtonValue)))
+        foreach (UserInputButton buttonValue in Enum.GetValues(typeof(UserInputButton)))
         {
             // Create game object
             GameObject newButton = GameObject.Instantiate(buttonPrefab);
@@ -36,7 +36,7 @@ public class UserInterfaceMicroControllerCommandsButtonSetup : MonoBehaviour
 
             // Set enum value
             UserInterfaceMicroControllerCommandButton userInterfaceButton = newButton.GetComponent<UserInterfaceMicroControllerCommandButton>();
-            userInterfaceButton.UserInterfaceButtonValue = buttonValue;
+            userInterfaceButton.UserInputButton = buttonValue;
 
             // Set event
             Button button = newButton.GetComponent<Button>();

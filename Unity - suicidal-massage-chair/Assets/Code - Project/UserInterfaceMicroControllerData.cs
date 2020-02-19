@@ -1,12 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿
 
 public class UserInterfaceMicroControllerData
 {
 }
 
-public enum UserInterfaceButtonValue
+public enum UserInputButton
 {
     Yes,
     No,

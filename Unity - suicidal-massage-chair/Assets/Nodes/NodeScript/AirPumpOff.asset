@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afc5ebf5fdac3c64fa6d0b619ba72201, type: 3}
   m_Name: AirPumpOff
   m_EditorClassIdentifier: 
+  AirPumpOn: 0

@@ -6,7 +6,7 @@ public class UserInterfaceMicroController : MonoBehaviour
 {
     public UserInterfaceMicroControllerData data;
 
-    public void SendCommand(UserInterfaceButtonValue pressed)
+    public void SendCommand(UserInputButton pressed)
     {
         Debug.Log(pressed.ToString());
     }

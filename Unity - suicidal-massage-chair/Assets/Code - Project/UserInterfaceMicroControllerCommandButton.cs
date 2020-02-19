@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UserInterfaceMicroControllerCommandButton : MonoBehaviour
 {
-    public UserInterfaceButtonValue UserInterfaceButtonValue;
+    public UserInputButton UserInputButton;
 
     private UserInterfaceMicroController controller;
 
@@ -15,6 +15,6 @@ public class UserInterfaceMicroControllerCommandButton : MonoBehaviour
 
     public void SendButtonToController()
     {
-        controller.SendCommand(UserInterfaceButtonValue);
+        controller.SendCommand(UserInputButton);
     }
 }

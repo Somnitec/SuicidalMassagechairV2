@@ -66,15 +66,15 @@ public abstract class EventAction : Event
 // TODO rethink if pressed, down and up is the way to go
 public class UserInputPressed : EventAction
 {
-    public UserInterfaceButtonValue Button;
+    public UserInputButton Button;
 }
 
 public class UserInputDown : EventAction
 {
-    public UserInterfaceButtonValue Button;
+    public UserInputButton Button;
 }
 
 public class UserInputUp : EventAction
 {
-    public UserInterfaceButtonValue Button;
+    public UserInputButton Button;
 }
