@@ -10,8 +10,12 @@ public class NodeData : ScriptableObject
 {
     // add Language?
     public string Name;
-    [TextArea] public string Description;
     public AudioClip AudioClip;
+    [TextArea] public string Description;
+
+    [OnValueChanged("Sort",true)]
+    [TableList(AlwaysExpanded = true, NumberOfItemsPerPage = 10, ShowPaging = true)]
+    [ListDrawerSettings]
     public List<NodeScriptLine> Functions;
 
     public Action OnFinished;
@@ -31,14 +35,14 @@ public class NodeData : ScriptableObject
 
     private IEnumerator ExecuteFunctions(float timeStarted)
     {
-        var sorted = Functions.OrderBy(a => a.Time);
+        Sort();
 
-        foreach (var nodeScriptLine in sorted)
+        foreach (var nodeScriptLine in Functions)
         {
             var timePassed = TimePassed(timeStarted);
-            if (timePassed - nodeScriptLine.Time < 0)
+            if (timePassed - nodeScriptLine.TimeInSec < 0)
             {
-                var waitTime = nodeScriptLine.Time - timePassed;
+                var waitTime = nodeScriptLine.TimeInSec - timePassed;
                 Debug.Log($"Starting wait of {waitTime} timePassed {timePassed}");
                 yield return new WaitForSeconds(waitTime);
             }
@@ -51,5 +55,10 @@ public class NodeData : ScriptableObject
     private static float TimePassed(float timeStarted)
     {
         return Time.timeSinceLevelLoad - timeStarted;
+    }
+
+    private void Sort()
+    {
+        Functions = Functions.OrderBy(a => a.TimeInSec).ToList();
     }
 }

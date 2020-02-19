@@ -4,11 +4,13 @@ using System.Collections.Generic;
 using System.Linq;
 using Framework;
 using Sirenix.OdinInspector;
+using Sirenix.Serialization;
+using Sirenix.Utilities;
 using UnityEngine;
 using Event = Framework.Event;
 
 [CreateAssetMenu, InlineEditor(InlineEditorModes.FullEditor)]
-public class Node : ScriptableObject
+public class Node : SerializedScriptableObject
 {
     public String Name;
     public NodeData Data; // add different languages later
@@ -23,10 +25,7 @@ public class Node : ScriptableObject
     public void OnDataFinished()
     {
         Debug.Log($"OnFinished {Name}");
-        ActionsAfterDataPlay.ForEach(ea =>
-        {
-            Events.Instance.AddListener(ea.EventToSubscribeTo, ea.Action.Invoke);
-        });
+        ActionsAfterDataPlay.ForEach(ea => { Events.Instance.AddListener(ea.Condition, ea.Action.Invoke); });
     }
 
     public void Disable()
@@ -36,30 +35,46 @@ public class Node : ScriptableObject
         Data.OnFinished -= OnDataFinished;
         ActionsAfterDataPlay.ForEach(ea =>
         {
-            Events.Instance.RemoveListener(ea.EventToSubscribeTo, ea.Action.Invoke);
+            Events.Instance.RemoveListener(ea.Condition, ea.Action.Invoke);
         });
     }
 }
 
-[Serializable]
 public class NodeEventAction
 {
-    public Event EventToSubscribeTo;
+    [TypeFilter("GetFilteredTypeList")]
+    [InlineProperty]
+    public EventAction Condition;
+    [InlineProperty]
     public NodeAction Action;
+
+    public IEnumerable<Type> GetFilteredTypeList()
+    {
+        var q = typeof(EventAction).Assembly.GetTypes()
+            .Where(x => !x.IsAbstract) // Excludes BaseClass
+            .Where(x => !x.IsGenericTypeDefinition)
+            .Where(x =>typeof(EventAction).IsAssignableFrom(x)); 
+
+        return q;
+    }
+}
+
+public abstract class EventAction : Event
+{
 }
 
 // TODO rethink if pressed, down and up is the way to go
-public class UserInputPressed : Event
+public class UserInputPressed : EventAction
 {
-    public UserInterfaceMicroControllerData.UserInterfaceButtonValue Button;
+    public UserInterfaceButtonValue Button;
 }
 
-public class UserInputDown : Event
+public class UserInputDown : EventAction
 {
-    public UserInterfaceMicroControllerData.UserInterfaceButtonValue Button;
+    public UserInterfaceButtonValue Button;
 }
 
-public class UserInputUp: Event
+public class UserInputUp : EventAction
 {
-    public UserInterfaceMicroControllerData.UserInterfaceButtonValue Button;
+    public UserInterfaceButtonValue Button;
 }

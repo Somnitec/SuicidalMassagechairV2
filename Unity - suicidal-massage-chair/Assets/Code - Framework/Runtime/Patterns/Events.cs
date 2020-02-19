@@ -4,12 +4,10 @@ using System.Collections.Generic;
 
 namespace Framework
 {
-    [Serializable]
     public class Event
     {
     }
 
-    [Serializable]
     public class Events : GenericEvents<Event>
     {
     }
