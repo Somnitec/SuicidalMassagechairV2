@@ -12,8 +12,75 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3f3993e9c5055549b26c13737068a1f, type: 3}
   m_Name: FirstNode
   m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: ActionsAfterDataPlay
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[NodeEventAction, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 1|NodeEventAction, Assembly-CSharp
+    - Name: Condition
+      Entry: 7
+      Data: 2|UserInputPressed, Assembly-CSharp
+    - Name: Button
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Action
+      Entry: 7
+      Data: 3|GoToNextNode, Assembly-CSharp
+    - Name: NodeToGoTo
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 4|NodeEventAction, Assembly-CSharp
+    - Name: Condition
+      Entry: 7
+      Data: 5|UserInputPressed, Assembly-CSharp
+    - Name: Button
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Action
+      Entry: 7
+      Data: 6|GoToNextNode, Assembly-CSharp
+    - Name: NodeToGoTo
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   Name: Test balbjla
   Data: {fileID: 11400000, guid: f027d79181da9ff4b927d5ca7ac16f7e, type: 2}
-  ActionsAfterDataPlay:
-  - Action: {fileID: 11400000, guid: ee8b4e9fe10bb1d449b2f8eaf8fd07c9, type: 2}
-  - Action: {fileID: 11400000, guid: ee8b4e9fe10bb1d449b2f8eaf8fd07c9, type: 2}

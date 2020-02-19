@@ -27,7 +27,7 @@ public class UserInterfaceMicroControllerCommandsButtonSetup : MonoBehaviour
 
     private void CreateButtonsFromUserInterFaceButtonValues()
     {
-        foreach (UserInterfaceMicroControllerData.UserInterfaceButtonValue buttonValue in Enum.GetValues(typeof(UserInterfaceMicroControllerData.UserInterfaceButtonValue)))
+        foreach (UserInterfaceButtonValue buttonValue in Enum.GetValues(typeof(UserInterfaceButtonValue)))
         {
             // Create game object
             GameObject newButton = GameObject.Instantiate(buttonPrefab);

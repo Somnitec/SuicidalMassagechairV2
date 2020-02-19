@@ -6,7 +6,6 @@ using Framework;
 using UnityEngine;
 using Event = Framework.Event;
 
-[CreateAssetMenu]
 public class GoToNextNode : NodeAction
 {
     public Node NodeToGoTo;

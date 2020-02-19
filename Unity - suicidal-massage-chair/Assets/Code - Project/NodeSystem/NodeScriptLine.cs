@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using Framework;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 [System.Serializable]
 public class NodeScriptLine
 {
-    public float Time;
+    [TableColumnWidth(100,false), Min(0)]
+    public float TimeInSec;
     public NodeScriptFunction Function;
 }
 
