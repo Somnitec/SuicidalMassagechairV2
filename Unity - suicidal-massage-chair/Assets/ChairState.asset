@@ -23,7 +23,7 @@ MonoBehaviour:
   roller_down_on: 1
   roller_sensor_top: 1
   roller_sensor_bottom: 1
-  roller_position: 0.64
+  roller_position: 0.406
   feet_roller_on: 1
   feet_roller_speed: 0.56
   airpump_on: 1

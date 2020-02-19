@@ -12,19 +12,73 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7d7c488026201c4dac5da43828dc1f6, type: 3}
   m_Name: FirstNode_NL
   m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: Functions
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 1|NodeScriptLine, Assembly-CSharp
+    - Name: TimeInSec
+      Entry: 4
+      Data: 0
+    - Name: Function
+      Entry: 7
+      Data: 2|AirBag, Assembly-CSharp
+    - Name: AirBagsOn
+      Entry: 3
+      Data: 7
+    - Name: AirBagsOff
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 3|NodeScriptLine, Assembly-CSharp
+    - Name: TimeInSec
+      Entry: 4
+      Data: 0
+    - Name: Function
+      Entry: 7
+      Data: 4|ChairPosition, Assembly-CSharp
+    - Name: Duration
+      Entry: 4
+      Data: 0
+    - Name: Direction
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: OnFinished
+      Entry: 6
+      Data: 
   Name: FirstNodeNL
   AudioClip: {fileID: 0}
   Description: Blablabla
-  Functions:
-  - TimeInSec: 0
-    Function: {fileID: 11400000, guid: 41dbb5cb522ede04787476d437f93557, type: 2}
-  - TimeInSec: 0
-    Function: {fileID: 11400000, guid: 0b96163706f61574998ed529134b73f2, type: 2}
-  - TimeInSec: 1
-    Function: {fileID: 11400000, guid: d092f47c27b6d684dbe48f913dd6aa83, type: 2}
-  - TimeInSec: 2
-    Function: {fileID: 11400000, guid: 0b96163706f61574998ed529134b73f2, type: 2}
-  - TimeInSec: 2
-    Function: {fileID: 11400000, guid: 41dbb5cb522ede04787476d437f93557, type: 2}
-  - TimeInSec: 3
-    Function: {fileID: 11400000, guid: 29604aad265185e43b58b3c3d245361f, type: 2}

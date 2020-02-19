@@ -8,10 +8,11 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "NodeScript/Airbag")]
 public class AirBag : NodeScriptFunction
 {
-    [EnumFlag] public AirBagFlag AirBagsOn;
-    [EnumFlag] public AirBagFlag AirBagsOff;
+    public AirBagFlag AirBagsOn;
+    public AirBagFlag AirBagsOff;
 }
 
+[Flags]
 public enum AirBagFlag
 {
     Shoulders = (1 << 0),

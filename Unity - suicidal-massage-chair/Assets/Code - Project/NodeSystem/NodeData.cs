@@ -6,7 +6,7 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 
 [CreateAssetMenu, InlineEditor()]
-public class NodeData : ScriptableObject
+public class NodeData : SerializedScriptableObject
 {
     // add Language?
     public string Name;
@@ -18,6 +18,7 @@ public class NodeData : ScriptableObject
     [ListDrawerSettings]
     public List<NodeScriptLine> Functions;
 
+    [HideInInspector]
     public Action OnFinished;
 
     public IEnumerator InvokeFunctions()

@@ -11,7 +11,7 @@ using UnityEngine;
 public class BaseNode : SerializableNode
 {
     [Input] public Connection Input;
-    protected NodeGraph nodeGraph => (NodeGraph)graph;
+    public NodeGraph NodeGraph => (NodeGraph)graph;
 
     public virtual void OnNodeEnable() { }
     public virtual void OnNodeDisable() { }

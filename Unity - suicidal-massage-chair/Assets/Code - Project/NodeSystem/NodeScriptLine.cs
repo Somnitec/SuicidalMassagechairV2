@@ -5,7 +5,6 @@ using Framework;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-[System.Serializable]
 public class NodeScriptLine
 {
     [TableColumnWidth(100,false), Min(0)]
