@@ -77,4 +77,9 @@ public class UserInputDown : EventAction
 public class UserInputUp : EventAction
 {
     public UserInputButton Button;
+
+    public UserInputUp(UserInputButton button)
+    {
+        Button = button;
+    }
 }

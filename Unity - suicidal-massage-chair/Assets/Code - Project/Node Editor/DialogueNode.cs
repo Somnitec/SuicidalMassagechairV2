@@ -18,29 +18,31 @@ public class DialogueNode : BaseNode
 
     public override void OnNodeEnable()
     {
-        Debug.Log("OnNodeEnable");
+        Debug.Log($"OnNodeEnable {name}");
 
         Events.Instance.AddListener<UserInputUp>(OnInterrupted);
         Data.OnFinished += OnFinished;
+
+        NodePlayer.Instance.StopAllCoroutines();
+        NodePlayer.Instance.StartCoroutine(Data.InvokeFunctions());
     }
 
     private void OnInterrupted(UserInputUp e)
     {
-        Debug.Log($"OnInterrupted {e.Button}");
+        Debug.Log($"OnInterrupted {name} {e.Button}");
     }
 
     private void OnFinished()
     {
-        Debug.Log("OnFinished");
+        Debug.Log($"OnFinished {name}");
 
         Events.Instance.AddListener<UserInputUp>(OnInterrupted);
         Events.Instance.AddListener<UserInputUp>(HandleInput);
-
     }
 
     private void HandleInput(UserInputUp e)
     {
-        Debug.Log("OnFinished");
+        Debug.Log($"OnFinished {name}");
 
         for (int i = 0; i < Buttons.Count; i++)
         {
@@ -48,22 +50,34 @@ public class DialogueNode : BaseNode
             {
                 Debug.Log($"Found Button in Buttons {e.Button}");
 
-                // nodeGraph.SetNode(this);
+                SetGraphNode($"Buttons {i}");
                 return;
             }
         }
 
         Debug.Log($"Found Button in AnyButton {e.Button}");
-        // nodeGraph.SetNode(this);
+        SetGraphNode("OnAnyButton");
+    }
 
+    private void SetGraphNode(String portName)
+    {
+        var port = GetOutputPort(portName);
+        if (!port.IsConnected)
+        {
+            Debug.LogWarning($"{portName} is not connected to anything for node {name}");
+            return;
+        }
+
+        var node = (BaseNode)port.Connection.node;
+        nodeGraph.SetNode(node);
     }
 
 
     public override void OnNodeDisable()
     {
-        Debug.Log("OnNodeDisable");
+        Debug.Log($"OnNodeDisable {name}");
 
-        if (Data.OnFinished != null)
+        if (Data?.OnFinished != null)
             Data.OnFinished -= OnFinished;
 
         Events.Instance.RemoveListener<UserInputUp>(HandleInput);

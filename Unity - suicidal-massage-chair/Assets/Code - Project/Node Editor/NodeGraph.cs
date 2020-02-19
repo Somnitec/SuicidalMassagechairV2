@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Framework;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -21,5 +22,17 @@ public class NodeGraph : XNode.NodeGraph
     public void SetRoot(BaseNode node)
     {
         RootNode = node;
+    }
+
+    [Button]
+    public void InputEvent(UserInputButton button)
+    {
+        Events.Instance.Raise(new UserInputUp(button));
+    }
+
+    [Button]
+    public void StartFromRoot()
+    {
+        SetNode(RootNode);
     }
 }
