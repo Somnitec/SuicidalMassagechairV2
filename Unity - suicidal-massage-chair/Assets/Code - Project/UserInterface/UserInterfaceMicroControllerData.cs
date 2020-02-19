@@ -2,6 +2,7 @@
 
 public class UserInterfaceMicroControllerData
 {
+
 }
 
 public enum UserInputButton

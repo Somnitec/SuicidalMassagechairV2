@@ -23,8 +23,8 @@ public class DialogueNode : BaseNode
         Events.Instance.AddListener<UserInputUp>(OnInterrupted);
         Data.OnFinished += OnFinished;
 
-        NodePlayer.Instance.StopAllCoroutines();
-        NodePlayer.Instance.StartCoroutine(Data.InvokeFunctions());
+        NodeFunctionRunner.Instance.StopAllCoroutines();
+        NodeFunctionRunner.Instance.StartCoroutine(Data.InvokeFunctions());
     }
 
     private void OnInterrupted(UserInputUp e)

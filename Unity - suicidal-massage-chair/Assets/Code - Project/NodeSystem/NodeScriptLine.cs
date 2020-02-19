@@ -17,7 +17,7 @@ public class ScriptEvent : GenericEvents<NodeScriptFunction>
 {
 }
 
-public abstract class NodeScriptFunction : ScriptableObject
+public abstract class NodeScriptFunction
 {
     public virtual void RaiseEvent()
     {

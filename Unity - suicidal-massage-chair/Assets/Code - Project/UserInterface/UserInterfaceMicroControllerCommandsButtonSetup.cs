@@ -1,7 +1,7 @@
-﻿using EasyButtons;
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
 using UnityEditor.Events;
 using UnityEngine;
 using UnityEngine.Events;
