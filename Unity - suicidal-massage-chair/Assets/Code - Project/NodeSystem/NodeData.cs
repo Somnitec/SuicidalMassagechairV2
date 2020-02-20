@@ -3,23 +3,24 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Sirenix.OdinInspector;
+using Sirenix.Utilities.Editor;
 using UnityEngine;
 
-[CreateAssetMenu, InlineEditor()]
-public class NodeData : SerializedScriptableObject
+public class NodeData
 {
     // add Language?
-    public string Name;
+    [HideLabel]
     public AudioClip AudioClip;
-    [TextArea] public string Description;
+    [TextArea, PropertySpace(0, 10f)]
+    public string Text;
 
-    [OnValueChanged("Sort",true)]
-    [TableList(AlwaysExpanded = true, NumberOfItemsPerPage = 10, ShowPaging = true)]
-    [ListDrawerSettings]
-    public List<NodeScriptLine> Functions;
+    [TableList(AlwaysExpanded = true, NumberOfItemsPerPage = 10, ShowPaging = true, HideToolbar = true)]
+    [HideLabel]
+    [FoldoutGroup("Chair Functions")]
+    [PropertyOrder(10)]
+    public List<NodeScriptLine> Functions = new List<NodeScriptLine>();
 
-    [HideInInspector]
-    public Action OnFinished;
+    [HideInInspector] public Action OnFinished;
 
     public IEnumerator InvokeFunctions()
     {
@@ -30,7 +31,7 @@ public class NodeData : SerializedScriptableObject
         yield return ExecuteFunctions(timeStarted);
 
         // Wait for audioclip
-   
+
         OnFinished?.Invoke();
     }
 
@@ -58,8 +59,19 @@ public class NodeData : SerializedScriptableObject
         return Time.timeSinceLevelLoad - timeStarted;
     }
 
+    [FoldoutGroup("Chair Functions")]
+    [HorizontalGroup("Chair Functions/Buttons")]
+    [Button]
     private void Sort()
     {
         Functions = Functions.OrderBy(a => a.TimeInSec).ToList();
+    }
+
+    [FoldoutGroup("Chair Functions")]
+    [HorizontalGroup("Chair Functions/Buttons")]
+    [Button]
+    private void Add()
+    {
+        Functions.Add(new NodeScriptLine());
     }
 }

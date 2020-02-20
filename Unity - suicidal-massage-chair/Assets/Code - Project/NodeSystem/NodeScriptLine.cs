@@ -5,9 +5,10 @@ using Framework;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-public class NodeScriptLine
+[HideReferenceObjectPicker]
+public struct NodeScriptLine
 {
-    [TableColumnWidth(100,false), Min(0)]
+    [TableColumnWidth(55,false), Min(0)]
     public float TimeInSec;
     public NodeScriptFunction Function;
 }

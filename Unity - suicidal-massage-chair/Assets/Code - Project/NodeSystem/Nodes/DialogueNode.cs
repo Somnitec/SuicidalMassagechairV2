@@ -8,9 +8,10 @@ using XNode;
 
 public class DialogueNode : BaseNode
 {
-    public NodeData Data;
+    [InlineProperty, HideLabel][FoldoutGroup("Data")][HideReferenceObjectPicker]
+    public NodeData Data = new NodeData();
 
-    [Output(dynamicPortList = true), HideLabel]
+    [Output(dynamicPortList = true), ListDrawerSettings(ShowIndexLabels = false)]
     public List<UserInputButton> Buttons;
 
     [Output]
