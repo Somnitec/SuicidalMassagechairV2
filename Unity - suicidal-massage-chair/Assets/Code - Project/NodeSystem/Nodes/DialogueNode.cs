@@ -8,7 +8,8 @@ using XNode;
 
 public class DialogueNode : BaseNode
 {
-    public NodeData Data;
+    [InlineProperty, HideLabel]
+    public NodeData Data = new NodeData();
 
     [Output(dynamicPortList = true), HideLabel]
     public List<UserInputButton> Buttons;

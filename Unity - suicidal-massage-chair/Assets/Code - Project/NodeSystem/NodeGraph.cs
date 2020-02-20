@@ -10,6 +10,7 @@ public class NodeGraph : XNode.NodeGraph
     public BaseNode RootNode;
     public BaseNode Current;
 
+    [PropertySpace]
     [Button]
     public void SetNode(BaseNode node)
     {
@@ -18,18 +19,21 @@ public class NodeGraph : XNode.NodeGraph
         Current?.OnNodeEnable();
     }
 
+    [PropertySpace]
     [Button]
     public void SetRoot(BaseNode node)
     {
         RootNode = node;
     }
 
+    [PropertySpace]
     [Button]
     public void InputEvent(UserInputButton button)
     {
         Events.Instance.Raise(new UserInputUp(button));
     }
 
+    [PropertySpace]
     [Button]
     public void StartFromRoot()
     {

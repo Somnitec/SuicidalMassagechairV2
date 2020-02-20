@@ -5,18 +5,18 @@ using System.Linq;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-[CreateAssetMenu, InlineEditor()]
-public class NodeData : SerializedScriptableObject
+public class NodeData
 {
     // add Language?
-    public string Name;
+    [HideLabel]
     public AudioClip AudioClip;
-    [TextArea] public string Description;
+    [TextArea] public string Text;
 
     [OnValueChanged("Sort",true)]
     [TableList(AlwaysExpanded = true, NumberOfItemsPerPage = 10, ShowPaging = true)]
     [ListDrawerSettings]
-    public List<NodeScriptLine> Functions;
+    [HideLabel]
+    public List<NodeScriptLine> Functions = new List<NodeScriptLine>();
 
     [HideInInspector]
     public Action OnFinished;
