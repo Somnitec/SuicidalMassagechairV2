@@ -8,7 +8,7 @@ using XNode;
 
 public class DialogueNode : BaseNode
 {
-    [InlineProperty, HideLabel][FoldoutGroup("Data")]
+    [InlineProperty, HideLabel][FoldoutGroup("Data")][HideReferenceObjectPicker]
     public NodeData Data = new NodeData();
 
     [Output(dynamicPortList = true), ListDrawerSettings(ShowIndexLabels = false)]

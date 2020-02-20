@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Sirenix.OdinInspector;
+using Sirenix.Utilities.Editor;
 using UnityEngine;
 
 public class NodeData
@@ -12,10 +13,11 @@ public class NodeData
     public AudioClip AudioClip;
     [TextArea] public string Text;
 
-    [OnValueChanged("Sort",true)]
-    [TableList(AlwaysExpanded = true, NumberOfItemsPerPage = 10, ShowPaging = true)]
-    [ListDrawerSettings]
+    // [OnValueChanged("Sort",true)]
+    [TableList(AlwaysExpanded = true, NumberOfItemsPerPage = 10, ShowPaging = true, HideToolbar = true)]
     [HideLabel]
+
+    [PropertyOrder(10)]
     public List<NodeScriptLine> Functions = new List<NodeScriptLine>();
 
     [HideInInspector]
@@ -58,8 +60,18 @@ public class NodeData
         return Time.timeSinceLevelLoad - timeStarted;
     }
 
+    [PropertySpace]
+    [HorizontalGroup("Buttons")]
+    [Button]
     private void Sort()
     {
         Functions = Functions.OrderBy(a => a.TimeInSec).ToList();
+    }
+    [PropertySpace]
+    [HorizontalGroup("Buttons")]
+    [Button]
+    private void Add()
+    {
+        Functions.Add(new NodeScriptLine());
     }
 }

@@ -5,7 +5,8 @@ using Framework;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-public class NodeScriptLine
+[HideReferenceObjectPicker]
+public struct NodeScriptLine
 {
     [TableColumnWidth(55,false), Min(0)]
     public float TimeInSec;
