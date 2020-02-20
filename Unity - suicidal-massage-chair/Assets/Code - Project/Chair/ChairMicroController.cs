@@ -5,15 +5,20 @@ using UnityEngine;
 
 public class ChairMicroController : MonoBehaviour
 {
-    public ChairMicroControllerState state;
+    public ChairMicroControllerState ArduinoState;
+    public ChairMicroControllerState MockState;
     private ChairMicroControllerMock chairMicroController;
+    private ChairMicroControllerArduino arduino;
 
     private void Start()
     {
-        if(state == null)
-            state = new ChairMicroControllerState();
+        if(MockState == null)
+            MockState = new ChairMicroControllerState();
+        if (ArduinoState == null)
+            ArduinoState = new ChairMicroControllerState();
 
-        chairMicroController = new ChairMicroControllerMock(state);
+        chairMicroController = new ChairMicroControllerMock(MockState);
+        arduino = new ChairMicroControllerArduino(ArduinoState);
     }
 
     private void OnDisable()
