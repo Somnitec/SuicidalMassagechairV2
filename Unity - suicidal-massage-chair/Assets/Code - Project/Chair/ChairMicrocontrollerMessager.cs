@@ -4,7 +4,7 @@ using UnityEngine;
 using Sirenix.OdinInspector;
 
 [ExecuteInEditMode]
-public class ChairMicrocontrollerMessageListener : MonoBehaviour
+public class ChairMicrocontrollerMessager : SingletonMonoBehavior<ChairMicrocontrollerMessager>
 {
     private SerialController serialController;
 
@@ -14,15 +14,12 @@ public class ChairMicrocontrollerMessageListener : MonoBehaviour
         serialController = GetComponent<SerialController>();
     }
 
-    [Sirenix.OdinInspector.Button]
+    [Button]
     public void SendMessage(string message)
     {
         serialController.SendSerialMessage(message);
     }
-    // Update is called once per frame
-    void Update()
-    {
-    }
+
     // Invoked when a line of data is received from the serial device.
     void OnMessageArrived(string msg)
     {
@@ -35,10 +32,8 @@ public class ChairMicrocontrollerMessageListener : MonoBehaviour
                 Debug.Log("no response: " + msg);
                 break;
         }
-        
-
-        
     }
+
     // Invoked when a connect/disconnect event occurs. The parameter 'success'
     // will be 'true' upon connection, and 'false' upon disconnection or
     // failure to connect.
