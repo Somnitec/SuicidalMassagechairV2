@@ -49,8 +49,8 @@ public class NodeData
                 yield return new WaitForSeconds(waitTime);
             }
 
-            Debug.Log($"Executing {nodeScriptLine.Function.GetType().FullName} at {timePassed}");
-            nodeScriptLine.Function.RaiseEvent();
+            Debug.Log($"Executing {nodeScriptLine.Function?.GetType().FullName} at {timePassed}");
+            nodeScriptLine.Function?.RaiseEvent();
         }
     }
 

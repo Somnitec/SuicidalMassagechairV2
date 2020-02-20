@@ -6,13 +6,15 @@ using System.Threading.Tasks;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-public class ChairPosition : NodeScriptFunction
+public class RollerPoundingSpeed : NodeScriptFunction
 {
-    [InfoBox("0 is up and 1 is down")][Range(0,1)]
-    public float NewPosition;
+    [InfoBox("0 is off 255 is full speed")] [Range(0, 1f)]
+    public float Speed = 0f;
 
     public override List<string> Serialize()
     {
-        return ToList($"chair_estimated_position:{(10000f * NewPosition)}");
+        return ToList(
+            "roller_pounding_speed:" + Speed * 255
+        );
     }
 }

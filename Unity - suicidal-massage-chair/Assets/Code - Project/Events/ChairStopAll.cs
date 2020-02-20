@@ -5,12 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 
-public class AirPump : NodeScriptFunction
+public class ChairStopAll : NodeScriptFunction
 {
-    public Boolean AirPumpOn;
-
     public override List<string> Serialize()
     {
-        return ToList($"airpump_on:{BoolToString(AirPumpOn)}");
+        return ToList("stopall");
     }
 }

@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
-public class AirPump : NodeScriptFunction
+public class BackLightColor : NodeScriptFunction
 {
-    public Boolean AirPumpOn;
+    public Color Color;
 
     public override List<string> Serialize()
     {
-        return ToList($"airpump_on:{BoolToString(AirPumpOn)}");
+        return ToList(
+            "backlight_color:" + Color
+        );
     }
 }

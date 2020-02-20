@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
-public class AirPump : NodeScriptFunction
+public class RollerKneadingOn : NodeScriptFunction
 {
-    public Boolean AirPumpOn;
+    public bool On;
 
     public override List<string> Serialize()
     {
-        return ToList($"airpump_on:{BoolToString(AirPumpOn)}");
+        return ToList("roller_kneading_on:" + BoolToString(On));
     }
 }
