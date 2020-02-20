@@ -11,17 +11,16 @@ public class NodeData
     // add Language?
     [HideLabel]
     public AudioClip AudioClip;
-    [TextArea] public string Text;
+    [TextArea, PropertySpace(0, 10f)]
+    public string Text;
 
-    // [OnValueChanged("Sort",true)]
     [TableList(AlwaysExpanded = true, NumberOfItemsPerPage = 10, ShowPaging = true, HideToolbar = true)]
     [HideLabel]
-
+    [FoldoutGroup("Chair Functions")]
     [PropertyOrder(10)]
     public List<NodeScriptLine> Functions = new List<NodeScriptLine>();
 
-    [HideInInspector]
-    public Action OnFinished;
+    [HideInInspector] public Action OnFinished;
 
     public IEnumerator InvokeFunctions()
     {
@@ -32,7 +31,7 @@ public class NodeData
         yield return ExecuteFunctions(timeStarted);
 
         // Wait for audioclip
-   
+
         OnFinished?.Invoke();
     }
 
@@ -60,15 +59,16 @@ public class NodeData
         return Time.timeSinceLevelLoad - timeStarted;
     }
 
-    [PropertySpace]
-    [HorizontalGroup("Buttons")]
+    [FoldoutGroup("Chair Functions")]
+    [HorizontalGroup("Chair Functions/Buttons")]
     [Button]
     private void Sort()
     {
         Functions = Functions.OrderBy(a => a.TimeInSec).ToList();
     }
-    [PropertySpace]
-    [HorizontalGroup("Buttons")]
+
+    [FoldoutGroup("Chair Functions")]
+    [HorizontalGroup("Chair Functions/Buttons")]
     [Button]
     private void Add()
     {
