@@ -23,6 +23,7 @@ using System.Threading;
  * on the integrity of the message. It's up to the one that makes sense of the
  * data.
  */
+[ExecuteInEditMode]
 public class SerialController : MonoBehaviour
 {
     [Tooltip("Port name with which the SerialPort object will be created.")]
@@ -107,6 +108,7 @@ public class SerialController : MonoBehaviour
     // ------------------------------------------------------------------------
     void Update()
     {
+        if (!On) return;
         // If the user prefers to poll the messages instead of receiving them
         // via SendMessage, then the message listener should be null.
         if (messageListener == null)
@@ -151,6 +153,8 @@ public class SerialController : MonoBehaviour
     // ------------------------------------------------------------------------
     public delegate void TearDownFunction();
     private TearDownFunction userDefinedTearDownFunction;
+    public bool On = true;
+
     public void SetTearDownFunction(TearDownFunction userFunction)
     {
         this.userDefinedTearDownFunction = userFunction;
