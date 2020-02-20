@@ -5,6 +5,7 @@ using System.Linq;
 using Framework;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using static System.String;
 
 [HideReferenceObjectPicker]
 public struct NodeScriptLine
@@ -30,12 +31,17 @@ public abstract class NodeScriptFunction
     public abstract List<string> Serialize();
 
 
+    public string SerializeToString()
+    {
+        return Join(",", Serialize());
+    }
+
     protected string BoolToString(bool b)
     {
         return b ? True : False;
     }
 
-    protected List<String> ToList(params string[] s)
+    protected List<string> ToList(params string[] s)
     {
         return s.ToList();
     }

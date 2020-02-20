@@ -12,20 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c4015d35a6934e4796c2ad626c931a8, type: 3}
   m_Name: Chair State
   m_EditorClassIdentifier: 
-  chair_estimated_position: 0.633
-  chair_up_on: 0
-  chair_down_on: 0
+  chair_estimated_position: 0.49
+  chair_up_on: 1
+  chair_down_on: 1
   roller_kneading_on: 1
-  roller_kneading_speed: 0.376
+  roller_kneading_speed: 0.72
   roller_pounding_on: 1
-  roller_pounding_speed: 0.465
+  roller_pounding_speed: 0.64
   roller_up_on: 1
   roller_down_on: 1
   roller_sensor_top: 1
   roller_sensor_bottom: 1
-  roller_position: 0.94
+  roller_position: 0.55
   feet_roller_on: 1
-  feet_roller_speed: 0.653
+  feet_roller_speed: 0.55
   airpump_on: 1
   airbag_shoulders_on: 1
   airbag_arms_on: 1
@@ -33,6 +33,6 @@ MonoBehaviour:
   airbag_outside_on: 1
   butt_vibration_on: 1
   backlight_on: 1
-  backlight_color: {r: 0, g: 0, b: 1, a: 1}
+  backlight_color: {r: 1, g: 0.87061286, b: 0.051886797, a: 1}
   redgreen_statuslight_red: 1
   redgreen_statuslight_green: 1

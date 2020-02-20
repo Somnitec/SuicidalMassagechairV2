@@ -13,7 +13,7 @@ public class BackLightColor : NodeScriptFunction
     public override List<string> Serialize()
     {
         return ToList(
-            "backlight_color:" + ColorUtility.ToHtmlStringRGB(Color);
+            "backlight_color:" + ColorUtility.ToHtmlStringRGB(Color)
         );
     }
 }

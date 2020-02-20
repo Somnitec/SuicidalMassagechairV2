@@ -14,7 +14,7 @@ public class NodeData
     [TextArea, PropertySpace(0, 10f)]
     public string Text;
 
-    [TableList(AlwaysExpanded = true, NumberOfItemsPerPage = 10, ShowPaging = true, HideToolbar = true)]
+    [TableList(AlwaysExpanded = true, HideToolbar = false)]
     [HideLabel]
     [FoldoutGroup("Chair Functions")]
     [PropertyOrder(10)]
