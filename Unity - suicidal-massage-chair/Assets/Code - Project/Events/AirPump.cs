@@ -5,8 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "NodeScript/AirPump")]
 public class AirPump : NodeScriptFunction
 {
     public Boolean AirPumpOn;
+
+    public override List<string> Serialize()
+    {
+        return ToList($"airpump_on:{BoolToString(AirPumpOn)}");
+    }
 }

@@ -5,15 +5,20 @@ using UnityEngine;
 
 public class ChairMicroController : MonoBehaviour
 {
-    public ChairMicroControllerState state;
+    public ChairMicroControllerState ArduinoState;
+    public ChairMicroControllerState MockState;
     private ChairMicroControllerMock chairMicroController;
+    private ChairMicroControllerArduino arduino;
 
     private void Start()
     {
-        if(state == null)
-            state = new ChairMicroControllerState();
+        if(MockState == null)
+            MockState = new ChairMicroControllerState();
+        if (ArduinoState == null)
+            ArduinoState = new ChairMicroControllerState();
 
-        chairMicroController = new ChairMicroControllerMock(state);
+        chairMicroController = new ChairMicroControllerMock(MockState);
+        arduino = new ChairMicroControllerArduino(ArduinoState);
     }
 
     private void OnDisable()
@@ -27,21 +32,5 @@ public class ChairMicroController : MonoBehaviour
         Chair_Down,
         Reset
         // TODO
-    }
-
-    // Todo rethink this in relation to arguments
-    // Possibly event pattern?
-    public void SendCommand(Commands command)
-    {
-        Debug.Log("The " + command.ToString() + " has been send");
-        // switch (command)
-        // {
-        //     case Commands.Reset:
-        //         ChairEvents.Instance.Raise(new ChairReset());
-        //         break;
-        //     default:
-        //         Debug.LogWarning(command.ToString() + " has no implementation yet");
-        //         break;
-        // }
     }
 }
