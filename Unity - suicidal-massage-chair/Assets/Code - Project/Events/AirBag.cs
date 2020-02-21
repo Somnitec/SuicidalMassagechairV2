@@ -8,8 +8,8 @@ using UnityEngine;
 
 public class AirBag : NodeScriptFunction
 {
-    [VerticalGroup("Split/Right")] public AirBagFlag AirBagsOn;
-    [VerticalGroup("Split/Right")] public AirBagFlag AirBagsOff;
+    public AirBagFlag AirBagsOn;
+    public AirBagFlag AirBagsOff;
     private string on = "on";
     private string off = "off";
 

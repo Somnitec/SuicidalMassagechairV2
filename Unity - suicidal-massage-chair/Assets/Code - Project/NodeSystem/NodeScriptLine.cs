@@ -10,8 +10,8 @@ using static System.String;
 [HideReferenceObjectPicker]
 public struct NodeScriptLine
 {
-    [TableColumnWidth(55, false), Min(0)] public float TimeInSec;
-    [InlineProperty][HorizontalGroup("Split")][VerticalGroup("Split/Left")][HideLabel]
+    [TableColumnWidth(55, false), Min(0)] public float TimeSec;
+    [InlineProperty]
     public NodeScriptFunction Function;
 }
 

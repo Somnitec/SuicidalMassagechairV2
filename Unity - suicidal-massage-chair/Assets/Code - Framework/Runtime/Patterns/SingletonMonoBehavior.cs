@@ -21,9 +21,6 @@ public class SingletonMonoBehavior<T> : MonoBehaviour where T : MonoBehaviour
                 if (instance == null)
                 {
                     instance = new GameObject() { name = typeof(T).FullName }.AddComponent<T>();
-
-                    //Debug.LogError("An instance of " + typeof(T) +
-                    //   " is needed in the scene, but there is none.");
                 }
             }
 
