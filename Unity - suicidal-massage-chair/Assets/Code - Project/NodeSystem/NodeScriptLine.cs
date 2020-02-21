@@ -11,6 +11,7 @@ using static System.String;
 public struct NodeScriptLine
 {
     [TableColumnWidth(55, false), Min(0)] public float TimeInSec;
+    [InlineProperty][HorizontalGroup("Split")][VerticalGroup("Split/Left")][HideLabel]
     public NodeScriptFunction Function;
 }
 

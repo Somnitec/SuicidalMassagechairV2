@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class AirBag : NodeScriptFunction
 {
-    public AirBagFlag AirBagsOn;
-    public AirBagFlag AirBagsOff;
+    [VerticalGroup("Split/Right")] public AirBagFlag AirBagsOn;
+    [VerticalGroup("Split/Right")] public AirBagFlag AirBagsOff;
     private string on = "on";
     private string off = "off";
 

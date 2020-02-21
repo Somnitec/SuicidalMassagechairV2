@@ -8,7 +8,7 @@ using UnityEngine;
 
 public class RollerPoundingSpeed : NodeScriptFunction
 {
-    [InfoBox("0 is off 255 is full speed")] [Range(0, 1f)]
+    [InfoBox("0 is off 1 is full speed")] [Range(0, 1f)]
     public float Speed = 0f;
 
     public override List<string> Serialize()
