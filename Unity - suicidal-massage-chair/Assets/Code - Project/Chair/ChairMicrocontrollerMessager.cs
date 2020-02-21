@@ -9,7 +9,7 @@ public class ChairMicrocontrollerMessager : SingletonMonoBehavior<ChairMicrocont
 {
     [SerializeField] [ReadOnly] [ShowInInspector]
     private bool ArduinoConnected;
-    [ReadOnly, SerializeField, TextArea]
+    [SerializeField, TextArea, PropertyOrder(10)]
     private string MessagesReceived;
     private SerialController serialController;
 
@@ -30,7 +30,7 @@ public class ChairMicrocontrollerMessager : SingletonMonoBehavior<ChairMicrocont
     // Invoked when a line of data is received from the serial device.
     void OnMessageArrived(string msg)
     {
-        MessagesReceived += msg + "\n";
+        MessagesReceived = msg + "\n" + MessagesReceived;
         switch (name)
         {
             case "object":

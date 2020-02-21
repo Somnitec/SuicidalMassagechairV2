@@ -246,8 +246,7 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects:
-    - {fileID: 8300000, guid: f308a0d1413c7574a9936fe29d003231, type: 3}
+    ReferencedUnityObjects: []
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -257,8 +256,8 @@ MonoBehaviour:
       Entry: 7
       Data: 0|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 10
-      Data: 0
+      Entry: 6
+      Data: 
     - Name: Text
       Entry: 6
       Data: 
@@ -545,7 +544,6 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 8300000, guid: f308a0d1413c7574a9936fe29d003231, type: 3}
     - {fileID: 2421428131002953428}
     SerializedBytesString: 
     Prefab: {fileID: 0}
@@ -556,10 +554,10 @@ MonoBehaviour:
       Entry: 7
       Data: 0|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 10
-      Data: 0
-    - Name: Text
       Entry: 6
+      Data: 
+    - Name: Text
+      Entry: 1
       Data: 
     - Name: Functions
       Entry: 7
@@ -876,7 +874,7 @@ MonoBehaviour:
       Data: 18|System.Action, mscorlib
     - Name: target
       Entry: 10
-      Data: 1
+      Data: 0
     - Name: declaringType
       Entry: 7
       Data: 19|System.RuntimeType, mscorlib
