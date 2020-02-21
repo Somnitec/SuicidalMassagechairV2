@@ -59,8 +59,10 @@ MonoBehaviour:
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes: []
-  Data: {fileID: 0}
+    SerializationNodes:
+    - Name: Data
+      Entry: 6
+      Data: 
   Buttons: 
 --- !u!114 &-5181468989907919709
 MonoBehaviour:
@@ -118,8 +120,224 @@ MonoBehaviour:
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes: []
-  Data: {fileID: 0}
+    SerializationNodes:
+    - Name: Data
+      Entry: 7
+      Data: 0|NodeData, Assembly-CSharp
+    - Name: AudioClip
+      Entry: 6
+      Data: 
+    - Name: Text
+      Entry: 6
+      Data: 
+    - Name: Functions
+      Entry: 7
+      Data: 1|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 7
+      Data: NodeScriptLine, Assembly-CSharp
+    - Name: TimeInSec
+      Entry: 4
+      Data: 0
+    - Name: Function
+      Entry: 7
+      Data: 2|AirBag, Assembly-CSharp
+    - Name: AirBagsOn
+      Entry: 3
+      Data: 0
+    - Name: AirBagsOff
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: NodeScriptLine, Assembly-CSharp
+    - Name: TimeInSec
+      Entry: 4
+      Data: 0
+    - Name: Function
+      Entry: 7
+      Data: 3|AirPump, Assembly-CSharp
+    - Name: AirPumpOn
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: NodeScriptLine, Assembly-CSharp
+    - Name: TimeInSec
+      Entry: 4
+      Data: 0
+    - Name: Function
+      Entry: 7
+      Data: 4|ResetChair, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: NodeScriptLine, Assembly-CSharp
+    - Name: TimeInSec
+      Entry: 4
+      Data: 0
+    - Name: Function
+      Entry: 7
+      Data: 5|ResetChair, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: NodeScriptLine, Assembly-CSharp
+    - Name: TimeInSec
+      Entry: 4
+      Data: 0
+    - Name: Function
+      Entry: 7
+      Data: 6|ChairPosition, Assembly-CSharp
+    - Name: Duration
+      Entry: 4
+      Data: 0
+    - Name: Direction
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: NodeScriptLine, Assembly-CSharp
+    - Name: TimeInSec
+      Entry: 4
+      Data: 0
+    - Name: Function
+      Entry: 7
+      Data: 7|AirBag, Assembly-CSharp
+    - Name: AirBagsOn
+      Entry: 3
+      Data: 0
+    - Name: AirBagsOff
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: NodeScriptLine, Assembly-CSharp
+    - Name: TimeInSec
+      Entry: 4
+      Data: 3
+    - Name: Function
+      Entry: 7
+      Data: 8|AirBag, Assembly-CSharp
+    - Name: AirBagsOn
+      Entry: 3
+      Data: 0
+    - Name: AirBagsOff
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: NodeScriptLine, Assembly-CSharp
+    - Name: TimeInSec
+      Entry: 4
+      Data: 5
+    - Name: Function
+      Entry: 7
+      Data: 9|AirPump, Assembly-CSharp
+    - Name: AirPumpOn
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: NodeScriptLine, Assembly-CSharp
+    - Name: TimeInSec
+      Entry: 4
+      Data: 10
+    - Name: Function
+      Entry: 7
+      Data: 10|AirPump, Assembly-CSharp
+    - Name: AirPumpOn
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: NodeScriptLine, Assembly-CSharp
+    - Name: TimeInSec
+      Entry: 4
+      Data: 11
+    - Name: Function
+      Entry: 7
+      Data: 11|ChairPosition, Assembly-CSharp
+    - Name: Duration
+      Entry: 4
+      Data: 0
+    - Name: Direction
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: OnFinished
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   Buttons: 
 --- !u!114 &-5136986826925439257
 MonoBehaviour:
@@ -222,8 +440,10 @@ MonoBehaviour:
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes: []
-  Data: {fileID: 0}
+    SerializationNodes:
+    - Name: Data
+      Entry: 6
+      Data: 
   Buttons: 
 --- !u!114 &-2429869686831015530
 MonoBehaviour:
@@ -300,8 +520,10 @@ MonoBehaviour:
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes: []
-  Data: {fileID: 0}
+    SerializationNodes:
+    - Name: Data
+      Entry: 6
+      Data: 
   Buttons: 01000000
 --- !u!114 &-1635374956691734540
 MonoBehaviour:
@@ -425,8 +647,10 @@ MonoBehaviour:
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes: []
-  Data: {fileID: 11400000, guid: f027d79181da9ff4b927d5ca7ac16f7e, type: 2}
+    SerializationNodes:
+    - Name: Data
+      Entry: 6
+      Data: 
   Buttons: 
 --- !u!114 &6947010457830027371
 MonoBehaviour:
@@ -513,8 +737,77 @@ MonoBehaviour:
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes: []
-  Data: {fileID: 0}
+    SerializationNodes:
+    - Name: Data
+      Entry: 7
+      Data: 0|NodeData, Assembly-CSharp
+    - Name: AudioClip
+      Entry: 6
+      Data: 
+    - Name: Text
+      Entry: 6
+      Data: 
+    - Name: Functions
+      Entry: 7
+      Data: 1|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: NodeScriptLine, Assembly-CSharp
+    - Name: TimeInSec
+      Entry: 4
+      Data: 0
+    - Name: Function
+      Entry: 7
+      Data: 2|AirBag, Assembly-CSharp
+    - Name: AirBagsOn
+      Entry: 3
+      Data: 0
+    - Name: AirBagsOff
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: NodeScriptLine, Assembly-CSharp
+    - Name: TimeInSec
+      Entry: 4
+      Data: 0
+    - Name: Function
+      Entry: 7
+      Data: 3|ChairPosition, Assembly-CSharp
+    - Name: Duration
+      Entry: 4
+      Data: 0
+    - Name: Direction
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: OnFinished
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   Buttons: 0000000001000000
 --- !u!114 &7308101778485953021
 MonoBehaviour:
@@ -575,8 +868,10 @@ MonoBehaviour:
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes: []
-  Data: {fileID: 0}
+    SerializationNodes:
+    - Name: Data
+      Entry: 6
+      Data: 
   Buttons: 
 --- !u!114 &7737505914613988613
 MonoBehaviour:
@@ -644,8 +939,25 @@ MonoBehaviour:
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes: []
-  Data: {fileID: 0}
+    SerializationNodes:
+    - Name: Data
+      Entry: 7
+      Data: 0|NodeData, Assembly-CSharp
+    - Name: AudioClip
+      Entry: 6
+      Data: 
+    - Name: Text
+      Entry: 6
+      Data: 
+    - Name: Functions
+      Entry: 6
+      Data: 
+    - Name: OnFinished
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   Buttons: 00000000
 --- !u!114 &7864363613721050552
 MonoBehaviour:

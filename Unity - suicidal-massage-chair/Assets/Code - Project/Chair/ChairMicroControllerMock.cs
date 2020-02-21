@@ -11,7 +11,7 @@ public class ChairMicroControllerMock : AbstractChairMicroController
 
     protected override void Reset(ResetChair args)
     {
-        Debug.Log($"RESET {args.Serialize()}");
+        Debug.Log($"Mock: RESET {args.SerializeToString()}");
         state.airbag_arms_on = false;
         state.airbag_legs_on = false;
         state.airbag_outside_on = false;
@@ -40,7 +40,7 @@ public class ChairMicroControllerMock : AbstractChairMicroController
 
     protected override void Airbag(AirBag args)
     {
-        Debug.Log($"AIRBAG :D {args.Serialize()}");
+        Debug.Log($"Mock: AIRBAG :D {args.SerializeToString()}");
         if( args.AirBagsOn.HasFlag(AirBagFlag.Arms)) state.airbag_arms_on = true;
         if (args.AirBagsOff.HasFlag(AirBagFlag.Arms)) state.airbag_arms_on = false;
         if (args.AirBagsOn.HasFlag(AirBagFlag.Legs)) state.airbag_legs_on = true;
@@ -53,74 +53,86 @@ public class ChairMicroControllerMock : AbstractChairMicroController
 
     protected override void ChairPosition(ChairPosition args)
     {
-       Debug.Log($"~ ChairPosition :D {args.Serialize()}");
+       Debug.Log($"Mock: ~ ChairPosition :D {args.SerializeToString()}");
+       state.chair_estimated_position = args.NewPosition;
 
     }
 
     protected override void AirPump(AirPump args)
     {
-        Debug.Log($"~ AirPump :D {args.Serialize()}");
-        if (args.AirPumpOn) state.airpump_on = true;
-        else state.airpump_on = false;
+        Debug.Log($"Mock: ~ AirPump :D {args.SerializeToString()}");
+        state.airpump_on = args.AirPumpOn;
     }
 
     protected override void RollerPoundingSpeed(RollerPoundingSpeed args)
     {
-        Debug.Log($"RollerPoundingSpeed{args.Serialize()}");
+        Debug.Log($"Mock: RollerPoundingSpeed {args.SerializeToString()}");
+        state.roller_pounding_speed = args.Speed;
     }
 
     protected override void RollerPoundingOn(RollerPoundingOn args)
     {
-        Debug.Log($"RollerPoundingOn{args.Serialize()}");
+        Debug.Log($"Mock: RollerPoundingOn {args.SerializeToString()}");
+        state.roller_pounding_on = args.On;
     }
 
     protected override void RollerPosition(RollerPosition args)
     {
-        Debug.Log($"RollerPosition{args.Serialize()}");
+        Debug.Log($"Mock: RollerPosition {args.SerializeToString()}");
+        state.roller_position = args.NewPosition;
     }
 
     protected override void RollerKneadingSpeed(RollerKneadingSpeed args)
     {
-        Debug.Log($"RollerKneadingSpeed{args.Serialize()}");
+        Debug.Log($"Mock: RollerKneadingSpeed {args.SerializeToString()}");
+        state.roller_kneading_speed = args.Speed;
     }
 
     protected override void RollerKneadingOn(RollerKneadingOn args)
     {
-        Debug.Log($"RollerKneadingOn{args.Serialize()}");
+        Debug.Log($"Mock: RollerKneadingOn {args.SerializeToString()}");
+        state.roller_kneading_on = args.On;
     }
 
     protected override void RecalibrateChair(RecalibrateChair args)
     {
-        Debug.Log($"RecalibrateChair{args.Serialize()}");
+        Debug.Log($"Mock: RecalibrateChair {args.SerializeToString()}");
+        
     }
 
     protected override void FeetRollingSpeed(FeetRollerSpeed args)
     {
-        Debug.Log($"FeetRollingSpeed{args.Serialize()}");
+        Debug.Log($"Mock: FeetRollingSpeed {args.SerializeToString()}");
+        state.feet_roller_speed = args.Speed;
     }
 
     protected override void FeetRollingOn(FeetRollerOn args)
     {
-        Debug.Log($"FeetRollingOn{args.Serialize()}");
+        Debug.Log($"Mock: FeetRollingOn {args.SerializeToString()}");
+        state.feet_roller_on = args.On;
     }
 
     protected override void ChairStopAll(ChairStopAll args)
     {
-        Debug.Log($"ChairStopAll{args.Serialize()}");
+        Debug.Log($"Mock: ChairStopAll {args.SerializeToString()}");
+        
     }
 
     protected override void ButtVibration(ButtVibration args)
     {
-        Debug.Log($"ButtVibration{args.Serialize()}");
+        Debug.Log($"Mock: ButtVibration {args.SerializeToString()}");
+        state.butt_vibration_on = args.On;
     }
 
     protected override void BackLightOn(BacklightOn args)
     {
-        Debug.Log($"BackLightOn{args.Serialize()}");
+        Debug.Log($"Mock: BackLightOn {args.SerializeToString()}");
+        state.backlight_on = args.On;
     }
 
     protected override void BackLightColor(BackLightColor args)
     {
-        Debug.Log($"BackLightColor{args.Serialize()}");
+        Debug.Log($"Mock: BackLightColor {args.SerializeToString()}");
+        state.backlight_color = args.Color;
     }
 }

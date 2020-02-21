@@ -8,6 +8,7 @@
 
 using UnityEngine;
 using System.Threading;
+using System.ComponentModel;
 
 /**
  * This class allows a Unity program to continually check for messages from a
@@ -98,6 +99,8 @@ public class SerialController : MonoBehaviour
             thread.Join();
             thread = null;
         }
+
+        messageListener.SendMessage("OnConnectionEvent", false);
     }
 
     // ------------------------------------------------------------------------
@@ -108,8 +111,7 @@ public class SerialController : MonoBehaviour
     // ------------------------------------------------------------------------
     void Update()
     {
-        if (!On) return;
-        // If the user prefers to poll the messages instead of receiving them
+            // If the user prefers to poll the messages instead of receiving them
         // via SendMessage, then the message listener should be null.
         if (messageListener == null)
             return;
@@ -153,7 +155,6 @@ public class SerialController : MonoBehaviour
     // ------------------------------------------------------------------------
     public delegate void TearDownFunction();
     private TearDownFunction userDefinedTearDownFunction;
-    public bool On = true;
 
     public void SetTearDownFunction(TearDownFunction userFunction)
     {

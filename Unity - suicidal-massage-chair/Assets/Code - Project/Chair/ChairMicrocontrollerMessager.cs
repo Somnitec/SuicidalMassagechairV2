@@ -2,10 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
+using Sirenix.Serialization;
 
 [ExecuteInEditMode]
 public class ChairMicrocontrollerMessager : SingletonMonoBehavior<ChairMicrocontrollerMessager>
 {
+    [SerializeField] [ReadOnly] [ShowInInspector]
+    private bool ArduinoConnected;
+    [SerializeField, TextArea, PropertyOrder(10)]
+    private string MessagesReceived;
     private SerialController serialController;
 
     // Use this for initialization
@@ -14,15 +19,18 @@ public class ChairMicrocontrollerMessager : SingletonMonoBehavior<ChairMicrocont
         serialController = GetComponent<SerialController>();
     }
 
+    [PropertySpace]
     [Button]
     public void SendMessage(string message)
     {
+        Debug.Log($"Sending to arduino: [{message}]");
         serialController.SendSerialMessage(message);
     }
 
     // Invoked when a line of data is received from the serial device.
     void OnMessageArrived(string msg)
     {
+        MessagesReceived = msg + "\n" + MessagesReceived;
         switch (name)
         {
             case "object":
@@ -39,6 +47,7 @@ public class ChairMicrocontrollerMessager : SingletonMonoBehavior<ChairMicrocont
     // failure to connect.
     void OnConnectionEvent(bool success)
     {
-        Debug.Log(success ? "Device connected" : "Device disconnected");
+        // Debug.Log(success ? "Device connected" : "Device disconnected");
+        ArduinoConnected = success;
     }
 }
