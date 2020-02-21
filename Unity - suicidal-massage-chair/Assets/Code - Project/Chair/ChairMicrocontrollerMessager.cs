@@ -1,15 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Framework;
 using UnityEngine;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
+using Event = Framework.Event;
 
 [ExecuteInEditMode]
 public class ChairMicrocontrollerMessager : SingletonMonoBehavior<ChairMicrocontrollerMessager>
 {
     [SerializeField] [ReadOnly] [ShowInInspector]
     private bool ArduinoConnected;
-    [SerializeField, TextArea, PropertyOrder(10)]
+    [SerializeField, PropertyOrder(10)] [TextArea(10,20)]
     private string MessagesReceived;
     private SerialController serialController;
 
@@ -19,9 +21,8 @@ public class ChairMicrocontrollerMessager : SingletonMonoBehavior<ChairMicrocont
         serialController = GetComponent<SerialController>();
     }
 
-    [PropertySpace]
-    [Button]
-    public void SendMessage(string message)
+    [PropertySpace,Button]
+    public void SendMessageToArduino(string message)
     {
         Debug.Log($"Sending to arduino: [{message}]");
         serialController.SendSerialMessage(message);
@@ -31,23 +32,43 @@ public class ChairMicrocontrollerMessager : SingletonMonoBehavior<ChairMicrocont
     void OnMessageArrived(string msg)
     {
         MessagesReceived = msg + "\n" + MessagesReceived;
-        switch (name)
-        {
-            case "object":
-                Debug.Log("staying alive: " + msg);
-                break;
-            default:
-                Debug.Log("no response: " + msg);
-                break;
-        }
+
+        Events.Instance.Raise(new ConsoleMessage($"Chair console: \n{MessagesReceived}"));
     }
 
-    // Invoked when a connect/disconnect event occurs. The parameter 'success'
-    // will be 'true' upon connection, and 'false' upon disconnection or
-    // failure to connect.
     void OnConnectionEvent(bool success)
     {
-        // Debug.Log(success ? "Device connected" : "Device disconnected");
         ArduinoConnected = success;
+    }
+
+    [Button]
+    public void ClearConsole()
+    {
+        MessagesReceived = "";
+
+        Events.Instance.Raise(new ConsoleMessage($"Chair console: \n{MessagesReceived}"));
+    }
+}
+
+public class ChairMessageParser
+{
+    public void ParseMessage(string msg)
+    {
+
+    }
+}
+
+public class UpdateChairState : Event
+{
+    public ChairMicroControllerState State;
+}
+
+public class ConsoleMessage : Event
+{
+    public string Text;
+
+    public ConsoleMessage(string msg)
+    {
+        Text = msg;
     }
 }

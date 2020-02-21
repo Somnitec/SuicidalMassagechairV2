@@ -30,7 +30,6 @@ public class NodeData
         functionsFinished = false;
         audioFinished = false;
 
-        // Play audioclip
         if (AudioClip == null)
         {
             Debug.LogWarning($"No audioClip on node");
@@ -42,8 +41,7 @@ public class NodeData
 
         yield return ExecuteFunctions(timeStarted);
 
-        // Wait for audioclip
-        while (!audioFinished)
+        while (!audioFinished || !functionsFinished)
             yield return null;
 
         OnFinished?.Invoke();
@@ -66,6 +64,8 @@ public class NodeData
             Debug.Log($"Node Function: {nodeScriptLine.Function?.GetType().FullName} at {timePassed}");
             nodeScriptLine.Function?.RaiseEvent();
         }
+
+        functionsFinished = true;
     }
 
     private static float TimePassed(float timeStarted)

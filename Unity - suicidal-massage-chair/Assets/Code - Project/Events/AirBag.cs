@@ -10,8 +10,6 @@ public class AirBag : NodeScriptFunction
 {
     public AirBagFlag AirBagsOn;
     public AirBagFlag AirBagsOff;
-    private string on = "on";
-    private string off = "off";
 
     public override List<string> Serialize()
     {
