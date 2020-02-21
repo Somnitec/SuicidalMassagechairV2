@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-using XNode.Examples.StateGraph;
 using XNodeEditor;
 
 
@@ -34,4 +33,4 @@ public class BaseNodeEditor : NodeEditor
         var graph = node.NodeGraph;
         if (GUILayout.Button("Set as current")) graph.SetNode(node);
     }
-}
+}  
