@@ -3,17 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "NodeScript/ChairPosition")]
 public class ChairPosition : NodeScriptFunction
 {
-    public float Duration;
-    public ChairPositionDirection Direction;
-}
+    [InfoBox("0 is up and 1 is down")][Range(0,1)]
+    public float NewPosition;
 
-public enum ChairPositionDirection
-{
-    Up,
-    Down
+    public override List<string> Serialize()
+    {
+        return ToList($"chair_estimated_position:{(10000f * NewPosition)}");
+    }
 }

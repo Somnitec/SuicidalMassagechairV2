@@ -5,7 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "NodeScript/ResetChair")]
 public class ResetChair : NodeScriptFunction
 {
+    public override List<string> Serialize()
+    {
+        return ToList("reset");
+    }
 }

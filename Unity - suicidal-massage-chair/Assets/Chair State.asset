@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c4015d35a6934e4796c2ad626c931a8, type: 3}
   m_Name: Chair State
   m_EditorClassIdentifier: 
-  chair_estimated_position: 1
+  chair_estimated_position: 0.633
   chair_up_on: 0
   chair_down_on: 0
   roller_kneading_on: 1

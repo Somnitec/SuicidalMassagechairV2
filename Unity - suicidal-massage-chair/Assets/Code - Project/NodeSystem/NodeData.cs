@@ -50,7 +50,7 @@ public class NodeData
             }
 
             Debug.Log($"Executing {nodeScriptLine.Function?.GetType().FullName} at {timePassed}");
-            nodeScriptLine.Function.RaiseEvent();
+            nodeScriptLine.Function?.RaiseEvent();
         }
     }
 
