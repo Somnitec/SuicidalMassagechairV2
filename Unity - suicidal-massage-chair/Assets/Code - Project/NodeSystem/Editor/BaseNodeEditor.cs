@@ -34,4 +34,4 @@ public class BaseNodeEditor : NodeEditor
         var graph = node.NodeGraph;
         if (GUILayout.Button("Set as current")) graph.SetNode(node);
     }
-}
+}  
