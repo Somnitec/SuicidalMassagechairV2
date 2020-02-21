@@ -15,6 +15,6 @@ public class ChairMicroControllerCommandButton : MonoBehaviour
 
     public void SendButtonToController()
     {
-        controller.SendCommand(Command);
+        //controller.SendCommand(Command);
     }
 }

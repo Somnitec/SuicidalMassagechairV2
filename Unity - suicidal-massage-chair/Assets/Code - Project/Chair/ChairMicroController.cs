@@ -33,20 +33,4 @@ public class ChairMicroController : MonoBehaviour
         Reset
         // TODO
     }
-
-    // Todo rethink this in relation to arguments
-    // Possibly event pattern?
-    public void SendCommand(Commands command)
-    {
-        Debug.Log("The " + command.ToString() + " has been send");
-        // switch (command)
-        // {
-        //     case Commands.Reset:
-        //         ChairEvents.Instance.Raise(new ChairReset());
-        //         break;
-        //     default:
-        //         Debug.LogWarning(command.ToString() + " has no implementation yet");
-        //         break;
-        // }
-    }
 }

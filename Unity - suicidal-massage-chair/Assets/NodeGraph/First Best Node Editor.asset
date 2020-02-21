@@ -246,14 +246,40 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 8300000, guid: f308a0d1413c7574a9936fe29d003231, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
     - Name: Data
+      Entry: 7
+      Data: 0|NodeData, Assembly-CSharp
+    - Name: AudioClip
+      Entry: 10
+      Data: 0
+    - Name: Text
       Entry: 6
+      Data: 
+    - Name: Functions
+      Entry: 7
+      Data: 1|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: OnFinished
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
       Data: 
   Buttons: 
 --- !u!114 &-2429869686831015530
@@ -552,10 +578,10 @@ MonoBehaviour:
       Data: 2|AirBag, Assembly-CSharp
     - Name: AirBagsOn
       Entry: 3
-      Data: 0
+      Data: 15
     - Name: AirBagsOff
       Entry: 3
-      Data: 0
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -573,7 +599,7 @@ MonoBehaviour:
       Data: 3|AirPump, Assembly-CSharp
     - Name: AirPumpOn
       Entry: 5
-      Data: false
+      Data: true
     - Name: 
       Entry: 8
       Data: 
@@ -594,7 +620,7 @@ MonoBehaviour:
       Data: UnityEngine.Color, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: 0
+      Data: 1
     - Name: 
       Entry: 4
       Data: 0
@@ -603,7 +629,7 @@ MonoBehaviour:
       Data: 0
     - Name: 
       Entry: 4
-      Data: 0
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -624,7 +650,7 @@ MonoBehaviour:
       Data: 5|BacklightOn, Assembly-CSharp
     - Name: On
       Entry: 5
-      Data: false
+      Data: true
     - Name: 
       Entry: 8
       Data: 
@@ -660,7 +686,7 @@ MonoBehaviour:
       Data: 7|ChairPosition, Assembly-CSharp
     - Name: NewPosition
       Entry: 4
-      Data: 0
+      Data: 0.4
     - Name: 
       Entry: 8
       Data: 
@@ -777,7 +803,7 @@ MonoBehaviour:
       Data: 14|RollerKneadingSpeed, Assembly-CSharp
     - Name: Speed
       Entry: 4
-      Data: 0
+      Data: 0.48
     - Name: 
       Entry: 8
       Data: 
@@ -795,7 +821,7 @@ MonoBehaviour:
       Data: 15|RollerPosition, Assembly-CSharp
     - Name: NewPosition
       Entry: 4
-      Data: 0
+      Data: 0.45
     - Name: 
       Entry: 8
       Data: 
@@ -831,7 +857,7 @@ MonoBehaviour:
       Data: 17|RollerPoundingSpeed, Assembly-CSharp
     - Name: Speed
       Entry: 4
-      Data: 0
+      Data: 0.56
     - Name: 
       Entry: 8
       Data: 

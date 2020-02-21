@@ -9,7 +9,7 @@ using UnityEngine;
 public class NodeData
 {
     // add Language?
-    [HideLabel]
+    [HideLabel][AssetsOnly]
     public AudioClip AudioClip;
     [TextArea, PropertySpace(0, 10f)]
     public string Text;
@@ -45,11 +45,11 @@ public class NodeData
             if (timePassed - nodeScriptLine.TimeInSec < 0)
             {
                 var waitTime = nodeScriptLine.TimeInSec - timePassed;
-                Debug.Log($"Starting wait of {waitTime} timePassed {timePassed}");
+                // Debug.Log($"Starting wait of {waitTime} timePassed {timePassed}");
                 yield return new WaitForSeconds(waitTime);
             }
 
-            Debug.Log($"Executing {nodeScriptLine.Function?.GetType().FullName} at {timePassed}");
+            Debug.Log($"Node Function: {nodeScriptLine.Function?.GetType().FullName} at {timePassed}");
             nodeScriptLine.Function?.RaiseEvent();
         }
     }
