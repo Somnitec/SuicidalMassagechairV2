@@ -18,7 +18,9 @@ public class UserInterfaceMicroControllerCommandsButtonSetup : MonoBehaviour
     {
         controller = FindObjectOfType<UserInterfaceMicroController>();
     }
+
 #if UNITY_EDITOR
+
     [Button]
     public void SetupButtons()
     {
@@ -49,7 +51,9 @@ public class UserInterfaceMicroControllerCommandsButtonSetup : MonoBehaviour
             textMeshPro.text = buttonValue.ToString();
         }
     }
+
 #endif
+
     [Button]
     public void DeleteButtons()
     {

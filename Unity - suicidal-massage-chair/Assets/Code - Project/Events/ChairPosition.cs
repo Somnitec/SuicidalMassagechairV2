@@ -10,6 +10,12 @@ public class ChairPosition : NodeScriptFunction
 {
     [InfoBox("0 is up and 1 is down")][Range(0,1)]
     public float NewPosition;
+    
+
+    public ChairPosition(float newPosition)
+    {
+        this.NewPosition = newPosition;
+    }
 
     public override List<string> SerializeToJson()
     {
