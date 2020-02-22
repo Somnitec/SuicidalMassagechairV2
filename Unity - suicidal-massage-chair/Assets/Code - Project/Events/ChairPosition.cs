@@ -13,6 +13,6 @@ public class ChairPosition : NodeScriptFunction
 
     public override List<string> Serialize()
     {
-        return ToList($"chair_estimated_position:{(10000f * NewPosition)}");
+        return ToList($"chair_position_estimated:{(10000f * NewPosition)}");
     }
 }
