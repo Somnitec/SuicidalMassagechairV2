@@ -32,6 +32,6 @@ public class BaseNodeEditor : NodeEditor
         base.OnBodyGUI();
         BaseNode node = target as BaseNode;
         var graph = node.NodeGraph;
-        if (GUILayout.Button("Set as current")) graph.SetNode(node);
+        if (GUILayout.Button("Set as current")) graph.SetCurrentNodeTo(node);
     }
 }  
