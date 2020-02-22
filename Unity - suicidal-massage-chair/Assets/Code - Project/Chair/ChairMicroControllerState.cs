@@ -1,12 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 [System.Serializable]
 [CreateAssetMenu]
-public class ChairMicroControllerState : ScriptableObject
+public class ChairMicroControllerState : SerializedScriptableObject
 {
+    [Header("Settings")]
+    public int MaxEstimatedPosition;
     public const int MaxSpeed = 1;
+
+    [Header("State Values")]
 
     [Range(0, 1)]
     public float chair_estimated_position;
@@ -29,7 +34,6 @@ public class ChairMicroControllerState : ScriptableObject
     [Range(0, 1)]
     public float roller_position;
     [Header("Feet Roller")]
-    //public bool feet_roller;
     public bool feet_roller_on;
     [Range(0, MaxSpeed)]
     public float feet_roller_speed;

@@ -11,8 +11,10 @@ public class ChairMicrocontrollerMessager : SingletonMonoBehavior<ChairMicrocont
 {
     [SerializeField] [ReadOnly] [ShowInInspector]
     private bool ArduinoConnected;
-    [SerializeField, PropertyOrder(10)] [TextArea(10,20)]
+
+    [SerializeField, PropertyOrder(10)] [TextArea(10, 20)]
     private string MessagesReceived;
+
     private SerialController serialController;
 
     // Use this for initialization
@@ -21,7 +23,7 @@ public class ChairMicrocontrollerMessager : SingletonMonoBehavior<ChairMicrocont
         serialController = GetComponent<SerialController>();
     }
 
-    [PropertySpace,Button]
+    [PropertySpace, Button]
     public void SendMessageToArduino(string message)
     {
         Debug.Log($"Sending to arduino: [{message}]");
@@ -36,7 +38,8 @@ public class ChairMicrocontrollerMessager : SingletonMonoBehavior<ChairMicrocont
         UpdateConsoleMessage();
 
         RawChairStatus status = ChairMessageParser.ParseMessage(msg);
-        
+
+        Debug.Log(status.ackTime);
     }
 
     void OnConnectionEvent(bool success)
@@ -65,47 +68,63 @@ public static class ChairMessageParser
         return JsonUtility.FromJson<RawChairStatus>(msg);
     }
 
-    // public static Chair
+    public static ChairMicroControllerState UpdateChairState(RawChairStatus raw)
+    {
+        var state = new ChairMicroControllerState();
+
+        // state.chair_estimated_position = (float) raw.chair_estimated_position / (float) state.MaxEstimatedPosition;
+        // Color c;
+        // c.
+
+        return state;
+    }
 }
 
-public class RawChairStatus
+public class RawChairStatus : SerializedScriptableObject
 {
-    // public float ChairPosition => chair_estimated_position / 10000;
-    public int blinkTime=2000;
-    public int chair_estimated_position=4000;
-    public int chair_position=0;
-    public int chair_position_move_time_max=0;
-    public int chair_position_move_time_up=0;
-    public int chair_position_move_time_down=0;
-    public int roller_kneading_on=1;
-    public int roller_kneading_speed=122;
-    public int roller_pounding_on=0;
-    public int roller_pounding_speed=142;
-    public int roller_up_on=0;
-    public int roller_down_on=0;
-    public int roller_sensor_top=1;
-    public int roller_sensor_bottom=1;
-    public int roller_time_up=0;
-    public int roller_time_down=0;
-    public int roller_estimated_position=0;
-    public int feet_roller_on=0;
-    public int feet_roller_speed=255;
-    public int airpump_on=0;
-    public int airbag_shoulders_on=0;
-    public int airbag_arms_on=0;
-    public int airbag_legs_on=0;
-    public int airbag_outside_on=0;
-    public int airbag_time_max=0;
-    public int butt_vibration_on=1;
-    public int backlight_on=0;
-    public int backlight_color=0;
+    // 0 ... 255
+    // -1 ... 1
+    // 0 ... 10,000
+    // Settings
+    public int maxStringLength = 64;
+    public uint time_since_started = 0;
+    public int ackTime = 14;
+
+    public int blinkTime = 2000;
+    public int chair_position_estimated = 4000; // 0..1
+    public int chair_position_target = 4000; // 0..1
+    public int chair_position_motor_direction = 0; // enum {up,neutral,down}
+    public int chair_position_move_time_max = 0; // convert ms to sec
+    public int chair_position_move_time_up = 0; // convert ms to sec
+    public int chair_position_move_time_down = 0; // convert ms to sec
+    public int roller_kneading_on = 1;
+    public int roller_kneading_speed = 122; // 0..1
+    public int roller_pounding_on = 0;
+    public int roller_pounding_speed = 142; // 0..1
+    public int roller_sensor_top = 1;
+    public int roller_sensor_bottom = 1;
+    public int roller_time_up = 0; // convert ms to sec
+    public int roller_time_down = 0; // convert ms to sec
+    public int roller_position_estimated = 0;// 0..1
+    public int roller_position_target = 0;// 0..1
+    public int roller_position_motor_direction = 0;// enum {up,neutral,down}
+    public int feet_roller_on = 0;
+    public int feet_roller_speed = 255;
+    public int airpump_on = 0;
+    public int airbag_shoulders_on = 0;
+    public int airbag_arms_on = 0;
+    public int airbag_legs_on = 0;
+    public int airbag_outside_on = 0;
+    public int airbag_time_max = 0; // convert ms to sec
+    public int butt_vibration_on = 1;
+    public int backlight_on = 0;
+
+    public int[] backlight_color; // convert to [0..255,g,b] to Color
+
     // public int[] backlight_LED= new []{0,0};
     // public int[] blacklight_program=new []{0,1,2,3};
-    public int redgreen_statuslight=0;
-    public int button_bounce_time=0;
-    public int time_since_started=0;
-    public int maxStringLength=64;
-    public int ackTime=14;
+    public int redgreen_statuslight = 0; // 0 red , 1 green
+    public int button_bounce_time = 0; // convert ms to sec
 }
 
 public class UpdateChairState : Event

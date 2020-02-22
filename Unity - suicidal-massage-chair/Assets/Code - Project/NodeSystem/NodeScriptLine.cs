@@ -31,6 +31,12 @@ public abstract class NodeScriptFunction
 
     public abstract List<string> Serialize();
 
+    [Button]
+    public string ToJson(string param, int value)
+    {
+        string json = $"{{\n\t\"{param}\":{value}\n}}";
+        return json;
+    }
 
     public string SerializeToString()
     {
