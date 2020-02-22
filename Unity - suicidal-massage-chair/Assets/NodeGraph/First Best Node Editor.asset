@@ -246,8 +246,7 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects:
-    - {fileID: 8300000, guid: f308a0d1413c7574a9936fe29d003231, type: 3}
+    ReferencedUnityObjects: []
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -257,8 +256,8 @@ MonoBehaviour:
       Entry: 7
       Data: 0|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 10
-      Data: 0
+      Entry: 6
+      Data: 
     - Name: Text
       Entry: 6
       Data: 

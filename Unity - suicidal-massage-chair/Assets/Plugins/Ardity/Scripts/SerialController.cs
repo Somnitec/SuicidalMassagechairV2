@@ -35,7 +35,7 @@ public class SerialController : MonoBehaviour
 
     [Tooltip("Reference to an scene object that will receive the events of connection, " +
              "disconnection and the messages from the serial device.")]
-    public GameObject messageListener;
+    public MessageListener messageListener;
 
     [Tooltip("After an error in the serial communication, or an unsuccessful " +
              "connect, how many milliseconds we should wait.")]
@@ -122,11 +122,11 @@ public class SerialController : MonoBehaviour
 
         // Check if the message is plain data or a connect/disconnect event.
         if (ReferenceEquals(message, SERIAL_DEVICE_CONNECTED))
-            messageListener.SendMessage("OnConnectionEvent", true);
+            messageListener.ConnectionEventFromArduino(true);
         else if (ReferenceEquals(message, SERIAL_DEVICE_DISCONNECTED))
-            messageListener.SendMessage("OnConnectionEvent", false);
+            messageListener.ConnectionEventFromArduino(false);
         else
-            messageListener.SendMessage("OnMessageArrived", message);
+            messageListener.MessageFromArduino(message);
     }
 
     // ------------------------------------------------------------------------
