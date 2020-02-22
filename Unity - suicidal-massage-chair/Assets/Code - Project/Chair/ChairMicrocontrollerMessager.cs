@@ -7,62 +7,12 @@ using Sirenix.Serialization;
 using Event = Framework.Event;
 
 [ExecuteInEditMode]
-public class ChairMicrocontrollerMessager : MessageListener
+public class ChairMicrocontrollerMessager : Messager
 {
-    [SerializeField] [ReadOnly] [ShowInInspector]
-    private bool ArduinoConnected;
-
-    [SerializeField, PropertyOrder(10)] [TextArea(10, 20)]
-    private string MessagesReceived;
-
-    private SerialController serialController;
-
-    // Use this for initialization
-    void Start()
+    protected override void OnMessageReceived(string message)
     {
-        serialController = GetComponent<SerialController>();
-    }
-
-    public override void ConnectionEventFromArduino(bool success)
-    {
-        ArduinoConnected = success;
-    }
-    [PropertySpace]
-    [Button]
-    public override void MessageFromArduino(string message)
-    {
-        MessagesReceived = message + "\n" + MessagesReceived;
-
-        UpdateConsoleMessage();
-
         RawChairStatus status = ChairMessageParser.ParseMessage(message);
         Events.Instance.Raise(new ChairStateUpdate(status));
-    }
-
-    [Button]
-    public override void SendMessageToArduino(string message)
-    {
-        Debug.Log($"Sending to arduino: [{message}]");
-        serialController.SendSerialMessage(message);
-    }
-
-    [Button]
-    public void SendMessageToArduino(string param, int value)
-    {
-        serialController.SendSerialMessage(MessageHelper.ToJson(param, value));
-    }
-
-    [Button]
-    public void ClearConsole()
-    {
-        MessagesReceived = "";
-
-        UpdateConsoleMessage();
-    }
-
-    private void UpdateConsoleMessage()
-    {
-        Events.Instance.Raise(new ConsoleMessage($"Chair console: \n{MessagesReceived}"));
     }
 }
 
@@ -73,15 +23,5 @@ public class ChairStateUpdate : Event
     public ChairStateUpdate(RawChairStatus state)
     {
         this.state = state;
-    }
-}
-
-public class ConsoleMessage : Event
-{
-    public string Text;
-
-    public ConsoleMessage(string msg)
-    {
-        Text = msg;
     }
 }

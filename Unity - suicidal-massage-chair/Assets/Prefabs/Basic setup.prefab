@@ -438,8 +438,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ArduinoConnected: 1
-  MessagesReceived: "{\n\t\"time_since_started\":144160564,\n\t\"last_command\":\"blinkTime\",\n\t\"serial_error\":\"\",\n\t\"blinkTime\":100,\n\t\"chair_position_estimated\":4000,\n\t\"chair_position_target\":0,\n\t\"chair_position_motor_direction\":0,\n\t\"chair_position_move_time_max\":0,\n\t\"chair_position_move_time_up\":0,\n\t\"chair_position_move_time_down\":0,\n\t\"roller_kneading_on\":0,\n\t\"roller_kneading_speed\":122,\n\t\"roller_pounding_on\":1,\n\t\"roller_pounding_speed\":142,\n\t\"roller_position_estimated\":0,\n\t\"roller_position_target\":0,\n\t\"roller_position_motor_direction\":0,\n\t\"roller_sensor_top\":1,\n\t\"roller_sensor_bottom\":1,\n\t\"roller_move_time_up\":0,\n\t\"roller_move_time_down\":0,\n\t\"roller_estimated_position\":4499,\n\t\"feet_roller_on\":1,\n\t\"feet_roller_speed\":102,\n\t\"airpump_on\":1,\n\t\"airbag_shoulders_on\":0,\n\t\"airbag_arms_on\":1,\n\t\"airbag_legs_on\":1,\n\t\"airbag_outside_on\":1,\n\t\"airbag_time_max\":0,\n\t\"butt_vibration_on\":1,\n\t\"backlight_on\":1,\n\t\"backlight_color\":[255,0,0],\n\t\"backlight_LED\":[0,0],\n\t\"blacklight_program\":[0,1,2,3],\n\t\"redgreen_statuslight\":0,\n\t\"button_bounce_time\":0,\n\t\"maxStringLength\":64,\n\t\"ackTime\":20\n}\n{\n\t\"time_since_started\":143484664,\n\t\"last_command\":\"blinkTime\",\n\t\"serial_error\":\"\",\n\t\"blinkTime\":100,\n\t\"chair_position_estimated\":4000,\n\t\"chair_position_target\":0,\n\t\"chair_position_motor_direction\":0,\n\t\"chair_position_move_time_max\":0,\n\t\"chair_position_move_time_up\":0,\n\t\"chair_position_move_time_down\":0,\n\t\"roller_kneading_on\":0,\n\t\"roller_kneading_speed\":122,\n\t\"roller_pounding_on\":1,\n\t\"roller_pounding_speed\":142,\n\t\"roller_position_estimated\":0,\n\t\"roller_position_target\":0,\n\t\"roller_position_motor_direction\":0,\n\t\"roller_sensor_top\":1,\n\t\"roller_sensor_bottom\":1,\n\t\"roller_move_time_up\":0,\n\t\"roller_move_time_down\":0,\n\t\"roller_estimated_position\":4499,\n\t\"feet_roller_on\":1,\n\t\"feet_roller_speed\":102,\n\t\"airpump_on\":1,\n\t\"airbag_shoulders_on\":0,\n\t\"airbag_arms_on\":1,\n\t\"airbag_legs_on\":1,\n\t\"airbag_outside_on\":1,\n\t\"airbag_time_max\":0,\n\t\"butt_vibration_on\":0,\n\t\"backlight_on\":1,\n\t\"backlight_color\":[255,0,0],\n\t\"backlight_LED\":[0,0],\n\t\"blacklight_program\":[0,1,2,3],\n\t\"redgreen_statuslight\":0,\n\t\"button_bounce_time\":0,\n\t\"maxStringLength\":64,\n\t\"ackTime\":22\n}\nno
-    useful message, sorry: {\n\t\"test\":[0]\n}\nno useful message, sorry: {\n\t\"test\":[0]\n}\n"
+  MessagesReceived: 
+--- !u!114 &1246545735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 363985665846085363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46aa72bca39cf6c428aa59279f3d2c27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Messager: {fileID: 239551547539229431}
+  Param: blinkTime
+  Value: -1
+  RefreshTime: 0.1
 --- !u!1 &2546377362335576663
 GameObject:
   m_ObjectHideFlags: 0
@@ -740,6 +755,10 @@ PrefabInstance:
       propertyPath: maxUnreadMessages
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 11442534, guid: a65acf0cbf56b80419f74ebf0bc845f4, type: 3}
+      propertyPath: Messager
+      value: 
+      objectReference: {fileID: 239551547539229431}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a65acf0cbf56b80419f74ebf0bc845f4, type: 3}
 --- !u!1 &363985665846085363 stripped

@@ -35,7 +35,7 @@ public class SerialController : MonoBehaviour
 
     [Tooltip("Reference to an scene object that will receive the events of connection, " +
              "disconnection and the messages from the serial device.")]
-    public MessageListener messageListener;
+    public MessageListener Messager;
 
     [Tooltip("After an error in the serial communication, or an unsuccessful " +
              "connect, how many milliseconds we should wait.")]
@@ -98,7 +98,7 @@ public class SerialController : MonoBehaviour
             thread.Join();
             thread = null;
         }
-        messageListener.ConnectionEventFromArduino(false);
+        Messager.ConnectionEventFromArduino(false);
     }
 
     // ------------------------------------------------------------------------
@@ -111,7 +111,7 @@ public class SerialController : MonoBehaviour
     {
         // If the user prefers to poll the messages instead of receiving them
         // via SendMessage, then the message listener should be null.
-        if (messageListener == null)
+        if (Messager == null)
             return;
 
         // Read the next message from the queue
@@ -121,16 +121,16 @@ public class SerialController : MonoBehaviour
         {
             // Check if the message is plain data or a connect/disconnect event.
             if (ReferenceEquals(message, SERIAL_DEVICE_CONNECTED))
-                messageListener.ConnectionEventFromArduino(true);
+                Messager.ConnectionEventFromArduino(true);
             else if (ReferenceEquals(message, SERIAL_DEVICE_DISCONNECTED))
-                messageListener.ConnectionEventFromArduino(false);
+                Messager.ConnectionEventFromArduino(false);
             else
-                messageListener.MessageFromArduino(message);
+                Messager.MessageFromArduino(message);
 
             message = (string)serialThread.ReadMessage();
             messages++;
         }
-       if(messages>0)Debug.Log($"Serial Controller processed {messages} message(s)");
+       // if(messages>0)Debug.Log($"Serial Controller processed {messages} message(s)");
     }
 
     // ------------------------------------------------------------------------
