@@ -2,10 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
-using UnityEditor.Events;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+#if UNITY_EDITOR
+using UnityEditor.Events;
+#endif
 
 public class UserInterfaceMicroControllerCommandsButtonSetup : MonoBehaviour
 {
@@ -16,7 +18,7 @@ public class UserInterfaceMicroControllerCommandsButtonSetup : MonoBehaviour
     {
         controller = FindObjectOfType<UserInterfaceMicroController>();
     }
-
+#if UNITY_EDITOR
     [Button]
     public void SetupButtons()
     {
@@ -47,7 +49,7 @@ public class UserInterfaceMicroControllerCommandsButtonSetup : MonoBehaviour
             textMeshPro.text = buttonValue.ToString();
         }
     }
-
+#endif
     [Button]
     public void DeleteButtons()
     {

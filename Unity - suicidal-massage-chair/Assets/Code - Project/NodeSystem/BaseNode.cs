@@ -18,8 +18,6 @@ public class BaseNode : SerializableNode
     public virtual void OnNodeEnable() { }
     public virtual void OnNodeDisable() { }
 
-  
-
     [ContextMenu("Set Current")]
     public void SetCurrent()
     {

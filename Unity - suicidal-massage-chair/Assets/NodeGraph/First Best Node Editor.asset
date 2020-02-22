@@ -191,7 +191,7 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  Color: {r: 0.357, g: 0.333, b: 0.278, a: 1}
 --- !u!114 &-4439052937896924749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1080,7 +1080,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  Color: {r: 0.50492215, g: 1, b: 0, a: 1}
+  Color: {r: 1, g: 0.5920364, b: 0.023584902, a: 1}
   Buttons: 0000000001000000
 --- !u!114 &7308101778485953021
 MonoBehaviour:
