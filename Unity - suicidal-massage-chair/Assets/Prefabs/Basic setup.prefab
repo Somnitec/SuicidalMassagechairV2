@@ -195,7 +195,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0.9489746, z: 1.552002, w: 1.3820343}
+  m_margin: {x: 15.498535, y: 13.347763, z: 17.050476, w: 14.814087}
   m_textInfo:
     textComponent: {fileID: 1767910962}
     characterCount: 8
@@ -438,18 +438,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ArduinoConnected: 1
-  MessagesReceived: 'no useful message, sorry
-
-    no useful message, sorry
-
-    no
-    useful message, sorry
-
-    no useful message, sorry
-
-    no useful message, sorry
-
-'
+  MessagesReceived: 
 --- !u!1 &2546377362335576663
 GameObject:
   m_ObjectHideFlags: 0
@@ -511,7 +500,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 4c2de647b79e76e448caea5d228b1856, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -737,10 +726,14 @@ PrefabInstance:
     - target: {fileID: 11442534, guid: a65acf0cbf56b80419f74ebf0bc845f4, type: 3}
       propertyPath: messageListener
       value: 
-      objectReference: {fileID: 363985665846085363}
+      objectReference: {fileID: 239551547539229431}
     - target: {fileID: 11442534, guid: a65acf0cbf56b80419f74ebf0bc845f4, type: 3}
       propertyPath: portName
       value: COM6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442534, guid: a65acf0cbf56b80419f74ebf0bc845f4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a65acf0cbf56b80419f74ebf0bc845f4, type: 3}
@@ -1026,17 +1019,17 @@ PrefabInstance:
     - target: {fileID: 4881339138565168766, guid: b2e8bfb65341f454796189775d554c31,
         type: 3}
       propertyPath: m_Color.g
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4881339138565168766, guid: b2e8bfb65341f454796189775d554c31,
         type: 3}
       propertyPath: m_Color.b
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4881339138565168766, guid: b2e8bfb65341f454796189775d554c31,
         type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4881339138773641997, guid: b2e8bfb65341f454796189775d554c31,
         type: 3}
@@ -1071,12 +1064,12 @@ PrefabInstance:
     - target: {fileID: 4881339139128858770, guid: b2e8bfb65341f454796189775d554c31,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4881339139131443670, guid: b2e8bfb65341f454796189775d554c31,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4881339139142413542, guid: b2e8bfb65341f454796189775d554c31,
         type: 3}
@@ -1197,7 +1190,7 @@ PrefabInstance:
         type: 3}
       propertyPath: data
       value: 
-      objectReference: {fileID: 11400000, guid: 2b0110cd53159fb4394c799a99beb3a5,
+      objectReference: {fileID: 11400000, guid: 1d31045ae3e113845895ddf3d8fb01d8,
         type: 2}
     - target: {fileID: 4881339139385958971, guid: b2e8bfb65341f454796189775d554c31,
         type: 3}
@@ -1227,7 +1220,7 @@ PrefabInstance:
     - target: {fileID: 4881339139694951473, guid: b2e8bfb65341f454796189775d554c31,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4881339139718945623, guid: b2e8bfb65341f454796189775d554c31,
         type: 3}
@@ -1287,7 +1280,7 @@ PrefabInstance:
     - target: {fileID: 4881339140043892590, guid: b2e8bfb65341f454796189775d554c31,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 30
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 4881339140045759051, guid: b2e8bfb65341f454796189775d554c31,
         type: 3}

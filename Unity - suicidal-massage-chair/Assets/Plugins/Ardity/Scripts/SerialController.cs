@@ -98,8 +98,7 @@ public class SerialController : MonoBehaviour
             thread.Join();
             thread = null;
         }
-
-        messageListener.SendMessage("OnConnectionEvent", false);
+        messageListener.ConnectionEventFromArduino(false);
     }
 
     // ------------------------------------------------------------------------
@@ -110,7 +109,7 @@ public class SerialController : MonoBehaviour
     // ------------------------------------------------------------------------
     void Update()
     {
-            // If the user prefers to poll the messages instead of receiving them
+        // If the user prefers to poll the messages instead of receiving them
         // via SendMessage, then the message listener should be null.
         if (messageListener == null)
             return;
