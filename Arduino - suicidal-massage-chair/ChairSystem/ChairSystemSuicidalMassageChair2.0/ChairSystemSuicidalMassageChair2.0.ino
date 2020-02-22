@@ -164,6 +164,8 @@ void loop()
 
 void receiveMessage( String message) {
   message.trim();
+
+
   if (checkForParameters(message, F("blinkTime"), 1)) {
     blinkTime =  getValue(message);
   }
@@ -257,7 +259,7 @@ void receiveMessage( String message) {
     backlight_on = getValue(message);
   }
   else if (checkForParameters(message, F("backlight_color"), 1)) {
-    backlight_color=getValue(message);
+    backlight_color = getValue(message);
   }
   else if (checkForParameters(message, F("backlight_LED"), 2)) {
     backlight_LED[0] = getValue(message);
@@ -276,17 +278,18 @@ void receiveMessage( String message) {
     button_bounce_time =  getValue(message);
   }
 
-  else if (checkForParameters(message, F("time_since_started"), 1)) {
+  else if (checkForParameters(message, F("time_since_started"), 0)) {
     //cannot be set, so this simply send an ack
   }
 
-  else return incorrectMessage();
+  else return incorrectMessage(message);
 
   sendAck();
 }
 
-void incorrectMessage() {
-  Serial.println(F("no useful message, sorry"));
+void incorrectMessage(String mssg) {
+  Serial.print(F("no useful message, sorry: "));
+  Serial.println(mssg);
 
 }
 int getValue(String mssg) {
@@ -304,68 +307,71 @@ bool checkForParameters(String mssg, String command, int amount) { //later expan
 
 void sendAck() {
   unsigned long timeCheck = millis();
-  //maybe make a function to test how long this took
-  Serial.print(F("blinkTime:"));
+  //JSONify
+  Serial.print(F("{"));
+  Serial.print(F("\n\t\"time_since_started\":"));
+  Serial.print(millis());
+  Serial.print(F(",\n\t\"blinkTime\":"));
   Serial.print(blinkTime);
-  Serial.print(F(";chair_estimated_position:"));
+  Serial.print(F(",\n\t\"chair_estimated_position\":"));
   Serial.print(chair_estimated_position);
-  Serial.print(F(";chair_position:"));
+  Serial.print(F(",\n\t\"chair_position\":"));
   Serial.print(chair_position_motor);
-  Serial.print(F(";chair_position_move_time_max:"));
+  Serial.print(F(",\n\t\"chair_position_move_time_max\":"));
   Serial.print(chair_position_move_time_max);
-  Serial.print(F(";chair_position_move_time_up:"));
+  Serial.print(F(",\n\t\"chair_position_move_time_up\":"));
   Serial.print(chair_position_move_time_up);
-  Serial.print(F(";chair_position_move_time_down:"));
+  Serial.print(F(",\n\t\"chair_position_move_time_down\":"));
   Serial.print(chair_position_move_time_down);
-  Serial.print(F(";roller_kneading_on:"));
+  Serial.print(F(",\n\t\"roller_kneading_on\":"));
   Serial.print(roller_kneading_on);
-  Serial.print(F(";roller_kneading_speed:"));
+  Serial.print(F(",\n\t\"roller_kneading_speed\":"));
   Serial.print(roller_kneading_speed);
-  Serial.print(F(";roller_pounding_on:"));
+  Serial.print(F(",\n\t\"roller_pounding_on\":"));
   Serial.print(roller_pounding_on);
-  Serial.print(F(";roller_pounding_speed:"));
+  Serial.print(F(",\n\t\"roller_pounding_speed\":"));
   Serial.print(roller_pounding_speed);
-  Serial.print(F(";roller_up_on:"));
+  Serial.print(F(",\n\t\"roller_up_on\":"));
   Serial.print(digitalRead(mssgup));
-  Serial.print(F(";roller_down_on:"));
+  Serial.print(F(",\n\t\"roller_down_on\":"));
   Serial.print(digitalRead(mssgdown));
-  Serial.print(F(";roller_sensor_top:"));
+  Serial.print(F(",\n\t\"roller_sensor_top\":"));
   Serial.print(roller_sensor_top.read());
-  Serial.print(F(";roller_sensor_bottom:"));
+  Serial.print(F(",\n\t\"roller_sensor_bottom\":"));
   Serial.print(roller_sensor_bottom.read());
-  Serial.print(F(";roller_time_up:"));
+  Serial.print(F(",\n\t\"roller_time_up\":"));
   Serial.print(roller_time_up);
-  Serial.print(F(";roller_time_down:"));
+  Serial.print(F(",\n\t\"roller_time_down\":"));
   Serial.print(roller_time_down);
-  Serial.print(F(";roller_estimated_position:"));
+  Serial.print(F(",\n\t\"roller_estimated_position\":"));
   Serial.print(roller_estimated_position);
-  Serial.print(F(";feet_roller_on:"));
+  Serial.print(F(",\n\t\"feet_roller_on\":"));
   Serial.print(feet_roller_on);
-  Serial.print(F(";feet_roller_speed:"));
+  Serial.print(F(",\n\t\"feet_roller_speed\":"));
   Serial.print(feet_roller_speed);
-  Serial.print(F(";airpump_on:"));
+  Serial.print(F(",\n\t\"airpump_on\":"));
   Serial.print(digitalRead(pump));
-  Serial.print(F(";airbag_shoulders_on:"));
+  Serial.print(F(",\n\t\"airbag_shoulders_on\":"));
   Serial.print(digitalRead(shoulders));
-  Serial.print(F(";airbag_arms_on:"));
+  Serial.print(F(",\n\t\"airbag_arms_on\":"));
   Serial.print(digitalRead(arms));
-  Serial.print(F(";airbag_legs_on:"));
+  Serial.print(F(",\n\t\"airbag_legs_on\":"));
   Serial.print(digitalRead(legs));
-  Serial.print(F(";airbag_outside_on:"));
+  Serial.print(F(",\n\t\"airbag_outside_on\":"));
   Serial.print(digitalRead(outside));
-  Serial.print(F(";airbag_time_max:"));
+  Serial.print(F(",\n\t\"airbag_time_max\":"));
   Serial.print(airbag_time_max);
-  Serial.print(F(";butt_vibration_on:"));
+  Serial.print(F(",\n\t\"butt_vibration_on\":"));
   Serial.print(digitalRead(vibration));
-  Serial.print(F(";backlight_on:"));
+  Serial.print(F(",\n\t\"backlight_on\":"));
   Serial.print(backlight_on);
-  Serial.print(F(";backlight_color:"));
+  Serial.print(F(",\n\t\"backlight_color\":"));
   Serial.print(backlight_color);
-  Serial.print(F(";backlight_LED:"));
+  Serial.print(F(",\n\t\"backlight_LED\":["));
   Serial.print(backlight_LED[0]);
   Serial.print(",");
   Serial.print(backlight_LED[1]);
-  Serial.print(F(";blacklight_program:"));
+  Serial.print(F("],\n\t\"blacklight_program\":["));
   Serial.print(blacklight_program[0]);
   Serial.print(",");
   Serial.print(blacklight_program[1]);
@@ -373,18 +379,15 @@ void sendAck() {
   Serial.print(blacklight_program[2]);
   Serial.print(",");
   Serial.print(blacklight_program[3]);
-  Serial.print(F(";redgreen_statuslight:"));
+  Serial.print(F("],\n\t\"redgreen_statuslight\":"));
   Serial.print(redgreen_statuslight);
-  Serial.print(F(";button_bounce_time:"));
+  Serial.print(F(",\n\t\"button_bounce_time\":"));
   Serial.print(button_bounce_time);
-  Serial.print(F(";time_since_started:"));
-  Serial.print(time_since_started);
-  Serial.print(F(";maxStringLength:"));
+  Serial.print(F(",\n\t\"maxStringLength\":"));
   Serial.print(maxStringLength);
-  Serial.print(F(";ackTime:"));
+  Serial.print(F(",\n\t\"ackTime\":"));
   Serial.print(millis() - timeCheck);
-  Serial.print(F(";"));
-  Serial.println();
+  Serial.println(F("\n}"));
 }
 
 void calibrationRoutine() {
