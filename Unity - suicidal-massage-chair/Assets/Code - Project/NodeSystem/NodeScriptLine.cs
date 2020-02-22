@@ -33,9 +33,7 @@ public abstract class NodeScriptFunction
 
     public string ToJson(string param, params int[] values)
     {
-        string flatValues = String.Join(",", values);
-        string json = $"{{\n\t\"{param}\":[{flatValues}]\n}}";
-        return json;
+        return MessageHelper.ToJson(param, values);
     }
 
     public string SerializeToString()

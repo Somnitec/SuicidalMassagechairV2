@@ -43,7 +43,7 @@ public class SerialController : MonoBehaviour
 
     [Tooltip("Maximum number of unread data messages in the queue. " +
              "New messages will be discarded.")]
-    public int maxUnreadMessages = 1;
+    public int maxUnreadMessages = 100;
 
     // Constants used to mark the start and end of a connection. There is no
     // way you can generate clashing messages from your serial device, as I
@@ -115,17 +115,22 @@ public class SerialController : MonoBehaviour
             return;
 
         // Read the next message from the queue
+        int messages = 0;
         string message = (string)serialThread.ReadMessage();
-        if (message == null)
-            return;
+        while (message != null)
+        {
+            // Check if the message is plain data or a connect/disconnect event.
+            if (ReferenceEquals(message, SERIAL_DEVICE_CONNECTED))
+                messageListener.ConnectionEventFromArduino(true);
+            else if (ReferenceEquals(message, SERIAL_DEVICE_DISCONNECTED))
+                messageListener.ConnectionEventFromArduino(false);
+            else
+                messageListener.MessageFromArduino(message);
 
-        // Check if the message is plain data or a connect/disconnect event.
-        if (ReferenceEquals(message, SERIAL_DEVICE_CONNECTED))
-            messageListener.ConnectionEventFromArduino(true);
-        else if (ReferenceEquals(message, SERIAL_DEVICE_DISCONNECTED))
-            messageListener.ConnectionEventFromArduino(false);
-        else
-            messageListener.MessageFromArduino(message);
+            message = (string)serialThread.ReadMessage();
+            messages++;
+        }
+       if(messages>0)Debug.Log($"Serial Controller processed {messages} message(s)");
     }
 
     // ------------------------------------------------------------------------

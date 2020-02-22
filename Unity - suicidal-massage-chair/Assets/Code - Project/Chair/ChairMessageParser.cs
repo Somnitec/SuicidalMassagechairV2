@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using static MessageHelper;
 
 public static class ChairMessageParser
 {
@@ -55,24 +56,9 @@ public static class ChairMessageParser
         return value == 0 ? ChairMicroControllerState.StatusLight.Green : ChairMicroControllerState.StatusLight.Red;
     }
 
-    private static Color ConvertToColor(int[] colorArray)
-    {
-        return new Color(colorArray[0], colorArray[1], colorArray[2]);
-    }
-
     private static float ConvertSpeed(int value, ChairMicroControllerState state)
     {
         return (float)value / (float)state.MaxSpeed;
-    }
-
-    private static bool ConvertToBool(int boolInt)
-    {
-        return boolInt == 1;
-    }
-
-    private static float ConvertMsToSec(int rawChairPositionMoveTimeDown)
-    {
-        return (float)rawChairPositionMoveTimeDown / 1000f;
     }
 
     private static float ConvertPosition(int position, ChairMicroControllerState state)

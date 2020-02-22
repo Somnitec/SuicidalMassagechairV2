@@ -27,7 +27,7 @@ public class ChairMicrocontrollerMessager : MessageListener
     {
         ArduinoConnected = success;
     }
-
+    [PropertySpace]
     [Button]
     public override void MessageFromArduino(string message)
     {
@@ -39,11 +39,17 @@ public class ChairMicrocontrollerMessager : MessageListener
         Events.Instance.Raise(new ChairStateUpdate(status));
     }
 
-    [PropertySpace, Button]
+    [Button]
     public override void SendMessageToArduino(string message)
     {
         Debug.Log($"Sending to arduino: [{message}]");
         serialController.SendSerialMessage(message);
+    }
+
+    [Button]
+    public void SendMessageToArduino(string param, int value)
+    {
+        serialController.SendSerialMessage(MessageHelper.ToJson(param, value));
     }
 
     [Button]

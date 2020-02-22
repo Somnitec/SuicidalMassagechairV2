@@ -668,7 +668,7 @@ MonoBehaviour:
       Data: 6|ButtVibration, Assembly-CSharp
     - Name: On
       Entry: 5
-      Data: false
+      Data: true
     - Name: 
       Entry: 8
       Data: 
@@ -839,7 +839,7 @@ MonoBehaviour:
       Data: 16|RollerPoundingOn, Assembly-CSharp
     - Name: On
       Entry: 5
-      Data: false
+      Data: true
     - Name: 
       Entry: 8
       Data: 

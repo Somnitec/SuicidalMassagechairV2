@@ -438,7 +438,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ArduinoConnected: 1
-  MessagesReceived: 
+  MessagesReceived: "{\n\t\"time_since_started\":144160564,\n\t\"last_command\":\"blinkTime\",\n\t\"serial_error\":\"\",\n\t\"blinkTime\":100,\n\t\"chair_position_estimated\":4000,\n\t\"chair_position_target\":0,\n\t\"chair_position_motor_direction\":0,\n\t\"chair_position_move_time_max\":0,\n\t\"chair_position_move_time_up\":0,\n\t\"chair_position_move_time_down\":0,\n\t\"roller_kneading_on\":0,\n\t\"roller_kneading_speed\":122,\n\t\"roller_pounding_on\":1,\n\t\"roller_pounding_speed\":142,\n\t\"roller_position_estimated\":0,\n\t\"roller_position_target\":0,\n\t\"roller_position_motor_direction\":0,\n\t\"roller_sensor_top\":1,\n\t\"roller_sensor_bottom\":1,\n\t\"roller_move_time_up\":0,\n\t\"roller_move_time_down\":0,\n\t\"roller_estimated_position\":4499,\n\t\"feet_roller_on\":1,\n\t\"feet_roller_speed\":102,\n\t\"airpump_on\":1,\n\t\"airbag_shoulders_on\":0,\n\t\"airbag_arms_on\":1,\n\t\"airbag_legs_on\":1,\n\t\"airbag_outside_on\":1,\n\t\"airbag_time_max\":0,\n\t\"butt_vibration_on\":1,\n\t\"backlight_on\":1,\n\t\"backlight_color\":[255,0,0],\n\t\"backlight_LED\":[0,0],\n\t\"blacklight_program\":[0,1,2,3],\n\t\"redgreen_statuslight\":0,\n\t\"button_bounce_time\":0,\n\t\"maxStringLength\":64,\n\t\"ackTime\":20\n}\n{\n\t\"time_since_started\":143484664,\n\t\"last_command\":\"blinkTime\",\n\t\"serial_error\":\"\",\n\t\"blinkTime\":100,\n\t\"chair_position_estimated\":4000,\n\t\"chair_position_target\":0,\n\t\"chair_position_motor_direction\":0,\n\t\"chair_position_move_time_max\":0,\n\t\"chair_position_move_time_up\":0,\n\t\"chair_position_move_time_down\":0,\n\t\"roller_kneading_on\":0,\n\t\"roller_kneading_speed\":122,\n\t\"roller_pounding_on\":1,\n\t\"roller_pounding_speed\":142,\n\t\"roller_position_estimated\":0,\n\t\"roller_position_target\":0,\n\t\"roller_position_motor_direction\":0,\n\t\"roller_sensor_top\":1,\n\t\"roller_sensor_bottom\":1,\n\t\"roller_move_time_up\":0,\n\t\"roller_move_time_down\":0,\n\t\"roller_estimated_position\":4499,\n\t\"feet_roller_on\":1,\n\t\"feet_roller_speed\":102,\n\t\"airpump_on\":1,\n\t\"airbag_shoulders_on\":0,\n\t\"airbag_arms_on\":1,\n\t\"airbag_legs_on\":1,\n\t\"airbag_outside_on\":1,\n\t\"airbag_time_max\":0,\n\t\"butt_vibration_on\":0,\n\t\"backlight_on\":1,\n\t\"backlight_color\":[255,0,0],\n\t\"backlight_LED\":[0,0],\n\t\"blacklight_program\":[0,1,2,3],\n\t\"redgreen_statuslight\":0,\n\t\"button_bounce_time\":0,\n\t\"maxStringLength\":64,\n\t\"ackTime\":22\n}\nno
+    useful message, sorry: {\n\t\"test\":[0]\n}\nno useful message, sorry: {\n\t\"test\":[0]\n}\n"
 --- !u!1 &2546377362335576663
 GameObject:
   m_ObjectHideFlags: 0
@@ -733,7 +734,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11442534, guid: a65acf0cbf56b80419f74ebf0bc845f4, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11442534, guid: a65acf0cbf56b80419f74ebf0bc845f4, type: 3}
+      propertyPath: maxUnreadMessages
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a65acf0cbf56b80419f74ebf0bc845f4, type: 3}
@@ -1014,7 +1019,7 @@ PrefabInstance:
     - target: {fileID: 4881339138565168764, guid: b2e8bfb65341f454796189775d554c31,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4881339138565168766, guid: b2e8bfb65341f454796189775d554c31,
         type: 3}
@@ -1029,7 +1034,7 @@ PrefabInstance:
     - target: {fileID: 4881339138565168766, guid: b2e8bfb65341f454796189775d554c31,
         type: 3}
       propertyPath: m_Color.r
-      value: 0
+      value: 255
       objectReference: {fileID: 0}
     - target: {fileID: 4881339138773641997, guid: b2e8bfb65341f454796189775d554c31,
         type: 3}
@@ -1059,7 +1064,7 @@ PrefabInstance:
     - target: {fileID: 4881339139125208091, guid: b2e8bfb65341f454796189775d554c31,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4881339139128858770, guid: b2e8bfb65341f454796189775d554c31,
         type: 3}
@@ -1074,12 +1079,12 @@ PrefabInstance:
     - target: {fileID: 4881339139142413542, guid: b2e8bfb65341f454796189775d554c31,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4881339139205185029, guid: b2e8bfb65341f454796189775d554c31,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4881339139385958964, guid: b2e8bfb65341f454796189775d554c31,
         type: 3}
@@ -1200,22 +1205,22 @@ PrefabInstance:
     - target: {fileID: 4881339139664282566, guid: b2e8bfb65341f454796189775d554c31,
         type: 3}
       propertyPath: m_text
-      value: 'Kneading speed: 0'
+      value: 'Kneading speed: 0.4'
       objectReference: {fileID: 0}
     - target: {fileID: 4881339139664282566, guid: b2e8bfb65341f454796189775d554c31,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 17
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 4881339139664282566, guid: b2e8bfb65341f454796189775d554c31,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4881339139685115234, guid: b2e8bfb65341f454796189775d554c31,
         type: 3}
       propertyPath: m_Value
-      value: 0
+      value: 0.5568628
       objectReference: {fileID: 0}
     - target: {fileID: 4881339139694951473, guid: b2e8bfb65341f454796189775d554c31,
         type: 3}
@@ -1230,17 +1235,17 @@ PrefabInstance:
     - target: {fileID: 4881339139732686923, guid: b2e8bfb65341f454796189775d554c31,
         type: 3}
       propertyPath: m_text
-      value: 'Pounding speed: 0'
+      value: 'Pounding speed: 0.5568628'
       objectReference: {fileID: 0}
     - target: {fileID: 4881339139732686923, guid: b2e8bfb65341f454796189775d554c31,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 17
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4881339139732686923, guid: b2e8bfb65341f454796189775d554c31,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4881339139736570424, guid: b2e8bfb65341f454796189775d554c31,
         type: 3}
@@ -1255,7 +1260,7 @@ PrefabInstance:
     - target: {fileID: 4881339139791553711, guid: b2e8bfb65341f454796189775d554c31,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4881339139867790922, guid: b2e8bfb65341f454796189775d554c31,
         type: 3}
@@ -1265,7 +1270,7 @@ PrefabInstance:
     - target: {fileID: 4881339140008836910, guid: b2e8bfb65341f454796189775d554c31,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4881339140009205224, guid: b2e8bfb65341f454796189775d554c31,
         type: 3}
@@ -1275,7 +1280,7 @@ PrefabInstance:
     - target: {fileID: 4881339140035693901, guid: b2e8bfb65341f454796189775d554c31,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4881339140043892590, guid: b2e8bfb65341f454796189775d554c31,
         type: 3}
@@ -1290,27 +1295,27 @@ PrefabInstance:
     - target: {fileID: 4881339140108573027, guid: b2e8bfb65341f454796189775d554c31,
         type: 3}
       propertyPath: m_Value
-      value: 0
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 4881339140259809282, guid: b2e8bfb65341f454796189775d554c31,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4881339140296846794, guid: b2e8bfb65341f454796189775d554c31,
         type: 3}
       propertyPath: m_Value
-      value: 0
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 4881339140358511886, guid: b2e8bfb65341f454796189775d554c31,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4881339140577794259, guid: b2e8bfb65341f454796189775d554c31,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2e8bfb65341f454796189775d554c31, type: 3}
