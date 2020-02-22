@@ -34,4 +34,10 @@ public class BaseNodeEditor : NodeEditor
         var graph = node.NodeGraph;
         if (GUILayout.Button("Set as current")) graph.SetCurrentNodeTo(node);
     }
+
+    public override Color GetTint()
+    {
+        BaseNode node = target as BaseNode;
+        return node.Color;
+    }
 }  

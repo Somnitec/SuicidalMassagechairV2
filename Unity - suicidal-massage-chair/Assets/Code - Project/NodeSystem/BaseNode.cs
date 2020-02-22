@@ -12,9 +12,13 @@ public class BaseNode : SerializableNode
 {
     [Input] public Connection Input;
     public NodeGraph NodeGraph => (NodeGraph)graph;
+    [ColorPalette()][HideLabel]
+    public Color Color = Color.gray;
 
     public virtual void OnNodeEnable() { }
     public virtual void OnNodeDisable() { }
+
+  
 
     [ContextMenu("Set Current")]
     public void SetCurrent()

@@ -63,6 +63,7 @@ MonoBehaviour:
     - Name: Data
       Entry: 6
       Data: 
+  Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   Buttons: 
 --- !u!114 &-5181468989907919709
 MonoBehaviour:
@@ -149,6 +150,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+  Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   Buttons: 
 --- !u!114 &-5136986826925439257
 MonoBehaviour:
@@ -189,6 +191,7 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
+  Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
 --- !u!114 &-4439052937896924749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280,6 +283,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+  Color: {r: 0.3820755, g: 0.7734277, b: 1, a: 1}
   Buttons: 
 --- !u!114 &-2429869686831015530
 MonoBehaviour:
@@ -360,6 +364,7 @@ MonoBehaviour:
     - Name: Data
       Entry: 6
       Data: 
+  Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   Buttons: 01000000
 --- !u!114 &-1635374956691734540
 MonoBehaviour:
@@ -397,6 +402,7 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
+  Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -488,6 +494,7 @@ MonoBehaviour:
     - Name: Data
       Entry: 6
       Data: 
+  Color: {r: 1, g: 0.5920364, b: 0.023584902, a: 1}
   Buttons: 
 --- !u!114 &2421428131002953428
 MonoBehaviour:
@@ -875,6 +882,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+  Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   Buttons: 
 --- !u!114 &6947010457830027371
 MonoBehaviour:
@@ -1072,6 +1080,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+  Color: {r: 0.50492215, g: 1, b: 0, a: 1}
   Buttons: 0000000001000000
 --- !u!114 &7308101778485953021
 MonoBehaviour:
@@ -1136,6 +1145,7 @@ MonoBehaviour:
     - Name: Data
       Entry: 6
       Data: 
+  Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   Buttons: 
 --- !u!114 &7737505914613988613
 MonoBehaviour:
@@ -1242,6 +1252,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+  Color: {r: 1, g: 0.5920364, b: 0.023584902, a: 1}
   Buttons: 0000000000000000
 --- !u!114 &7864363613721050552
 MonoBehaviour:
@@ -1279,3 +1290,4 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
+  Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
