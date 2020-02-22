@@ -20,5 +20,3 @@ public class MessageConsole : MonoBehaviour
         Debug.Log(e.Text);
     }
 }
-
-

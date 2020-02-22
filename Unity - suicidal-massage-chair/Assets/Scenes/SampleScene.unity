@@ -151,16 +151,7 @@ PrefabInstance:
     - target: {fileID: 239551547539229431, guid: 6bc9dc72b6f54ce44b378d087e6e28e8,
         type: 3}
       propertyPath: MessagesReceived
-      value: 'no useful message, sorry
-
-        no useful message, sorry
-
-        no
-        useful message, sorry
-
-        no useful message, sorry
-
-'
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1433932004372106271, guid: 6bc9dc72b6f54ce44b378d087e6e28e8,
         type: 3}
