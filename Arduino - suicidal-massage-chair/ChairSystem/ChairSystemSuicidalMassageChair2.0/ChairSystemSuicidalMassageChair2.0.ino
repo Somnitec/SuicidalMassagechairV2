@@ -1,5 +1,6 @@
 #include <FastLED.h>
 #include <Bounce2.h>
+#include <jsonlib.h>
 
 //PINMAPPINGS
 #define pump A5
@@ -26,9 +27,9 @@
 //EDITABLE VARIABLES
 unsigned int blinkTime = 2000;
 
-int chair_estimated_position;
-enum positionMotors {up, down, neutral};
-positionMotors chair_position_motor;
+int chair_position_estimated; //up: 0 - flat: 10000
+int chair_position_target;  // 0 - 10000
+int chair_position_motor_direction; //-1 down, 0 neutral, 1 up
 int chair_position_move_time_max;
 int chair_position_move_time_up;
 int chair_position_move_time_down;
@@ -39,12 +40,13 @@ int roller_kneading_speed = 255;
 bool roller_pounding_on;
 int roller_pounding_speed = 255;
 
-//bool roller_up_on;
-//bool roller_down_on;
+int roller_position_estimated;  //bottom: 0 - top: 10000
+int roller_position_target;  // 0 - 10000
+int roller_position_motor_direction; //-1 down, 0 neutral, 1 up
 Bounce roller_sensor_top = Bounce();
 Bounce roller_sensor_bottom = Bounce();
-int roller_time_up;
-int roller_time_down;
+int roller_move_time_up;
+int roller_move_time_down;
 int roller_estimated_position;
 
 bool feet_roller_on;
@@ -60,18 +62,19 @@ int airbag_time_max;
 //bool butt_vibration_on;
 
 bool backlight_on;
-int backlight_color;//check which parameter would be best to use
+int backlight_color[] = {0, 0, 0}; //rgb
 int backlight_LED[] = {0, 0}; //(led, color):
 int blacklight_program[] = {0, 1, 2, 3}; //(program, parameters....)
 
-enum statuslightColors {red, green};
-statuslightColors redgreen_statuslight;
+bool redgreen_statuslight;//0=red,1=green
 
 int button_bounce_time;
 
-long time_since_started;
+unsigned long time_since_started;
 
 int maxStringLength = 64;
+
+String last_command = "";
 
 //~~~~commands
 
@@ -105,9 +108,13 @@ int ledPos = 0;
 int ledBreathMin = 100;
 int ledBreathMax = 255;
 
+bool readingMessage = false;
+
+#define MAXARRAYSIZE 4
+
 void setup() {
   Serial.begin(9600);
-  //while (!Serial);//leonardo fix?
+  while (!Serial);//leonardo fix?
 
   pinMode(led, OUTPUT);
   digitalWrite(led, HIGH);
@@ -144,37 +151,50 @@ void loop()
 
   if (Serial.available())  {
     char c = Serial.read();  //gets one byte from serial buffer
-    if (c == '\n') {  //looks for end of data packet marker
-      Serial.read(); //gets rid of following \r
-      receiveMessage(readString); //prints string to serial port out
-      //do stuff with captured readString
-      readString = ""; //clears variable for new input
-    }
-    else {
-      readString += c; //makes the string readString
-      if (readString.length() > maxStringLength) {//preventing buffer overflow
-        readString = "";
-        Serial.println(F("overflow error"));
+    if (c == '{' && !readingMessage)readingMessage = true;
+    if (readingMessage) {
+      if (c == '}') {  //looks for end of data packet marker
+        readString += c;
+        receiveMessage(readString); //prints string to serial port out
+        //do stuff with captured readString
+        readString = ""; //clears variable for new input
+        readingMessage = false;
       }
+      else {
+        readString += c; //makes the string readString
+        if (readString.length() > maxStringLength) {//preventing buffer overflow
+          readString = "";
+          readingMessage = false;
+          Serial.println(F("overflow error"));
+
+        }
+      }
+
     }
   }
 }
 
 
-
 void receiveMessage( String message) {
-  message.trim();
+  sendAck();
+  /*
+    last_command = "";
 
+    message = jsonRemoveWhiteSpace(message);
+    //Serial.println(jsonIndexList(jsonExtract(message, "test"), 1).toInt());
+    Serial.println(jsonExtract(message, "blinkTime"));//bug to be solved: toInt() returns a 0 if it gets invalid input
 
-  if (checkForParameters(message, F("blinkTime"), 1)) {
-    blinkTime =  getValue(message);
-  }
-
-  else if (checkForParameters(message, F("chair_estimated_position"), 1)) {
-    chair_estimated_position =  getValue(message);
+    
+    if (int value = jsonExtract(message, "blinkTime").toInt()) {
+      last_command = "blinkTime";
+      blinkTime =  value;
+    }
+  
+  if (checkForParameters(message, F("chair_position_estimated"), 1)) {
+    chair_position_estimated =  getValue(message);
   }
   else if (checkForParameters(message, F("chair_position_motor"), 1)) {
-    chair_position_motor =  getValue(message);
+    chair_position_motor_direction =  getValue(message);
   }
   else if (checkForParameters(message, F("chair_position_move_time_max"), 1)) {
     chair_position_move_time_max =  getValue(message);
@@ -214,11 +234,11 @@ void receiveMessage( String message) {
   else if (checkForParameters(message, F("roller_sensor_bottom"), 0)) {
     //cannot be set, so it will simply return an ack
   }
-  else if (checkForParameters(message, F("roller_time_up"), 1)) {
-    roller_time_up =  getValue(message);
+  else if (checkForParameters(message, F("roller_move_time_up"), 1)) {
+    roller_move_time_up =  getValue(message);
   }
-  else if (checkForParameters(message, F("roller_time_down"), 1)) {
-    roller_time_down =  getValue(message);
+  else if (checkForParameters(message, F("roller_move_time_down"), 1)) {
+    roller_move_time_down =  getValue(message);
   }
   else if (checkForParameters(message, F("roller_estimated_position"), 1)) {
     roller_estimated_position =  getValue(message);
@@ -259,7 +279,7 @@ void receiveMessage( String message) {
     backlight_on = getValue(message);
   }
   else if (checkForParameters(message, F("backlight_color"), 1)) {
-    backlight_color = getValue(message);
+    backlight_color[0] = getValue(message);
   }
   else if (checkForParameters(message, F("backlight_LED"), 2)) {
     backlight_LED[0] = getValue(message);
@@ -283,8 +303,10 @@ void receiveMessage( String message) {
   }
 
   else return incorrectMessage(message);
-
+  
   sendAck();
+*/
+
 }
 
 void incorrectMessage(String mssg) {
@@ -292,6 +314,29 @@ void incorrectMessage(String mssg) {
   Serial.println(mssg);
 
 }
+
+String getCommand(String mssg) {
+  if (mssg.indexOf(':') == -1) return "";
+  else  return mssg.substring(mssg.indexOf('"') + 1 , mssg.lastIndexOf('"'));
+
+}
+
+int countValues(String mssg) {
+  if (mssg.indexOf(':') == -1)return 0;
+  else if ((bool)mssg.substring(mssg.indexOf(':') + 1 , mssg.lastIndexOf(',')).toInt())return 1;
+  else if (int firstBracket = mssg.indexOf('[')) {
+    if (mssg.indexOf(',') == -1)return 1;
+    int i = 1;
+    int index = 0;
+    while (index = mssg.indexOf(',', index)) {
+      i++;
+    }
+    return i;
+  }
+  else return 0;
+
+}
+
 int getValue(String mssg) {
   return mssg.substring(mssg.indexOf(':') + 1 , mssg.lastIndexOf(';')).toInt();
 }
@@ -308,15 +353,29 @@ bool checkForParameters(String mssg, String command, int amount) { //later expan
 void sendAck() {
   unsigned long timeCheck = millis();
   //JSONify
+
+
   Serial.print(F("{"));
   Serial.print(F("\n\t\"time_since_started\":"));
   Serial.print(millis());
-  Serial.print(F(",\n\t\"blinkTime\":"));
+  Serial.print(maxStringLength);
+  Serial.print(F(",\n\t\"ackTime\":"));
+  Serial.print(millis() - timeCheck);
+  Serial.print(F(",\n\t\"last_command\":\""));
+  Serial.print(last_command);
+  Serial.print(F("\",\n\t\"error\":\""));
+  Serial.print("not yet implemented");
+  Serial.print(F("\",\n\t\"blinkTime\":"));
   Serial.print(blinkTime);
-  Serial.print(F(",\n\t\"chair_estimated_position\":"));
-  Serial.print(chair_estimated_position);
-  Serial.print(F(",\n\t\"chair_position\":"));
-  Serial.print(chair_position_motor);
+  Serial.print(F(",\n\t\"chair_position_estimated\":"));
+  Serial.print(chair_position_estimated);
+  Serial.print(F(",\n\t\"chair_position_target\":"));
+  Serial.print(chair_position_target);
+  Serial.print(F(",\n\t\"chair_position_motor_direction\":"));
+  if (digitalRead(chairup))chair_position_motor_direction = 1;
+  else if (digitalRead(chairdown))chair_position_motor_direction = -1;
+  else chair_position_motor_direction = 0;
+  Serial.print(chair_position_motor_direction);
   Serial.print(F(",\n\t\"chair_position_move_time_max\":"));
   Serial.print(chair_position_move_time_max);
   Serial.print(F(",\n\t\"chair_position_move_time_up\":"));
@@ -331,18 +390,23 @@ void sendAck() {
   Serial.print(roller_pounding_on);
   Serial.print(F(",\n\t\"roller_pounding_speed\":"));
   Serial.print(roller_pounding_speed);
-  Serial.print(F(",\n\t\"roller_up_on\":"));
-  Serial.print(digitalRead(mssgup));
-  Serial.print(F(",\n\t\"roller_down_on\":"));
-  Serial.print(digitalRead(mssgdown));
+  Serial.print(F(",\n\t\"roller_position_estimated\":"));
+  Serial.print(roller_position_estimated);
+  Serial.print(F(",\n\t\"roller_position_target\":"));
+  Serial.print(roller_position_target);
+  Serial.print(F(",\n\t\"roller_position_motor_direction\":"));
+  if (digitalRead(mssgup))roller_position_motor_direction = 1;
+  else if (digitalRead(mssgdown))roller_position_motor_direction = -1;
+  else roller_position_motor_direction = 0;
+  Serial.print(roller_position_motor_direction);
   Serial.print(F(",\n\t\"roller_sensor_top\":"));
   Serial.print(roller_sensor_top.read());
   Serial.print(F(",\n\t\"roller_sensor_bottom\":"));
   Serial.print(roller_sensor_bottom.read());
-  Serial.print(F(",\n\t\"roller_time_up\":"));
-  Serial.print(roller_time_up);
-  Serial.print(F(",\n\t\"roller_time_down\":"));
-  Serial.print(roller_time_down);
+  Serial.print(F(",\n\t\"roller_move_time_up\":"));
+  Serial.print(roller_move_time_up);
+  Serial.print(F(",\n\t\"roller_move_time_down\":"));
+  Serial.print(roller_move_time_down);
   Serial.print(F(",\n\t\"roller_estimated_position\":"));
   Serial.print(roller_estimated_position);
   Serial.print(F(",\n\t\"feet_roller_on\":"));
@@ -365,9 +429,13 @@ void sendAck() {
   Serial.print(digitalRead(vibration));
   Serial.print(F(",\n\t\"backlight_on\":"));
   Serial.print(backlight_on);
-  Serial.print(F(",\n\t\"backlight_color\":"));
-  Serial.print(backlight_color);
-  Serial.print(F(",\n\t\"backlight_LED\":["));
+  Serial.print(F(",\n\t\"backlight_color\":["));
+  Serial.print(backlight_color[0]);
+  Serial.print(",");
+  Serial.print(backlight_color[1]);
+  Serial.print(",");
+  Serial.print(backlight_color[2]);
+  Serial.print(F("],\n\t\"backlight_LED\":["));
   Serial.print(backlight_LED[0]);
   Serial.print(",");
   Serial.print(backlight_LED[1]);
@@ -385,8 +453,6 @@ void sendAck() {
   Serial.print(button_bounce_time);
   Serial.print(F(",\n\t\"maxStringLength\":"));
   Serial.print(maxStringLength);
-  Serial.print(F(",\n\t\"ackTime\":"));
-  Serial.print(millis() - timeCheck);
   Serial.println(F("\n}"));
 }
 
