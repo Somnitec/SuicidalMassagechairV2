@@ -11,13 +11,16 @@ public abstract class Messager : MessageListener
     [SerializeField]
     [ReadOnly]
     [ShowInInspector]
-    protected bool ArduinoConnected;
+    public bool ArduinoConnected;
 
     protected SerialController serialController;
 
     [SerializeField, PropertyOrder(10)]
     [TextArea(10, 20)]
-    protected string MessagesReceived;
+    protected string MessagesStorage;
+
+    public int MessagesSent { get; private set; }
+    public int MessagesReceived { get; private set; }
 
     void Start()
     {
@@ -28,7 +31,9 @@ public abstract class Messager : MessageListener
     [Button]
     public override void MessageFromArduino(string message)
     {
-        MessagesReceived = message + "\n" + MessagesReceived;
+        MessagesStorage = message + "\n" + MessagesStorage;
+
+        MessagesReceived++;
 
         UpdateConsoleMessage();
 
@@ -47,6 +52,7 @@ public abstract class Messager : MessageListener
     {
         Debug.Log($"Sending to arduino: [{message}]");
         serialController.SendSerialMessage(message);
+        MessagesSent++;
     }
 
     [Button]
@@ -55,19 +61,20 @@ public abstract class Messager : MessageListener
         var message = MessageHelper.ToJson(param, value);
         Debug.Log($"Sending to arduino: [{message}]");
         serialController.SendSerialMessage(message);
+        MessagesSent++;
     }
 
     [Button]
     public void ClearConsole()
     {
-        MessagesReceived = "";
+        MessagesStorage = "";
 
         UpdateConsoleMessage();
     }
 
     protected void UpdateConsoleMessage()
     {
-        Events.Instance.Raise(new ConsoleMessage($"Chair console: \n{MessagesReceived}"));
+        Events.Instance.Raise(new ConsoleMessage($"Chair console: \n{MessagesStorage}"));
     }
 }
 
