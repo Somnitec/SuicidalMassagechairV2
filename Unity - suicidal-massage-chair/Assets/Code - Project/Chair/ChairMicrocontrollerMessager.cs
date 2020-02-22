@@ -30,16 +30,15 @@ public class ChairMicrocontrollerMessager : SingletonMonoBehavior<ChairMicrocont
         serialController.SendSerialMessage(message);
     }
 
-    // Invoked when a line of data is received from the serial device.
-    void OnMessageArrived(string msg)
+    [Button]
+    public void OnMessageArrived(string msg)
     {
         MessagesReceived = msg + "\n" + MessagesReceived;
 
         UpdateConsoleMessage();
 
         RawChairStatus status = ChairMessageParser.ParseMessage(msg);
-
-        Debug.Log(status.ackTime);
+        Events.Instance.Raise(new ChairStateUpdate(status));
     }
 
     void OnConnectionEvent(bool success)
@@ -61,6 +60,16 @@ public class ChairMicrocontrollerMessager : SingletonMonoBehavior<ChairMicrocont
     }
 }
 
+public class ChairStateUpdate : Event
+{
+    public RawChairStatus state { get; }
+
+    public ChairStateUpdate(RawChairStatus state)
+    {
+        this.state = state;
+    }
+}
+
 public static class ChairMessageParser
 {
     public static RawChairStatus ParseMessage(string msg)
@@ -68,10 +77,8 @@ public static class ChairMessageParser
         return JsonUtility.FromJson<RawChairStatus>(msg);
     }
 
-    public static ChairMicroControllerState UpdateChairState(RawChairStatus raw)
+    public static void UpdateChairState(RawChairStatus raw, ChairMicroControllerState state)
     {
-        var state = new ChairMicroControllerState();
-
         state.time_since_started = raw.time_since_started;
 
         state.chair_position_estimated = ConvertPosition(raw.chair_position_estimated, state);
@@ -111,8 +118,6 @@ public static class ChairMessageParser
 
         state.redgreen_statuslight = ConvertToRedGreen(raw.redgreen_statuslight);
         state.button_bounce_time = ConvertMsToSec(raw.button_bounce_time);
-
-        return state;
     }
 
     private static ChairMicroControllerState.StatusLight ConvertToRedGreen(int value)

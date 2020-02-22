@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Framework;
 using UnityEngine;
 
 [System.Serializable]
@@ -9,6 +10,19 @@ public class ChairMicroControllerArduino : AbstractChairMicroController
 {
     public ChairMicroControllerArduino(ChairMicroControllerState state) : base(state)
     {
+        Events.Instance.AddListener<ChairStateUpdate>(StatusUpdate);
+    }
+
+    private void StatusUpdate(ChairStateUpdate e)
+    {
+        Debug.Log($"Message received. Updating State of Arduino.");
+        ChairMessageParser.UpdateChairState(e.state, this.state);
+    }
+
+    public override void RemoveListeners()
+    {
+        base.RemoveListeners();
+        Events.Instance.RemoveListener<ChairStateUpdate>(StatusUpdate);
     }
 
     protected override void Reset(ResetChair args)
