@@ -23,7 +23,7 @@ MonoBehaviour:
     SerializationNodes: []
   MaxPosition: 10000
   MaxSpeed: 255
-  time_since_started: 6302864
+  time_since_started: 1
   chair_position_estimated: 0
   chair_position_target: 0
   chair_position_motor_direction: 1

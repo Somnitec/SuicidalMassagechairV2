@@ -40,7 +40,7 @@ public class ChairMicrocontrollerMessager : MessageListener
     }
 
     [PropertySpace, Button]
-    public void SendMessageToArduino(string message)
+    public override void SendMessageToArduino(string message)
     {
         Debug.Log($"Sending to arduino: [{message}]");
         serialController.SendSerialMessage(message);

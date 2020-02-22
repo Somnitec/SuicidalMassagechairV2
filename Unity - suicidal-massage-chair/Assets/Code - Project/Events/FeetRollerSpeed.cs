@@ -11,10 +11,10 @@ public class FeetRollerSpeed : NodeScriptFunction
     [InfoBox("0 is off 1 is full speed")] [Range(0, 1f)]
     public float Speed = 0f;
 
-    public override List<string> Serialize()
+    public override List<string> SerializeToJson()
     {
-        return ToList(
-            "feet_roller_speed:" + Speed * 255
+        return ToList(ToJson(
+            "feet_roller_speed", (int)(Speed * 255))
         );
     }
 }

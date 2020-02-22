@@ -27,11 +27,12 @@ public class ChairMicroControllerArduino : AbstractChairMicroController
 
     protected override void Reset(ResetChair args)
     {
-        send(args.Serialize());
+        send(args.SerializeToJson());
     }
 
     private void send(List<string> msgs)
     {
+        Debug.Log("Sending");
         msgs.ForEach(msg =>
             ChairMicrocontrollerMessager.Instance.SendMessageToArduino(msg)
         );
@@ -39,76 +40,76 @@ public class ChairMicroControllerArduino : AbstractChairMicroController
 
     protected override void Airbag(AirBag args)
     {
-        send(args.Serialize());
+        send(args.SerializeToJson());
     }
 
     protected override void ChairPosition(ChairPosition args)
     {
-        send(args.Serialize());
+        send(args.SerializeToJson());
     }
 
     protected override void AirPump(AirPump args)
     {
-        send(args.Serialize());
+        send(args.SerializeToJson());
     }
 
     protected override void RollerPoundingSpeed(RollerPoundingSpeed args)
     {
-        send(args.Serialize());
+        send(args.SerializeToJson());
     }
 
     protected override void RollerPoundingOn(RollerPoundingOn args)
     {
-        send(args.Serialize());
+        send(args.SerializeToJson());
     }
 
     protected override void RollerPosition(RollerPosition args)
     {
-        send(args.Serialize());
+        send(args.SerializeToJson());
     }
 
     protected override void RollerKneadingSpeed(RollerKneadingSpeed args)
     {
-        send(args.Serialize());
+        send(args.SerializeToJson());
     }
 
     protected override void RollerKneadingOn(RollerKneadingOn args)
     {
-        send(args.Serialize());
+        send(args.SerializeToJson());
     }
 
     protected override void RecalibrateChair(RecalibrateChair args)
     {
-        send(args.Serialize());
+        send(args.SerializeToJson());
     }
 
     protected override void FeetRollingSpeed(FeetRollerSpeed args)
     {
-        send(args.Serialize());
+        send(args.SerializeToJson());
     }
 
     protected override void FeetRollingOn(FeetRollerOn args)
     {
-        send(args.Serialize());
+        send(args.SerializeToJson());
     }
 
     protected override void ChairStopAll(ChairStopAll args)
     {
-        send(args.Serialize());
+        send(args.SerializeToJson());
     }
 
     protected override void ButtVibration(ButtVibration args)
     {
-        send(args.Serialize());
+        send(args.SerializeToJson());
     }
 
     protected override void BackLightOn(BacklightOn args)
     {
-        send(args.Serialize());
+        send(args.SerializeToJson());
     }
 
     protected override void BackLightColor(BackLightColor args)
     {
-        send(args.Serialize());
+        send(args.SerializeToJson());
     }
 }
