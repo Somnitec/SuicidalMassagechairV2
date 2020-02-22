@@ -1,6 +1,6 @@
 #include <FastLED.h>
 #include <Bounce2.h>
-#include <jsonlib.h>
+#include <ArduinoJson.h>
 
 //PINMAPPINGS
 #define pump A5
@@ -112,9 +112,14 @@ bool readingMessage = false;
 
 #define MAXARRAYSIZE 4
 
+String serial_error = "";
+StaticJsonDocument<200> doc;
+
 void setup() {
   Serial.begin(9600);
   while (!Serial);//leonardo fix?
+
+
 
   pinMode(led, OUTPUT);
   digitalWrite(led, HIGH);
@@ -176,136 +181,140 @@ void loop()
 
 
 void receiveMessage( String message) {
-  sendAck();
-  /*
-    last_command = "";
+  last_command = "";
+  String currentCommand = "";
 
-    message = jsonRemoveWhiteSpace(message);
-    //Serial.println(jsonIndexList(jsonExtract(message, "test"), 1).toInt());
-    Serial.println(jsonExtract(message, "blinkTime"));//bug to be solved: toInt() returns a 0 if it gets invalid input
-
-    
-    if (int value = jsonExtract(message, "blinkTime").toInt()) {
-      last_command = "blinkTime";
-      blinkTime =  value;
-    }
-  
-  if (checkForParameters(message, F("chair_position_estimated"), 1)) {
-    chair_position_estimated =  getValue(message);
-  }
-  else if (checkForParameters(message, F("chair_position_motor"), 1)) {
-    chair_position_motor_direction =  getValue(message);
-  }
-  else if (checkForParameters(message, F("chair_position_move_time_max"), 1)) {
-    chair_position_move_time_max =  getValue(message);
-  }
-  else if (checkForParameters(message, F("chair_position_move_time_up"), 1)) {
-    chair_position_move_time_up =  getValue(message);
-  }
-  else if (checkForParameters(message, F("chair_position_move_time_down"), 1)) {
-    chair_position_move_time_down =  getValue(message);
+  DeserializationError error = deserializeJson(doc, message);
+  // Test if parsing succeeds.
+  if (error) {
+    Serial.print(F("deserializeJson() failed: "));
+    Serial.println(error.c_str());
+    return;
   }
 
-  else if (checkForParameters(message, F("roller_kneading_on"), 1)) {
-    roller_kneading_on = getValue(message);
+
+
+
+  if (validateInput(F("blinkTime"), 1)) {
+    blinkTime = doc["blinkTime"][0];
+  }
+
+  else if (validateInput( F("chair_position_estimated"), 1)) {
+    chair_position_estimated =  doc["chair_position_estimated"][0];
+  }
+  else if (validateInput( F("chair_position_motor"), 1)) {
+    chair_position_motor_direction =  doc["chair_position_motor"][0];
+  }
+  else if (validateInput( F("chair_position_move_time_max"), 1)) {
+    chair_position_move_time_max =  doc["chair_position_move_time_max"][0];
+  }
+  else if (validateInput( F("chair_position_move_time_up"), 1)) {
+    chair_position_move_time_up =  doc["chair_position_move_time_up"][0];
+  }
+  else if (validateInput( F("chair_position_move_time_down"), 1)) {
+    chair_position_move_time_down =  doc["chair_position_move_time_down"][0];
+  }
+
+  else if (validateInput( F("roller_kneading_on"), 1)) {
+    roller_kneading_on = doc["roller_kneading_on"][0];
     analogWrite(kneading, roller_kneading_on * roller_kneading_speed);
   }
-  else if (checkForParameters(message, F("roller_kneading_speed"), 1)) {
-    roller_kneading_speed =  getValue(message);
+  else if (validateInput( F("roller_kneading_speed"), 1)) {
+    roller_kneading_speed =  doc["roller_kneading_speed"][0];
   }
 
-  else if (checkForParameters(message, F("roller_pounding_on"), 1)) {
-    roller_pounding_on = getValue(message);
+  else if (validateInput( F("roller_pounding_on"), 1)) {
+    roller_pounding_on = doc["roller_pounding_on"][0];
     analogWrite(pounding, roller_pounding_on * roller_pounding_speed);
   }
-  else if (checkForParameters(message, F("roller_pounding_speed"), 1)) {
-    roller_pounding_speed =  getValue(message);
+  else if (validateInput( F("roller_pounding_speed"), 1)) {
+    roller_pounding_speed =  doc["roller_pounding_speed"][0];
   }
 
-  else if (checkForParameters(message, F("roller_up_on"), 1)) {
-    digitalWrite(mssgup, getValue(message));
+  else if (validateInput( F("roller_up_on"), 1)) {
+    digitalWrite(mssgup, doc["roller_up_on"][0]);
   }
-  else if (checkForParameters(message, F("roller_down_on"), 1)) {
-    digitalWrite(mssgdown, getValue(message));
+  else if (validateInput( F("roller_down_on"), 1)) {
+    digitalWrite(mssgdown, doc["roller_down_on"][0]);
   }
-  else if (checkForParameters(message, F("roller_sensor_top"), 0)) {
+  else if (validateInput( F("roller_sensor_top"), 0)) {
     //cannot be set, so it will simply return an ack
   }
-  else if (checkForParameters(message, F("roller_sensor_bottom"), 0)) {
+  else if (validateInput( F("roller_sensor_bottom"), 0)) {
     //cannot be set, so it will simply return an ack
   }
-  else if (checkForParameters(message, F("roller_move_time_up"), 1)) {
-    roller_move_time_up =  getValue(message);
+  else if (validateInput( F("roller_move_time_up"), 1)) {
+    roller_move_time_up =  doc["roller_"][0];
   }
-  else if (checkForParameters(message, F("roller_move_time_down"), 1)) {
-    roller_move_time_down =  getValue(message);
+  else if (validateInput( F("roller_move_time_down"), 1)) {
+    roller_move_time_down =  doc["roller_move_time_down"][0];
   }
-  else if (checkForParameters(message, F("roller_estimated_position"), 1)) {
-    roller_estimated_position =  getValue(message);
+  else if (validateInput( F("roller_estimated_position"), 1)) {
+    roller_estimated_position =  doc["roller_estimated_position"][0];
   }
 
-  else if (checkForParameters(message, F("feet_roller_on"), 1)) {
-    feet_roller_on = getValue(message);
+  else if (validateInput( F("feet_roller_on"), 1)) {
+    feet_roller_on = doc["feet_roller_on"][0];
     analogWrite(pounding, feet_roller_on * feet_roller_speed);
   }
-  else if (checkForParameters(message, F("feet_roller_speed"), 1)) {
-    feet_roller_speed =  getValue(message);
+  else if (validateInput( F("feet_roller_speed"), 1)) {
+    feet_roller_speed =  doc["feet_roller_speed"][0];
   }
 
-  else if (checkForParameters(message, F("airpump_on"), 1)) {
-    digitalWrite(pump,  getValue(message));
+  else if (validateInput( F("airpump_on"), 1)) {
+    digitalWrite(pump,  doc["airpump_on"][0]);
   }
-  else if (checkForParameters(message, F("airbag_shoulders_on"), 1)) {
-    digitalWrite(shoulders, getValue(message));
+  else if (validateInput( F("airbag_shoulders_on"), 1)) {
+    digitalWrite(shoulders, doc["airbag_shoulders_on"][0]);
   }
-  else if (checkForParameters(message, F("airbag_arms_on"), 1)) {
-    digitalWrite(arms, getValue(message));
+  else if (validateInput( F("airbag_arms_on"), 1)) {
+    digitalWrite(arms, doc["airbag_arms_on"][0]);
   }
-  else if (checkForParameters(message, F("airbag_legs_on"), 1)) {
-    digitalWrite(legs, getValue(message));
+  else if (validateInput( F("airbag_legs_on"), 1)) {
+    digitalWrite(legs, doc["airbag_legs_on"][0]);
   }
-  else if (checkForParameters(message, F("airbag_outside_on"), 1)) {
-    digitalWrite(outside, getValue(message));
+  else if (validateInput( F("airbag_outside_on"), 1)) {
+    digitalWrite(outside, doc["airbag_outside_on"][0]);
   }
-  else if (checkForParameters(message, F("airbag_time_max"), 1)) {
-    airbag_time_max =  getValue(message);
-  }
-
-  else if (checkForParameters(message, F("butt_vibration_on"), 1)) {
-    digitalWrite(vibration,  getValue(message));
+  else if (validateInput( F("airbag_time_max"), 1)) {
+    airbag_time_max =  doc["airbag_time_max"][0];
   }
 
-  else if (checkForParameters(message, F("backlight_on"), 1)) {
-    backlight_on = getValue(message);
+  else if (validateInput( F("butt_vibration_on"), 1)) {
+    digitalWrite(vibration,  doc["butt_vibration_on"][0]);
   }
-  else if (checkForParameters(message, F("backlight_color"), 1)) {
-    backlight_color[0] = getValue(message);
+
+  else if (validateInput( F("backlight_on"), 1)) {
+    backlight_on = doc["backlight_on"][0];
   }
-  else if (checkForParameters(message, F("backlight_LED"), 2)) {
-    backlight_LED[0] = getValue(message);
+  else if (validateInput( F("backlight_color"), 1)) {
+    backlight_color[0] = doc["backlight_color"][0];
+  }
+  else if (validateInput( F("backlight_LED"), 2)) {
+    backlight_LED[0] = doc["backlight_LED"][0];
     //make that two parameters can be read
   }
-  else if (checkForParameters(message, F("blacklight_program"), 3)) {
-    blacklight_program[0] =  getValue(message);
+  else if (validateInput( F("blacklight_program"), 3)) {
+    blacklight_program[0] =  doc["blacklight_program"][0];
     //make that three parameters can be read
   }
 
-  else if (checkForParameters(message, F("redgreen_statuslight"), 1)) {
-    redgreen_statuslight =  getValue(message);
+  else if (validateInput( F("redgreen_statuslight"), 1)) {
+    redgreen_statuslight =  doc["redgreen_statuslight"][0];
   }
 
-  else if (checkForParameters(message, F("button_bounce_time"), 1)) {
-    button_bounce_time =  getValue(message);
+  else if (validateInput( F("button_bounce_time"), 1)) {
+    button_bounce_time =  doc["button_bounce_time"][0];
   }
 
-  else if (checkForParameters(message, F("time_since_started"), 0)) {
+  else if (validateInput( F("time_since_started"), 0)) {
     //cannot be set, so this simply send an ack
   }
 
   else return incorrectMessage(message);
-  
+
   sendAck();
-*/
+
 
 }
 
@@ -336,10 +345,21 @@ int countValues(String mssg) {
   else return 0;
 
 }
-
-int getValue(String mssg) {
-  return mssg.substring(mssg.indexOf(':') + 1 , mssg.lastIndexOf(';')).toInt();
+bool validateInput(String command, int expectedArguments) {
+  if ( expectedArguments == 0) return false;//always get one argument (for now)
+  else {
+    for (int i = 0; i < expectedArguments; i++) {
+      String item = doc[command][i];
+      if (item.equals("null"))return false;
+    }
+  }
+  last_command = command;
+  return true;
 }
+/*
+  int getValue(String mssg) {
+  return mssg.substring(mssg.indexOf(':') + 1 , mssg.lastIndexOf(';')).toInt();
+  }*/
 
 bool checkForParameters(String mssg, String command, int amount) { //later expandable for multiple parameters
   if (mssg.startsWith(command)) {
@@ -359,12 +379,10 @@ void sendAck() {
   Serial.print(F("\n\t\"time_since_started\":"));
   Serial.print(millis());
   Serial.print(maxStringLength);
-  Serial.print(F(",\n\t\"ackTime\":"));
-  Serial.print(millis() - timeCheck);
   Serial.print(F(",\n\t\"last_command\":\""));
   Serial.print(last_command);
-  Serial.print(F("\",\n\t\"error\":\""));
-  Serial.print("not yet implemented");
+  Serial.print(F("\",\n\t\"serial_error\":\""));
+  Serial.print(serial_error);
   Serial.print(F("\",\n\t\"blinkTime\":"));
   Serial.print(blinkTime);
   Serial.print(F(",\n\t\"chair_position_estimated\":"));
@@ -453,6 +471,8 @@ void sendAck() {
   Serial.print(button_bounce_time);
   Serial.print(F(",\n\t\"maxStringLength\":"));
   Serial.print(maxStringLength);
+  Serial.print(F(",\n\t\"ackTime\":"));
+  Serial.print(millis() - timeCheck);
   Serial.println(F("\n}"));
 }
 
@@ -463,4 +483,29 @@ void calibrationRoutine() {
 float fmap(float x, float in_min, float in_max, float out_min, float out_max)
 {
   return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+}
+
+
+boolean isNumeric(String str) {
+  unsigned int stringLength = str.length();
+  if (stringLength == 0) {
+    return false;
+  }
+  boolean seenDecimal = false;
+  for (unsigned int i = 0; i < stringLength; ++i) {
+    if (isDigit(str.charAt(i))) {
+      continue;
+    } else if ( i == 0 && str.charAt(0) == ' -') {
+      continue;
+    }
+    if (str.charAt(i) == '.') {
+      if (seenDecimal) {
+        return false;
+      }
+      seenDecimal = true;
+      continue;
+    }
+    return false;
+  }
+  return true;
 }
