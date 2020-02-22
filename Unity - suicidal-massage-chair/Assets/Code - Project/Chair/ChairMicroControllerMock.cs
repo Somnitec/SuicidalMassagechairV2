@@ -20,22 +20,22 @@ public class ChairMicroControllerMock : AbstractChairMicroController
         state.backlight_color = Color.white;
         state.backlight_on = false;
         state.butt_vibration_on = false;
-        state.chair_down_on = false;
-        state.chair_up_on = false;
-        state.chair_estimated_position = 0f;
+        // state.chair_down_on = false;
+        // state.chair_up_on = false;
+        state.chair_position_estimated = 0f;
         state.feet_roller_on = false;
         state.feet_roller_speed = 0;
-        state.redgreen_statuslight_green = false;
-        state.redgreen_statuslight_red = false;
-        state.roller_down_on = false;
+        // state.redgreen_statuslight_green = false;
+        // state.redgreen_statuslight_red = false;
+        // state.roller_down_on = false;
         state.roller_kneading_on = false;
         state.roller_kneading_speed = 0;
-        state.roller_position = 0f;
+        // state.roller_position = 0f;
         state.roller_pounding_on = false;
         state.roller_pounding_speed = 0;
         state.roller_sensor_bottom = false;
         state.roller_sensor_top = false;
-        state.roller_up_on = false;
+        // state.roller_up_on = false;
     }
 
     protected override void Airbag(AirBag args)
@@ -54,7 +54,7 @@ public class ChairMicroControllerMock : AbstractChairMicroController
     protected override void ChairPosition(ChairPosition args)
     {
        Debug.Log($"Mock: ~ ChairPosition :D {args.SerializeToString()}");
-       state.chair_estimated_position = args.NewPosition;
+       state.chair_position_estimated = args.NewPosition;
 
     }
 
@@ -79,7 +79,7 @@ public class ChairMicroControllerMock : AbstractChairMicroController
     protected override void RollerPosition(RollerPosition args)
     {
         Debug.Log($"Mock: RollerPosition {args.SerializeToString()}");
-        state.roller_position = args.NewPosition;
+        // state.roller_position = args.NewPosition;
     }
 
     protected override void RollerKneadingSpeed(RollerKneadingSpeed args)

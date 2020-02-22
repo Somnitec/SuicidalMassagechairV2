@@ -7,8 +7,8 @@ using UnityEngine;
 
 public class ResetChair : NodeScriptFunction
 {
-    public override List<string> Serialize()
+    public override List<string> SerializeToJson()
     {
-        return ToList("reset");
+        return ToList(ToJson("reset",-1));
     }
 }

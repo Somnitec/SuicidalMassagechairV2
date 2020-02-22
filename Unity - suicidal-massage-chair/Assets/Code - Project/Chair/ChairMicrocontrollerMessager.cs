@@ -1,16 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Framework;
 using UnityEngine;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
+using Event = Framework.Event;
 
 [ExecuteInEditMode]
-public class ChairMicrocontrollerMessager : SingletonMonoBehavior<ChairMicrocontrollerMessager>
+public class ChairMicrocontrollerMessager : MessageListener
 {
     [SerializeField] [ReadOnly] [ShowInInspector]
     private bool ArduinoConnected;
-    [SerializeField, TextArea, PropertyOrder(10)]
+
+    [SerializeField, PropertyOrder(10)] [TextArea(10, 20)]
     private string MessagesReceived;
+
     private SerialController serialController;
 
     // Use this for initialization
@@ -19,35 +23,59 @@ public class ChairMicrocontrollerMessager : SingletonMonoBehavior<ChairMicrocont
         serialController = GetComponent<SerialController>();
     }
 
-    [PropertySpace]
+    public override void ConnectionEventFromArduino(bool success)
+    {
+        ArduinoConnected = success;
+    }
+
     [Button]
-    public void SendMessage(string message)
+    public override void MessageFromArduino(string message)
+    {
+        MessagesReceived = message + "\n" + MessagesReceived;
+
+        UpdateConsoleMessage();
+
+        RawChairStatus status = ChairMessageParser.ParseMessage(message);
+        Events.Instance.Raise(new ChairStateUpdate(status));
+    }
+
+    [PropertySpace, Button]
+    public override void SendMessageToArduino(string message)
     {
         Debug.Log($"Sending to arduino: [{message}]");
         serialController.SendSerialMessage(message);
     }
 
-    // Invoked when a line of data is received from the serial device.
-    void OnMessageArrived(string msg)
+    [Button]
+    public void ClearConsole()
     {
-        MessagesReceived = msg + "\n" + MessagesReceived;
-        switch (name)
-        {
-            case "object":
-                Debug.Log("staying alive: " + msg);
-                break;
-            default:
-                Debug.Log("no response: " + msg);
-                break;
-        }
+        MessagesReceived = "";
+
+        UpdateConsoleMessage();
     }
 
-    // Invoked when a connect/disconnect event occurs. The parameter 'success'
-    // will be 'true' upon connection, and 'false' upon disconnection or
-    // failure to connect.
-    void OnConnectionEvent(bool success)
+    private void UpdateConsoleMessage()
     {
-        // Debug.Log(success ? "Device connected" : "Device disconnected");
-        ArduinoConnected = success;
+        Events.Instance.Raise(new ConsoleMessage($"Chair console: \n{MessagesReceived}"));
+    }
+}
+
+public class ChairStateUpdate : Event
+{
+    public RawChairStatus state { get; }
+
+    public ChairStateUpdate(RawChairStatus state)
+    {
+        this.state = state;
+    }
+}
+
+public class ConsoleMessage : Event
+{
+    public string Text;
+
+    public ConsoleMessage(string msg)
+    {
+        Text = msg;
     }
 }

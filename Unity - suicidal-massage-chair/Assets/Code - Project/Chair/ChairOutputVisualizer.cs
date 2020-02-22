@@ -29,18 +29,18 @@ public class ChairOutputVisualizer : MonoBehaviour
         images.chair_down_on.gameObject.SetActive(data.chair_down_on);
         images.chair_status_up.gameObject.SetActive(data.chair_status_up);
         images.chair_status_down.gameObject.SetActive(data.chair_status_down);
-        chair_estimated_position_slider.value = data.chair_estimated_position;
+        chair_estimated_position_slider.value = data.chair_position_estimated;
 
         // Roller
         images.roller_kneading_on.gameObject.SetActive(data.roller_kneading_on);
         float roller_kneading_speed = !data.roller_kneading_on ? 0 : (float)data.roller_kneading_speed;
         roller_kneading_speed_text.text = KneadingText + roller_kneading_speed;
-        roller_kneading_speed_slider.value = roller_kneading_speed / ChairMicroControllerState.MaxSpeed;
+        roller_kneading_speed_slider.value = roller_kneading_speed;
 
         images.roller_pounding_on.gameObject.SetActive(data.roller_pounding_on);
         float roller_pounding_speed = !data.roller_pounding_on ? 0 : (float)data.roller_pounding_speed;
         roller_pounding_speed_text.text = PoundingText + roller_pounding_speed;
-        roller_pounding_speed_slider.value = roller_pounding_speed / ChairMicroControllerState.MaxSpeed;
+        roller_pounding_speed_slider.value = roller_pounding_speed;
 
         images.roller_up_on.gameObject.SetActive(data.roller_up_on);
         images.roller_down_on.gameObject.SetActive(data.roller_down_on);
@@ -53,7 +53,7 @@ public class ChairOutputVisualizer : MonoBehaviour
         images.feet_roller_on.gameObject.SetActive(data.feet_roller_on);
         float feet_roller_speed = !data.feet_roller_on ? 0 : (float)data.feet_roller_speed;
         feet_roller_speed_text.text = KneadingText + feet_roller_speed;
-        feet_roller_speed_slider.value = feet_roller_speed / ChairMicroControllerState.MaxSpeed;
+        feet_roller_speed_slider.value = feet_roller_speed;
 
         // Airpump
         images.airpump_on.gameObject.SetActive(data.airpump_on);
@@ -67,8 +67,8 @@ public class ChairOutputVisualizer : MonoBehaviour
         images.backlight_on.gameObject.SetActive(data.backlight_on);
         images.backlight_color.gameObject.SetActive(data.backlight_on);
         images.backlight_color.color = data.backlight_color;
-        images.redgreen_statuslight_red.gameObject.SetActive(data.redgreen_statuslight_red);
-        images.redgreen_statuslight_green.gameObject.SetActive(data.redgreen_statuslight_green);
+        images.redgreen_statuslight_red.gameObject.SetActive(data.statusLightRed);
+        images.redgreen_statuslight_green.gameObject.SetActive(data.statusLightGreen);
     }
 
     private void SetRollerCursorHeight()
@@ -78,7 +78,7 @@ public class ChairOutputVisualizer : MonoBehaviour
         float range = Mathf.Abs(cursorMax - cursorMin);
         // prevent division by zero
         range = range == 0f ? 0.1f : range;
-        float y = data.roller_position * range + cursorMin;
+        float y = data.roller_position_estimated * range + cursorMin;
         images.roller_position_cursor.rectTransform.localPosition = new Vector3(oldPos.x, y, oldPos.z);
     }
 

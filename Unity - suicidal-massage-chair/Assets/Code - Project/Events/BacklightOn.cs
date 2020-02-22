@@ -10,10 +10,8 @@ public class BacklightOn : NodeScriptFunction
 {
     public bool On;
 
-    public override List<string> Serialize()
+    public override List<string> SerializeToJson()
     {
-        return ToList(
-            "backlight_on:" + BoolToString(On)
-        );
+        return ToList(ToJson("backlight_on", BoolToString(On)));
     }
 }

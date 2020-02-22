@@ -35,7 +35,7 @@ public class SerialController : MonoBehaviour
 
     [Tooltip("Reference to an scene object that will receive the events of connection, " +
              "disconnection and the messages from the serial device.")]
-    public GameObject messageListener;
+    public MessageListener messageListener;
 
     [Tooltip("After an error in the serial communication, or an unsuccessful " +
              "connect, how many milliseconds we should wait.")]
@@ -56,7 +56,6 @@ public class SerialController : MonoBehaviour
     // Internal reference to the Thread and the object that runs in it.
     protected Thread thread;
     protected SerialThreadLines serialThread;
-
 
     // ------------------------------------------------------------------------
     // Invoked whenever the SerialController gameobject is activated.
@@ -99,8 +98,7 @@ public class SerialController : MonoBehaviour
             thread.Join();
             thread = null;
         }
-
-        messageListener.SendMessage("OnConnectionEvent", false);
+        messageListener.ConnectionEventFromArduino(false);
     }
 
     // ------------------------------------------------------------------------
@@ -111,7 +109,7 @@ public class SerialController : MonoBehaviour
     // ------------------------------------------------------------------------
     void Update()
     {
-            // If the user prefers to poll the messages instead of receiving them
+        // If the user prefers to poll the messages instead of receiving them
         // via SendMessage, then the message listener should be null.
         if (messageListener == null)
             return;
@@ -123,11 +121,11 @@ public class SerialController : MonoBehaviour
 
         // Check if the message is plain data or a connect/disconnect event.
         if (ReferenceEquals(message, SERIAL_DEVICE_CONNECTED))
-            messageListener.SendMessage("OnConnectionEvent", true);
+            messageListener.ConnectionEventFromArduino(true);
         else if (ReferenceEquals(message, SERIAL_DEVICE_DISCONNECTED))
-            messageListener.SendMessage("OnConnectionEvent", false);
+            messageListener.ConnectionEventFromArduino(false);
         else
-            messageListener.SendMessage("OnMessageArrived", message);
+            messageListener.MessageFromArduino(message);
     }
 
     // ------------------------------------------------------------------------

@@ -11,8 +11,8 @@ public class ChairPosition : NodeScriptFunction
     [InfoBox("0 is up and 1 is down")][Range(0,1)]
     public float NewPosition;
 
-    public override List<string> Serialize()
+    public override List<string> SerializeToJson()
     {
-        return ToList($"chair_estimated_position:{(10000f * NewPosition)}");
+        return ToList(ToJson("chair_position_estimated",(int)(10000f * NewPosition)));
     }
 }
