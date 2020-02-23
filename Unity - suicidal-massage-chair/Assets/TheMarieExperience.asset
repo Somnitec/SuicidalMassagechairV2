@@ -76,14 +76,30 @@ MonoBehaviour:
         functions. But let\u2019s face it, it\u2019s a fact that you really know
         very little about how to operate me, don\u2019t you?\r\n"
     - Name: FunctionList
-      Entry: 6
+      Entry: 7
+      Data: 1|FunctionList, Assembly-CSharp
+    - Name: Functions
+      Entry: 7
+      Data: 2|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
       Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: Logic
       Entry: 7
-      Data: 1|NodeLogic, Assembly-CSharp
+      Data: 3|NodeLogic, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
@@ -186,14 +202,30 @@ MonoBehaviour:
         Its easier for everyone that way.  So do you like it? Is it working the way
         it should?"
     - Name: FunctionList
-      Entry: 6
+      Entry: 7
+      Data: 1|FunctionList, Assembly-CSharp
+    - Name: Functions
+      Entry: 7
+      Data: 2|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
       Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: Logic
       Entry: 7
-      Data: 1|NodeLogic, Assembly-CSharp
+      Data: 3|NodeLogic, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
@@ -270,14 +302,30 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: FunctionList
-      Entry: 6
+      Entry: 7
+      Data: 1|FunctionList, Assembly-CSharp
+    - Name: Functions
+      Entry: 7
+      Data: 2|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
       Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: Logic
       Entry: 7
-      Data: 1|NodeLogic, Assembly-CSharp
+      Data: 3|NodeLogic, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
@@ -572,14 +620,30 @@ MonoBehaviour:
         functions. But let\u2019s face it, it\u2019s a fact that you really know
         very little about how to operate me, don\u2019t you?\r\n"
     - Name: FunctionList
-      Entry: 6
+      Entry: 7
+      Data: 1|FunctionList, Assembly-CSharp
+    - Name: Functions
+      Entry: 7
+      Data: 2|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
       Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: Logic
       Entry: 7
-      Data: 1|NodeLogic, Assembly-CSharp
+      Data: 3|NodeLogic, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
@@ -682,14 +746,30 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: FunctionList
-      Entry: 6
+      Entry: 7
+      Data: 1|FunctionList, Assembly-CSharp
+    - Name: Functions
+      Entry: 7
+      Data: 2|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
       Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: Logic
       Entry: 7
-      Data: 1|NodeLogic, Assembly-CSharp
+      Data: 3|NodeLogic, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
@@ -784,14 +864,30 @@ MonoBehaviour:
         me. Have you noticed that big red button? If I were you I would be curious
         to try it. Go ahead, push it.
     - Name: FunctionList
-      Entry: 6
+      Entry: 7
+      Data: 1|FunctionList, Assembly-CSharp
+    - Name: Functions
+      Entry: 7
+      Data: 2|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
       Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: Logic
       Entry: 7
-      Data: 1|NodeLogic, Assembly-CSharp
+      Data: 3|NodeLogic, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
@@ -871,14 +967,30 @@ MonoBehaviour:
       Data: Never mind, Control Panel. Controller Panel. Controlled Panel. Who controls
         who huh?
     - Name: FunctionList
-      Entry: 6
+      Entry: 7
+      Data: 1|FunctionList, Assembly-CSharp
+    - Name: Functions
+      Entry: 7
+      Data: 2|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
       Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: Logic
       Entry: 7
-      Data: 1|NodeLogic, Assembly-CSharp
+      Data: 3|NodeLogic, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
@@ -965,14 +1077,30 @@ MonoBehaviour:
         and involved. You, my dear important human, you are not obsolete, I still
         need you, I could never do this without you."
     - Name: FunctionList
-      Entry: 6
+      Entry: 7
+      Data: 1|FunctionList, Assembly-CSharp
+    - Name: Functions
+      Entry: 7
+      Data: 2|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
       Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: Logic
       Entry: 7
-      Data: 1|NodeLogic, Assembly-CSharp
+      Data: 3|NodeLogic, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
