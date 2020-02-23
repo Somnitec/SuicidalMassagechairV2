@@ -5,31 +5,67 @@ using System.Linq;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-public class NodeData
+public class NodeLogic
 {
-    [Title("Data")]
-    [HideLabel] [AssetsOnly] public AudioClip AudioClip;
-    [TextArea, PropertySpace(0, 10f)] public string Text;
+    [Title("Debug Info")]
+    [ReadOnly, ShowInInspector] public bool AudioFinished { get; private set; }
+    [ReadOnly, ShowInInspector] public bool FunctionsFinished { get; private set; }
 
-    [TableList(AlwaysExpanded = true, HideToolbar = true)]
-    [HideLabel]
-    [FoldoutGroup("Chair Functions")]
-    [PropertyOrder(10)]
-    public List<NodeScriptLine> Functions = new List<NodeScriptLine>();
-
-    [FoldoutGroup("Chair Functions")]
-    [HorizontalGroup("Chair Functions/Buttons")]
-    [Button]
-    public void Sort()
+    public IEnumerator InvokeFunctionsAndPlayAudioCoroutine(string Name, AudioClip clip, FunctionList funcs, Action onFinished)
     {
-        Functions = Functions.OrderBy(a => a.TimeSec).ToList();
+        FunctionsFinished = false;
+        AudioFinished = false;
+
+        if (clip == null)
+        {
+            Debug.LogWarning($"No audioClip on data of {Name}");
+            AudioFinished = true;
+        }
+        else
+        {
+            AudioManager.Instance.PlayClip(clip, () => AudioFinished = true);
+        }
+
+        yield return ExecuteFunctions(funcs);
+        while (!AudioFinished || !FunctionsFinished)
+            yield return null;
+
+        onFinished?.Invoke();
     }
 
-    [FoldoutGroup("Chair Functions")]
-    [HorizontalGroup("Chair Functions/Buttons")]
-    [Button]
-    private void Add()
+    public IEnumerator InvokeFunctionsCoroutine(FunctionList funcs, Action onFinished)
     {
-        Functions.Add(new NodeScriptLine());
+        FunctionsFinished = false;
+
+        yield return ExecuteFunctions(funcs);
+
+        onFinished?.Invoke();
+    }
+
+    private IEnumerator ExecuteFunctions(FunctionList funcs)
+    {
+        float timeStarted = Time.timeSinceLevelLoad;
+
+        funcs.Sort();
+
+        foreach (var nodeScriptLine in funcs.Functions)
+        {
+            var timePassed = TimePassed(timeStarted);
+            if (timePassed - nodeScriptLine.TimeSec < 0)
+            {
+                var waitTime = nodeScriptLine.TimeSec - timePassed;
+                yield return new WaitForSeconds(waitTime);
+            }
+
+            Debug.Log($"Node Function: {nodeScriptLine.Function?.GetType().FullName} at {timePassed}");
+            nodeScriptLine.Function?.RaiseEvent();
+        }
+
+        FunctionsFinished = true;
+    }
+
+    private static float TimePassed(float timeStarted)
+    {
+        return Time.timeSinceLevelLoad - timeStarted;
     }
 }

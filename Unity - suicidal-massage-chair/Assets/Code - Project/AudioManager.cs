@@ -20,6 +20,11 @@ public class AudioManager : SingletonMonoBehavior<AudioManager>
             Listener = gameObject.AddComponent<AudioListener>();
     }
 
+    public void Stop()
+    {
+        Source.Stop();
+    }
+
     public void PlayClip(AudioClip clip, Action onFinished)
     {
         if (clip == null)

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using static ChairMicroControllerState;
 using static MessageHelper;
 
 public static class ChairMessageParser
@@ -51,31 +52,36 @@ public static class ChairMessageParser
         state.button_bounce_time = ConvertMsToSec(raw.button_bounce_time);
     }
 
-    private static ChairMicroControllerState.StatusLight ConvertToRedGreen(int value)
+    private static StatusLight ConvertToRedGreen(int value)
     {
-        return value == 0 ? ChairMicroControllerState.StatusLight.Green : ChairMicroControllerState.StatusLight.Red;
+        return value == 0 ? StatusLight.Green : StatusLight.Red;
+    }
+
+    public static int ConvertFromRedGreen(StatusLight value)
+    {
+        return value == StatusLight.Green ? 0 : 1;
     }
 
     private static float ConvertSpeed(int value, ChairMicroControllerState state)
     {
-        return (float)value / (float)state.MaxSpeed;
+        return (float) value / (float) state.MaxSpeed;
     }
 
     private static float ConvertPosition(int position, ChairMicroControllerState state)
     {
-        return (float)position / (float)state.MaxPosition;
+        return (float) position / (float) state.MaxPosition;
     }
 
-    private static ChairMicroControllerState.ChairMotorDirection ConvertDirection(int dir)
+    private static ChairMotorDirection ConvertDirection(int dir)
     {
         switch (dir)
         {
             case 1:
-                return ChairMicroControllerState.ChairMotorDirection.Up;
+                return ChairMotorDirection.Up;
             case -1:
-                return ChairMicroControllerState.ChairMotorDirection.Down;
+                return ChairMotorDirection.Down;
             default:
-                return ChairMicroControllerState.ChairMotorDirection.Neutral;
+                return ChairMotorDirection.Neutral;
         }
     }
 }

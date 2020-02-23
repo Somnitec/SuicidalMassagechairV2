@@ -8,19 +8,16 @@ using XNode;
 
 public class DialogueNode : BaseNode
 {
-    [ShowIf("showData")]
-    [InlineProperty, HideLabel, HideReferenceObjectPicker]
+    [ShowIf("showData")] [InlineProperty, HideLabel, HideReferenceObjectPicker] [Title("Data")]
     public NodeData Data = new NodeData();
 
-    [ShowIf("showDebugInfo")]
-    [InlineProperty, HideLabel, HideReferenceObjectPicker]
+    [ShowIf("showDebugInfo")] [InlineProperty, HideLabel, HideReferenceObjectPicker]
     public NodeLogic Logic = new NodeLogic();
 
     [Output(dynamicPortList = true), ListDrawerSettings(ShowIndexLabels = false)]
     public List<UserInputButton> Buttons;
 
-    [Output]
-    public Connection OnAnyButton;
+    [Output] public Connection OnAnyButton;
 
     private bool showDebugInfo => SettingsHolder.Instance.Settings.ShowNodeDebugInfo;
     private bool showData => SettingsHolder.Instance.Settings.ShowNodeData;
@@ -30,10 +27,14 @@ public class DialogueNode : BaseNode
         Debug.Log($"OnNodeEnable {name}");
 
         Events.Instance.AddListener<UserInputUp>(OnInterrupted);
-        Logic.OnFinished += OnFinished;
 
         NodeFunctionRunner.Instance.StopAllCoroutines();
-        NodeFunctionRunner.Instance.StartCoroutine(Logic.InvokeFunctionsAndPlayAudio(name, Data));
+        NodeFunctionRunner.Instance.StartCoroutine(
+            Logic.InvokeFunctionsAndPlayAudioCoroutine(
+                name, 
+                Data.AudioClip, 
+                Data.FunctionList, 
+                OnFinished));
     }
 
     private void OnInterrupted(UserInputUp e)
@@ -77,7 +78,7 @@ public class DialogueNode : BaseNode
             return;
         }
 
-        var node = (BaseNode)port.Connection.node;
+        var node = (BaseNode) port.Connection.node;
         NodeGraph.PlayNode(node);
     }
 
@@ -85,10 +86,6 @@ public class DialogueNode : BaseNode
     {
         Debug.Log($"OnNodeDisable {name}");
 
-        if (Logic?.OnFinished != null)
-            Logic.OnFinished -= OnFinished;
-
         Events.Instance.RemoveListener<UserInputUp>(HandleInput);
     }
 }
-

@@ -1,0 +1,138 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60d8f93c755397442a5d7acfbc7d99bf, type: 3}
+  m_Name: ApplicationSettings
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: RestartChair
+      Entry: 7
+      Data: 0|FunctionList, Assembly-CSharp
+    - Name: Functions
+      Entry: 7
+      Data: 1|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: NodeScriptLine, Assembly-CSharp
+    - Name: TimeSec
+      Entry: 4
+      Data: 0
+    - Name: Function
+      Entry: 7
+      Data: 2|ResetChair, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: NodeScriptLine, Assembly-CSharp
+    - Name: TimeSec
+      Entry: 4
+      Data: 5
+    - Name: Function
+      Entry: 7
+      Data: 3|RedGreenStatusLight, Assembly-CSharp
+    - Name: Status
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: WaitingFunctions
+      Entry: 7
+      Data: 4|FunctionList, Assembly-CSharp
+    - Name: Functions
+      Entry: 7
+      Data: 5|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: OnStart
+      Entry: 7
+      Data: 6|FunctionList, Assembly-CSharp
+    - Name: Functions
+      Entry: 7
+      Data: 7|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: NodeScriptLine, Assembly-CSharp
+    - Name: TimeSec
+      Entry: 4
+      Data: 0
+    - Name: Function
+      Entry: 7
+      Data: 8|RedGreenStatusLight, Assembly-CSharp
+    - Name: Status
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  Graph: {fileID: 11400000, guid: 208fc1b72ba06254e85f499519f40a6d, type: 2}
+  Mock: {fileID: 11400000, guid: 2b0110cd53159fb4394c799a99beb3a5, type: 2}
+  Arduino: {fileID: 11400000, guid: 1d31045ae3e113845895ddf3d8fb01d8, type: 2}
+  ShowColors: 0
+  ShowNodeDebugInfo: 0
+  ShowNodeData: 1
+  WaitingAudio: {fileID: 0}

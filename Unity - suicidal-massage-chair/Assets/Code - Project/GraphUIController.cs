@@ -9,14 +9,16 @@ public class GraphUIController : MonoBehaviour
     public TextMeshProUGUI Text;
 
     public NodeGraph Graph => SettingsHolder.Instance.Settings.Graph;
-    private AudioManager mgr => AudioManager.Instance;
+    private AudioManager audMgr => AudioManager.Instance;
+    private ApplicationStateApplicationManager appMgr => ApplicationStateApplicationManager.Instance;
     void Update()
     {
-        var text = $"Node info\n" +
-                   $"Playing: {Graph.Current.name}\n" +
-                   $"Audio: {mgr.Source.clip.name}\n" +
-                   $"Duration: {mgr.ClipProgress}\n" +
-                   $"Playing: {mgr.Source.isPlaying}\n" ;
+        var text = $"Application info\n" +
+                   $"State: {appMgr.State}\n" +
+                   $"Node: {Graph.Current.name}\n" +
+                   $"Audio: {audMgr.Source.clip.name}\n" +
+                   $"Duration: {audMgr.ClipProgress}\n" +
+                   $"Playing: {audMgr.Source.isPlaying}\n" ;
 
         DialogueNode dialogueNode = Graph.Current as DialogueNode;
         if (dialogueNode != null)

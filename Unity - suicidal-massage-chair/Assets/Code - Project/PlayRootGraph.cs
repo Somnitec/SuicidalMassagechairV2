@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayRootGraph : MonoBehaviour
 {
-    public NodeGraph Graph;
+    private NodeGraph Graph => SettingsHolder.Instance.Settings.Graph;
 
     void Start()
     {

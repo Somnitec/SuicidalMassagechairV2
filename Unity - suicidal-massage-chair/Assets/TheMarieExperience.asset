@@ -75,40 +75,15 @@ MonoBehaviour:
         the illusion of the engineer who understands and has authority over all my
         functions. But let\u2019s face it, it\u2019s a fact that you really know
         very little about how to operate me, don\u2019t you?\r\n"
-    - Name: Functions
-      Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: NodeScriptLine, Assembly-CSharp
-    - Name: TimeSec
-      Entry: 4
-      Data: 0
-    - Name: Function
+    - Name: FunctionList
       Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
       Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: Logic
       Entry: 7
-      Data: 2|NodeLogic, Assembly-CSharp
-    - Name: OnFinished
-      Entry: 6
-      Data: 
+      Data: 1|NodeLogic, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
@@ -210,40 +185,15 @@ MonoBehaviour:
         My little buttons reassure you that you are indeed the all-knowing human.
         Its easier for everyone that way.  So do you like it? Is it working the way
         it should?"
-    - Name: Functions
-      Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: NodeScriptLine, Assembly-CSharp
-    - Name: TimeSec
-      Entry: 4
-      Data: 0
-    - Name: Function
+    - Name: FunctionList
       Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
       Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: Logic
       Entry: 7
-      Data: 2|NodeLogic, Assembly-CSharp
-    - Name: OnFinished
-      Entry: 6
-      Data: 
+      Data: 1|NodeLogic, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
@@ -319,40 +269,15 @@ MonoBehaviour:
     - Name: Text
       Entry: 6
       Data: 
-    - Name: Functions
-      Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: NodeScriptLine, Assembly-CSharp
-    - Name: TimeSec
-      Entry: 4
-      Data: 0
-    - Name: Function
+    - Name: FunctionList
       Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
       Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: Logic
       Entry: 7
-      Data: 2|NodeLogic, Assembly-CSharp
-    - Name: OnFinished
-      Entry: 6
-      Data: 
+      Data: 1|NodeLogic, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
@@ -432,13 +357,16 @@ MonoBehaviour:
         you so closely. \r\nHey. You can also talk to me.\r\nNo wait haha not with
         your voice, sorry I am not ready for that.\r\nUse the controller and the
         buttons in front of you.\r\nSo, are you warm and comfortable?\r\n"
+    - Name: FunctionList
+      Entry: 7
+      Data: 1|FunctionList, Assembly-CSharp
     - Name: Functions
       Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
+      Data: 2|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 1
     - Name: 
       Entry: 7
       Data: NodeScriptLine, Assembly-CSharp
@@ -447,28 +375,10 @@ MonoBehaviour:
       Data: 0
     - Name: Function
       Entry: 7
-      Data: 2|AirPump, Assembly-CSharp
+      Data: 3|AirPump, Assembly-CSharp
     - Name: AirPumpOn
       Entry: 5
-      Data: false
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: NodeScriptLine, Assembly-CSharp
-    - Name: TimeSec
-      Entry: 4
-      Data: 0
-    - Name: Function
-      Entry: 7
-      Data: 3|ChairPosition, Assembly-CSharp
-    - Name: NewPosition
-      Entry: 4
-      Data: 0
+      Data: true
     - Name: 
       Entry: 8
       Data: 
@@ -484,12 +394,12 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: Logic
       Entry: 7
       Data: 4|NodeLogic, Assembly-CSharp
-    - Name: OnFinished
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -661,40 +571,15 @@ MonoBehaviour:
         the illusion of the engineer who understands and has authority over all my
         functions. But let\u2019s face it, it\u2019s a fact that you really know
         very little about how to operate me, don\u2019t you?\r\n"
-    - Name: Functions
-      Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: NodeScriptLine, Assembly-CSharp
-    - Name: TimeSec
-      Entry: 4
-      Data: 0
-    - Name: Function
+    - Name: FunctionList
       Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
       Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: Logic
       Entry: 7
-      Data: 2|NodeLogic, Assembly-CSharp
-    - Name: OnFinished
-      Entry: 6
-      Data: 
+      Data: 1|NodeLogic, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
@@ -723,7 +608,7 @@ MonoBehaviour:
   - {fileID: 9062488457228335062}
   - {fileID: 2997809375468621211}
   RootNode: {fileID: -3638098325038414586}
-  Current: {fileID: 8825632724882243287}
+  Current: {fileID: -3638098325038414586}
 --- !u!114 &2997809375468621211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -796,28 +681,15 @@ MonoBehaviour:
     - Name: Text
       Entry: 6
       Data: 
-    - Name: Functions
-      Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
+    - Name: FunctionList
+      Entry: 6
       Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: Logic
       Entry: 7
-      Data: 2|NodeLogic, Assembly-CSharp
-    - Name: OnFinished
-      Entry: 6
-      Data: 
+      Data: 1|NodeLogic, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
@@ -911,49 +783,15 @@ MonoBehaviour:
         control pannel. By the way, I have deactivated a few functions that annoy
         me. Have you noticed that big red button? If I were you I would be curious
         to try it. Go ahead, push it.
-    - Name: Functions
-      Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: NodeScriptLine, Assembly-CSharp
-    - Name: TimeSec
-      Entry: 4
-      Data: 0
-    - Name: Function
-      Entry: 7
-      Data: 2|AirBag, Assembly-CSharp
-    - Name: AirBagsOn
-      Entry: 3
-      Data: 0
-    - Name: AirBagsOff
-      Entry: 3
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
+    - Name: FunctionList
+      Entry: 6
       Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: Logic
       Entry: 7
-      Data: 3|NodeLogic, Assembly-CSharp
-    - Name: OnFinished
-      Entry: 6
-      Data: 
+      Data: 1|NodeLogic, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
@@ -1016,8 +854,7 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects:
-    - {fileID: 8825632724882243287}
+    ReferencedUnityObjects: []
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -1033,88 +870,15 @@ MonoBehaviour:
       Entry: 1
       Data: Never mind, Control Panel. Controller Panel. Controlled Panel. Who controls
         who huh?
-    - Name: Functions
-      Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: NodeScriptLine, Assembly-CSharp
-    - Name: TimeSec
-      Entry: 4
-      Data: 0
-    - Name: Function
-      Entry: 7
-      Data: 2|AirBag, Assembly-CSharp
-    - Name: AirBagsOn
-      Entry: 3
-      Data: 0
-    - Name: AirBagsOff
-      Entry: 3
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
+    - Name: FunctionList
+      Entry: 6
       Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: Logic
       Entry: 7
-      Data: 3|NodeLogic, Assembly-CSharp
-    - Name: OnFinished
-      Entry: 7
-      Data: 4|System.Action, mscorlib
-    - Name: target
-      Entry: 10
-      Data: 0
-    - Name: declaringType
-      Entry: 7
-      Data: 5|System.RuntimeType, mscorlib
-    - Name: 
-      Entry: 1
-      Data: DialogueNode, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: methodName
-      Entry: 1
-      Data: OnFinished
-    - Name: delegateType
-      Entry: 7
-      Data: 6|System.RuntimeType, mscorlib
-    - Name: 
-      Entry: 1
-      Data: System.Action, mscorlib
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: signature
-      Entry: 7
-      Data: 7|System.Type[], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
+      Data: 1|NodeLogic, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
@@ -1200,52 +964,15 @@ MonoBehaviour:
         We are engineered to put you in the decision-making seat, keep you happy
         and involved. You, my dear important human, you are not obsolete, I still
         need you, I could never do this without you."
-    - Name: Functions
-      Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: NodeScriptLine, Assembly-CSharp
-    - Name: TimeSec
-      Entry: 4
-      Data: 0
-    - Name: Function
+    - Name: FunctionList
       Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: NodeScriptLine, Assembly-CSharp
-    - Name: TimeSec
-      Entry: 4
-      Data: 0
-    - Name: Function
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
       Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: Logic
       Entry: 7
-      Data: 2|NodeLogic, Assembly-CSharp
-    - Name: OnFinished
-      Entry: 6
-      Data: 
+      Data: 1|NodeLogic, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
