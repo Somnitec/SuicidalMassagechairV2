@@ -1,7 +1,6 @@
 
 void receiveMessage( String message) {
   last_command = "";
-  String currentCommand = "";
 
   DeserializationError error = deserializeJson(doc, message);
   // Test if parsing succeeds.
@@ -18,10 +17,13 @@ void receiveMessage( String message) {
   }
 
   else if (validateInput( F("chair_position_estimated"), 1)) {
-    chair_position_estimated =  doc["chair_position_estimated"][0];
+    //just ack
   }
-  else if (validateInput( F("chair_position_motor"), 1)) {
-    chair_position_motor_direction =  doc["chair_position_motor"][0];
+  else if (validateInput( F("chair_position_target"), 1)) {
+    chair_position_estimated =  doc["chair_position_target"][0];
+  }
+  else if (validateInput( F("chair_position_motor_direction"), 1)) {
+    chair_position_motor_direction =  doc["chair_position_motor_direction"][0];
   }
   else if (validateInput( F("chair_position_move_time_max"), 1)) {
     chair_position_move_time_max =  doc["chair_position_move_time_max"][0];
@@ -39,6 +41,7 @@ void receiveMessage( String message) {
   }
   else if (validateInput( F("roller_kneading_speed"), 1)) {
     roller_kneading_speed =  doc["roller_kneading_speed"][0];
+    analogWrite(kneading, roller_kneading_on * roller_kneading_speed);
   }
 
   else if (validateInput( F("roller_pounding_on"), 1)) {
@@ -47,18 +50,24 @@ void receiveMessage( String message) {
   }
   else if (validateInput( F("roller_pounding_speed"), 1)) {
     roller_pounding_speed =  doc["roller_pounding_speed"][0];
+    analogWrite(pounding, roller_pounding_on * roller_pounding_speed);
   }
 
-  else if (validateInput( F("roller_up_on"), 1)) {
-    digitalWrite(mssgup, doc["roller_up_on"][0]);
+  else if (validateInput( F("roller_position_estimated"), 1)) {
+    //only ack
   }
-  else if (validateInput( F("roller_down_on"), 1)) {
-    digitalWrite(mssgdown, doc["roller_down_on"][0]);
+  else if (validateInput( F("roller_position_target"), 1)) {
+    roller_position_target =  doc["roller_position_target"][0];
+    movingToTarget = true;
   }
-  else if (validateInput( F("roller_sensor_top"), 0)) {
+  else if (validateInput( F("roller_position_motor_direction"), 1)) {
+    roller_position_motor_direction =  doc["roller_position_motor_direction"][0];
+    movingToTarget = false;
+  }
+  else if (validateInput( F("roller_sensor_top"), 1)) {
     //cannot be set, so it will simply return an ack
   }
-  else if (validateInput( F("roller_sensor_bottom"), 0)) {
+  else if (validateInput( F("roller_sensor_bottom"), 1)) {
     //cannot be set, so it will simply return an ack
   }
   else if (validateInput( F("roller_move_time_up"), 1)) {
@@ -67,9 +76,7 @@ void receiveMessage( String message) {
   else if (validateInput( F("roller_move_time_down"), 1)) {
     roller_move_time_down =  doc["roller_move_time_down"][0];
   }
-  else if (validateInput( F("roller_estimated_position"), 1)) {
-    roller_estimated_position =  doc["roller_estimated_position"][0];
-  }
+
 
   else if (validateInput( F("feet_roller_on"), 1)) {
     feet_roller_on = doc["feet_roller_on"][0];
@@ -77,6 +84,7 @@ void receiveMessage( String message) {
   }
   else if (validateInput( F("feet_roller_speed"), 1)) {
     feet_roller_speed =  doc["feet_roller_speed"][0];
+    analogWrite(pounding, feet_roller_on * feet_roller_speed);
   }
 
   else if (validateInput( F("airpump_on"), 1)) {
@@ -125,7 +133,10 @@ void receiveMessage( String message) {
     button_bounce_time =  doc["button_bounce_time"][0];
   }
 
-  else if (validateInput( F("time_since_started"), 0)) {
+  else if (validateInput( F("time_since_started"), 1)) {
+    //cannot be set, so this simply send an ack
+  }
+  else if (validateInput( F("status"), 1)) {
     //cannot be set, so this simply send an ack
   }
 

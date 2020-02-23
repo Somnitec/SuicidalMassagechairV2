@@ -24,6 +24,8 @@
 
 #define redgreen A0
 
+//still available 0, 1, 6, 12 (?)
+
 //EDITABLE VARIABLES
 unsigned int blinkTime = 2000;
 
@@ -45,8 +47,8 @@ int roller_position_target;  // 0 - 10000
 int roller_position_motor_direction; //-1 down, 0 neutral, 1 up
 Bounce roller_sensor_top = Bounce();
 Bounce roller_sensor_bottom = Bounce();
-int roller_move_time_up;
-int roller_move_time_down;
+int roller_move_time_up = 15862; //is average measured value
+int roller_move_time_down = 14776; //is average measured value
 int roller_estimated_position;
 
 bool feet_roller_on;
@@ -68,7 +70,7 @@ int blacklight_program[] = {0, 1, 2, 3}; //(program, parameters....)
 
 bool redgreen_statuslight;//0=red,1=green
 
-int button_bounce_time;
+int button_bounce_time = 5;
 
 unsigned long time_since_started;
 
@@ -115,6 +117,8 @@ bool readingMessage = false;
 String serial_error = "";
 StaticJsonDocument<200> doc;
 
+bool movingToTarget = true;//needed for roller
+
 void setup() {
   Serial.begin(9600);
   while (!Serial);//leonardo fix?
@@ -126,30 +130,32 @@ void setup() {
 
   for (int i = 0; i < outputAmount; i++)
     pinMode(outputs[i], OUTPUT);
-  for (int i = 0; i < inputAmount; i++)
-    pinMode(inputs[i], INPUT);
+  //for (int i = 0; i < inputAmount; i++)
+  //  pinMode(inputs[i], INPUT);
 
   FastLED.addLeds<LED_TYPE, DATA_PIN, COLOR_ORDER>(leds, NUM_LEDS).setCorrection(TypicalLEDStrip);
   FastLED.setBrightness(BRIGHTNESS);
 
-  roller_sensor_top.attach(topstop, INPUT_PULLUP);
+  roller_sensor_top.attach(topstop, INPUT);
   roller_sensor_top.interval(button_bounce_time);
-  roller_sensor_bottom.attach(botstop, INPUT_PULLUP);
+  roller_sensor_bottom.attach(botstop, INPUT);
   roller_sensor_bottom.interval(button_bounce_time);
 
-  calibrationRoutine();
+
+  moveRollerUp();
+
+  //rollerCalibrationRoutine();
+  roller_position_target = 8000;
+  //sendAck();
 }
+
+
+
 void loop()
 {
-  roller_sensor_top.update();
-  roller_sensor_bottom.update();
-  //add code for making sure the motor doesn't keep moving
-  if ( roller_sensor_top.fell() ) {
-    Serial.println("top sensor triggered");
-  }
-  if ( roller_sensor_bottom.fell() ) {
-    Serial.println("bottom sensor triggered");
-  }
+  rollerRoutine();
+
+
 
 
 
@@ -192,9 +198,9 @@ void printError(String error) {
 
 
 void incorrectMessage(String mssg) {
-  Serial.print(F("{\n\t\"no useful message\":"));
+  Serial.print(F("{\n\t\"no useful message\":\""));
   Serial.print(mssg);
-  Serial.println(F("\n}"));
+  Serial.println(F("\"\n}"));
 
 }
 
@@ -246,9 +252,6 @@ bool checkForParameters(String mssg, String command, int amount) { //later expan
 
 
 
-void calibrationRoutine() {
-  //to write, will move the roller up and down, counting the time that it needs.
-}
 
 float fmap(float x, float in_min, float in_max, float out_min, float out_max)
 {
