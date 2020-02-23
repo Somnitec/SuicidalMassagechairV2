@@ -132,7 +132,8 @@ MonoBehaviour:
   Graph: {fileID: 11400000, guid: 208fc1b72ba06254e85f499519f40a6d, type: 2}
   Mock: {fileID: 11400000, guid: 2b0110cd53159fb4394c799a99beb3a5, type: 2}
   Arduino: {fileID: 11400000, guid: 1d31045ae3e113845895ddf3d8fb01d8, type: 2}
+  RepeatedMessage: status
   ShowColors: 0
   ShowNodeDebugInfo: 0
-  ShowNodeData: 1
+  ShowNodeData: 0
   WaitingAudio: {fileID: 0}

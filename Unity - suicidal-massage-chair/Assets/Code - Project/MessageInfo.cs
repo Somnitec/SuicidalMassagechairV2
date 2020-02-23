@@ -10,9 +10,6 @@ public class MessageInfo : MonoBehaviour
     public Messager Messager;
     public TextMeshProUGUI Text;
 
-
-
-    // Update is called once per frame
     void Update()
     {
         if(Messager == null || Text == null) return;
