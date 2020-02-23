@@ -63,7 +63,7 @@ MonoBehaviour:
     - Name: Data
       Entry: 6
       Data: 
-  Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  Color: {r: 0.314, g: 0.427, b: 0.31, a: 1}
   Buttons: 
 --- !u!114 &-5181468989907919709
 MonoBehaviour:
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Name: Variable
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 264, y: -280}
+  position: {x: 200, y: -312}
   ports:
     keys:
     - Input
@@ -362,9 +362,34 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes:
     - Name: Data
+      Entry: 7
+      Data: 0|NodeData, Assembly-CSharp
+    - Name: AudioClip
       Entry: 6
       Data: 
-  Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - Name: Text
+      Entry: 6
+      Data: 
+    - Name: Functions
+      Entry: 7
+      Data: 1|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: OnFinished
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  Color: {r: 0.314, g: 0.427, b: 0.31, a: 1}
   Buttons: 01000000
 --- !u!114 &-1635374956691734540
 MonoBehaviour:
@@ -429,8 +454,8 @@ MonoBehaviour:
   - {fileID: -5181468989907919709}
   - {fileID: 2421428131002953428}
   - {fileID: 0}
-  RootNode: {fileID: 6947010457830027371}
-  Current: {fileID: 6947010457830027371}
+  RootNode: {fileID: 2421428131002953428}
+  Current: {fileID: 2421428131002953428}
 --- !u!114 &2277012804171452123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -552,6 +577,7 @@ MonoBehaviour:
     SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 8300000, guid: 4c2de647b79e76e448caea5d228b1856, type: 3}
+    - {fileID: 2421428131002953428}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -877,7 +903,46 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: OnFinished
-      Entry: 6
+      Entry: 7
+      Data: 18|System.Action, mscorlib
+    - Name: target
+      Entry: 10
+      Data: 1
+    - Name: declaringType
+      Entry: 7
+      Data: 19|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: DialogueNode, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: methodName
+      Entry: 1
+      Data: OnFinished
+    - Name: delegateType
+      Entry: 7
+      Data: 20|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: System.Action, mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: signature
+      Entry: 7
+      Data: 21|System.Type[], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
       Data: 
     - Name: 
       Entry: 8
@@ -967,8 +1032,7 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects:
-    - {fileID: 6947010457830027371}
+    ReferencedUnityObjects: []
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -1036,51 +1100,12 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: OnFinished
-      Entry: 7
-      Data: 4|System.Action, mscorlib
-    - Name: target
-      Entry: 10
-      Data: 0
-    - Name: declaringType
-      Entry: 7
-      Data: 5|System.RuntimeType, mscorlib
-    - Name: 
-      Entry: 1
-      Data: DialogueNode, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: methodName
-      Entry: 1
-      Data: OnFinished
-    - Name: delegateType
-      Entry: 7
-      Data: 6|System.RuntimeType, mscorlib
-    - Name: 
-      Entry: 1
-      Data: System.Action, mscorlib
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: signature
-      Entry: 7
-      Data: 7|System.Type[], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
+      Entry: 6
       Data: 
     - Name: 
       Entry: 8
       Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  Color: {r: 1, g: 0.5920364, b: 0.023584902, a: 1}
+  Color: {r: 0.435, g: 0.161, b: 0.063, a: 1}
   Buttons: 0000000001000000
 --- !u!114 &7308101778485953021
 MonoBehaviour:
