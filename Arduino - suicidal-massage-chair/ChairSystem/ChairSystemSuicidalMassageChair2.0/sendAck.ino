@@ -41,9 +41,6 @@ void sendAck() {
   Serial.print(F(",\n\t\"roller_position_target\":"));
   Serial.print(roller_position_target);
   Serial.print(F(",\n\t\"roller_position_motor_direction\":"));
-  if (digitalRead(mssgup))roller_position_motor_direction = 1;
-  else if (digitalRead(mssgdown))roller_position_motor_direction = -1;
-  else roller_position_motor_direction = 0;
   Serial.print(roller_position_motor_direction);
   Serial.print(F(",\n\t\"roller_sensor_top\":"));
   Serial.print(roller_sensor_top.read());
