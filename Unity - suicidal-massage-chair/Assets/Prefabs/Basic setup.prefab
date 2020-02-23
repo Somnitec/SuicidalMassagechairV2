@@ -1079,7 +1079,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Node info\nPlaying: Start Sweet\nAudio: chairvoice sample1\nDuration:
-    [0.00,36.20]\nPlaying: False\nFunctionsFinished: False \nAudioFinished: False"
+    [0.00,36.20]\nPlaying: False\nFunctionsFinished: True \nAudioFinished: False"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1124,7 +1124,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 121
+  m_firstOverflowCharacterIndex: 120
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -1148,7 +1148,7 @@ MonoBehaviour:
   m_margin: {x: 15.498535, y: 13.347763, z: 17.050476, w: 14.814087}
   m_textInfo:
     textComponent: {fileID: 5724830196379704284}
-    characterCount: 141
+    characterCount: 140
     spriteCount: 0
     spaceCount: 16
     wordCount: 19
@@ -2601,7 +2601,7 @@ PrefabInstance:
     - target: {fileID: 4881339139054884190, guid: b2e8bfb65341f454796189775d554c31,
         type: 3}
       propertyPath: m_text
-      value: 'Kneading speed: 0.395'
+      value: 'Kneading speed: 0.423'
       objectReference: {fileID: 0}
     - target: {fileID: 4881339139054884190, guid: b2e8bfb65341f454796189775d554c31,
         type: 3}
@@ -2633,6 +2633,12 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4881339139125208085, guid: b2e8bfb65341f454796189775d554c31,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9393c935f1f249b42a18c377b7c13cdc,
+        type: 3}
     - target: {fileID: 4881339139125208091, guid: b2e8bfb65341f454796189775d554c31,
         type: 3}
       propertyPath: m_IsActive
@@ -2863,7 +2869,7 @@ PrefabInstance:
     - target: {fileID: 4881339139718945623, guid: b2e8bfb65341f454796189775d554c31,
         type: 3}
       propertyPath: m_Value
-      value: 0.395
+      value: 0.423
       objectReference: {fileID: 0}
     - target: {fileID: 4881339139732686923, guid: b2e8bfb65341f454796189775d554c31,
         type: 3}
@@ -2978,7 +2984,7 @@ PrefabInstance:
     - target: {fileID: 4881339140296846794, guid: b2e8bfb65341f454796189775d554c31,
         type: 3}
       propertyPath: m_Value
-      value: 0.803
+      value: 0.506
       objectReference: {fileID: 0}
     - target: {fileID: 4881339140358269713, guid: b2e8bfb65341f454796189775d554c31,
         type: 3}
@@ -3043,7 +3049,7 @@ PrefabInstance:
     - target: {fileID: 6196985896799058343, guid: b2e8bfb65341f454796189775d554c31,
         type: 3}
       propertyPath: m_text
-      value: 'Estimated: 0.803'
+      value: 'Estimated: 0.506'
       objectReference: {fileID: 0}
     - target: {fileID: 6355259230900119704, guid: b2e8bfb65341f454796189775d554c31,
         type: 3}

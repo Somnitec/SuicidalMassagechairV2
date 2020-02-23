@@ -24,7 +24,7 @@ MonoBehaviour:
   MaxPosition: 10000
   MaxSpeed: 255
   time_since_started: 0
-  chair_position_estimated: 1
+  chair_position_estimated: 0.506
   chair_position_target: 0.552
   chair_position_motor_direction: 0
   chair_position_move_time_max: 0
