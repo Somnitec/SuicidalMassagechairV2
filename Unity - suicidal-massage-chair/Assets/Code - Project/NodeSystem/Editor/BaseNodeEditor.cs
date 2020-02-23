@@ -32,7 +32,7 @@ public class BaseNodeEditor : NodeEditor
         base.OnBodyGUI();
         BaseNode node = target as BaseNode;
         var graph = node.NodeGraph;
-        if (GUILayout.Button("Set as current")) graph.SetCurrentNodeTo(node);
+        if (GUILayout.Button("Set as current")) graph.PlayNode(node);
     }
 
     public override Color GetTint()

@@ -12,8 +12,10 @@ public class BaseNode : SerializableNode
 {
     [Input] public Connection Input;
     public NodeGraph NodeGraph => (NodeGraph)graph;
-    [ColorPalette()][HideLabel]
+    [ColorPalette()][HideLabel][ShowIf("showColors")]
     public Color Color = Color.gray;
+
+    private bool showColors => SettingsHolder.Instance.Settings.ShowColors;
 
     public virtual void OnNodeEnable() { }
     public virtual void OnNodeDisable() { }
@@ -21,7 +23,7 @@ public class BaseNode : SerializableNode
     [ContextMenu("Set Current")]
     public void SetCurrent()
     {
-        NodeGraph.SetCurrentNodeTo(this);
+        NodeGraph.PlayNode(this);
     }
 
     [ContextMenu("Set Root")]

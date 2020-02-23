@@ -6,8 +6,8 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class ChairStateSwitcher : MonoBehaviour
 {
-    public ChairMicroControllerState Arduino, Mock;
     private ChairOutputVisualizer visualizer;
+    private Settings settings => SettingsHolder.Instance.Settings;
 
     void Start()
     {
@@ -24,13 +24,13 @@ public class ChairStateSwitcher : MonoBehaviour
     public void SwitchToMock()
     {
         Setup();
-        visualizer.State = Mock;
+        visualizer.State = settings.Mock;
     }
 
     [Button]
     public void SwitchToArduino()
     {
         Setup();
-        visualizer.State = Arduino;
+        visualizer.State = settings.Arduino;
     }
 }
