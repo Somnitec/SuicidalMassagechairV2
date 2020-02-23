@@ -70,7 +70,7 @@ public class DialogueNode : BaseNode
         }
 
         var node = (BaseNode)port.Connection.node;
-        NodeGraph.SetCurrentNodeTo(node);
+        NodeGraph.PlayNode(node);
     }
 
 
