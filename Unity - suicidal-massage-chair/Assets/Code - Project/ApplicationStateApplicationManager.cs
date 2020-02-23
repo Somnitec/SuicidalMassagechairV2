@@ -8,7 +8,7 @@ using Event = Framework.Event;
 public class ApplicationStateApplicationManager : SingletonMonoBehavior<ApplicationStateApplicationManager>
 {
     [ReadOnly]
-    public ApplicationState State;
+    public ApplicationState State = ApplicationState.Playing;
 
     private Settings settings => SettingsHolder.Instance.Settings;
     private NodeLogic logic = new NodeLogic();
@@ -16,6 +16,9 @@ public class ApplicationStateApplicationManager : SingletonMonoBehavior<Applicat
     void Start()
     {
         Events.Instance.AddListener<StoryFinished>(RestartApplication);
+
+        // Example of using this event on the End node
+        // Events.Instance.Raise(new StoryFinished());
     }
 
     [Button]

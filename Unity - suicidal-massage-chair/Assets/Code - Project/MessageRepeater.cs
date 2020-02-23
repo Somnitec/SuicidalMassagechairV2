@@ -7,7 +7,6 @@ using UnityEngine;
 public class MessageRepeater : MonoBehaviour
 {
     public Messager Messager;
-    public string Param = "blinkTime";
     public int Value = -1;
     
     [Range(0,10f)]
@@ -16,13 +15,14 @@ public class MessageRepeater : MonoBehaviour
 
     [ReadOnly,ShowInInspector]
     private float TimePassedSinceLastRefresh = 0f;
+    private Settings settings => SettingsHolder.Instance.Settings;
     
     void Update()
     {
         TimePassedSinceLastRefresh += Time.deltaTime;
         if (TimePassedSinceLastRefresh >= RefreshTime)
         {
-            this.Messager.SendMessageToArduino(Param, Value);
+            this.Messager.SendMessageToArduino(settings.RepeatedMessage, Value);
             TimePassedSinceLastRefresh = 0;
         }
     }

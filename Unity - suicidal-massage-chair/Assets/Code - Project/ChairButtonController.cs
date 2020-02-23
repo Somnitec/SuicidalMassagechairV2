@@ -29,8 +29,8 @@ public class ChairButtonController : MonoBehaviour
         new ResetChair().RaiseEvent();
     }
 
-    private void ChairPosition(float v)
+    private void ChairPosition(float newTargetPosition)
     {
-        new ChairPosition(v).RaiseEvent();
+        new ChairPosition(newTargetPosition).RaiseEvent();
     }
 }

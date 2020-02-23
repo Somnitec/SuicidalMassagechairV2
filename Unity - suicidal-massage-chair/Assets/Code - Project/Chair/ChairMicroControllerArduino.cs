@@ -25,6 +25,7 @@ public class ChairMicroControllerArduino : AbstractChairMicroController
         Events.Instance.RemoveListener<ChairStateUpdate>(StatusUpdate);
     }
 
+
     protected override void Reset(ResetChair args)
     {
         send(args.SerializeToJson());
@@ -35,6 +36,11 @@ public class ChairMicroControllerArduino : AbstractChairMicroController
         msgs.ForEach(msg =>
             ChairMicrocontrollerMessager.Instance.SendMessageToArduino(msg)
         );
+    }
+
+    protected override void RedGreenStatusLight(RedGreenStatusLight args)
+    {
+        send(args.SerializeToJson());
     }
 
     protected override void Airbag(AirBag args)

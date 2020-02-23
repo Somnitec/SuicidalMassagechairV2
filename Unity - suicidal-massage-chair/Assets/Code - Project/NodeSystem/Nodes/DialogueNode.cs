@@ -4,6 +4,7 @@ using Framework;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using XNode;
+using Event = Framework.Event;
 
 
 public class DialogueNode : BaseNode
@@ -40,6 +41,7 @@ public class DialogueNode : BaseNode
     private void OnInterrupted(UserInputUp e)
     {
         Debug.Log($"OnInterrupted {name} {e.Button}");
+        Events.Instance.Raise(new InterruptedInput(e.Button));
     }
 
     private void OnFinished()
@@ -87,5 +89,15 @@ public class DialogueNode : BaseNode
         Debug.Log($"OnNodeDisable {name}");
 
         Events.Instance.RemoveListener<UserInputUp>(HandleInput);
+    }
+}
+
+public class InterruptedInput : Event
+{
+    public UserInputButton Button;
+
+    public InterruptedInput(UserInputButton button)
+    {
+        Button = button;
     }
 }

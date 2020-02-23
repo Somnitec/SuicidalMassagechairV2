@@ -27,7 +27,9 @@ public abstract class AbstractChairMicroController
         ScriptEvent.Instance.AddListener<RollerPosition>(RollerPosition);
         ScriptEvent.Instance.AddListener<RollerPoundingOn>(RollerPoundingOn);
         ScriptEvent.Instance.AddListener<RollerPoundingSpeed>(RollerPoundingSpeed);
+        ScriptEvent.Instance.AddListener<RedGreenStatusLight>(RedGreenStatusLight);
     }
+
 
     public virtual void RemoveListeners()
     {
@@ -46,9 +48,11 @@ public abstract class AbstractChairMicroController
         ScriptEvent.Instance.RemoveListener<RollerKneadingSpeed>(RollerKneadingSpeed);
         ScriptEvent.Instance.RemoveListener<RollerPosition>(RollerPosition);
         ScriptEvent.Instance.RemoveListener<RollerPoundingOn>(RollerPoundingOn);
-        ScriptEvent.Instance.RemoveListener<RollerPoundingSpeed>(RollerPoundingSpeed); ;
+        ScriptEvent.Instance.RemoveListener<RollerPoundingSpeed>(RollerPoundingSpeed);
+        ScriptEvent.Instance.RemoveListener<RedGreenStatusLight>(RedGreenStatusLight);
     }
 
+    protected abstract void RedGreenStatusLight(RedGreenStatusLight e);
     protected abstract void Reset(ResetChair args);
     protected abstract void Airbag(AirBag args);
     protected abstract void ChairPosition(ChairPosition args);

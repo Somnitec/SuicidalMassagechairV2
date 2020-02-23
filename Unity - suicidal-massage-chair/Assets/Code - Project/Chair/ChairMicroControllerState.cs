@@ -66,6 +66,7 @@ public class ChairMicroControllerState : SerializedScriptableObject
     public StatusLight redgreen_statuslight;
     public bool statusLightGreen => redgreen_statuslight == StatusLight.Green;
     public bool statusLightRed => redgreen_statuslight == StatusLight.Red;
+
     public float button_bounce_time;
 
 

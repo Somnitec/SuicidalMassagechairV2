@@ -1,4 +1,5 @@
 ﻿
+using System;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -8,6 +9,7 @@ public class Settings : SerializedScriptableObject
     [Title("Hookups")]
     public NodeGraph Graph;
     public ChairMicroControllerState Mock, Arduino;
+    public String RepeatedMessage = "status";
     [Title("Toggles")]
     public bool ShowColors = true; // TODO implement this
     public bool ShowNodeDebugInfo = true;

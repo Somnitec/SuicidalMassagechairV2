@@ -38,6 +38,11 @@ public class ChairMicroControllerMock : AbstractChairMicroController
         // state.roller_up_on = false;
     }
 
+    protected override void RedGreenStatusLight(RedGreenStatusLight e)
+    {
+        state.redgreen_statuslight = e.Status;
+    }
+
     protected override void Airbag(AirBag args)
     {
         Debug.Log($"Mock: AIRBAG :D {args.SerializeToString()}");
