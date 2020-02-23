@@ -62,7 +62,7 @@ public class ChairMicroControllerState : SerializedScriptableObject
     [Header("Other")]
     public bool butt_vibration_on;
     public bool backlight_on;
-    public Color backlight_color = Color.blue;
+    public Color backlight_color;
     public StatusLight redgreen_statuslight;
     public bool statusLightGreen => redgreen_statuslight == StatusLight.Green;
     public bool statusLightRed => redgreen_statuslight == StatusLight.Red;

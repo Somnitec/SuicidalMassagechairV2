@@ -100,6 +100,12 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Logic
+      Entry: 7
+      Data: 2|NodeLogic, Assembly-CSharp
     - Name: OnFinished
       Entry: 6
       Data: 
@@ -229,6 +235,12 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Logic
+      Entry: 7
+      Data: 2|NodeLogic, Assembly-CSharp
     - Name: OnFinished
       Entry: 6
       Data: 
@@ -332,6 +344,12 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Logic
+      Entry: 7
+      Data: 2|NodeLogic, Assembly-CSharp
     - Name: OnFinished
       Entry: 6
       Data: 
@@ -463,6 +481,12 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Logic
+      Entry: 7
+      Data: 4|NodeLogic, Assembly-CSharp
     - Name: OnFinished
       Entry: 6
       Data: 
@@ -619,8 +643,7 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects:
-    - {fileID: -1201324122032544533}
+    ReferencedUnityObjects: []
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -663,47 +686,14 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Logic
+      Entry: 7
+      Data: 2|NodeLogic, Assembly-CSharp
     - Name: OnFinished
-      Entry: 7
-      Data: 2|System.Action, mscorlib
-    - Name: target
-      Entry: 10
-      Data: 0
-    - Name: declaringType
-      Entry: 7
-      Data: 3|System.RuntimeType, mscorlib
-    - Name: 
-      Entry: 1
-      Data: DialogueNode, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: methodName
-      Entry: 1
-      Data: OnFinished
-    - Name: delegateType
-      Entry: 7
-      Data: 4|System.RuntimeType, mscorlib
-    - Name: 
-      Entry: 1
-      Data: System.Action, mscorlib
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: signature
-      Entry: 7
-      Data: 5|System.Type[], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
+      Entry: 6
       Data: 
     - Name: 
       Entry: 8
@@ -733,7 +723,7 @@ MonoBehaviour:
   - {fileID: 9062488457228335062}
   - {fileID: 2997809375468621211}
   RootNode: {fileID: -3638098325038414586}
-  Current: {fileID: -1201324122032544533}
+  Current: {fileID: 8825632724882243287}
 --- !u!114 &2997809375468621211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -819,6 +809,12 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Logic
+      Entry: 7
+      Data: 2|NodeLogic, Assembly-CSharp
     - Name: OnFinished
       Entry: 6
       Data: 
@@ -949,6 +945,12 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Logic
+      Entry: 7
+      Data: 3|NodeLogic, Assembly-CSharp
     - Name: OnFinished
       Entry: 6
       Data: 
@@ -1014,7 +1016,8 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 8825632724882243287}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -1064,8 +1067,53 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Logic
+      Entry: 7
+      Data: 3|NodeLogic, Assembly-CSharp
     - Name: OnFinished
-      Entry: 6
+      Entry: 7
+      Data: 4|System.Action, mscorlib
+    - Name: target
+      Entry: 10
+      Data: 0
+    - Name: declaringType
+      Entry: 7
+      Data: 5|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: DialogueNode, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: methodName
+      Entry: 1
+      Data: OnFinished
+    - Name: delegateType
+      Entry: 7
+      Data: 6|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: System.Action, mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: signature
+      Entry: 7
+      Data: 7|System.Type[], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
       Data: 
     - Name: 
       Entry: 8
@@ -1189,6 +1237,12 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Logic
+      Entry: 7
+      Data: 2|NodeLogic, Assembly-CSharp
     - Name: OnFinished
       Entry: 6
       Data: 

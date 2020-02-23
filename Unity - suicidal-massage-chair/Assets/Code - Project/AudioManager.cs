@@ -10,7 +10,7 @@ public class AudioManager : SingletonMonoBehavior<AudioManager>
     public AudioListener Listener;
 
     double clipDuration => (double) Source.clip.samples / Source.clip.frequency;
-
+    public string ClipProgress => $"[{Source.time.ToString("F2")},{clipDuration.ToString("F2")}]";
 
     void Start()
     {
