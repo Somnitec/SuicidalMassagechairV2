@@ -12,8 +12,10 @@ public class BaseNode : SerializableNode
 {
     [Input] public Connection Input;
     public NodeGraph NodeGraph => (NodeGraph)graph;
-    [ColorPalette()][HideLabel]
+    [ColorPalette()][HideLabel][ShowIf("showColors")]
     public Color Color = Color.gray;
+
+    private bool showColors => SettingsHolder.Instance.Settings.ShowColors;
 
     public virtual void OnNodeEnable() { }
     public virtual void OnNodeDisable() { }

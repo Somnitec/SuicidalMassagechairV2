@@ -5,25 +5,20 @@ using UnityEngine;
 
 public class ChairMicroController : MonoBehaviour
 {
-    public ChairMicroControllerState ArduinoState;
-    public ChairMicroControllerState MockState;
-    private ChairMicroControllerMock chairMicroController;
-    private ChairMicroControllerArduino arduino;
+    private ChairMicroControllerMock mockController;
+    private ChairMicroControllerArduino arduinoController;
+
+    private Settings settings => SettingsHolder.Instance.Settings;
 
     private void Start()
     {
-        if(MockState == null)
-            MockState = new ChairMicroControllerState();
-        if (ArduinoState == null)
-            ArduinoState = new ChairMicroControllerState();
-
-        chairMicroController = new ChairMicroControllerMock(MockState);
-        arduino = new ChairMicroControllerArduino(ArduinoState);
+        mockController = new ChairMicroControllerMock(settings.Mock);
+        arduinoController = new ChairMicroControllerArduino(settings.Arduino);
     }
 
     private void OnDisable()
     {
-        chairMicroController.RemoveListeners();
+        mockController.RemoveListeners();
     }
 
     public enum Commands

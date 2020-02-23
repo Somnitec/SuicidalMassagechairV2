@@ -8,8 +8,13 @@ using XNode;
 
 public class DialogueNode : BaseNode
 {
-    [InlineProperty, HideLabel][FoldoutGroup("Data")][HideReferenceObjectPicker]
+    [ShowIf("showData")]
+    [InlineProperty, HideLabel, HideReferenceObjectPicker]
     public NodeData Data = new NodeData();
+
+    [ShowIf("showDebugInfo")]
+    [InlineProperty, HideLabel, HideReferenceObjectPicker]
+    public NodeLogic Logic = new NodeLogic();
 
     [Output(dynamicPortList = true), ListDrawerSettings(ShowIndexLabels = false)]
     public List<UserInputButton> Buttons;
@@ -17,15 +22,18 @@ public class DialogueNode : BaseNode
     [Output]
     public Connection OnAnyButton;
 
+    private bool showDebugInfo => SettingsHolder.Instance.Settings.ShowNodeDebugInfo;
+    private bool showData => SettingsHolder.Instance.Settings.ShowNodeData;
+
     public override void OnNodeEnable()
     {
         Debug.Log($"OnNodeEnable {name}");
 
         Events.Instance.AddListener<UserInputUp>(OnInterrupted);
-        Data.OnFinished += OnFinished;
+        Logic.OnFinished += OnFinished;
 
         NodeFunctionRunner.Instance.StopAllCoroutines();
-        NodeFunctionRunner.Instance.StartCoroutine(Data.InvokeFunctionsAndPlayAudio(name));
+        NodeFunctionRunner.Instance.StartCoroutine(Logic.InvokeFunctionsAndPlayAudio(name, Data));
     }
 
     private void OnInterrupted(UserInputUp e)
@@ -77,8 +85,8 @@ public class DialogueNode : BaseNode
     {
         Debug.Log($"OnNodeDisable {name}");
 
-        if (Data?.OnFinished != null)
-            Data.OnFinished -= OnFinished;
+        if (Logic?.OnFinished != null)
+            Logic.OnFinished -= OnFinished;
 
         Events.Instance.RemoveListener<UserInputUp>(HandleInput);
     }

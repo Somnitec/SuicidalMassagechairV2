@@ -5,56 +5,41 @@ using System.Linq;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-public class NodeData
+public class NodeLogic
 {
-    // add Language?
-    [HideLabel] [AssetsOnly] public AudioClip AudioClip;
-    [TextArea, PropertySpace(0, 10f)] public string Text;
+    [HideInInspector] public Action OnFinished;
 
-    [TableList(AlwaysExpanded = true, HideToolbar = true)]
-    [HideLabel]
-    [FoldoutGroup("Chair Functions")]
-    [PropertyOrder(10)]
-    public List<NodeScriptLine> Functions = new List<NodeScriptLine>();
+    [Title("Debug Info")]
+    [ReadOnly, ShowInInspector] public bool AudioFinished { get; private set; }
+    [ReadOnly, ShowInInspector] public bool FunctionsFinished { get; private set; }
 
-    [HideInInspector]
-    public Action OnFinished;
-
-    [ReadOnly,ShowInInspector]
-    private bool audioFinished = false;
-    [ReadOnly, ShowInInspector]
-    private bool functionsFinished = false;
-
-    public IEnumerator InvokeFunctionsAndPlayAudio(string Name)
+    public IEnumerator InvokeFunctionsAndPlayAudio(string Name, NodeData data)
     {
         float timeStarted = Time.timeSinceLevelLoad;
-
-        functionsFinished = false;
-        audioFinished = false;
-
-        if (AudioClip == null)
+        FunctionsFinished = false;
+        AudioFinished = false;
+        if (data.AudioClip == null)
         {
             Debug.LogWarning($"No audioClip on data of {Name}");
-            audioFinished = true;
+            AudioFinished = true;
         }
+
         else
         {
-            AudioManager.Instance.PlayClip(AudioClip, () => audioFinished = true);
+            AudioManager.Instance.PlayClip(data.AudioClip, () => AudioFinished = true);
         }
 
-        yield return ExecuteFunctions(timeStarted);
-
-        while (!audioFinished || !functionsFinished)
+        yield return ExecuteFunctions(timeStarted, data);
+        while (!AudioFinished || !FunctionsFinished)
             yield return null;
-
         OnFinished?.Invoke();
     }
 
-    private IEnumerator ExecuteFunctions(float timeStarted)
+    private IEnumerator ExecuteFunctions(float timeStarted, NodeData data)
     {
-        Sort();
+        data.Sort();
 
-        foreach (var nodeScriptLine in Functions)
+        foreach (var nodeScriptLine in data.Functions)
         {
             var timePassed = TimePassed(timeStarted);
             if (timePassed - nodeScriptLine.TimeSec < 0)
@@ -68,27 +53,11 @@ public class NodeData
             nodeScriptLine.Function?.RaiseEvent();
         }
 
-        functionsFinished = true;
+        FunctionsFinished = true;
     }
 
     private static float TimePassed(float timeStarted)
     {
         return Time.timeSinceLevelLoad - timeStarted;
-    }
-
-    [FoldoutGroup("Chair Functions")]
-    [HorizontalGroup("Chair Functions/Buttons")]
-    [Button]
-    private void Sort()
-    {
-        Functions = Functions.OrderBy(a => a.TimeSec).ToList();
-    }
-
-    [FoldoutGroup("Chair Functions")]
-    [HorizontalGroup("Chair Functions/Buttons")]
-    [Button]
-    private void Add()
-    {
-        Functions.Add(new NodeScriptLine());
     }
 }
