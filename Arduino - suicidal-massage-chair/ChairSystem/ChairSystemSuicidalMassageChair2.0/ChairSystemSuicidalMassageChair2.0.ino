@@ -170,8 +170,7 @@ void loop()
         if (readString.length() > maxStringLength) {//preventing buffer overflow
           readString = "";
           readingMessage = false;
-          Serial.println(F("overflow error"));
-
+          printError("overflow");
         }
       }
 
@@ -179,6 +178,11 @@ void loop()
   }
 }
 
+void printError(String error) {
+  Serial.print(F("{\n\t\"error\":\""));
+  Serial.print(error);
+  Serial.println(F("\"\n}"));
+}
 
 void receiveMessage( String message) {
   last_command = "";
@@ -187,8 +191,7 @@ void receiveMessage( String message) {
   DeserializationError error = deserializeJson(doc, message);
   // Test if parsing succeeds.
   if (error) {
-    Serial.print(F("deserializeJson() failed: "));
-    Serial.println(error.c_str());
+    printError(error.c_str());
     return;
   }
 
@@ -319,8 +322,9 @@ void receiveMessage( String message) {
 }
 
 void incorrectMessage(String mssg) {
-  Serial.print(F("no useful message, sorry: "));
-  Serial.println(mssg);
+  Serial.print(F("{\n\t\"no useful message\":"));
+  Serial.print(mssg);
+  Serial.println(F("\n}"));
 
 }
 
