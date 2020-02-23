@@ -24,16 +24,16 @@ MonoBehaviour:
   MaxPosition: 10000
   MaxSpeed: 255
   time_since_started: 0
-  chair_position_estimated: 0.803
+  chair_position_estimated: 1
   chair_position_target: 0.552
   chair_position_motor_direction: 0
   chair_position_move_time_max: 0
   chair_position_move_time_up: 0
   chair_position_move_time_down: 0
   roller_kneading_on: 1
-  roller_kneading_speed: 0.395
+  roller_kneading_speed: 0.423
   roller_pounding_on: 1
-  roller_pounding_speed: 0.255
+  roller_pounding_speed: 0.548
   roller_position_estimated: 0.693
   roller_position_target: 0.344
   roller_position_motor_direction: 2
