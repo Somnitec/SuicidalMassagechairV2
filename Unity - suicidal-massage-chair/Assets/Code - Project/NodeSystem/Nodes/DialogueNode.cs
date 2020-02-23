@@ -25,7 +25,7 @@ public class DialogueNode : BaseNode
         Data.OnFinished += OnFinished;
 
         NodeFunctionRunner.Instance.StopAllCoroutines();
-        NodeFunctionRunner.Instance.StartCoroutine(Data.InvokeFunctions());
+        NodeFunctionRunner.Instance.StartCoroutine(Data.InvokeFunctionsAndPlayAudio(name));
     }
 
     private void OnInterrupted(UserInputUp e)
@@ -72,7 +72,6 @@ public class DialogueNode : BaseNode
         var node = (BaseNode)port.Connection.node;
         NodeGraph.PlayNode(node);
     }
-
 
     public override void OnNodeDisable()
     {
