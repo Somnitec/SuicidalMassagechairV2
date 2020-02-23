@@ -57,8 +57,7 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects:
-    - {fileID: -7770791189078705305}
+    ReferencedUnityObjects: []
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -86,7 +85,7 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: NodeScriptLine, Assembly-CSharp
-    - Name: TimeInSec
+    - Name: TimeSec
       Entry: 4
       Data: 0
     - Name: Function
@@ -102,50 +101,12 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: OnFinished
-      Entry: 7
-      Data: 2|System.Action, mscorlib
-    - Name: target
-      Entry: 10
-      Data: 0
-    - Name: declaringType
-      Entry: 7
-      Data: 3|System.RuntimeType, mscorlib
-    - Name: 
-      Entry: 1
-      Data: DialogueNode, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: methodName
-      Entry: 1
-      Data: OnFinished
-    - Name: delegateType
-      Entry: 7
-      Data: 4|System.RuntimeType, mscorlib
-    - Name: 
-      Entry: 1
-      Data: System.Action, mscorlib
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: signature
-      Entry: 7
-      Data: 5|System.Type[], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
+      Entry: 6
       Data: 
     - Name: 
       Entry: 8
       Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
+  Color: {r: 0.2, g: 0.6, b: 0.698, a: 1}
   Buttons: 
 --- !u!114 &-6363787560277895047
 MonoBehaviour:
@@ -253,7 +214,7 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: NodeScriptLine, Assembly-CSharp
-    - Name: TimeInSec
+    - Name: TimeSec
       Entry: 4
       Data: 0
     - Name: Function
@@ -274,6 +235,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+  Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   Buttons: 
 --- !u!114 &-5966743639661084290
 MonoBehaviour:
@@ -355,7 +317,7 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: NodeScriptLine, Assembly-CSharp
-    - Name: TimeInSec
+    - Name: TimeSec
       Entry: 4
       Data: 0
     - Name: Function
@@ -376,6 +338,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+  Color: {r: 0.11, g: 0.49, b: 0.698, a: 1}
   Buttons: 
 --- !u!114 &-3638098325038414586
 MonoBehaviour:
@@ -431,7 +394,8 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 8300000, guid: 4c2de647b79e76e448caea5d228b1856, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -441,8 +405,8 @@ MonoBehaviour:
       Entry: 7
       Data: 0|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 0
     - Name: Text
       Entry: 1
       Data: "Hello new friend, \r\nWelcome\r\nNow is a moment to wind down. \r\nMake
@@ -460,7 +424,7 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: NodeScriptLine, Assembly-CSharp
-    - Name: TimeInSec
+    - Name: TimeSec
       Entry: 4
       Data: 0
     - Name: Function
@@ -478,17 +442,14 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: NodeScriptLine, Assembly-CSharp
-    - Name: TimeInSec
+    - Name: TimeSec
       Entry: 4
-      Data: 10
+      Data: 0
     - Name: Function
       Entry: 7
       Data: 3|ChairPosition, Assembly-CSharp
-    - Name: Duration
+    - Name: NewPosition
       Entry: 4
-      Data: 0
-    - Name: Direction
-      Entry: 3
       Data: 0
     - Name: 
       Entry: 8
@@ -508,6 +469,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+  Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   Buttons: 
 --- !u!114 &-1201324122032544533
 MonoBehaviour:
@@ -657,7 +619,8 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: -1201324122032544533}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -685,7 +648,7 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: NodeScriptLine, Assembly-CSharp
-    - Name: TimeInSec
+    - Name: TimeSec
       Entry: 4
       Data: 0
     - Name: Function
@@ -701,11 +664,51 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: OnFinished
-      Entry: 6
+      Entry: 7
+      Data: 2|System.Action, mscorlib
+    - Name: target
+      Entry: 10
+      Data: 0
+    - Name: declaringType
+      Entry: 7
+      Data: 3|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: DialogueNode, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: methodName
+      Entry: 1
+      Data: OnFinished
+    - Name: delegateType
+      Entry: 7
+      Data: 4|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: System.Action, mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: signature
+      Entry: 7
+      Data: 5|System.Type[], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
       Data: 
     - Name: 
       Entry: 8
       Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  Color: {r: 0.2, g: 0.6, b: 0.698, a: 1}
   Buttons: 00000000030000000700000008000000090000000a0000000b000000
 --- !u!114 &11400000
 MonoBehaviour:
@@ -729,8 +732,8 @@ MonoBehaviour:
   - {fileID: -6363787560277895047}
   - {fileID: 9062488457228335062}
   - {fileID: 2997809375468621211}
-  RootNode: {fileID: 0}
-  Current: {fileID: -7770791189078705305}
+  RootNode: {fileID: -3638098325038414586}
+  Current: {fileID: -1201324122032544533}
 --- !u!114 &2997809375468621211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -822,6 +825,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+  Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   Buttons: 
 --- !u!114 &5458372892668278758
 MonoBehaviour:
@@ -833,7 +837,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e762170afb489d7498c4c2bde9052014, type: 3}
-  m_Name: Control pannel 1
+  m_Name: TheMarieExperience - Graph
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -504, y: -376}
@@ -921,7 +925,7 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: NodeScriptLine, Assembly-CSharp
-    - Name: TimeInSec
+    - Name: TimeSec
       Entry: 4
       Data: 0
     - Name: Function
@@ -951,6 +955,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+  Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   Buttons: 02000000
 --- !u!114 &8825632724882243287
 MonoBehaviour:
@@ -965,7 +970,7 @@ MonoBehaviour:
   m_Name: control pannel 2
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -200, y: -376}
+  position: {x: -200, y: -392}
   ports:
     keys:
     - Buttons
@@ -1035,7 +1040,7 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: NodeScriptLine, Assembly-CSharp
-    - Name: TimeInSec
+    - Name: TimeSec
       Entry: 4
       Data: 0
     - Name: Function
@@ -1065,6 +1070,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+  Color: {r: 0.2, g: 0.6, b: 0.698, a: 1}
   Buttons: 
 --- !u!114 &9062488457228335062
 MonoBehaviour:
@@ -1156,7 +1162,7 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: NodeScriptLine, Assembly-CSharp
-    - Name: TimeInSec
+    - Name: TimeSec
       Entry: 4
       Data: 0
     - Name: Function
@@ -1168,7 +1174,7 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: NodeScriptLine, Assembly-CSharp
-    - Name: TimeInSec
+    - Name: TimeSec
       Entry: 4
       Data: 0
     - Name: Function
@@ -1189,4 +1195,5 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+  Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   Buttons: 

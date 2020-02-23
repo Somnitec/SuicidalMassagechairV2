@@ -32,7 +32,6 @@ public class ChairMicroControllerArduino : AbstractChairMicroController
 
     private void send(List<string> msgs)
     {
-        Debug.Log("Sending");
         msgs.ForEach(msg =>
             ChairMicrocontrollerMessager.Instance.SendMessageToArduino(msg)
         );

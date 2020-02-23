@@ -21,7 +21,7 @@ public class BaseNode : SerializableNode
     [ContextMenu("Set Current")]
     public void SetCurrent()
     {
-        NodeGraph.SetCurrentNodeTo(this);
+        NodeGraph.PlayNode(this);
     }
 
     [ContextMenu("Set Root")]

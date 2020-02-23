@@ -17,12 +17,15 @@ public class NodeData
     [PropertyOrder(10)]
     public List<NodeScriptLine> Functions = new List<NodeScriptLine>();
 
-    [HideInInspector] public Action OnFinished;
+    [HideInInspector]
+    public Action OnFinished;
 
+    [ReadOnly,ShowInInspector]
     private bool audioFinished = false;
+    [ReadOnly, ShowInInspector]
     private bool functionsFinished = false;
 
-    public IEnumerator InvokeFunctions()
+    public IEnumerator InvokeFunctionsAndPlayAudio(string Name)
     {
         float timeStarted = Time.timeSinceLevelLoad;
 
@@ -31,7 +34,8 @@ public class NodeData
 
         if (AudioClip == null)
         {
-            Debug.LogWarning($"No audioClip on node");
+            Debug.LogWarning($"No audioClip on data of {Name}");
+            audioFinished = true;
         }
         else
         {

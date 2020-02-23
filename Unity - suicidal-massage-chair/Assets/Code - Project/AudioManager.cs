@@ -9,19 +9,25 @@ public class AudioManager : SingletonMonoBehavior<AudioManager>
 
     public AudioListener Listener;
 
-    double clipDuration => (double)Source.clip.samples / Source.clip.frequency;
+    double clipDuration => (double) Source.clip.samples / Source.clip.frequency;
 
 
     void Start()
     {
-        if(Source == null)
+        if (Source == null)
             Source = gameObject.AddComponent<AudioSource>();
-        if(Listener == null)
+        if (Listener == null)
             Listener = gameObject.AddComponent<AudioListener>();
     }
 
     public void PlayClip(AudioClip clip, Action onFinished)
     {
+        if (clip == null)
+        {
+            onFinished.Invoke();
+            return;
+        }
+
         // TODO crossfade if still playing
         Source.clip = clip;
         Source.Play();
@@ -31,7 +37,7 @@ public class AudioManager : SingletonMonoBehavior<AudioManager>
 
     private IEnumerator WaitTillFinished(Action onFinished)
     {
-        yield return new WaitForSeconds((float)clipDuration);
+        yield return new WaitForSeconds((float) clipDuration);
 
         onFinished.Invoke();
     }
