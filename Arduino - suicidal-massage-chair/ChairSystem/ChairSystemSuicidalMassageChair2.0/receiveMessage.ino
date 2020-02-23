@@ -1,7 +1,6 @@
 
 void receiveMessage( String message) {
   last_command = "";
-  String currentCommand = "";
 
   DeserializationError error = deserializeJson(doc, message);
   // Test if parsing succeeds.
@@ -18,7 +17,10 @@ void receiveMessage( String message) {
   }
 
   else if (validateInput( F("chair_position_estimated"), 1)) {
-    chair_position_estimated =  doc["chair_position_estimated"][0];
+    //just ack
+  }
+  else if (validateInput( F("chair_position_target"), 1)) {
+    chair_position_estimated =  doc["chair_position_target"][0];
   }
   else if (validateInput( F("chair_position_motor_direction"), 1)) {
     chair_position_motor_direction =  doc["chair_position_motor_direction"][0];
@@ -51,8 +53,16 @@ void receiveMessage( String message) {
     analogWrite(pounding, roller_pounding_on * roller_pounding_speed);
   }
 
+  else if (validateInput( F("roller_position_estimated"), 1)) {
+    //only ack
+  }
+  else if (validateInput( F("roller_position_target"), 1)) {
+    roller_position_target =  doc["roller_position_target"][0];
+    movingToTarget = true;
+  }
   else if (validateInput( F("roller_position_motor_direction"), 1)) {
     roller_position_motor_direction =  doc["roller_position_motor_direction"][0];
+    movingToTarget = false;
   }
   else if (validateInput( F("roller_sensor_top"), 1)) {
     //cannot be set, so it will simply return an ack
@@ -66,9 +76,7 @@ void receiveMessage( String message) {
   else if (validateInput( F("roller_move_time_down"), 1)) {
     roller_move_time_down =  doc["roller_move_time_down"][0];
   }
-  else if (validateInput( F("roller_estimated_position"), 1)) {
-    roller_estimated_position =  doc["roller_estimated_position"][0];
-  }
+
 
   else if (validateInput( F("feet_roller_on"), 1)) {
     feet_roller_on = doc["feet_roller_on"][0];

@@ -47,8 +47,8 @@ int roller_position_target;  // 0 - 10000
 int roller_position_motor_direction; //-1 down, 0 neutral, 1 up
 Bounce roller_sensor_top = Bounce();
 Bounce roller_sensor_bottom = Bounce();
-int roller_move_time_up;
-int roller_move_time_down;
+int roller_move_time_up = 15862; //is average measured value
+int roller_move_time_down = 14776; //is average measured value
 int roller_estimated_position;
 
 bool feet_roller_on;
@@ -117,6 +117,8 @@ bool readingMessage = false;
 String serial_error = "";
 StaticJsonDocument<200> doc;
 
+bool movingToTarget = true;//needed for roller
+
 void setup() {
   Serial.begin(9600);
   while (!Serial);//leonardo fix?
@@ -139,7 +141,12 @@ void setup() {
   roller_sensor_bottom.attach(botstop, INPUT);
   roller_sensor_bottom.interval(button_bounce_time);
 
-  rollerRalibrationRoutine();
+
+  moveRollerUp();
+
+  //rollerCalibrationRoutine();
+  roller_position_target = 8000;
+  //sendAck();
 }
 
 
