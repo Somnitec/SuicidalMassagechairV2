@@ -144,6 +144,12 @@ void loop()
   roller_sensor_top.update();
   roller_sensor_bottom.update();
   //add code for making sure the motor doesn't keep moving
+  if ( roller_sensor_top.fell() ) {
+    Serial.println("top sensor triggered");
+  }
+  if ( roller_sensor_bottom.fell() ) {
+    Serial.println("bottom sensor triggered");
+  }
 
 
 
@@ -184,142 +190,6 @@ void printError(String error) {
   Serial.println(F("\"\n}"));
 }
 
-void receiveMessage( String message) {
-  last_command = "";
-  String currentCommand = "";
-
-  DeserializationError error = deserializeJson(doc, message);
-  // Test if parsing succeeds.
-  if (error) {
-    printError(error.c_str());
-    return;
-  }
-
-
-
-
-  if (validateInput(F("blinkTime"), 1)) {
-    blinkTime = doc["blinkTime"][0];
-  }
-
-  else if (validateInput( F("chair_position_estimated"), 1)) {
-    chair_position_estimated =  doc["chair_position_estimated"][0];
-  }
-  else if (validateInput( F("chair_position_motor"), 1)) {
-    chair_position_motor_direction =  doc["chair_position_motor"][0];
-  }
-  else if (validateInput( F("chair_position_move_time_max"), 1)) {
-    chair_position_move_time_max =  doc["chair_position_move_time_max"][0];
-  }
-  else if (validateInput( F("chair_position_move_time_up"), 1)) {
-    chair_position_move_time_up =  doc["chair_position_move_time_up"][0];
-  }
-  else if (validateInput( F("chair_position_move_time_down"), 1)) {
-    chair_position_move_time_down =  doc["chair_position_move_time_down"][0];
-  }
-
-  else if (validateInput( F("roller_kneading_on"), 1)) {
-    roller_kneading_on = doc["roller_kneading_on"][0];
-    analogWrite(kneading, roller_kneading_on * roller_kneading_speed);
-  }
-  else if (validateInput( F("roller_kneading_speed"), 1)) {
-    roller_kneading_speed =  doc["roller_kneading_speed"][0];
-  }
-
-  else if (validateInput( F("roller_pounding_on"), 1)) {
-    roller_pounding_on = doc["roller_pounding_on"][0];
-    analogWrite(pounding, roller_pounding_on * roller_pounding_speed);
-  }
-  else if (validateInput( F("roller_pounding_speed"), 1)) {
-    roller_pounding_speed =  doc["roller_pounding_speed"][0];
-  }
-
-  else if (validateInput( F("roller_up_on"), 1)) {
-    digitalWrite(mssgup, doc["roller_up_on"][0]);
-  }
-  else if (validateInput( F("roller_down_on"), 1)) {
-    digitalWrite(mssgdown, doc["roller_down_on"][0]);
-  }
-  else if (validateInput( F("roller_sensor_top"), 0)) {
-    //cannot be set, so it will simply return an ack
-  }
-  else if (validateInput( F("roller_sensor_bottom"), 0)) {
-    //cannot be set, so it will simply return an ack
-  }
-  else if (validateInput( F("roller_move_time_up"), 1)) {
-    roller_move_time_up =  doc["roller_"][0];
-  }
-  else if (validateInput( F("roller_move_time_down"), 1)) {
-    roller_move_time_down =  doc["roller_move_time_down"][0];
-  }
-  else if (validateInput( F("roller_estimated_position"), 1)) {
-    roller_estimated_position =  doc["roller_estimated_position"][0];
-  }
-
-  else if (validateInput( F("feet_roller_on"), 1)) {
-    feet_roller_on = doc["feet_roller_on"][0];
-    analogWrite(pounding, feet_roller_on * feet_roller_speed);
-  }
-  else if (validateInput( F("feet_roller_speed"), 1)) {
-    feet_roller_speed =  doc["feet_roller_speed"][0];
-  }
-
-  else if (validateInput( F("airpump_on"), 1)) {
-    digitalWrite(pump,  doc["airpump_on"][0]);
-  }
-  else if (validateInput( F("airbag_shoulders_on"), 1)) {
-    digitalWrite(shoulders, doc["airbag_shoulders_on"][0]);
-  }
-  else if (validateInput( F("airbag_arms_on"), 1)) {
-    digitalWrite(arms, doc["airbag_arms_on"][0]);
-  }
-  else if (validateInput( F("airbag_legs_on"), 1)) {
-    digitalWrite(legs, doc["airbag_legs_on"][0]);
-  }
-  else if (validateInput( F("airbag_outside_on"), 1)) {
-    digitalWrite(outside, doc["airbag_outside_on"][0]);
-  }
-  else if (validateInput( F("airbag_time_max"), 1)) {
-    airbag_time_max =  doc["airbag_time_max"][0];
-  }
-
-  else if (validateInput( F("butt_vibration_on"), 1)) {
-    digitalWrite(vibration,  doc["butt_vibration_on"][0]);
-  }
-
-  else if (validateInput( F("backlight_on"), 1)) {
-    backlight_on = doc["backlight_on"][0];
-  }
-  else if (validateInput( F("backlight_color"), 1)) {
-    backlight_color[0] = doc["backlight_color"][0];
-  }
-  else if (validateInput( F("backlight_LED"), 2)) {
-    backlight_LED[0] = doc["backlight_LED"][0];
-    //make that two parameters can be read
-  }
-  else if (validateInput( F("blacklight_program"), 3)) {
-    blacklight_program[0] =  doc["blacklight_program"][0];
-    //make that three parameters can be read
-  }
-
-  else if (validateInput( F("redgreen_statuslight"), 1)) {
-    redgreen_statuslight =  doc["redgreen_statuslight"][0];
-  }
-
-  else if (validateInput( F("button_bounce_time"), 1)) {
-    button_bounce_time =  doc["button_bounce_time"][0];
-  }
-
-  else if (validateInput( F("time_since_started"), 0)) {
-    //cannot be set, so this simply send an ack
-  }
-
-  else return incorrectMessage(message);
-
-  sendAck();
-
-
-}
 
 void incorrectMessage(String mssg) {
   Serial.print(F("{\n\t\"no useful message\":"));
@@ -374,111 +244,7 @@ bool checkForParameters(String mssg, String command, int amount) { //later expan
   } else return false;
 }
 
-void sendAck() {
-  unsigned long timeCheck = millis();
-  //JSONify
 
-
-  Serial.print(F("{"));
-  Serial.print(F("\n\t\"time_since_started\":"));
-  Serial.print(millis());
-  Serial.print(maxStringLength);
-  Serial.print(F(",\n\t\"last_command\":\""));
-  Serial.print(last_command);
-  Serial.print(F("\",\n\t\"serial_error\":\""));
-  Serial.print(serial_error);
-  Serial.print(F("\",\n\t\"blinkTime\":"));
-  Serial.print(blinkTime);
-  Serial.print(F(",\n\t\"chair_position_estimated\":"));
-  Serial.print(chair_position_estimated);
-  Serial.print(F(",\n\t\"chair_position_target\":"));
-  Serial.print(chair_position_target);
-  Serial.print(F(",\n\t\"chair_position_motor_direction\":"));
-  if (digitalRead(chairup))chair_position_motor_direction = 1;
-  else if (digitalRead(chairdown))chair_position_motor_direction = -1;
-  else chair_position_motor_direction = 0;
-  Serial.print(chair_position_motor_direction);
-  Serial.print(F(",\n\t\"chair_position_move_time_max\":"));
-  Serial.print(chair_position_move_time_max);
-  Serial.print(F(",\n\t\"chair_position_move_time_up\":"));
-  Serial.print(chair_position_move_time_up);
-  Serial.print(F(",\n\t\"chair_position_move_time_down\":"));
-  Serial.print(chair_position_move_time_down);
-  Serial.print(F(",\n\t\"roller_kneading_on\":"));
-  Serial.print(roller_kneading_on);
-  Serial.print(F(",\n\t\"roller_kneading_speed\":"));
-  Serial.print(roller_kneading_speed);
-  Serial.print(F(",\n\t\"roller_pounding_on\":"));
-  Serial.print(roller_pounding_on);
-  Serial.print(F(",\n\t\"roller_pounding_speed\":"));
-  Serial.print(roller_pounding_speed);
-  Serial.print(F(",\n\t\"roller_position_estimated\":"));
-  Serial.print(roller_position_estimated);
-  Serial.print(F(",\n\t\"roller_position_target\":"));
-  Serial.print(roller_position_target);
-  Serial.print(F(",\n\t\"roller_position_motor_direction\":"));
-  if (digitalRead(mssgup))roller_position_motor_direction = 1;
-  else if (digitalRead(mssgdown))roller_position_motor_direction = -1;
-  else roller_position_motor_direction = 0;
-  Serial.print(roller_position_motor_direction);
-  Serial.print(F(",\n\t\"roller_sensor_top\":"));
-  Serial.print(roller_sensor_top.read());
-  Serial.print(F(",\n\t\"roller_sensor_bottom\":"));
-  Serial.print(roller_sensor_bottom.read());
-  Serial.print(F(",\n\t\"roller_move_time_up\":"));
-  Serial.print(roller_move_time_up);
-  Serial.print(F(",\n\t\"roller_move_time_down\":"));
-  Serial.print(roller_move_time_down);
-  Serial.print(F(",\n\t\"roller_estimated_position\":"));
-  Serial.print(roller_estimated_position);
-  Serial.print(F(",\n\t\"feet_roller_on\":"));
-  Serial.print(feet_roller_on);
-  Serial.print(F(",\n\t\"feet_roller_speed\":"));
-  Serial.print(feet_roller_speed);
-  Serial.print(F(",\n\t\"airpump_on\":"));
-  Serial.print(digitalRead(pump));
-  Serial.print(F(",\n\t\"airbag_shoulders_on\":"));
-  Serial.print(digitalRead(shoulders));
-  Serial.print(F(",\n\t\"airbag_arms_on\":"));
-  Serial.print(digitalRead(arms));
-  Serial.print(F(",\n\t\"airbag_legs_on\":"));
-  Serial.print(digitalRead(legs));
-  Serial.print(F(",\n\t\"airbag_outside_on\":"));
-  Serial.print(digitalRead(outside));
-  Serial.print(F(",\n\t\"airbag_time_max\":"));
-  Serial.print(airbag_time_max);
-  Serial.print(F(",\n\t\"butt_vibration_on\":"));
-  Serial.print(digitalRead(vibration));
-  Serial.print(F(",\n\t\"backlight_on\":"));
-  Serial.print(backlight_on);
-  Serial.print(F(",\n\t\"backlight_color\":["));
-  Serial.print(backlight_color[0]);
-  Serial.print(",");
-  Serial.print(backlight_color[1]);
-  Serial.print(",");
-  Serial.print(backlight_color[2]);
-  Serial.print(F("],\n\t\"backlight_LED\":["));
-  Serial.print(backlight_LED[0]);
-  Serial.print(",");
-  Serial.print(backlight_LED[1]);
-  Serial.print(F("],\n\t\"blacklight_program\":["));
-  Serial.print(blacklight_program[0]);
-  Serial.print(",");
-  Serial.print(blacklight_program[1]);
-  Serial.print(",");
-  Serial.print(blacklight_program[2]);
-  Serial.print(",");
-  Serial.print(blacklight_program[3]);
-  Serial.print(F("],\n\t\"redgreen_statuslight\":"));
-  Serial.print(redgreen_statuslight);
-  Serial.print(F(",\n\t\"button_bounce_time\":"));
-  Serial.print(button_bounce_time);
-  Serial.print(F(",\n\t\"maxStringLength\":"));
-  Serial.print(maxStringLength);
-  Serial.print(F(",\n\t\"ackTime\":"));
-  Serial.print(millis() - timeCheck);
-  Serial.println(F("\n}"));
-}
 
 void calibrationRoutine() {
   //to write, will move the roller up and down, counting the time that it needs.
