@@ -12,27 +12,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c4015d35a6934e4796c2ad626c931a8, type: 3}
   m_Name: Arduino State
   m_EditorClassIdentifier: 
-  chair_estimated_position: 0
-  chair_up_on: 0
-  chair_down_on: 0
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  MaxPosition: 10000
+  MaxSpeed: 255
+  time_since_started: 1
+  chair_position_estimated: 0
+  chair_position_target: 0
+  chair_position_motor_direction: 1
+  chair_position_move_time_max: 0
+  chair_position_move_time_up: 0
+  chair_position_move_time_down: 0
   roller_kneading_on: 0
-  roller_kneading_speed: 0
+  roller_kneading_speed: 1
   roller_pounding_on: 0
-  roller_pounding_speed: 0
-  roller_up_on: 0
-  roller_down_on: 0
-  roller_sensor_top: 0
-  roller_sensor_bottom: 0
-  roller_position: 0
+  roller_pounding_speed: 1
+  roller_position_estimated: 0
+  roller_position_target: 0
+  roller_position_motor_direction: 1
+  roller_sensor_top: 1
+  roller_sensor_bottom: 1
+  roller_move_time_up: 0
+  roller_move_time_down: 0
   feet_roller_on: 0
-  feet_roller_speed: 0
+  feet_roller_speed: 1
   airpump_on: 0
+  airbag_time_max: 0
   airbag_shoulders_on: 0
   airbag_arms_on: 0
   airbag_legs_on: 0
   airbag_outside_on: 0
   butt_vibration_on: 0
   backlight_on: 0
-  backlight_color: {r: 0, g: 0, b: 1, a: 1}
-  redgreen_statuslight_red: 0
-  redgreen_statuslight_green: 0
+  backlight_color: {r: 0, g: 0, b: 0, a: 1}
+  redgreen_statuslight: 1
+  button_bounce_time: 0

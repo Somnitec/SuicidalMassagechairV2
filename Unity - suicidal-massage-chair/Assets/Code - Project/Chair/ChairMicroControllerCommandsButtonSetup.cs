@@ -2,11 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
-using UnityEditor.Events;
-using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
-
+using UnityEngine;
+#if UNITY_EDITOR
+using UnityEditor.Events;
+#endif
 public class ChairMicroControllerCommandsButtonSetup : MonoBehaviour
 {
     public GameObject buttonPrefab;
@@ -16,6 +17,8 @@ public class ChairMicroControllerCommandsButtonSetup : MonoBehaviour
     {
         controller = FindObjectOfType<ChairMicroController>();
     }
+
+#if UNITY_EDITOR
 
     [Button]
     public void SetupButtons()
@@ -47,7 +50,7 @@ public class ChairMicroControllerCommandsButtonSetup : MonoBehaviour
             textMeshPro.text = buttonValue.ToString();
         }
     }
-
+#endif
     [Button]
     public void DeleteButtons()
     {

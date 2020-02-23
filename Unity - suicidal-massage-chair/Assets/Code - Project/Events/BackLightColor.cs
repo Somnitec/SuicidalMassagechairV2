@@ -10,10 +10,9 @@ public class BackLightColor : NodeScriptFunction
 {
     public Color Color;
 
-    public override List<string> Serialize()
+    public override List<string> SerializeToJson()
     {
-        return ToList(
-            "backlight_color:" + ColorUtility.ToHtmlStringRGB(Color)
-        );
+        int[] color = new[] { (int)(Color.r * 255), (int)(Color.g * 255), (int)(Color.b * 255)};
+        return ToList(ToJson("backlight_color", color));
     }
 }

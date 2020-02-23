@@ -10,10 +10,8 @@ public class AirBag : NodeScriptFunction
 {
     public AirBagFlag AirBagsOn;
     public AirBagFlag AirBagsOff;
-    private string on = "on";
-    private string off = "off";
 
-    public override List<string> Serialize()
+    public override List<string> SerializeToJson()
     {
         var on = ToStringList(AirBagsOn, true);
         var off = ToStringList(AirBagsOff, false);
@@ -39,7 +37,7 @@ public class AirBag : NodeScriptFunction
 
     private string AddArgument(string param, bool on)
     {
-        return $"{param}:{BoolToString(on)}";
+        return ToJson(param, BoolToString(on));
     }
 }
 

@@ -9,8 +9,8 @@ public class AirPump : NodeScriptFunction
 {
     public Boolean AirPumpOn;
 
-    public override List<string> Serialize()
+    public override List<string> SerializeToJson()
     {
-        return ToList($"airpump_on:{BoolToString(AirPumpOn)}");
+        return ToList(ToJson("airpump_on",BoolToString(AirPumpOn)));
     }
 }

@@ -10,10 +10,8 @@ public class ButtVibration : NodeScriptFunction
 {
     public bool On;
 
-    public override List<string> Serialize()
+    public override List<string> SerializeToJson()
     {
-        return ToList(
-            "butt_vibration_on:" + BoolToString(On)
-        );
+        return ToList(ToJson("butt_vibration_on" + BoolToString(On)));
     }
 }

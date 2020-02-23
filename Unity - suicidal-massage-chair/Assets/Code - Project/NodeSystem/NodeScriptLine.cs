@@ -21,23 +21,27 @@ public class ScriptEvent : GenericEvents<NodeScriptFunction>
 
 public abstract class NodeScriptFunction
 {
-    protected string True => "1";
-    protected string False => "0";
+    protected int True => 1;
+    protected int False => 0;
 
     public virtual void RaiseEvent()
     {
         ScriptEvent.Instance.Raise(this);
     }
 
-    public abstract List<string> Serialize();
+    public abstract List<string> SerializeToJson();
 
+    public string ToJson(string param, params int[] values)
+    {
+        return MessageHelper.ToJson(param, values);
+    }
 
     public string SerializeToString()
     {
-        return Join(",", Serialize());
+        return Join(",", SerializeToJson());
     }
 
-    protected string BoolToString(bool b)
+    protected int BoolToString(bool b)
     {
         return b ? True : False;
     }

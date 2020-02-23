@@ -7,8 +7,8 @@ using UnityEngine;
 
 public class ChairStopAll : NodeScriptFunction
 {
-    public override List<string> Serialize()
+    public override List<string> SerializeToJson()
     {
-        return ToList("stopall");
+        return ToList(ToJson("stopall",-1));
     }
 }

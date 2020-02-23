@@ -12,7 +12,7 @@ public class NodeGraph : XNode.NodeGraph
 
     [PropertySpace]
     [Button]
-    public void SetNode(BaseNode node)
+    public void SetCurrentNodeTo(BaseNode node)
     {
         Current?.OnNodeDisable();
         Current = node;
@@ -37,6 +37,6 @@ public class NodeGraph : XNode.NodeGraph
     [Button]
     public void StartFromRoot()
     {
-        SetNode(RootNode);
+        SetCurrentNodeTo(RootNode);
     }
 }

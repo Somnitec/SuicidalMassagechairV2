@@ -6,15 +6,15 @@ public class ChairMicroControllerCommandButton : MonoBehaviour
 {
     public ChairMicroController.Commands Command;
 
-    private ChairMicroController controller;
+    private ChairButtonController controller;
 
     private void Start()
     {
-        controller = FindObjectOfType<ChairMicroController>();
+        controller = FindObjectOfType<ChairButtonController>();
     }
 
     public void SendButtonToController()
     {
-        //controller.SendCommand(Command);
+        controller.SendButton(Command);
     }
 }

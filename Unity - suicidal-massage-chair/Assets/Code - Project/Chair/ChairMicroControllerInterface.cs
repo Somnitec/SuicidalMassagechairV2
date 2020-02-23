@@ -29,7 +29,7 @@ public abstract class AbstractChairMicroController
         ScriptEvent.Instance.AddListener<RollerPoundingSpeed>(RollerPoundingSpeed);
     }
 
-    public void RemoveListeners()
+    public virtual void RemoveListeners()
     {
         ScriptEvent.Instance.RemoveListener<AirBag>(Airbag);
         ScriptEvent.Instance.RemoveListener<AirPump>(AirPump);

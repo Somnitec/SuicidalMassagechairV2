@@ -35,7 +35,7 @@ public class SerialController : MonoBehaviour
 
     [Tooltip("Reference to an scene object that will receive the events of connection, " +
              "disconnection and the messages from the serial device.")]
-    public GameObject messageListener;
+    public MessageListener Messager;
 
     [Tooltip("After an error in the serial communication, or an unsuccessful " +
              "connect, how many milliseconds we should wait.")]
@@ -43,7 +43,7 @@ public class SerialController : MonoBehaviour
 
     [Tooltip("Maximum number of unread data messages in the queue. " +
              "New messages will be discarded.")]
-    public int maxUnreadMessages = 1;
+    public int maxUnreadMessages = 100;
 
     // Constants used to mark the start and end of a connection. There is no
     // way you can generate clashing messages from your serial device, as I
@@ -56,7 +56,6 @@ public class SerialController : MonoBehaviour
     // Internal reference to the Thread and the object that runs in it.
     protected Thread thread;
     protected SerialThreadLines serialThread;
-
 
     // ------------------------------------------------------------------------
     // Invoked whenever the SerialController gameobject is activated.
@@ -99,8 +98,7 @@ public class SerialController : MonoBehaviour
             thread.Join();
             thread = null;
         }
-
-        messageListener.SendMessage("OnConnectionEvent", false);
+        Messager.ConnectionEventFromArduino(false);
     }
 
     // ------------------------------------------------------------------------
@@ -111,23 +109,28 @@ public class SerialController : MonoBehaviour
     // ------------------------------------------------------------------------
     void Update()
     {
-            // If the user prefers to poll the messages instead of receiving them
+        // If the user prefers to poll the messages instead of receiving them
         // via SendMessage, then the message listener should be null.
-        if (messageListener == null)
+        if (Messager == null)
             return;
 
         // Read the next message from the queue
+        int messages = 0;
         string message = (string)serialThread.ReadMessage();
-        if (message == null)
-            return;
+        while (message != null)
+        {
+            // Check if the message is plain data or a connect/disconnect event.
+            if (ReferenceEquals(message, SERIAL_DEVICE_CONNECTED))
+                Messager.ConnectionEventFromArduino(true);
+            else if (ReferenceEquals(message, SERIAL_DEVICE_DISCONNECTED))
+                Messager.ConnectionEventFromArduino(false);
+            else
+                Messager.MessageFromArduino(message);
 
-        // Check if the message is plain data or a connect/disconnect event.
-        if (ReferenceEquals(message, SERIAL_DEVICE_CONNECTED))
-            messageListener.SendMessage("OnConnectionEvent", true);
-        else if (ReferenceEquals(message, SERIAL_DEVICE_DISCONNECTED))
-            messageListener.SendMessage("OnConnectionEvent", false);
-        else
-            messageListener.SendMessage("OnMessageArrived", message);
+            message = (string)serialThread.ReadMessage();
+            messages++;
+        }
+       // if(messages>0)Debug.Log($"Serial Controller processed {messages} message(s)");
     }
 
     // ------------------------------------------------------------------------

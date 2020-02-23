@@ -28,9 +28,8 @@ public class ChairMicroController : MonoBehaviour
 
     public enum Commands
     {
-        Chair_Up,
-        Chair_Down,
-        Reset
-        // TODO
+        ChairUp,
+        ChairDown,
+        Reset,
     }
 }

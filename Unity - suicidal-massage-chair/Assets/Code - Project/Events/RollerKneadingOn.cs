@@ -10,8 +10,8 @@ public class RollerKneadingOn : NodeScriptFunction
 {
     public bool On;
 
-    public override List<string> Serialize()
+    public override List<string> SerializeToJson()
     {
-        return ToList("roller_kneading_on:" + BoolToString(On));
+        return ToList(ToJson("roller_kneading_on", BoolToString(On)));
     }
 }
