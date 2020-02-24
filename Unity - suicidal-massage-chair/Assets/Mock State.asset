@@ -24,16 +24,16 @@ MonoBehaviour:
   MaxPosition: 10000
   MaxSpeed: 255
   time_since_started: 0
-  chair_position_estimated: 0.506
-  chair_position_target: 0.552
+  chair_position_estimated: 0
+  chair_position_target: 1
   chair_position_motor_direction: 0
   chair_position_move_time_max: 0
   chair_position_move_time_up: 0
   chair_position_move_time_down: 0
-  roller_kneading_on: 1
-  roller_kneading_speed: 0.423
-  roller_pounding_on: 1
-  roller_pounding_speed: 0.68
+  roller_kneading_on: 0
+  roller_kneading_speed: 0
+  roller_pounding_on: 0
+  roller_pounding_speed: 0
   roller_position_estimated: 0.16
   roller_position_target: 0.61
   roller_position_motor_direction: 2
@@ -41,16 +41,16 @@ MonoBehaviour:
   roller_sensor_bottom: 0
   roller_move_time_up: 0
   roller_move_time_down: 0
-  feet_roller_on: 1
-  feet_roller_speed: 0.385
-  airpump_on: 1
+  feet_roller_on: 0
+  feet_roller_speed: 0
+  airpump_on: 0
   airbag_time_max: 4.32
-  airbag_shoulders_on: 1
-  airbag_arms_on: 1
-  airbag_legs_on: 1
-  airbag_outside_on: 1
-  butt_vibration_on: 1
-  backlight_on: 1
+  airbag_shoulders_on: 0
+  airbag_arms_on: 0
+  airbag_legs_on: 0
+  airbag_outside_on: 0
+  butt_vibration_on: 0
+  backlight_on: 0
   backlight_color: {r: 1, g: 1, b: 1, a: 1}
   redgreen_statuslight: 0
   button_bounce_time: 0
