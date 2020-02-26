@@ -1,8 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using Framework;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.UI;
 using XNode;
 using Event = Framework.Event;
 
@@ -58,7 +59,7 @@ public class DialogueNode : BaseNode
 
         for (int i = 0; i < Buttons.Count; i++)
         {
-            if (Buttons[i] == e.Button)
+            if (Buttons[i].HasFlag(e.Button))
             {
                 Debug.Log($"Found Button in Buttons {e.Button}");
 
