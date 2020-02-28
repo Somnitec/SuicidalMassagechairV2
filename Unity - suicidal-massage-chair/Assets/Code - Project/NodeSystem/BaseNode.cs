@@ -45,6 +45,12 @@ public abstract class BaseNode : SerializableNode
     {
         NodeGraph.SetRoot(this);
     }
+
+    [ContextMenu("Set Special/Kill")]
+    public void SetKill()
+    {
+        NodeGraph.SpecialNodes.Add("KillNode", this);
+    }
 }
 
 [Serializable]

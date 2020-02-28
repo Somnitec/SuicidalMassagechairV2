@@ -46,6 +46,12 @@ public class NodeLogic
     {
         float timeStarted = Time.timeSinceLevelLoad;
 
+        if (funcs == null)
+        {
+            FunctionsFinished = true;
+            yield break;
+        }
+
         funcs.Sort();
 
         foreach (var nodeScriptLine in funcs.Functions)

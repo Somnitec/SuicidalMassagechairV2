@@ -13,7 +13,7 @@ public class NodeData
     public string Text;
 
     [InlineProperty,HideLabel,HideReferenceObjectPicker]
-    public FunctionList FunctionList;
+    public FunctionList FunctionList = new FunctionList();
 }
 
 public class FunctionList

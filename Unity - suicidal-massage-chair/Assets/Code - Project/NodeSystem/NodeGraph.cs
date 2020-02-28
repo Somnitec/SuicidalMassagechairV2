@@ -2,18 +2,30 @@
 using System.Collections.Generic;
 using Framework;
 using Sirenix.OdinInspector;
+using Sirenix.Serialization;
 using UnityEngine;
 
 [CreateAssetMenu]
-public class NodeGraph : XNode.NodeGraph
+public class NodeGraph : SerializedNodeGraph
 {
     public BaseNode RootNode;
     public BaseNode Current;
+
+    [OdinSerialize,
+     DictionaryDrawerSettings(
+         DisplayMode = DictionaryDisplayOptions.OneLine, 
+         IsReadOnly = false,
+         KeyLabel = "Name", 
+         ValueLabel = "Special Node")]
+    public Dictionary<string, BaseNode> SpecialNodes = new Dictionary<string, BaseNode>();
+
+    private Settings settings => SettingsHolder.Instance.Settings;
 
     [PropertySpace]
     [Button]
     public void PlayNode(BaseNode node)
     {
+        if (settings.LogDebugInfo) Debug.Log($"Playing {node.name}");
         Current?.OnNodeDisable();
         Current = node;
         Current?.OnNodeEnable();
@@ -44,5 +56,48 @@ public class NodeGraph : XNode.NodeGraph
     public void PlayRoot()
     {
         PlayNode(RootNode);
+    }
+
+    public void PlaySpecialNode(string key)
+    {
+        if (!SpecialNodes.ContainsKey(key))
+        {
+            Debug.LogError($"No Special node found for index {key}");
+            return;
+        }
+
+        PlayNode(SpecialNodes[key]);
+    }
+}
+
+[ShowOdinSerializedPropertiesInInspector]
+public class SerializedNodeGraph : XNode.NodeGraph, ISerializationCallbackReceiver
+{
+    [SerializeField, HideInInspector] private SerializationData serializationData;
+
+    void ISerializationCallbackReceiver.OnAfterDeserialize()
+    {
+        UnitySerializationUtility.DeserializeUnityObject(this, ref this.serializationData);
+        this.OnAfterDeserialize();
+    }
+
+    void ISerializationCallbackReceiver.OnBeforeSerialize()
+    {
+        this.OnBeforeSerialize();
+        UnitySerializationUtility.SerializeUnityObject(this, ref this.serializationData);
+    }
+
+    /// <summary>
+    /// Invoked after deserialization has taken place.
+    /// </summary>
+    protected virtual void OnAfterDeserialize()
+    {
+    }
+
+    /// <summary>
+    /// Invoked before serialization has taken place.
+    /// </summary>
+    protected virtual void OnBeforeSerialize()
+    {
     }
 }
