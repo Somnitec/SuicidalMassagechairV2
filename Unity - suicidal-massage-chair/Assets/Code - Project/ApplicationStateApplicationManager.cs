@@ -17,6 +17,12 @@ public class ApplicationStateApplicationManager : SingletonMonoBehavior<Applicat
     {
         Events.Instance.AddListener<StoryFinished>(RestartApplication);
 
+        if (settings.ResetChairOnStart)
+            RestartApplication();
+        else
+            ChangeState(ApplicationState.Playing);
+
+
         // Example of using this event on the End node
         // Events.Instance.Raise(new StoryFinished());
     }
@@ -29,7 +35,7 @@ public class ApplicationStateApplicationManager : SingletonMonoBehavior<Applicat
 
     private void RestartApplication(StoryFinished storyFinished)
     {
-        this.State = ApplicationState.Restarting;
+        ChangeState(ApplicationState.Restarting);
         AudioManager.instance.Stop();
 
         StartCoroutine(logic.InvokeFunctionsCoroutine(settings.RestartChair, StartWaiting));
@@ -37,7 +43,7 @@ public class ApplicationStateApplicationManager : SingletonMonoBehavior<Applicat
 
     private void StartWaiting()
     {
-        this.State = ApplicationState.Waiting;
+        ChangeState(ApplicationState.Waiting);
 
         Events.Instance.AddListener<UserInputUp>(StartStory);
         Waiting();
@@ -54,7 +60,7 @@ public class ApplicationStateApplicationManager : SingletonMonoBehavior<Applicat
 
     private void StartStory(UserInputUp e)
     {
-        this.State = ApplicationState.Starting;
+        ChangeState(ApplicationState.Starting);
 
         Events.Instance.RemoveListener<UserInputUp>(StartStory);
         StopAllCoroutines();
@@ -64,9 +70,16 @@ public class ApplicationStateApplicationManager : SingletonMonoBehavior<Applicat
 
     public void PlayRootNode()
     {
-        this.State = ApplicationState.Playing;
+        ChangeState(ApplicationState.Playing);
 
         settings.Graph.PlayRoot();
+    }
+
+    private void ChangeState(ApplicationState state)
+    {
+        this.State = state;
+
+        Events.Instance.Raise(new ApplicationStateChange(state));
     }
 }
 
@@ -76,6 +89,16 @@ public enum ApplicationState
     Restarting,
     Waiting,
     Starting,
+}
+
+public class ApplicationStateChange : Event
+{
+    public ApplicationState State;
+
+    public ApplicationStateChange(ApplicationState state)
+    {
+        this.State = state;
+    }
 }
 
 public class StoryFinished : Event

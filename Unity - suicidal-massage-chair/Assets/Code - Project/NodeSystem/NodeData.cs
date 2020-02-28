@@ -24,6 +24,8 @@ public class FunctionList
     [PropertyOrder(10)]
     public List<NodeScriptLine> Functions = new List<NodeScriptLine>();
 
+    public float Duration => Functions.Max(f => f.TimeSec);
+
     [FoldoutGroup("Chair Functions")]
     [HorizontalGroup("Chair Functions/Buttons")]
     [Button]

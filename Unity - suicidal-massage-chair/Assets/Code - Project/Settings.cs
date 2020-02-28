@@ -10,12 +10,17 @@ public class Settings : SerializedScriptableObject
     public NodeGraph Graph;
     public ChairMicroControllerState Mock, Arduino;
     public String RepeatedMessage = "status";
+
     [Title("Toggles")]
     public bool ShowColors = true; // TODO implement this
     public bool ShowNodeDebugInfo = true;
     public bool LogDebugInfo = false;
     public bool ShowNodeData = true;
+
     [Title("App setting")]
+    public bool ResetChairOnStart = false;
+    public float TimeOutTimeInSeconds = 600;
+
     [Title("Restart", bold:false)]
     [InfoBox("This gets triggered every time the story ends and it restarts.")]
     [HideReferenceObjectPicker, HideLabel, InlineProperty]
@@ -32,4 +37,5 @@ public class Settings : SerializedScriptableObject
     [InfoBox("This gets triggered after a person has pressed a button in the wait mode.")]
     [HideReferenceObjectPicker, HideLabel, InlineProperty]
     public FunctionList OnStart = new FunctionList();
+
 }

@@ -5,11 +5,13 @@ using UnityEngine;
 
 public class PlayRootGraph : MonoBehaviour
 {
-    private NodeGraph Graph => SettingsHolder.Instance.Settings.Graph;
+    private Settings settings => SettingsHolder.Instance.Settings;
+    private NodeGraph Graph => settings.Graph;
 
     void Start()
     {
-        Graph.PlayRoot();
+        if(!settings.ResetChairOnStart)
+            Graph.PlayRoot();
     }
 
     [Button]
