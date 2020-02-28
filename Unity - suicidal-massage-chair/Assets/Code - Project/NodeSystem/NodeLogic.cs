@@ -8,21 +8,24 @@ using UnityEngine;
 public class NodeLogic
 {
     [Title("Debug Info")]
-    [ReadOnly, ShowInInspector] public bool AudioFinished { get; private set; }
+    [ReadOnly, ShowInInspector]
+    public bool AudioFinished { get; private set; }
+
     [ReadOnly, ShowInInspector] public bool FunctionsFinished { get; private set; }
     private float functionDuration = 0f;
-    private float functionProgress => Mathf.Min(functionDuration, now - invokedTime);
+    private float functionProgress => Mathf.Clamp(functionDuration, 0, now - invokedTime);
     private float invokedTime = 0f;
     private float now => Time.timeSinceLevelLoad;
-    public string FunctionProgress => $"[{functionProgress.ToString("F2")}/{functionDuration.ToString("F2")}]";
+    public string FunctionProgress => $"[{functionProgress:F2}/{functionDuration:F2}]";
 
-    public IEnumerator InvokeFunctionsAndPlayAudioCoroutine(string Name, AudioClip clip, FunctionList funcs, Action onFinished)
+    public IEnumerator InvokeFunctionsAndPlayAudioCoroutine(string Name, AudioClip clip, FunctionList funcs,
+        Action onFinished)
     {
         FunctionsFinished = false;
         AudioFinished = false;
         invokedTime = now;
-        functionDuration = funcs.Duration;
-        
+        functionDuration = funcs?.Duration ?? 0;
+
         if (clip == null)
         {
             Debug.LogWarning($"No audioClip on data of {Name}");

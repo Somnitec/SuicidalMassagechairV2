@@ -9,12 +9,9 @@ public class CoreButtonResponse : MonoBehaviour
     private Settings settings => SettingsHolder.Instance.Settings;
     private NodeGraph graph => settings.Graph;
 
-    [ShowInInspector, ReadOnly] private int killIndex;
-
     private void Start()
     {
         Events.Instance.AddListener<UserInputUp>(HandleInput);
-
     }
 
     public void HandleInput(UserInputUp userInputUp)

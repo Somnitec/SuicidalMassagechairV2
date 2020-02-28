@@ -10,7 +10,7 @@ public class AudioManager : SingletonMonoBehavior<AudioManager>
     public AudioListener Listener;
 
     double clipDuration => (double) Source.clip.samples / Source.clip.frequency;
-    public string ClipProgress => $"[{Source.time.ToString("F2")},{clipDuration.ToString("F2")}]";
+    public string ClipProgress => $"[{Source.time:F2}/{clipDuration:F2}]";
 
     void Start()
     {
@@ -45,5 +45,12 @@ public class AudioManager : SingletonMonoBehavior<AudioManager>
         yield return new WaitForSeconds((float) clipDuration);
 
         onFinished.Invoke();
+    }
+
+    public void PlayEffect(AudioClip fx)
+    {
+        if(fx == null) return;
+
+        Source.PlayOneShot(fx);
     }
 }

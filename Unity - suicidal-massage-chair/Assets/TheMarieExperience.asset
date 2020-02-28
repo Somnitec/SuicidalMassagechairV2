@@ -523,14 +523,30 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: FunctionList
-      Entry: 6
+      Entry: 7
+      Data: 1|FunctionList, Assembly-CSharp
+    - Name: Functions
+      Entry: 7
+      Data: 2|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
       Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: Logic
       Entry: 7
-      Data: 1|NodeLogic, Assembly-CSharp
+      Data: 3|NodeLogic, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
@@ -1021,7 +1037,7 @@ MonoBehaviour:
       Entry: 8
       Data: 
   RootNode: {fileID: -3638098325038414586}
-  Current: {fileID: -1201324122032544533}
+  Current: {fileID: -2575359792057119683}
 --- !u!114 &1165554918314036783
 MonoBehaviour:
   m_ObjectHideFlags: 0

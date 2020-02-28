@@ -1,5 +1,6 @@
 ﻿
 using System;
+using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -10,6 +11,9 @@ public class Settings : SerializedScriptableObject
     public NodeGraph Graph;
     public ChairMicroControllerState Mock, Arduino;
     public String RepeatedMessage = "status";
+
+    [Title("Sound Effects")]
+    public List<AudioClip> ClickSoundEffects;
 
     [Title("Toggles")]
     public bool ShowColors = true; // TODO implement this
