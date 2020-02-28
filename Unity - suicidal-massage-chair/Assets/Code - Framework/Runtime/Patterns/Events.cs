@@ -43,7 +43,7 @@ namespace Framework
             }
         }
 
-        public void AddListener<T>(T type, EventDelegate<T> del) where T : J
+        public void AddListenerViaObject<T>(T type, EventDelegate<T> del) where T : J
         {
             AddListener<T>(del);
         }
@@ -69,7 +69,7 @@ namespace Framework
             }
         }
 
-        public void RemoveListener<T>(T type, EventDelegate<T> del) where T : J
+        public void RemoveListenerViaObject<T>(T type, EventDelegate<T> del) where T : J
         {
             RemoveListener<T>(del);
         }
