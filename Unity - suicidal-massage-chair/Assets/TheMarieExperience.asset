@@ -774,7 +774,7 @@ MonoBehaviour:
   - {fileID: 3141897193728766143}
   - {fileID: 1165554918314036783}
   RootNode: {fileID: -3638098325038414586}
-  Current: {fileID: -3638098325038414586}
+  Current: {fileID: 2997809375468621211}
 --- !u!114 &1165554918314036783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -880,6 +880,9 @@ MonoBehaviour:
     - Buttons
     - OnAnyButton
     - Input
+    - Buttons 0
+    - Buttons 1
+    - Buttons 2
     values:
     - _fieldName: Buttons
       _node: {fileID: 2997809375468621211}
@@ -915,6 +918,33 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
+    - _fieldName: Buttons 0
+      _node: {fileID: 2997809375468621211}
+      _typeQualifiedName: UserInputButton, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: Buttons 1
+      _node: {fileID: 2997809375468621211}
+      _typeQualifiedName: UserInputButton, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: Buttons 2
+      _node: {fileID: 2997809375468621211}
+      _typeQualifiedName: UserInputButton, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
@@ -962,7 +992,7 @@ MonoBehaviour:
       Entry: 8
       Data: 
   Color: {r: 0.439, g: 0.627, b: 0.227, a: 1}
-  Buttons: 
+  Buttons: 000000000000000000000000
 --- !u!114 &3141897193728766143
 MonoBehaviour:
   m_ObjectHideFlags: 0

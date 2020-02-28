@@ -13,6 +13,7 @@ public class Settings : SerializedScriptableObject
     [Title("Toggles")]
     public bool ShowColors = true; // TODO implement this
     public bool ShowNodeDebugInfo = true;
+    public bool LogDebugInfo = false;
     public bool ShowNodeData = true;
     [Title("App setting")]
     [Title("Restart", bold:false)]
@@ -31,4 +32,5 @@ public class Settings : SerializedScriptableObject
     [InfoBox("This gets triggered after a person has pressed a button in the wait mode.")]
     [HideReferenceObjectPicker, HideLabel, InlineProperty]
     public FunctionList OnStart = new FunctionList();
+
 }

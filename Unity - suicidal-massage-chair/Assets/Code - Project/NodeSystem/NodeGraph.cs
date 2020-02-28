@@ -17,8 +17,12 @@ public class NodeGraph : XNode.NodeGraph
         Current?.OnNodeDisable();
         Current = node;
         Current?.OnNodeEnable();
-        
-        // TODO end check and send NodeEndEvent
+    }
+
+    [Button]
+    public void NoMoreConnections()
+    {
+        Events.Instance.Raise(new StoryFinished());
     }
 
     [PropertySpace]

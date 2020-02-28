@@ -8,7 +8,7 @@ using Sirenix.Serialization;
 using UnityEngine;
 
 
-public class BaseNode : SerializableNode
+public abstract class BaseNode : SerializableNode
 {
     [Input] public Connection Input;
     public NodeGraph NodeGraph => (NodeGraph)graph;
@@ -19,6 +19,20 @@ public class BaseNode : SerializableNode
 
     public virtual void OnNodeEnable() { }
     public virtual void OnNodeDisable() { }
+
+    public abstract bool HasConnections();
+
+    protected bool NodeFinished()
+    {
+        if (!HasConnections())
+        {
+            NodeGraph.NoMoreConnections();
+            return true;
+        }
+
+        return false;
+    }
+
 
     [ContextMenu("Set Current")]
     public void SetCurrent()
