@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Framework;
@@ -11,6 +12,8 @@ using Event = Framework.Event;
 
 public class DialogueNode : BaseNode
 {
+    #region Fields
+
     [ShowIf("showData")] [InlineProperty, HideLabel, HideReferenceObjectPicker] [Title("Data")]
     public NodeData Data = new NodeData();
 
@@ -19,14 +22,26 @@ public class DialogueNode : BaseNode
 
     [Output(dynamicPortList = true), ListDrawerSettings(ShowIndexLabels = false)]
     public List<UserInputButton> Buttons = new List<UserInputButton>();
-
     [Output] public Connection OnAnyButton;
+
+    [HorizontalGroup("TimeOut"), LabelText("TimeOut")]
+    public bool HasTimeOut = false;
+    [HorizontalGroup("TimeOut"), HideLabel]
+    [ShowIf("HasTimeOut")]
+    [Range(0,30f)]
+    public float TimeOut = 3.0f;
+
+    [ShowIf("HasTimeOut")]
+    [Output] public Connection OnTimeOut;
 
     private bool showDebugInfo => SettingsHolder.Instance.Settings.ShowNodeDebugInfo;
     private bool showData => SettingsHolder.Instance.Settings.ShowNodeData;
     private bool logDebugInfo => SettingsHolder.Instance.Settings.LogDebugInfo;
 
     private NodePort AnyButtonPort => GetOutputPort("OnAnyButton");
+    private NodePort TimeOutButtonPort => GetOutputPort("OnTimeOut");
+
+    #endregion
 
     /// <summary>
     /// OnEnable -> Wait for Audio & Functions -> Onfinished
@@ -68,6 +83,18 @@ public class DialogueNode : BaseNode
 
         Events.Instance.RemoveListener<UserInputUp>(OnInterrupted);
         Events.Instance.AddListener<UserInputUp>(HandleInput);
+
+        NodeFunctionRunner.Instance.StartCoroutine(TimeOutCoroutine());
+    }
+
+    private IEnumerator TimeOutCoroutine()
+    {
+        yield return new WaitForSeconds(TimeOut);
+
+        if (HasTimeOut)
+        {
+            GoToNode(TimeOutButtonPort);
+        }
     }
 
     private void HandleInput(UserInputUp e)
@@ -94,8 +121,9 @@ public class DialogueNode : BaseNode
     {
         if (logDebugInfo)
             Debug.Log($"OnNodeDisable {name}");
-
+        
         Events.Instance.RemoveListener<UserInputUp>(HandleInput);
+        NodeFunctionRunner.Instance.StopAllCoroutines();
     }
 
     public override bool HasConnections()
