@@ -17,6 +17,5 @@ namespace NodeSystem.Nodes
         private Settings settings => SettingsHolder.Instance.Settings;
         
         public NodeData Data => settings.Language == Language.Dutch ? dutch : english;
-
     }
 }

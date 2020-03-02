@@ -15,7 +15,6 @@ public class BottonPressAudioEffects : MonoBehaviour
     {
         var index = Random.Range(0, settings.ClickSoundEffects.Count);
         var fx = settings.ClickSoundEffects[index];
-        Debug.Log(index);
         audio.PlayEffect(fx);
     }
 }

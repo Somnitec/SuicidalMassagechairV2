@@ -24,7 +24,19 @@ public class CoreButtonResponse : MonoBehaviour
             case UserInputButton.Kill:
                 Kill();
                 break;
+            case UserInputButton.English:
+                SetLanguageAndRestart(Language.English);
+                break;
+            case UserInputButton.Dutch:
+                SetLanguageAndRestart(Language.Dutch);
+                break;    
         }
+    }
+
+    private void SetLanguageAndRestart(Language language)
+    {
+        settings.Language = language;
+        graph.PlayNode(graph.Current);
     }
 
     private void Kill()

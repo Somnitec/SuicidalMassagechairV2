@@ -23,5 +23,8 @@ public enum UserInputButton
     Custom3 = (1 << 12),
     Repeat = (1 << 13),
     Settings = (1 << 14),
-    Positive = (Yes | ThumbUp), 
+    Dutch = (1 << 15),
+    English = (1 << 16),
+    Positive = (Yes | ThumbUp),
+    AnyButton = ~(Dutch | English), // Not dutch or english
 }

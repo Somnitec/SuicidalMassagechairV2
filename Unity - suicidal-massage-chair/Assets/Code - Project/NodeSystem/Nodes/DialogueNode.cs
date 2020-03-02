@@ -167,6 +167,12 @@ public class DialogueNode : BaseNode
         if (logDebugInfo)
             Debug.Log($"Found Button in AnyButton {e.Button}");
 
+        if (!UserInputButton.AnyButton.HasFlag(e.Button))
+        {
+            Debug.Log($"Ignoring {e.Button}");
+            return;
+        }
+        
         GoToNode(AnyButtonPort);
     }
 
