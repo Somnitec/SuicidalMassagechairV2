@@ -3,8 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Framework;
+using NodeSystem.Nodes;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 using XNode;
 using Event = Framework.Event;
@@ -14,54 +16,95 @@ public class DialogueNode : BaseNode
 {
     #region Fields
 
-    [ShowIf("showData")] [InlineProperty, HideLabel, HideReferenceObjectPicker] [Title("Data")]
-    public NodeData Data = new NodeData();
+    [Title("Data")] [ShowIf("showData"), InlineProperty, HideLabel, HideReferenceObjectPicker]
+    public NodeMultiLanguageData Data = new NodeMultiLanguageData();
 
     [ShowIf("showDebugInfo")] [InlineProperty, HideLabel, HideReferenceObjectPicker]
-    public NodeLogic Logic = new NodeLogic();
+    public NodePlayingLogic playingLogic = new NodePlayingLogic();
 
-    [Output(dynamicPortList = true), ListDrawerSettings(ShowIndexLabels = false)]
+    [Output(dynamicPortList = true)] [ListDrawerSettings(ShowIndexLabels = false)]
     public List<UserInputButton> Buttons = new List<UserInputButton>();
+
     [Output] public Connection OnAnyButton;
 
-    [HorizontalGroup("TimeOut"), LabelText("TimeOut")]
-    public bool HasTimeOut = false;
-    [HorizontalGroup("TimeOut"), HideLabel]
-    [ShowIf("HasTimeOut")]
-    [Range(0,30f)]
-    public float TimeOut = 3.0f;
+    [SerializeField, InlineProperty, HideReferenceObjectPicker, HideLabel]
+    private NodeTimeOutLogic timeOutLogic = new NodeTimeOutLogic();
 
-    [ShowIf("HasTimeOut")]
-    [Output] public Connection OnTimeOut;
+    [ShowIf("hasTimeOut")] [Node.OutputAttribute]
+    public Connection OnTimeOut;
 
-    private bool showDebugInfo => SettingsHolder.Instance.Settings.ShowNodeDebugInfo;
-    private bool showData => SettingsHolder.Instance.Settings.ShowNodeData;
-    private bool logDebugInfo => SettingsHolder.Instance.Settings.LogDebugInfo;
+    private Settings settings => SettingsHolder.Instance.Settings;
+    private bool showDebugInfo => settings.ShowNodeDebugInfo;
+    private bool showData => settings.ShowNodeData;
+    private bool logDebugInfo => settings.LogDebugInfo;
+    private bool hasTimeOut => timeOutLogic.HasTimeOut;
 
     private NodePort AnyButtonPort => GetOutputPort("OnAnyButton");
-    private NodePort TimeOutButtonPort => GetOutputPort("OnTimeOut");
 
     #endregion
 
-    /// <summary>
-    /// OnEnable -> Wait for Audio & Functions -> Onfinished
-    /// OnFinished -> Connected? Wait for Input | else | Graph.NoMoreConnections()
-    /// Input After Finished -> Go To Next node
-    /// </summary>
+    #region  Main Flow
+
     public override void OnNodeEnable()
     {
         if (logDebugInfo)
             Debug.Log($"OnNodeEnable {name}");
 
-        Events.Instance.AddListener<UserInputUp>(OnInterrupted);
+        ListenToInterruptedInput();
+        PlayFunctionsAndAudio(OnFinished);
+    }
+    
+    private void OnFinished()
+    {
+        if (logDebugInfo)
+            Debug.Log($"OnFinished {name}");
 
-        NodeFunctionRunner.Instance.StopAllCoroutines();
-        NodeFunctionRunner.Instance.StartCoroutine(
-            Logic.InvokeFunctionsAndPlayAudioCoroutine(
-                name,
-                Data.AudioClip,
-                Data.FunctionList,
-                OnFinished));
+        if (NodeFinishedNoMoreConnections()) return;
+
+        WaitForInput();
+        StartTimeOut();
+    }
+    
+    private void HandleInput(UserInputUp e)
+    {
+        Debug.Log($"OnFinished {name}");
+
+        if (ConnectedButtonPressed(e)) return;
+
+        GoToAnyButtonPort(e);
+    }
+    
+    public override void OnNodeDisable()
+    {
+        if (logDebugInfo)
+            Debug.Log($"OnNodeDisable {name}");
+
+        CleanUp();
+    }
+
+    #endregion
+    
+    #region Flow
+    
+    private void PlayFunctionsAndAudio(Action onFinished)
+    {
+        playingLogic.PlayFunctionsAndAudio(OnFinished, Data.Data.AudioClip, Data.Data.FunctionList, name);
+    }
+    
+    private void StartTimeOut()
+    {
+        timeOutLogic.StartTimeOut(port => GoToNode(port), NodeFunctionRunner.Instance, this);
+    }
+
+    private void WaitForInput()
+    {
+        Events.Instance.RemoveListener<UserInputUp>(OnInterrupted);
+        Events.Instance.AddListener<UserInputUp>(HandleInput);
+    }
+    
+    private void ListenToInterruptedInput()
+    {
+        Events.Instance.AddListener<UserInputUp>(OnInterrupted);
     }
 
     private void OnInterrupted(UserInputUp e)
@@ -70,63 +113,18 @@ public class DialogueNode : BaseNode
             Debug.Log($"OnInterrupted {name} {e.Button}");
         Events.Instance.Raise(new InterruptedInput(e.Button));
     }
-
-    private void OnFinished()
+    
+    private void CleanUp()
     {
-        if(logDebugInfo)
-            Debug.Log($"OnFinished {name}");
-
-        if (NodeFinished())
-        {
-            return;
-        }
-
-        Events.Instance.RemoveListener<UserInputUp>(OnInterrupted);
-        Events.Instance.AddListener<UserInputUp>(HandleInput);
-
-        NodeFunctionRunner.Instance.StartCoroutine(TimeOutCoroutine());
-    }
-
-    private IEnumerator TimeOutCoroutine()
-    {
-        yield return new WaitForSeconds(TimeOut);
-
-        if (HasTimeOut)
-        {
-            GoToNode(TimeOutButtonPort);
-        }
-    }
-
-    private void HandleInput(UserInputUp e)
-    {
-        Debug.Log($"OnFinished {name}");
-
-        for (int i = 0; i < Buttons.Count; i++)
-        {
-            if (Buttons[i].HasFlag(e.Button))
-            {
-                if (logDebugInfo)
-                    Debug.Log($"Found Button in Buttons {e.Button}");
-
-                GoToNode(GetButtonPort(i));
-                return;
-            }
-        }
-        if (logDebugInfo)
-            Debug.Log($"Found Button in AnyButton {e.Button}");
-        GoToNode(AnyButtonPort);
-    }
-
-    public override void OnNodeDisable()
-    {
-        if (logDebugInfo)
-            Debug.Log($"OnNodeDisable {name}");
-        
         Events.Instance.RemoveListener<UserInputUp>(HandleInput);
         NodeFunctionRunner.Instance.StopAllCoroutines();
     }
+    
+    #endregion
 
-    public override bool HasConnections()
+    #region Helpers
+
+    protected override bool HasConnections()
     {
         var onAnyButtonConnected = AnyButtonPort.IsConnected;
         var anyButtonsConnected = AnyButtonConnected();
@@ -143,6 +141,7 @@ public class DialogueNode : BaseNode
             if (GetButtonPort(i).IsConnected)
                 return true;
         }
+
         return false;
     }
 
@@ -159,9 +158,36 @@ public class DialogueNode : BaseNode
             return;
         }
 
-        var node = (BaseNode)port.Connection.node;
+        var node = (BaseNode) port.Connection.node;
         NodeGraph.PlayNode(node);
     }
+
+    private void GoToAnyButtonPort(UserInputUp e)
+    {
+        if (logDebugInfo)
+            Debug.Log($"Found Button in AnyButton {e.Button}");
+
+        GoToNode(AnyButtonPort);
+    }
+
+    private bool ConnectedButtonPressed(UserInputUp e)
+    {
+        for (int i = 0; i < Buttons.Count; i++)
+        {
+            if (Buttons[i].HasFlag(e.Button))
+            {
+                if (logDebugInfo)
+                    Debug.Log($"Found Button in Buttons {e.Button}");
+
+                GoToNode(GetButtonPort(i));
+                return true;
+            }
+        }
+
+        return false;
+    }
+    
+    #endregion
 }
 
 public class InterruptedInput : Event

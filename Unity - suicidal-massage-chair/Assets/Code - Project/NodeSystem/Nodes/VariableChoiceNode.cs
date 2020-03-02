@@ -14,7 +14,7 @@ public class VariableChoiceNode : BaseNode
     [Output()]
     public Connection True, False;
 
-    public override bool HasConnections()
+    protected override bool HasConnections()
     {
         return True == null && False == null;
     }

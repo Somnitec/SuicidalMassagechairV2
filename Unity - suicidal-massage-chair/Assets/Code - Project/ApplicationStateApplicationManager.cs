@@ -7,11 +7,10 @@ using Event = Framework.Event;
 
 public class ApplicationStateApplicationManager : SingletonMonoBehavior<ApplicationStateApplicationManager>
 {
-    [ReadOnly]
-    public ApplicationState State = ApplicationState.Playing;
+    [ReadOnly] public ApplicationState State = ApplicationState.Playing;
 
     private Settings settings => SettingsHolder.Instance.Settings;
-    private NodeLogic logic = new NodeLogic();
+    private NodePlayingLogic _playingLogic = new NodePlayingLogic();
 
     void Start()
     {
@@ -38,7 +37,7 @@ public class ApplicationStateApplicationManager : SingletonMonoBehavior<Applicat
         ChangeState(ApplicationState.Restarting);
         AudioManager.instance.Stop();
 
-        StartCoroutine(logic.InvokeFunctionsCoroutine(settings.RestartChair, StartWaiting));
+        StartCoroutine(_playingLogic.InvokeFunctionsCoroutine(settings.RestartChair, StartWaiting));
     }
 
     private void StartWaiting()
@@ -51,11 +50,12 @@ public class ApplicationStateApplicationManager : SingletonMonoBehavior<Applicat
 
     private void Waiting()
     {
-        StartCoroutine(logic.InvokeFunctionsAndPlayAudioCoroutine(
-            "Waiting",
+        _playingLogic.PlayFunctionsAndAudio(
+            Waiting,
             settings.WaitingAudio,
             settings.WaitingFunctions,
-            Waiting));
+            "Waiting"
+        );
     }
 
     private void StartStory(UserInputUp e)
@@ -65,7 +65,7 @@ public class ApplicationStateApplicationManager : SingletonMonoBehavior<Applicat
         Events.Instance.RemoveListener<UserInputUp>(StartStory);
         StopAllCoroutines();
 
-        StartCoroutine(logic.InvokeFunctionsCoroutine(settings.OnStart, PlayRootNode));
+        StartCoroutine(_playingLogic.InvokeFunctionsCoroutine(settings.OnStart, PlayRootNode));
     }
 
     public void PlayRootNode()
@@ -103,5 +103,4 @@ public class ApplicationStateChange : Event
 
 public class StoryFinished : Event
 {
-
 }

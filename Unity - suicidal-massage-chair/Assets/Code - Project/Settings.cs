@@ -20,6 +20,7 @@ public class Settings : SerializedScriptableObject
     public bool ShowNodeDebugInfo = true;
     public bool LogDebugInfo = false;
     public bool ShowNodeData = true;
+    public Language Language = Language.Dutch;
 
     [Title("App setting")]
     public bool ResetChairOnStart = false;
@@ -41,5 +42,10 @@ public class Settings : SerializedScriptableObject
     [InfoBox("This gets triggered after a person has pressed a button in the wait mode.")]
     [HideReferenceObjectPicker, HideLabel, InlineProperty]
     public FunctionList OnStart = new FunctionList();
+}
 
+public enum Language
+{
+    Dutch,
+    English
 }

@@ -25,9 +25,9 @@ public class ApplicationInfoUIController : MonoBehaviour
 
         DialogueNode dialogueNode = Graph.Current as DialogueNode;
         if (dialogueNode != null)
-            text += $"Function: {dialogueNode.Logic.FunctionProgress}\n" +
-                    $"FunctionsFinished: {dialogueNode.Logic.FunctionsFinished} \n" +
-                    $"AudioFinished: {dialogueNode.Logic.AudioFinished}";
+            text += $"Function: {dialogueNode.playingLogic.FunctionProgress}\n" +
+                    $"FunctionsFinished: {dialogueNode.playingLogic.FunctionsFinished} \n" +
+                    $"AudioFinished: {dialogueNode.playingLogic.AudioFinished}";
 
         if (Text != null)
             Text.text = text;

@@ -140,6 +140,7 @@ MonoBehaviour:
   ShowNodeDebugInfo: 0
   LogDebugInfo: 0
   ShowNodeData: 0
+  Language: 0
   ResetChairOnStart: 0
   TimeOutTimeInSeconds: 600
   WaitingAudio: {fileID: 0}

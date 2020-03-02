@@ -5,7 +5,7 @@ using System.Linq;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-public class NodeLogic
+public class NodePlayingLogic
 {
     [Title("Debug Info")]
     [ReadOnly, ShowInInspector]
@@ -18,7 +18,18 @@ public class NodeLogic
     private float now => Time.timeSinceLevelLoad;
     public string FunctionProgress => $"[{functionProgress:F2}/{functionDuration:F2}]";
 
-    public IEnumerator InvokeFunctionsAndPlayAudioCoroutine(string Name, AudioClip clip, FunctionList funcs,
+    public void PlayFunctionsAndAudio(Action onFinished, AudioClip clip, FunctionList funcs, string name)
+    {
+        NodeFunctionRunner.Instance.StopAllCoroutines();
+        NodeFunctionRunner.Instance.StartCoroutine(
+            InvokeFunctionsAndPlayAudioCoroutine(
+                name,
+                clip,
+                funcs,
+                onFinished));
+    }
+    
+    private IEnumerator InvokeFunctionsAndPlayAudioCoroutine(string name, AudioClip clip, FunctionList funcs,
         Action onFinished)
     {
         FunctionsFinished = false;
@@ -28,7 +39,7 @@ public class NodeLogic
 
         if (clip == null)
         {
-            Debug.LogWarning($"No audioClip on data of {Name}");
+            Debug.LogWarning($"No audioClip on data of {name}");
             AudioFinished = true;
         }
         else

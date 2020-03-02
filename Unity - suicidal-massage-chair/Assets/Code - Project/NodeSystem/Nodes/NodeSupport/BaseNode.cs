@@ -20,17 +20,14 @@ public abstract class BaseNode : SerializableNode
     public virtual void OnNodeEnable() { }
     public virtual void OnNodeDisable() { }
 
-    public abstract bool HasConnections();
+    protected abstract bool HasConnections();
 
-    protected bool NodeFinished()
+    protected bool NodeFinishedNoMoreConnections()
     {
-        if (!HasConnections())
-        {
-            NodeGraph.NoMoreConnections();
-            return true;
-        }
-
-        return false;
+        if (HasConnections()) return false;
+        
+        NodeGraph.NoMoreConnections();
+        return true;
     }
 
 
