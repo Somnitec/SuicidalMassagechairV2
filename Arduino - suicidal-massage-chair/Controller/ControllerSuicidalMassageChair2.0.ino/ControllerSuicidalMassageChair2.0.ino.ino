@@ -1,3 +1,83 @@
+/*
+Protocol:
+
+OUTPUT
+
+{
+  'buttonPressed':'...'
+}
+
+  buttonKill,
+  buttonCustomA,
+  buttonCustomB,
+  buttonCustomC,
+  buttonSettings,
+  buttonThumb,
+  buttonYes,
+  buttonNo,
+  buttonRepeat,
+  buttonCross,
+  buttonHorn,
+
+  
+{
+  'slider':['...']
+}
+ 1 - 5
+
+  
+{
+  'languageSet':['...']
+}
+ up, down
+
+INPUT
+
+{
+  'customScreenA':['...']
+}
+ string
+
+ ... A, B, C
+
+
+{ 
+  'clearScreens':[]
+}
+
+{
+  'buttonBrightnessSettings':[..]
+}
+ int 0-255
+ Settings, No, Yes
+
+ {
+  'buttonFadeTimeSettings':[..]
+}
+ int
+ Settings, No, Yes
+
+{
+  'buttonBounceTime':[..]
+}
+ int 
+
+
+
+
+ IDEALLY:
+ {
+    'settings':{
+        'button':['Settings'],
+        'brightness':[255]
+     }
+ }
+      
+
+ 
+ */
+
+
 #include <Bounce2.h>
 #include <ss_oled.h>
 #include <elapsedMillis.h>
