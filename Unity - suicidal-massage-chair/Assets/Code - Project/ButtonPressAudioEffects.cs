@@ -1,7 +1,7 @@
 ﻿using Framework;
 using UnityEngine;
 
-public class BottonPressAudioEffects : MonoBehaviour
+public class ButtonPressAudioEffects : MonoBehaviour
 {
     private Settings settings => SettingsHolder.Instance.Settings;
     private AudioManager audio => AudioManager.Instance;

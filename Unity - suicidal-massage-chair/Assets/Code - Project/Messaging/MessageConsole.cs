@@ -8,14 +8,18 @@ public class MessageConsole : MonoBehaviour
 {
     public TextMeshProUGUI tmPro;
 
-    // Start is called before the first frame update
+    private Messager _messager;
     void Start()
     {
         Events.Instance.AddListener<ConsoleMessage>(UpdateText);
+        _messager = GetComponent<Messager>();
     }
 
     private void UpdateText(ConsoleMessage e)
     {
+        if(e.Messager != _messager)
+            return;
+        
         tmPro.text = e.Text;
         Debug.Log(e.Text);
     }
