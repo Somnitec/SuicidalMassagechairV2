@@ -6,6 +6,7 @@ using NodeSystem.Nodes;
 using Sirenix.OdinInspector;
 using Sirenix.Utilities;
 using UnityEngine;
+using UnityEngine.Serialization;
 using XNode;
 
 namespace NodeSystem.BlackBoard
@@ -13,13 +14,29 @@ namespace NodeSystem.BlackBoard
     [CreateAssetMenu]
     public class BlackBoard : SerializedScriptableObject
     {
-        public Dictionary<string, BlackBoardValue> Values = new Dictionary<string, BlackBoardValue>();
+        public Dictionary<string, BlackBoardTypeAndValue> Values = new Dictionary<string, BlackBoardTypeAndValue>();
+    }
+
+    [Serializable, InlineProperty, HideLabel, HideReferenceObjectPicker]
+    public class BlackBoardTypeAndValue
+    {
+        [HorizontalGroup(Width = 0.5f), HideLabel]
+        [OnValueChanged("UpdateType")]
+        public BlackBoardValue.ValueType Type;
+        
+        [HorizontalGroup(), HideLabel]
+        public BlackBoardValue Value = new BlackBoardValue();
+
+        private void UpdateType()
+        {
+            Value.Type = Type;
+        }
     }
 
     [Serializable, InlineProperty, HideLabel, HideReferenceObjectPicker]
     public class BlackBoardValue
     {
-        [HorizontalGroup(Width = 0.3f), HideLabel]
+        [HideInInspector]
         public ValueType Type;
         [HorizontalGroup(), HideLabel]
         [ShowIf("isFloat")]
@@ -105,6 +122,7 @@ namespace NodeSystem.Nodes
         
         private NodePort TruePort => GetOutputPort("True");
         private NodePort FalsePort => GetOutputPort("False");
+        private BlackBoard.BlackBoard bb => NodeGraph.BlackBoard;
 
         public override void OnNodeEnable()
         {
@@ -118,29 +136,37 @@ namespace NodeSystem.Nodes
         {
             return TruePort.IsConnected || FalsePort.IsConnected;
         }
+
+        protected override void Init()
+        {
+            Comparison.BlackBoard = bb;
+        }
     }
 
     [Serializable, InlineProperty, HideLabel, Title("Comparison")]
     public class Comparison
     {
-        [HorizontalGroup("Value1")]
+        [HorizontalGroup("Comparison", MinWidth = 0.4f)]
         [ValueDropdown("GetKeys"), PropertyOrder(-2)]
         [HideLabel]
         public string Name;
         
-        [HorizontalGroup("Value1")]
+        [HorizontalGroup("Comparison", Width = 0.2f)]
         [HideLabel]
         [ShowInInspector, InlineProperty, PropertyOrder(-1)]
-        private BlackBoardValue value => bb.Values[Name];
+        private BlackBoardValue value => BlackBoard != null ? BlackBoard.Values[Name].Value : null;
         
-        [HorizontalGroup("Value2")]
+        [HorizontalGroup("Comparison", Width = 0.15f)]
         [HideLabel] [ValueDropdown("ComparatorStrings")]
         public Comparator Comparator;
 
-        [HorizontalGroup("Value2")]
+        [HorizontalGroup("Comparison", Width = 0.2f)]
         [HideLabel]
         public BlackBoardValue CompareValue;
 
+        [ReadOnly, PropertyOrder(10)]
+        public BlackBoard.BlackBoard BlackBoard;
+        
         [ShowInInspector]
         private bool Result => Compare();
         
@@ -148,13 +174,10 @@ namespace NodeSystem.Nodes
         {
             return value.Compare(Comparator, CompareValue, value.Type);
         }
-
-        [SerializeField, ShowInInspector]
-        private BlackBoard.BlackBoard bb;
         
         private IEnumerable<string> GetKeys()
         {
-            return bb.Values.Keys;
+            return BlackBoard.Values.Keys;
         }
 
         private IEnumerable ComparatorStrings = new ValueDropdownList<Comparator>()
