@@ -78,7 +78,7 @@ public abstract class Messager : MessageListener
 
     protected void UpdateConsoleMessage()
     {
-        Events.Instance.Raise(new ConsoleMessage($"Chair console: \n{MessagesStorage}"));
+        Events.Instance.Raise(new ConsoleMessage(MessagesStorage));
     }
 }
 
