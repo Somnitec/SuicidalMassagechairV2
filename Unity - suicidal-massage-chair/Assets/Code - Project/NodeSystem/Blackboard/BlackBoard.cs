@@ -6,6 +6,7 @@ using NodeSystem.Nodes;
 using Sirenix.OdinInspector;
 using Sirenix.Utilities;
 using UnityEngine;
+using XNode;
 
 namespace NodeSystem.BlackBoard
 {
@@ -18,7 +19,7 @@ namespace NodeSystem.BlackBoard
     [Serializable, InlineProperty, HideLabel, HideReferenceObjectPicker]
     public class BlackBoardValue
     {
-        [HorizontalGroup(Width = 0.5f), HideLabel]
+        [HorizontalGroup(Width = 0.3f), HideLabel]
         public ValueType Type;
         [HorizontalGroup(), HideLabel]
         [ShowIf("isFloat")]
@@ -26,12 +27,31 @@ namespace NodeSystem.BlackBoard
         [HorizontalGroup(), HideLabel]
         [ShowIf("isBool")]
         public bool Bool;
+        [HorizontalGroup(), HideLabel]
+        [ShowIf("isInt")]
+        public int Int;
 
         private bool isFloat => Type == ValueType.Float;
         private bool isBool => Type == ValueType.Bool;
-
-        private IComparable value => isBool ? (IComparable) Bool : Float;
+        private bool isInt => Type == ValueType.Int;
         
+        private IComparable value
+        {
+            get
+            {
+                switch (Type)
+                {
+                    case ValueType.Int:
+                        return Int;
+                    case ValueType.Float:
+                        return Float;
+                    default:
+                    case ValueType.Bool:
+                        return Bool;
+                }
+            }
+        }
+
         public bool Compare(Comparator comparator, BlackBoardValue compareValue, ValueType type)
         {
             Type = type;
@@ -40,18 +60,36 @@ namespace NodeSystem.BlackBoard
             switch (comparator)
             {
                 case Comparator.LargerThan:
-                    return value.CompareTo(compareValue.value) == 1;
-                
+                    return CompareTo(compareValue) == 1;
+                case Comparator.LargerOrEquals:
+                    return CompareTo(compareValue) == -1 || Equals(compareValue);
+                case Comparator.SmallerThan:
+                    return CompareTo(compareValue) == -1;
+                case Comparator.SmallerOrEquals:
+                    return CompareTo(compareValue) == -1 || Equals(compareValue);
+                case Comparator.NotEquals:
+                    return !Equals(compareValue);
                 case Comparator.Equals:
                 default:
-                    return value.Equals(compareValue.value);
+                    return Equals(compareValue);
             }
+        }
+
+        private int CompareTo(BlackBoardValue compareValue)
+        {
+            return value.CompareTo(compareValue.value);
+        }
+
+        private bool Equals(BlackBoardValue compareValue)
+        {
+            return value.Equals(compareValue.value);
         }
 
         public enum ValueType
         {
             Float,
-            Bool
+            Bool,
+            Int
         }
     }
 }
@@ -60,17 +98,25 @@ namespace NodeSystem.Nodes
 {
     public class VariableComparison : BaseNode
     {
-        public BlackBoard.BlackBoard bb;
+        public Comparison Comparison = new Comparison();
+        
+        [Output()] public Connection True;
+        [Output()] public Connection False;
+        
+        private NodePort TruePort => GetOutputPort("True");
+        private NodePort FalsePort => GetOutputPort("False");
 
-        public Comparison Comparison;
-        
-        // [Output(dynamicPortList = true)] public List<Comparison> Comparisons = new List<Comparison>();
-        [Output()] public Comparison Test;
-        [Output()] public Connection Test2;
-        
+        public override void OnNodeEnable()
+        {
+            if(Comparison.Compare())
+                GoToNode(TruePort);
+            else
+                GoToNode(FalsePort);
+        }
+
         protected override bool HasConnections()
         {
-            return true;
+            return TruePort.IsConnected || FalsePort.IsConnected;
         }
     }
 
@@ -81,14 +127,16 @@ namespace NodeSystem.Nodes
         [ValueDropdown("GetKeys"), PropertyOrder(-2)]
         [HideLabel]
         public string Name;
+        
         [HorizontalGroup("Value1")]
         [HideLabel]
         [ShowInInspector, InlineProperty, PropertyOrder(-1)]
         private BlackBoardValue value => bb.Values[Name];
         
         [HorizontalGroup("Value2")]
-        [HideLabel]
+        [HideLabel] [ValueDropdown("ComparatorStrings")]
         public Comparator Comparator;
+
         [HorizontalGroup("Value2")]
         [HideLabel]
         public BlackBoardValue CompareValue;
@@ -108,14 +156,16 @@ namespace NodeSystem.Nodes
         {
             return bb.Values.Keys;
         }
-        
-        private IEnumerable GetValues()
+
+        private IEnumerable ComparatorStrings = new ValueDropdownList<Comparator>()
         {
-            var list = new ValueDropdownList<BlackBoardValue>();
-            bb.Values.Keys.ForEach(k =>
-                list.Add(k, bb.Values[k]));
-            return list;
-        }
+            { "==", Comparator.Equals},
+            { "!=", Comparator.NotEquals},
+            { ">", Comparator.LargerThan},
+            { ">=", Comparator.LargerOrEquals},
+            { "<", Comparator.SmallerThan},
+            { "<=", Comparator.SmallerOrEquals},
+        };
     }
     
     public enum Comparator

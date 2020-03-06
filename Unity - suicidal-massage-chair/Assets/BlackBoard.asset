@@ -46,13 +46,16 @@ MonoBehaviour:
       Data: 2|NodeSystem.BlackBoard.BlackBoardValue, Assembly-CSharp
     - Name: Type
       Entry: 3
-      Data: 0
+      Data: 2
     - Name: Float
       Entry: 4
       Data: 1
     - Name: Bool
       Entry: 5
       Data: false
+    - Name: Int
+      Entry: 3
+      Data: 2
     - Name: 
       Entry: 8
       Data: 
@@ -77,6 +80,9 @@ MonoBehaviour:
     - Name: Bool
       Entry: 5
       Data: false
+    - Name: Int
+      Entry: 3
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -101,6 +107,9 @@ MonoBehaviour:
     - Name: Bool
       Entry: 5
       Data: true
+    - Name: Int
+      Entry: 3
+      Data: 0
     - Name: 
       Entry: 8
       Data: 

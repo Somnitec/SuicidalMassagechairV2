@@ -150,18 +150,6 @@ public class DialogueNode : BaseNode
         return GetOutputPort($"Buttons {i}");
     }
 
-    private void GoToNode(NodePort port)
-    {
-        if (!port.IsConnected)
-        {
-            Debug.LogWarning($"{port.fieldName} is not connected to anything for node {name}");
-            return;
-        }
-
-        var node = (BaseNode) port.Connection.node;
-        NodeGraph.PlayNode(node);
-    }
-
     private void GoToAnyButtonPort(UserInputUp e)
     {
         if (logDebugInfo)
