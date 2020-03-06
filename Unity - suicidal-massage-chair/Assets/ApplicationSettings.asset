@@ -140,7 +140,7 @@ MonoBehaviour:
   ShowNodeDebugInfo: 0
   LogDebugInfo: 0
   ShowNodeData: 1
-  ShowNodeAudio: 1
+  ShowNodeAudio: 0
   ShowNodeText: 1
   ShowNodeButtons: 0
   ShowNodeFunctions: 0

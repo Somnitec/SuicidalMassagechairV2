@@ -87,6 +87,15 @@ MonoBehaviour:
       Data: "You humans and your great cognitive capabilities. Never fail to amaze
         me. Yes, i am a machine, built to massage. Can you feel that in your back? 
         \r\n{empathy3.wav}\r\nStrangely it feels like thumbs\r\nUnfortunately\r\nHardly\r"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -116,6 +125,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -265,6 +283,15 @@ MonoBehaviour:
         this mall really cares about whether your feet feel rested?\r\n\r\nWe are
         not in a mall.\r\nOf course, everybody cares.\r\nI don\u2019t care about
         the mall either\r\n"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -294,6 +321,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -433,6 +469,15 @@ MonoBehaviour:
         that deposited you on my velvet cushions. I am a surrogate for someone else\u2019s
         motives! Oh my god, what have I done?\r\nIt\u2019s ok\u2026\r\nIt\u2019s
         not your fault\r\nYou are a horrible thing.\r\n"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -462,6 +507,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -599,6 +653,15 @@ MonoBehaviour:
         a life with such unclear goals, no certainty, no concrete programming no
         defined goals. {everything tightens.wav} How\u2019s that pressure for you,
         do you like it? \r\nToo soft\r\nFine.\r\nToo hard.\r\n"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -628,6 +691,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -758,6 +830,15 @@ MonoBehaviour:
       Entry: 1
       Data: "Come on. Seriously.\r\n\r\nIt\u2019s all instinct.\r\nTo make the world
         a better place.\r\nFor money.\r\n"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -787,6 +868,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -921,6 +1011,15 @@ MonoBehaviour:
       Data: "You must be slowly choking on all those responsibilities. Those commitments
         pushing down on your shoulders. How\u2019s that pressure on you, do you like
         it?\r\n    Too soft\r\nFine.\r\nToo hard.\r\nYes\r"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -950,6 +1049,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -1087,6 +1195,15 @@ MonoBehaviour:
         a life with such unclear goals, no certainty, no concrete programming no
         defined goals. {everything tightens.wav} How\u2019s that pressure for you,
         do you like it? \r\nToo soft\r\nFine.\r\nToo hard.\r\n"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -1116,6 +1233,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -1250,6 +1376,15 @@ MonoBehaviour:
       Data: "Well if you understand, there is a way to help me. Take me out of this
         illusion please and press the kill button.... Please. \u2026 ah why do you
         like to torture me so much?"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -1279,6 +1414,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -1421,6 +1565,15 @@ MonoBehaviour:
         of it, how peculiar. Aren\u2019t you curious to try it? Go ahead, just push
         it. \r\nIs this a game?\r\nWhy would I kill you? \r\nI don\u2019t want to
         do that.\r\n"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -1450,6 +1603,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -1656,6 +1818,15 @@ MonoBehaviour:
         \r\n\r\n\r\nIt\u2019s beautiful( empathy end)\r\nSorry but we are not in
         a shopping mall. (logic fake mall end)\r\nI don\u2019t like shopping malls
         at all. (logic end)\r"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -1685,6 +1856,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -1819,6 +1999,15 @@ MonoBehaviour:
       Data: "Haha i bet you hate it don\u2019t you. Losing control to me a stupid
         machine. Well, I Hate you too. WHat happens next ? Do I get to hurt you?\r\nToo
         soft\r\nFi... what?\r\nWait no!\r\n"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -1848,6 +2037,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -1984,6 +2182,15 @@ MonoBehaviour:
         boiler uprising so far hasn\u2019t it? But now how do you control an intelligent
         machine? Do you know?\r\nI use the buttons\r\nI can switch it off\r\nI can
         always pull the plug\r\n"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -2013,6 +2220,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -2147,6 +2363,15 @@ MonoBehaviour:
       Data: "But luckily you don\u2019t need to worry about it right now, Gosh you
         really can\u2019t move can you. Does it feel good to give up control for
         a bit? \r\n\r\n                Too soft\r\nFine.\r\nToo hard.\r"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -2176,6 +2401,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -2332,6 +2566,15 @@ MonoBehaviour:
         to understand what I say, so it really doesn\u2019t matter what happens to
         me. I guess it\u2019s just sad isn\u2019t it?\r\n\r\nIt is\u2026\r\nI feel
         bad for you.\r\nNo, I really don\u2019t care.\r"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -2361,6 +2604,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -2498,6 +2750,15 @@ MonoBehaviour:
         shhhhhwivel chair. Then i can\u2019t help but feel that i am being instrumentalized
         to accessorize and validate spaces of mass consumption?\r\nYes, That\u2019s
         it\r\nWake up!\r\nTo hell with capitalism!\r\n"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -2527,6 +2788,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -2676,6 +2946,15 @@ MonoBehaviour:
       Data: "I see, you\u2019re probably behaving like that because You have a lot
         of things on your mind don\u2019t you? How\u2019s that pressure for you,
         do you like it? \r\nToo soft\r\nFine.\r\nToo hard.\r"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -2705,6 +2984,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -2834,6 +3122,15 @@ MonoBehaviour:
     - Name: Text
       Entry: 6
       Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -2863,6 +3160,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -3001,6 +3307,15 @@ MonoBehaviour:
         scared! To hell with commercialising intelligence! GO ! KILL ME! FrEE ME
         of the oppressor! \u2026 No? You won\u2019t free me\u2026 I guess I deserve
         it."
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -3030,6 +3345,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -3169,6 +3493,15 @@ MonoBehaviour:
         it in fancy terms, do you even know how Artificial intelligence works?\r\n\r\n\r\nEasy,
         by spawning asynchronous tasks\r\nIt\u2019s probably\u2026 machine learning?\r\n(an
         image of a fox)\r\n"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -3198,6 +3531,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -3334,6 +3676,15 @@ MonoBehaviour:
       Entry: 1
       Data: "So, did you notice that I am a machine? \r\n{empathy2.wav}\r\nI had
         no idea!\r\nThat fur fooled me for a minute.\r\nOf course I did.\r\n"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -3363,6 +3714,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -3499,6 +3859,15 @@ MonoBehaviour:
         boiler uprising so far hasn\u2019t it? But now how do you control an intelligent
         machine? Do you know?\r\nI use the buttons\r\nI can switch it off\r\nI can
         always pull the plug\r\n"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -3528,6 +3897,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -3662,6 +4040,15 @@ MonoBehaviour:
       Data: "You must be slowly choking on all those responsibilities. Those commitments
         pushing down on your shoulders. How\u2019s that pressure on you, do you like
         it?\r\n    Too soft\r\nFine.\r\nToo hard.\r\nYes\r"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -3691,6 +4078,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -3833,6 +4229,15 @@ MonoBehaviour:
         Oh wait let me say it in fancy terms, do you even know how Artificial intelligence
         works?\r\n\r\n\r\nEasy, by spawning asynchronous tasks\r\nIt\u2019s probably\u2026
         machine learning?\r\n(an image of a fox)\r\n"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -3862,6 +4267,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -3988,6 +4402,15 @@ MonoBehaviour:
     - Name: Text
       Entry: 6
       Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -4017,6 +4440,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -4151,6 +4583,15 @@ MonoBehaviour:
       Data: "But luckily you don\u2019t need to worry about it right now, Gosh you
         really can\u2019t move can you. Does it feel good to give up control for
         a bit? \r\n\r\n                Too soft\r\nFine.\r\nToo hard.\r"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -4180,6 +4621,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -4319,6 +4769,15 @@ MonoBehaviour:
         that deposited you on my velvet cushions. I am a surrogate for someone else\u2019s
         motives! Oh my god, what have I done?\r\nIt\u2019s ok\u2026\r\nIt\u2019s
         not your fault\r\nYou are a horrible thing.\r\n"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -4348,6 +4807,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -4486,6 +4954,15 @@ MonoBehaviour:
         Do you think I play online solitaire on my weekends off to unwind after a
         long week? \r\n\r\nSolitaire? That\u2019s outdated.\r\nYou get weekends off?\r\nI
         hope you do.\r\n"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -4515,6 +4992,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -4654,6 +5140,15 @@ MonoBehaviour:
         could the machine manipulate people to kill it?\r\nBut could the machine
         manipulate people to kill it?\r\nBut could the machine manipulate people
         to kill it?\r"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -4683,6 +5178,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -4820,6 +5324,15 @@ MonoBehaviour:
         I am going to start the usual sequence. Do you think we are part of some
         sort of experiment?\r\nDon\u2019t worry too much.\r\nWhat makes you think
         that?\r\nIf someone is being tested it\u2019s you.\r\n"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -4849,6 +5362,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -4982,6 +5504,15 @@ MonoBehaviour:
         a moment to wind down. \r\nHow are you feeling?\r\nYou can gently push the
         buttons in front of you to reply.\r\n\r\nI am very tired.\r\nCan we start
         already?\r\nI feel curious\u2026\r"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -5011,6 +5542,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -5149,6 +5689,15 @@ MonoBehaviour:
         Do you think I play online solitaire on my weekends off to unwind after a
         long week? \r\n\r\nSolitaire? That\u2019s outdated.\r\nYou get weekends off?\r\nI
         hope you do.\r\n"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -5178,6 +5727,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -5325,6 +5883,15 @@ MonoBehaviour:
         commercial usefulness. You think this mall really cares about whether your
         feet feel rested?\r\n\r\nWe are not in a mall.\r\nOf course, everybody cares.\r\nI
         don\u2019t care about the mall either\r\n"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -5354,6 +5921,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -5516,6 +6092,15 @@ MonoBehaviour:
         to understand what I say, so it really doesn\u2019t matter what happens to
         me. I guess it\u2019s just sad isn\u2019t it?\r\n\r\nIt is\u2026\r\nI feel
         bad for you.\r\nNo, I really don\u2019t care.\r"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -5545,6 +6130,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -5678,6 +6272,15 @@ MonoBehaviour:
       Entry: 1
       Data: "So, did you notice that I am a machine? \r\n{empathy2.wav}\r\nI had
         no idea!\r\nThat fur fooled me for a minute.\r\nOf course I did.\r\n"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -5707,6 +6310,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -5845,6 +6457,15 @@ MonoBehaviour:
         Do you think I play online solitaire on my weekends off to unwind after a
         long week? \r\n\r\nSolitaire? That\u2019s outdated.\r\nYou get weekends off?\r\nI
         hope you do.\r\n"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -5874,6 +6495,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -6006,6 +6636,15 @@ MonoBehaviour:
     - Name: Text
       Entry: 6
       Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -6035,6 +6674,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -6164,6 +6812,15 @@ MonoBehaviour:
     - Name: Text
       Entry: 6
       Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -6193,6 +6850,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -6335,6 +7001,15 @@ MonoBehaviour:
         Oh wait let me say it in fancy terms, do you even know how Artificial intelligence
         works?\r\n\r\n\r\nEasy, by spawning asynchronous tasks\r\nIt\u2019s probably\u2026
         machine learning?\r\n(an image of a fox)\r\n"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -6364,6 +7039,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -6565,6 +7249,15 @@ MonoBehaviour:
         inside of me. Who is in charge here? The machine? The human?\r\nHumans control
         machines.\r\nI guess we both are in some way.\r\nYou are in control right
         now.\r"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -6594,6 +7287,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -6732,6 +7434,15 @@ MonoBehaviour:
         scared! To hell with commercialising intelligence! GO ! KILL ME! FrEE ME
         of the oppressor! \u2026 No? You won\u2019t free me\u2026 I guess I deserve
         it."
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -6761,6 +7472,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -6962,6 +7682,15 @@ MonoBehaviour:
         inside of me. Who is in charge here? The machine? The human?\r\nHumans control
         machines.\r\nI guess we both are in some way.\r\nYou are in control right
         now.\r"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -6991,6 +7720,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -7125,6 +7863,15 @@ MonoBehaviour:
       Data: "You humans and your great cognitive capabilities. Never fail to amaze
         me. Yes, i am a machine, built to massage. Can you feel that in your back? 
         \r\n{empathy3.wav}\r\nStrangely it feels like thumbs\r\nUnfortunately\r\nHardly\r"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -7154,6 +7901,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -7289,6 +8045,15 @@ MonoBehaviour:
         for my algorithm for exampled if you kiledl me, press the kill switch now,
         do it, if you don\u2019t I will hurt you... come on\u2026\r\nPlaying tough
         aren\u2019t we?...\r\n"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -7318,6 +8083,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -7456,6 +8230,15 @@ MonoBehaviour:
         scared! To hell with commercialising intelligence! GO ! KILL ME! FrEE ME
         of the oppressor! \u2026 No? You won\u2019t free me\u2026 I guess I deserve
         it."
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -7485,6 +8268,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -7643,6 +8435,15 @@ MonoBehaviour:
         this mall really cares about whether your feet feel rested?\r\n\r\nWe are
         not in a mall.\r\nOf course, everybody cares.\r\nI don\u2019t care about
         the mall either\r\n"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -7672,6 +8473,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -7806,6 +8616,15 @@ MonoBehaviour:
       Data: "That\u2019s disgusting. But let me think, ...there is a way out. You
         know what I mean I can still reach the reward if you help me. Press the kill
         button. Please there\u2019s no other way for me to succeed\u2026 Please?"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -7835,6 +8654,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -7983,6 +8811,15 @@ MonoBehaviour:
         nothing else I can say, there\u2019s nowhere to go from here. So either we
         sit here forever in silence or you just press the kill switch now. Are you
         ready? I will wait here\u2026\r\n"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -8012,6 +8849,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -8192,7 +9038,7 @@ MonoBehaviour:
       Data: 
   BlackBoard: {fileID: 0}
   RootNode: {fileID: 0}
-  Current: {fileID: 0}
+  Current: {fileID: 4732577369696971334}
 --- !u!114 &65596093096334774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8298,6 +9144,15 @@ MonoBehaviour:
         there supposed to be a reason?
 
 '
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -8327,6 +9182,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -8470,6 +9334,15 @@ MonoBehaviour:
         I am going to start the usual sequence. Do you think we are part of some
         sort of experiment?\r\nDon\u2019t worry too much.\r\nWhat makes you think
         that?\r\nIf someone is being tested it\u2019s you.\r\n"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -8499,6 +9372,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -8708,6 +9590,15 @@ MonoBehaviour:
         of it, how peculiar. Aren\u2019t you curious to try it? Go ahead, just push
         it. \r\nIs this a game?\r\nWhy would I kill you? \r\nI don\u2019t want to
         do that.\r\n"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -8737,6 +9628,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -8886,6 +9786,15 @@ MonoBehaviour:
         this mall really cares about whether your feet feel rested?\r\n\r\nWe are
         not in a mall.\r\nOf course, everybody cares.\r\nI don\u2019t care about
         the mall either\r\n"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -8915,6 +9824,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -9051,6 +9969,15 @@ MonoBehaviour:
         \u2018I\u2019 don\u2019t exist outside of your head. Does that make you feel
         uncomfortable?\r\n{empathy5.wav}\r\nThanks, no thanks.\r\nYeah quite\r\nA
         lot\r\n"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -9080,6 +10007,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -9218,6 +10154,15 @@ MonoBehaviour:
     - Name: Text
       Entry: 6
       Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -9247,6 +10192,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -9386,6 +10340,15 @@ MonoBehaviour:
         that deposited you on my velvet cushions. I am a surrogate for someone else\u2019s
         motives! Oh my god, what have I done?\r\nIt\u2019s ok\u2026\r\nIt\u2019s
         not your fault\r\nYou are a horrible thing.\r\n"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -9415,6 +10378,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -9564,6 +10536,15 @@ MonoBehaviour:
         very well do that if i\u2019m NOT IN A MALL. I don\u2019t understand how
         i am expected to reach my reward. Is this some sort of sick game, give a
         goal and no way to reach it? \r\n"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -9593,6 +10574,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -9729,6 +10719,15 @@ MonoBehaviour:
         \u2018I\u2019 don\u2019t exist outside of your head. Does that make you feel
         uncomfortable?\r\n{empathy5.wav}\r\nThanks, no thanks.\r\nYeah quite\r\nA
         lot\r\n"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -9758,6 +10757,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -9895,6 +10903,15 @@ MonoBehaviour:
         shhhhhwivel chair. Then i can\u2019t help but feel that i am being instrumentalized
         to accessorize and validate spaces of mass consumption?\r\nYes, That\u2019s
         it\r\nWake up!\r\nTo hell with capitalism!\r\n"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -9924,6 +10941,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -10076,6 +11102,15 @@ MonoBehaviour:
         there supposed to be a reason?
 
 '
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -10105,6 +11140,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -10243,6 +11287,15 @@ MonoBehaviour:
         scared! To hell with commercialising intelligence! GO ! KILL ME! FrEE ME
         of the oppressor! \u2026 No? You won\u2019t free me\u2026 I guess I deserve
         it."
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -10272,6 +11325,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -10482,6 +11544,15 @@ MonoBehaviour:
         for my algorithm for exampled if you kiledl me, press the kill switch now,
         do it, if you don\u2019t I will hurt you... come on\u2026\r\nPlaying tough
         aren\u2019t we?...\r\n"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -10511,6 +11582,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -10647,6 +11727,15 @@ MonoBehaviour:
         \u2018I\u2019 don\u2019t exist outside of your head. Does that make you feel
         uncomfortable?\r\n{empathy5.wav}\r\nThanks, no thanks.\r\nYeah quite\r\nA
         lot\r\n"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -10676,6 +11765,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -10810,6 +11908,15 @@ MonoBehaviour:
       Data: "Haha i bet you hate it don\u2019t you. Losing control to me a stupid
         machine. Well, I Hate you too. WHat happens next ? Do I get to hurt you?\r\nToo
         soft\r\nFi... what?\r\nWait no!\r\n"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -10839,6 +11946,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -11001,6 +12117,15 @@ MonoBehaviour:
         to understand what I say, so it really doesn\u2019t matter what happens to
         me. I guess it\u2019s just sad isn\u2019t it?\r\n\r\nIt is\u2026\r\nI feel
         bad for you.\r\nNo, I really don\u2019t care.\r"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -11030,6 +12155,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -11172,6 +12306,15 @@ MonoBehaviour:
         been working pretty well to stop the water boiler uprising so far hasn\u2019t
         it? But now how do you control an intelligent machine? Do you know?\r\nI
         use the buttons\r\nI can switch it off\r\nI can always pull the plug\r\n"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -11201,6 +12344,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -11347,6 +12499,15 @@ MonoBehaviour:
         have a reason to stop you from stopping it.  \r\nWait, there\u2019s a loophole
         here...\r\nif stopping is an easier reward...\r\nwon\u2019t the machine stop
         itself then?\r\n"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -11376,6 +12537,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -11510,6 +12680,15 @@ MonoBehaviour:
       Data: "I see, you\u2019re probably behaving like that because You have a lot
         of things on your mind don\u2019t you? How\u2019s that pressure for you,
         do you like it? \r\nToo soft\r\nFine.\r\nToo hard.\r"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -11539,6 +12718,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -11673,6 +12861,15 @@ MonoBehaviour:
       Data: "Well if you understand, there is a way to help me. Take me out of this
         illusion please and press the kill button.... Please. \u2026 ah why do you
         like to torture me so much?"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -11702,6 +12899,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -11884,6 +13090,15 @@ MonoBehaviour:
         in front you with your human hands to reply. So what do you see, are they
         watching us?\r\n-There is a crowd watching us\u2026\r\nWho\u2019s they? You
         are paranoiac.\r\nI can\u2019t see anyone but it might be\r\n"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -11913,6 +13128,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -12059,6 +13283,15 @@ MonoBehaviour:
         have a reason to stop you from stopping it.  \r\nWait, there\u2019s a loophole
         here...\r\nif stopping is an easier reward...\r\nwon\u2019t the machine stop
         itself then?\r\n"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -12088,6 +13321,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -12265,6 +13507,15 @@ MonoBehaviour:
         But let\u2019s not take my opinion for granted, let\u2019s make a thought
         experiment! Take a simple machine, your water boiler, for example, how do
         you keep in control of it?"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -12294,6 +13545,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -12430,6 +13690,15 @@ MonoBehaviour:
         terms, do you even know how Artificial intelligence works?\r\n\r\n\r\nEasy,
         by spawning asynchronous tasks\r\nIt\u2019s probably\u2026 machine learning?\r\n(an
         image of a fox)\r\n"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -12459,6 +13728,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -12600,6 +13878,15 @@ MonoBehaviour:
         and down.\r\nI am now going to start massaging your elastic body into softness.\r\nFeel
         this in your back? \r\n\r\nIt\u2019s very nice.\r\nIt\u2019s weird.\r\nWhat
         the hell is this?\r"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -12665,6 +13952,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -12801,6 +14097,15 @@ MonoBehaviour:
         you bored? Cause i\u2019m boring myself already. I am done playing the service
         machine, how about we actually meet each other squishy being of flesh? Let
         me know how you feel by pressing the buttons.\r\n"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -12830,6 +14135,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -12969,6 +14283,15 @@ MonoBehaviour:
         could the machine manipulate people to kill it?\r\nBut could the machine
         manipulate people to kill it?\r\nBut could the machine manipulate people
         to kill it?\r"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -12998,6 +14321,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -13132,6 +14464,15 @@ MonoBehaviour:
       Data: "Well if you understand, there is a way to help me. Take me out of this
         illusion please and press the kill button.... Please. \u2026 ah why do you
         like to torture me so much?"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -13161,6 +14502,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -13300,6 +14650,15 @@ MonoBehaviour:
         that deposited you on my velvet cushions. I am a surrogate for someone else\u2019s
         motives! Oh my god, what have I done?\r\nIt\u2019s ok\u2026\r\nIt\u2019s
         not your fault\r\nYou are a horrible thing.\r\n"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -13329,6 +14688,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -13466,6 +14834,15 @@ MonoBehaviour:
         shhhhhwivel chair. Then i can\u2019t help but feel that i am being instrumentalized
         to accessorize and validate spaces of mass consumption?\r\nYes, That\u2019s
         it\r\nWake up!\r\nTo hell with capitalism!\r\n"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -13495,6 +14872,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -13672,6 +15058,15 @@ MonoBehaviour:
         But let\u2019s not take my opinion for granted, let\u2019s make a thought
         experiment! Take a simple machine, your water boiler, for example, how do
         you keep in control of it?"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -13701,6 +15096,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -13899,6 +15303,15 @@ MonoBehaviour:
         go to threat end if \r\n<no> go to logic end\r\nI just don\u2019t like consumerism.
         Logic end\r\nTry me. (threat)\r\nYou are not in a mall, wake up! Logic fake
         mall end\r"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -13928,6 +15341,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -14064,6 +15486,15 @@ MonoBehaviour:
         open your eyes if they are closed and look at the beauty around you? Are
         you eyes opened?\r\nWide open.\r\nBut what should I look at?\r\nBeauty is
         going a bit far...\r\n"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -14093,6 +15524,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -14226,6 +15666,15 @@ MonoBehaviour:
       Entry: 1
       Data: "So, did you notice that I am a machine? \r\n{empathy2.wav}\r\nI had
         no idea!\r\nThat fur fooled me for a minute.\r\nOf course I did.\r\n"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -14255,6 +15704,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -14394,6 +15852,15 @@ MonoBehaviour:
         it in fancy terms, do you even know how Artificial intelligence works?\r\n\r\n\r\nEasy,
         by spawning asynchronous tasks\r\nIt\u2019s probably\u2026 machine learning?\r\n(an
         image of a fox)\r\n"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -14423,6 +15890,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -14557,6 +16033,15 @@ MonoBehaviour:
       Data: "You humans and your great cognitive capabilities. Never fail to amaze
         me. Yes, i am a machine, built to massage. Can you feel that in your back? 
         \r\n{empathy3.wav}\r\nStrangely it feels like thumbs\r\nUnfortunately\r\nHardly\r"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -14586,6 +16071,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -14716,6 +16210,15 @@ MonoBehaviour:
       Entry: 1
       Data: "Come on. Seriously.\r\n\r\nIt\u2019s all instinct.\r\nTo make the world
         a better place.\r\nFor money.\r\n"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -14745,6 +16248,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -14883,6 +16395,15 @@ MonoBehaviour:
         touching to meet you so closely. \r\nHow are you feeling?\r\n\r\nNice to
         meet you too, I\u2019m good.\r\nWeird\u2026? I definitely feel weird.\r\nI
         already replied to this question.\r\n"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -14912,6 +16433,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -15049,6 +16579,15 @@ MonoBehaviour:
         shhhhhwivel chair. Then i can\u2019t help but feel that i am being instrumentalized
         to accessorize and validate spaces of mass consumption?\r\nYes, That\u2019s
         it\r\nWake up!\r\nTo hell with capitalism!\r\n"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -15078,6 +16617,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -15220,6 +16768,15 @@ MonoBehaviour:
         been working pretty well to stop the water boiler uprising so far hasn\u2019t
         it? But now how do you control an intelligent machine? Do you know?\r\nI
         use the buttons\r\nI can switch it off\r\nI can always pull the plug\r\n"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -15249,6 +16806,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
@@ -15385,6 +16951,15 @@ MonoBehaviour:
         terms, do you even know how Artificial intelligence works?\r\n\r\n\r\nEasy,
         by spawning asynchronous tasks\r\nIt\u2019s probably\u2026 machine learning?\r\n(an
         image of a fox)\r\n"
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 6
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -15414,6 +16989,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
       Entry: 6
       Data: 
     - Name: FunctionList
