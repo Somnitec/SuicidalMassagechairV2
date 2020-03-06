@@ -15,10 +15,4 @@ public class NodeGraphEditor : XNodeEditor.NodeGraphEditor
             return base.GetNodeMenuName(type);
         return null;
     }
-
-    public override void OnGUI()
-    {
-        // Keep repainting the GUI of the active NodeEditorWindow
-        NodeEditorWindow.current.Repaint();
-    }
 }
