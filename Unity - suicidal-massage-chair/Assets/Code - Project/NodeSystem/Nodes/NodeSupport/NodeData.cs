@@ -9,7 +9,8 @@ public class NodeData
 {
     [HideLabel] [AssetsOnly]
     public AudioClip AudioClip;
-    [TextArea, PropertySpace(0, 10f)]
+    [TextArea(10, 20)]
+    [PropertySpace(0, 10f)]
     public string Text;
 
     [InlineProperty,HideLabel,HideReferenceObjectPicker]
