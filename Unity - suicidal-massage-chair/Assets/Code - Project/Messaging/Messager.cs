@@ -78,16 +78,18 @@ public abstract class Messager : MessageListener
 
     protected void UpdateConsoleMessage()
     {
-        Events.Instance.Raise(new ConsoleMessage(MessagesStorage));
+        Events.Instance.Raise(new ConsoleMessage(MessagesStorage, this));
     }
 }
 
 public class ConsoleMessage : Event
 {
     public string Text;
+    public Messager Messager;
 
-    public ConsoleMessage(string msg)
+    public ConsoleMessage(string msg, Messager messager)
     {
         Text = msg;
+        Messager = messager;
     }
 }

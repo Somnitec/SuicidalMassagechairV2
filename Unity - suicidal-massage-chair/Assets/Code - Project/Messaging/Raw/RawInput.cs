@@ -2,8 +2,9 @@
 {
     public class RawInput
     {
-        public RawButtons ButtonPressed;
-        
+        public RawButtons buttonPressed;
+        public int slider;
+        public LanguageStick languageSet;
     }
 
     public enum RawButtons
@@ -19,6 +20,12 @@
         buttonRepeat,
         buttonCross,
         buttonHorn,
+    }
+
+    public enum LanguageStick
+    {
+      Up,
+      Down
     }
 }
 /*

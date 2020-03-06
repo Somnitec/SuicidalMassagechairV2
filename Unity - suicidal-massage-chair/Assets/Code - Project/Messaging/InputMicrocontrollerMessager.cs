@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using Framework;
+using Messaging.Raw;
 using UnityEngine;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
@@ -11,7 +12,8 @@ public class InputMicrocontrollerMessager : Messager
 {
     protected override void OnMessageReceived(string message)
     {
-        RawChairStatus status = ChairMessageParser.ParseMessage(message);
+        RawInput status = InputMessageParser.ParseMessage(message);
+        Debug.Log(status.buttonPressed);
         Events.Instance.Raise(new InputUpdate());
     }
 }
