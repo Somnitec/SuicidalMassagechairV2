@@ -67,13 +67,25 @@ public class DialogueNode : BaseNode
     
     private void HandleInput(UserInputUp e)
     {
-        Debug.Log($"OnFinished {name}");
+        if (logDebugInfo)
+            Debug.Log($"HandleInput {name}");
 
+        if(SpecialButton(e))
+            return;
+        
         if (ConnectedButtonPressed(e)) return;
 
         GoToAnyButtonPort(e);
     }
-    
+
+    private bool SpecialButton(UserInputUp userInputUp)
+    {
+        if (userInputUp.Button.HasFlag(UserInputButton.Kill))
+            return true;
+
+        return false;
+    }
+
     public override void OnNodeDisable()
     {
         if (logDebugInfo)

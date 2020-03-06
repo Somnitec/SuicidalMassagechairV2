@@ -34,6 +34,7 @@ public class VariableComparisonNode : BaseNode
         return TruePort.IsConnected || FalsePort.IsConnected;
     }
 
+    [Button]
     protected override void Init()
     {
         Comparison.BlackBoard = bb;
@@ -55,7 +56,7 @@ public class Comparison
     private BlackBoardValue GetBlackBoardValue()
     {
         if(string.IsNullOrEmpty(Name))
-            BlackBoard.Values.First();
+            BlackBoard?.Values.First();
         
         return BlackBoard != null ? BlackBoard.Values[Name].Value : new BlackBoardValue();
     }
