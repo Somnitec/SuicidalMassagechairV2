@@ -26,9 +26,9 @@ void writeToScreen(int screen, String text) {
   text5.toCharArray(charBuf5, bufsize) ;
 
   //something broken with new oled library
-  //if (screen == 0)oledInit(OLED_128x64, 0, 0, 17, 16, 400000L); // use standard I2C bus at 400Khz
-  //if (screen == 1)oledInit(OLED_128x64, 0, 0, 23, 22, 400000L); // use standard I2C bus at 400Khz
-  //if (screen == 2)oledInit(OLED_128x64, 0, 0, 18, 19, 400000L); // use standard I2C bus at 400Khz
+  if (screen == 0)oledInit(OLED_128x64, 0, 0, 17, 16,-1, 400000L); // use standard I2C bus at 400Khz
+  if (screen == 1)oledInit(OLED_128x64, 0, 0, 23, 22, -1,400000L); // use standard I2C bus at 400Khz
+  if (screen == 2)oledInit(OLED_128x64, 0, 0, 18, 19,-1, 400000L); // use standard I2C bus at 400Khz
   oledFill(0, 1);
   if (screen > 3) {
     // clear the screens
