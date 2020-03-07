@@ -1,6 +1,6 @@
 bool readingMessage = false;
 String readString;
-int maxStringLength = 64;
+unsigned int maxStringLength = 64;
 String last_command = "";
 
 void readSerial() {
@@ -56,11 +56,74 @@ void receiveMessage( String message) {
     printError(error.c_str());
     return;
   }
-
-
-
-
   if (validateInput(F("test"), 1)) {
-    sendCommand("test","received");
+    String message =  doc[F("test")][0];
+    sendCommand("test", message);
   }
+  else if (validateInput(F("customScreenA"), 1)) {
+    String message =  doc[F("customScreenA")][0];
+    writeToScreen(0, message);
+    sendCommand("customScreenA", message);
+  }
+  else if (validateInput(F("customScreenB"), 1)) {
+    String message =  doc[F("customScreenB")][0];
+    writeToScreen(1, message);
+    sendCommand("customScreenB", message);
+  }
+  else if (validateInput(F("customScreenC"), 1)) {
+    String message =  doc[F("customScreenC")][0];
+    writeToScreen(2, message);
+    sendCommand("customScreenC", message);
+  }
+  else if (validateInput(F("clearScreen"), 1)) {
+    bool message =  doc[F("clearScreen")][0];
+    if (message) writeToScreen(4, message);
+    sendCommand("clearScreen", message);
+  }
+  else if (validateInput(F("allLeds"), 1)) {
+    LEDSOn  =  doc[F("allLeds")][0];
+    sendCommand("allLeds", LEDSOn);
+  }
+  else if (validateInput(F("buttonBounceTime"), 1)) {
+    buttonBounceTime   =  doc[F("buttonBounceTime")][0];
+    sendCommand("buttonBounceTime", buttonBounceTime );
+  }
+  else if (validateInput(F("buttonFadeTimeSettings"), 1)) {
+    buttonFadeTimeSettings  =  doc[F("buttonFadeTimeSettings")][0];
+    sendCommand("buttonFadeTimeSettings", buttonFadeTimeSettings );
+  }
+  else if (validateInput(F("buttonBrightnessSettings"), 1)) {
+    buttonBrightnessSettings   =  doc[F("buttonBrightnessSettings")][0];
+    sendCommand("buttonBrightnessSettings", buttonBrightnessSettings );
+  }
+  else if (validateInput(F("settingsLed "), 1)) {
+    settingsLed   =  doc[F("settingsLed ")][0];
+    sendCommand("settingsLed ", settingsLed  );
+  }
+  else if (validateInput(F("yesLed  "), 1)) {
+    yesLed    =  doc[F("yesLed  ")][0];
+    sendCommand("yesLed  ", yesLed   );
+  }
+  else if (validateInput(F("noLed "), 1)) {
+    noLed    =  doc[F("noLed ")][0];
+    sendCommand("noLed ", noLed  );
+  }
+
+  else if (validateInput(F("reset"), 1)) {
+    String message    =  doc[F("reset")][0];
+    
+    sendCommand("reset", message  );
+    resetBasicState();
+  }
+  /*
+
+    buttonBounceTime = int in MS
+    buttonFadeTimeSettings = int in MS
+    buttonBrightnessSettings = 0 .. 255
+     = bool
+    settingsLed = bool
+    yesLed  = bool
+    noLed = bool
+    reset
+  */
 }
