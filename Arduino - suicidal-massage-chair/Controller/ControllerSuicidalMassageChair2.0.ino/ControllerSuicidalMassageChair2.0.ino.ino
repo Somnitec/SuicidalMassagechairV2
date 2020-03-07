@@ -80,7 +80,7 @@ INPUT
 
 #include <Bounce2.h>
 #include <ss_oled.h>
-#include <elapsedMillis.h>
+//#include <elapsedMillis.h>
 #include <ArduinoJson.h>
 
 #define buttonCustomA 0
@@ -147,6 +147,7 @@ int lastSliderValue = 0;
 
 boolean LEDSOn = true;
 
+StaticJsonDocument<200> doc;
 
 #define bufsize 250
 char charBuf1[bufsize];
@@ -177,12 +178,13 @@ void setup() {
   pinMode(13, OUTPUT);
   digitalWrite(13, HIGH);
 
+  sendCommand("test",random(100));
 
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-
+  readSerial();
+  readButtons();
 }
 
 int sliderConversion(int input)
