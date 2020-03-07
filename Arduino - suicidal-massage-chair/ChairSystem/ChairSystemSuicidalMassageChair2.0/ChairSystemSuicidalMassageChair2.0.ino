@@ -1,6 +1,7 @@
 #include <FastLED.h>
 #include <Bounce2.h>
 #include <ArduinoJson.h>
+#include <elapsedMillis.h>
 
 //PINMAPPINGS
 #define pump A5
@@ -143,9 +144,9 @@ void setup() {
 
 
   moveRollerUp();
-
   //rollerCalibrationRoutine();
   roller_position_target = 8000;
+  
   //sendAck();
 }
 
@@ -154,9 +155,6 @@ void setup() {
 void loop()
 {
   //rollerRoutine();
-
-
-
 
 
   //Blinking the led to see if code is still running
@@ -176,88 +174,9 @@ void printError(String error) {
 }
 
 
-void incorrectMessage(String mssg) {
-  Serial.print(F("{\n\t\"no useful message\":\""));
-  Serial.print(mssg);
-  Serial.println(F("\"\n}"));
-
-}
-
-String getCommand(String mssg) {
-  if (mssg.indexOf(':') == -1) return "";
-  else  return mssg.substring(mssg.indexOf('"') + 1 , mssg.lastIndexOf('"'));
-
-}
-
-int countValues(String mssg) {
-  if (mssg.indexOf(':') == -1)return 0;
-  else if ((bool)mssg.substring(mssg.indexOf(':') + 1 , mssg.lastIndexOf(',')).toInt())return 1;
-  else if (int firstBracket = mssg.indexOf('[')) {
-    if (mssg.indexOf(',') == -1)return 1;
-    int i = 1;
-    int index = 0;
-    while (index = mssg.indexOf(',', index)) {
-      i++;
-    }
-    return i;
-  }
-  else return 0;
-
-}
-bool validateInput(String command, int expectedArguments) {
-  if ( expectedArguments == 0) return false;//always get one argument (for now)
-  else {
-    for (int i = 0; i < expectedArguments; i++) {
-      String item = doc[command][i];
-      if (item.equals("null"))return false;
-    }
-  }
-  last_command = command;
-  return true;
-}
-/*
-  int getValue(String mssg) {
-  return mssg.substring(mssg.indexOf(':') + 1 , mssg.lastIndexOf(';')).toInt();
-  }*/
-
-bool checkForParameters(String mssg, String command, int amount) { //later expandable for multiple parameters
-  if (mssg.startsWith(command)) {
-    if (amount == 0)  return mssg.indexOf(':') == -1;
-    if (amount == 1)  return mssg.indexOf(':') != -1;
-    if (amount == 2)  return mssg.indexOf(':', mssg.indexOf(':')) != -1;
-    if (amount == 3)  return mssg.indexOf(':', mssg.indexOf(':', mssg.indexOf(':'))) != -1;
-  } else return false;
-}
-
-
 
 
 float fmap(float x, float in_min, float in_max, float out_min, float out_max)
 {
   return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
-}
-
-
-boolean isNumeric(String str) {
-  unsigned int stringLength = str.length();
-  if (stringLength == 0) {
-    return false;
-  }
-  boolean seenDecimal = false;
-  for (unsigned int i = 0; i < stringLength; ++i) {
-    if (isDigit(str.charAt(i))) {
-      continue;
-    } else if ( i == 0 && str.charAt(0) == ' -') {
-      continue;
-    }
-    if (str.charAt(i) == '.') {
-      if (seenDecimal) {
-        return false;
-      }
-      seenDecimal = true;
-      continue;
-    }
-    return false;
-  }
-  return true;
 }

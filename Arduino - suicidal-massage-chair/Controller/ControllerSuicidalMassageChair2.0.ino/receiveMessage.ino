@@ -111,7 +111,7 @@ void receiveMessage( String message) {
 
   else if (validateInput(F("reset"), 1)) {
     String message    =  doc[F("reset")][0];
-    
+
     sendCommand("reset", message  );
     resetBasicState();
   }
