@@ -141,8 +141,8 @@ MonoBehaviour:
   LogDebugInfo: 0
   ShowNodeData: 0
   ShowNodeAudio: 0
-  ShowNodeText: 1
-  ShowNodeButtons: 0
+  ShowNodeText: 0
+  ShowNodeButtons: 1
   ShowNodeFunctions: 0
   Language: 1
   ResetChairOnStart: 0

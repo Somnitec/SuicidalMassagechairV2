@@ -7,8 +7,6 @@ namespace Messaging.Raw
         public string controllerCommand;
         public string controllerValue;
     }
-
-    
 }
 /*
 OUTPUT
@@ -29,7 +27,7 @@ InputParse
   buttonNo,
   buttonRepeat,
   buttonHorn,
-  languageSet
+  buttonLanguage
   slider => int 1..5 
   
 InfoParse  

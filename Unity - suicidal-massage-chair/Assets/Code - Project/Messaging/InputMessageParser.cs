@@ -12,6 +12,14 @@ namespace Messaging
 
         public static UserInputButton? ParseButton(RawInput raw)
         {
+            if (raw == null || raw.controllerCommand == null || raw.controllerValue == null)
+            {
+                Debug.LogError("ParsingButton raw is null");
+                return null;
+            }
+            
+            Debug.Log($"{raw.controllerCommand} {raw.controllerValue}");
+            
             switch (raw.controllerCommand)
             {
                 case "buttonKill":
@@ -36,9 +44,10 @@ namespace Messaging
                     return UserInputButton.Repeat;
                 case "buttonHorn":
                     return UserInputButton.Horn;
-                case "languageSet":
-                    return raw.controllerValue == "0" ? UserInputButton.Dutch : UserInputButton.English;
-                case "slider":
+                case "buttonLanguage":
+                    Debug.Log($"{raw.controllerValue} {raw.controllerValue == "0"}");
+                    return raw.controllerValue == "1" ? UserInputButton.Dutch : UserInputButton.English;
+                case "buttonSlider":
                 {
                     switch (raw.controllerValue)
                     {

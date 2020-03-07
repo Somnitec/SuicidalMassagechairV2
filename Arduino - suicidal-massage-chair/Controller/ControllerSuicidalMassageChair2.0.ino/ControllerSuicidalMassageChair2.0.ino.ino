@@ -1,86 +1,52 @@
 /*
-Protocol:
+  OUTPUT
+  {
+  "controllerCommand":"..."
+  "controllerValue':"..." 0..1-5
+  }
 
-OUTPUT
-
-{
-  'buttonPressed':'...'
-}
-
-  buttonKill,
-  buttonCustomA,
-  buttonCustomB,
-  buttonCustomC,
-  buttonSettings,
-  buttonThumb,
+  InputParse
+  buttonKill, => bool
+  buttonCustomA, => bool
+  buttonCustomB, => bool
+  buttonCustomC, => bool
+  buttonSettings,  => bool
+  buttonThumbUpUp,
+  buttonThumbUpDown,
   buttonYes,
   buttonNo,
   buttonRepeat,
-  buttonCross,
   buttonHorn,
+  buttonLanguage,
+  buttonSlider => int 1..5
 
-  
-{
-  'slider':['...']
-}
- 1 - 5
+  InfoParse
+  customScreenA => string
+  customScreenB => string
+  customScreenC => string
+  clearScreen = bool
+  buttonBounceTime = int in MS
+  buttonFadeTimeSettings = int in MS
+  buttonBrightnessSettings = 0 .. 255
+  allLeds = bool
+  settingsLed = bool
+  yesLed  = bool
+  noLed = bool
+  reset
 
-  
-{
-  'languageSet':['...']
-}
- up, down
-
-INPUT
-
-{
-  'customScreenA':['...']
-}
- string
-
- ... A, B, C
-
-
-{ 
-  'clearScreens':[]
-}
-
-{
-  'buttonBrightnessSettings':[..]
-}
- int 0-255
- Settings, No, Yes
-
- {
-  'buttonFadeTimeSettings':[..]
-}
- int
- Settings, No, Yes
-
-{
-  'buttonBounceTime':[..]
-}
- int 
+  For example
+  {
+    "controllerCommand": "buttonKill",
+    "controllerValue": "1"
+  }
 
 
-
-
- IDEALLY:
- {
-    'settings':{
-        'button':['Settings'],
-        'brightness':[255]
-     }
- }
-      
-
- 
- */
+*/
 
 
 #include <Bounce2.h>
 #include <ss_oled.h>
-//#include <elapsedMillis.h>
+#include <elapsedMillis.h>
 #include <ArduinoJson.h>
 
 #define buttonCustomA 0
@@ -89,7 +55,7 @@ INPUT
 #define buttonLanguage 3
 #define LEDSettings 4
 #define buttonSettings 5
-#define buttonThumb 6
+#define buttonThumbUp 6
 #define buttonRepeat 7
 #define buttonNo 11
 #define LEDNo 10
@@ -98,7 +64,7 @@ INPUT
 #define buttonHorn 14
 #define buttonKill 15
 #define sliderNumbers 24
-#define buttonCross 25
+#define buttonThumbDown 25
 #define volume0 21
 #define volume1 20
 #define sda0 18
@@ -107,8 +73,9 @@ INPUT
 #define scl1 22
 
 //########SETTINGS
-int debounceTime = 100;
-int ledFadeTime = 100;
+int buttonBounceTime = 100;
+int buttonFadeTimeSettings = 100;
+int buttonBrightnessSettings = 255;
 //######
 
 
@@ -119,11 +86,11 @@ int buttons[] = {
   buttonCustomC,
   buttonLanguage,
   buttonSettings,
-  buttonThumb,
+  buttonThumbUp,
   buttonYes,
   buttonNo,
   buttonRepeat,
-  buttonCross,
+  buttonThumbDown,
   buttonHorn,
 };
 String buttonsString[] = {"buttonKill",
@@ -132,11 +99,11 @@ String buttonsString[] = {"buttonKill",
                           "buttonCustomC",
                           "buttonLanguage",
                           "buttonSettings",
-                          "buttonThumb",
+                          "buttonThumbUp",
                           "buttonYes",
                           "buttonNo",
                           "buttonRepeat",
-                          "buttonCross",
+                          "buttonThumbDown",
                           "buttonHorn"
                          };
 int buttonAmount = sizeof(buttons) / sizeof(buttons[0]);
@@ -146,6 +113,11 @@ Bounce *debouncedButtons = new Bounce[buttonAmount];
 int lastSliderValue = 0;
 
 boolean LEDSOn = true;
+
+bool    settingsLed = true;
+bool   yesLed  = true;
+bool   noLed = true;
+
 
 StaticJsonDocument<200> doc;
 
@@ -166,7 +138,7 @@ void setup() {
   for (int i = 0; i < buttonAmount; i++)
   {
     debouncedButtons[i].attach(buttons[i], INPUT_PULLUP);
-    debouncedButtons[i].interval(debounceTime);
+    debouncedButtons[i].interval(buttonBounceTime);
   }
 
   pinMode(sliderNumbers, INPUT);
@@ -178,34 +150,20 @@ void setup() {
   pinMode(13, OUTPUT);
   digitalWrite(13, HIGH);
 
-  sendCommand("test",random(100));
+  sendCommand("started", millis());
 
+}
+
+void resetBasicState() {
+  LEDSOn = false;
+  settingsLed = true;
+  yesLed  = true;
+  noLed = true;
+  writeToScreen(4, "nope");
 }
 
 void loop() {
   readSerial();
   readButtons();
-}
-
-int sliderConversion(int input)
-{
-  //1 730
-  //    695
-  //2 660
-  //    570
-  //3 480
-  //    407
-  //4 335
-  //    293
-  //5 250
-  if (input > 695)
-    return 1;
-  else if (input > 570)
-    return 2;
-  else if (input > 407)
-    return 3;
-  else if (input > 293)
-    return 4;
-  else
-    return 5;
+  ledStates();
 }
