@@ -29,7 +29,7 @@ InputParse
   buttonNo,
   buttonRepeat,
   buttonHorn,
-  languageSet
+  buttonLanguage
   slider => int 1..5 
   
 InfoParse  

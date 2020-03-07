@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using Framework;
 using Messaging.Raw;
@@ -20,7 +20,7 @@ namespace Messaging
             var optionalButton = InputMessageParser.ParseButton(raw);
             if (optionalButton is UserInputButton button)
             {
-                if (settings.LogDebugInfo)
+                // if (settings.LogDebugInfo)
                     Debug.Log($"Received input {button.ToString()}");
                 Events.Instance.Raise(new UserInputUp(button));
             }
