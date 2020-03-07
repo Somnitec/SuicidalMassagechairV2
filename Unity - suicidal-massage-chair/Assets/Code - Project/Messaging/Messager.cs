@@ -52,7 +52,7 @@ public abstract class Messager : MessageListener
     {
         if (!ArduinoConnected) return;
 
-        Debug.Log($"Sending to arduino: [{message}]");
+        Debug.Log($"Sending to arduino: {message} {gameObject.name}");
         serialController.SendSerialMessage(message);
         MessagesSent++;
     }

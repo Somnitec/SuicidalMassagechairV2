@@ -4,14 +4,19 @@ using System.Collections.Generic;
 using System.Linq;
 using Framework;
 using Messaging;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 [System.Serializable]
 public class ChairMicroControllerArduino : AbstractChairMicroController
 {
-    public ChairMicroControllerArduino(ChairMicroControllerState state) : base(state)
+    [ShowInInspector]
+    private Messager _messager;
+    
+    public ChairMicroControllerArduino(ChairMicroControllerState state, Messager messager) : base(state)
     {
         Events.Instance.AddListener<ChairStateUpdate>(StatusUpdate);
+        this._messager = messager;
     }
 
     private void StatusUpdate(ChairStateUpdate e)
@@ -34,7 +39,7 @@ public class ChairMicroControllerArduino : AbstractChairMicroController
     private void send(List<string> msgs)
     {
         msgs.ForEach(msg =>
-            ChairMicroControllerMessager.Instance.SendMessageToArduino(msg)
+            _messager.SendMessageToArduino(msg)
         );
     }
 
