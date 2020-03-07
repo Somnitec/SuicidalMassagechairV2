@@ -38,8 +38,7 @@ public class VariableComparisonNode : BaseNode
     [Button]
     protected override void Init()
     {
-        Comparison.BlackBoard = bb;
-        Comparison.Name = bb.Values.Keys.First();
+        Comparison.Init(bb);
     }
 }
 

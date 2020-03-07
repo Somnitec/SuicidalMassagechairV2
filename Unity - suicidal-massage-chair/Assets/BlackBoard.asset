@@ -49,13 +49,13 @@ MonoBehaviour:
       Data: 0
     - Name: Value
       Entry: 7
-      Data: 3|NodeSystem.BlackBoard.BlackBoardValue, Assembly-CSharp
+      Data: 3|NodeSystem.Blackboard.BlackBoardValue, Assembly-CSharp
     - Name: Type
       Entry: 3
       Data: 0
     - Name: Float
       Entry: 4
-      Data: 0
+      Data: 2
     - Name: Bool
       Entry: 5
       Data: false
@@ -85,7 +85,7 @@ MonoBehaviour:
       Data: 0
     - Name: Value
       Entry: 7
-      Data: 5|NodeSystem.BlackBoard.BlackBoardValue, Assembly-CSharp
+      Data: 5|NodeSystem.Blackboard.BlackBoardValue, Assembly-CSharp
     - Name: Type
       Entry: 3
       Data: 0
@@ -121,13 +121,13 @@ MonoBehaviour:
       Data: 1
     - Name: Value
       Entry: 7
-      Data: 7|NodeSystem.BlackBoard.BlackBoardValue, Assembly-CSharp
+      Data: 7|NodeSystem.Blackboard.BlackBoardValue, Assembly-CSharp
     - Name: Type
       Entry: 3
       Data: 1
     - Name: Float
       Entry: 4
-      Data: 0
+      Data: 2
     - Name: Bool
       Entry: 5
       Data: false
