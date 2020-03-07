@@ -7,8 +7,6 @@ namespace Messaging.Raw
         public string controllerCommand;
         public string controllerValue;
     }
-
-    
 }
 /*
 OUTPUT

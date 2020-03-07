@@ -5,6 +5,7 @@ using NodeSystem.BlackBoard;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 using UnityEngine;
+using Event = Framework.Event;
 
 [CreateAssetMenu]
 public class NodeGraph : SerializedNodeGraph
@@ -31,6 +32,7 @@ public class NodeGraph : SerializedNodeGraph
         Current?.OnNodeDisable();
         Current = node;
         Current?.OnNodeEnable();
+        Events.Instance.Raise(new NewNode());
     }
 
     [Button]
@@ -70,6 +72,10 @@ public class NodeGraph : SerializedNodeGraph
 
         PlayNode(SpecialNodes[key]);
     }
+}
+
+public class NewNode : Event
+{
 }
 
 [ShowOdinSerializedPropertiesInInspector]
