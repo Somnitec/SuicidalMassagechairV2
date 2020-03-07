@@ -12,30 +12,37 @@ using XNode;
 public abstract class BaseNode : SerializableNode
 {
     [Input] public Connection Input;
-    public NodeGraph NodeGraph => (NodeGraph)graph;
-    [ColorPalette()][HideLabel][ShowIf("showColors")]
+    public NodeGraph NodeGraph => (NodeGraph) graph;
+
+    [ColorPalette()] [HideLabel] [ShowIf("showColors")]
     public Color Color = Color.gray;
 
     private bool showColors => SettingsHolder.Instance.Settings.ShowColors;
 
-    public virtual void OnNodeEnable() { }
-    public virtual void OnNodeDisable() { }
+    public virtual void OnNodeEnable()
+    {
+    }
+
+    public virtual void OnNodeDisable()
+    {
+    }
 
     protected abstract bool HasConnections();
 
     protected bool NodeFinishedNoMoreConnections()
     {
         if (HasConnections()) return false;
-        
+
         NodeGraph.NoMoreConnections();
         return true;
     }
-    
+
     protected void GoToNode(NodePort port)
     {
         if (!port.IsConnected)
         {
-            Debug.LogWarning($"Trying to go to next node via {port.fieldName} on node:{name}. However it is not connected to anything. :(");
+            Debug.LogWarning(
+                $"Trying to go to next node via {port.fieldName} on node:{name}. However it is not connected to anything. :(");
             return;
         }
 
@@ -58,7 +65,33 @@ public abstract class BaseNode : SerializableNode
     [ContextMenu("Set Special/Kill")]
     public void SetKill()
     {
-        NodeGraph.SpecialNodes.Add("KillNode", this);
+        SetOrAddSpecialNode("Kill Node");
+    }
+    
+    [ContextMenu("Set Special/Interrupted")]
+    public void SetInterrupted()
+    {
+        SetOrAddSpecialNode("Interrupted Node");
+    }
+    
+    [ContextMenu("Set Special/NoInput")]
+    public void SetNoInput()
+    {
+        SetOrAddSpecialNode("No Input Node");
+    }
+    
+    [ContextMenu("Set Special/Settings")]
+    public void SetSettings()
+    {
+        SetOrAddSpecialNode("Settings Node");
+    }
+
+    private void SetOrAddSpecialNode(string name)
+    {
+        if (NodeGraph.SpecialNodes.ContainsKey(name))
+            NodeGraph.SpecialNodes[name] = this;
+        else
+            NodeGraph.SpecialNodes.Add(name, this);
     }
 }
 
@@ -70,8 +103,7 @@ public class Connection
 [ShowOdinSerializedPropertiesInInspector]
 public class SerializableNode : XNode.Node, ISerializationCallbackReceiver
 {
-    [SerializeField, HideInInspector]
-    private SerializationData serializationData;
+    [SerializeField, HideInInspector] private SerializationData serializationData;
 
     void ISerializationCallbackReceiver.OnAfterDeserialize()
     {
@@ -99,4 +131,3 @@ public class SerializableNode : XNode.Node, ISerializationCallbackReceiver
     {
     }
 }
-

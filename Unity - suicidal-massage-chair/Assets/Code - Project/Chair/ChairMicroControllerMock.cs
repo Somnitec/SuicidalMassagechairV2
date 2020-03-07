@@ -20,6 +20,7 @@ public class ChairMicroControllerMock : AbstractChairMicroController
         state.backlight_color = Color.white;
         state.backlight_on = false;
         state.butt_vibration_on = false;
+        
         // state.chair_down_on = false;
         // state.chair_up_on = false;
         state.chair_position_estimated = 0f;
@@ -84,7 +85,7 @@ public class ChairMicroControllerMock : AbstractChairMicroController
     protected override void RollerPosition(RollerPosition args)
     {
         Debug.Log($"Mock: RollerPosition {args.SerializeToString()}");
-        // state.roller_position = args.NewPosition;
+        state.roller_position_target = args.NewPosition;
     }
 
     protected override void RollerKneadingSpeed(RollerKneadingSpeed args)

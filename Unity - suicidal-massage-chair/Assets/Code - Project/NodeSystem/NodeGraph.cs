@@ -13,7 +13,9 @@ public class NodeGraph : SerializedNodeGraph
     public BlackBoard BlackBoard;
     public BaseNode RootNode;
     public BaseNode Current;
-    
+    [SerializeField]
+    private BaseNode goBackNode;
+
     [OdinSerialize,
      DictionaryDrawerSettings(
          DisplayMode = DictionaryDisplayOptions.OneLine, 
@@ -22,7 +24,10 @@ public class NodeGraph : SerializedNodeGraph
          ValueLabel = "Special Node")]
     public Dictionary<string, BaseNode> SpecialNodes = new Dictionary<string, BaseNode>();
 
+    public bool HasGoBackNode => goBackNode != null;
+    
     private Settings settings => SettingsHolder.Instance.Settings;
+    
 
     [PropertySpace]
     [Button]
@@ -62,6 +67,7 @@ public class NodeGraph : SerializedNodeGraph
         PlayNode(RootNode);
     }
 
+    [Button]
     public void PlaySpecialNode(string key)
     {
         if (!SpecialNodes.ContainsKey(key))
@@ -70,7 +76,21 @@ public class NodeGraph : SerializedNodeGraph
             return;
         }
 
+        goBackNode = Current;
+
         PlayNode(SpecialNodes[key]);
+    }
+
+    [Button]
+    public void PlayGoBackNode()
+    {
+        if (!HasGoBackNode)
+        {
+            Debug.LogError($"No Go Back Node has been set");
+            return;
+        }
+        PlayNode(goBackNode);
+        goBackNode = null;
     }
 }
 
