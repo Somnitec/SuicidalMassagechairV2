@@ -36,9 +36,10 @@ namespace Messaging
                     return UserInputButton.Repeat;
                 case "buttonHorn":
                     return UserInputButton.Horn;
-                case "languageSet":
-                    return raw.controllerValue == "0" ? UserInputButton.Dutch : UserInputButton.English;
-                case "slider":
+                case "buttonLanguage":
+                    Debug.Log($"{raw.controllerValue} {raw.controllerValue == "0"}");
+                    return raw.controllerValue == "1" ? UserInputButton.Dutch : UserInputButton.English;
+                case "buttonSlider":
                 {
                     switch (raw.controllerValue)
                     {
