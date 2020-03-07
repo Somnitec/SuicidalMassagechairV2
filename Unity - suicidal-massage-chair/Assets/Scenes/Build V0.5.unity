@@ -301,6 +301,15 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2126402097767101498, guid: 6bc9dc72b6f54ce44b378d087e6e28e8,
+        type: 3}
+      propertyPath: MessagesStorage
+      value: '{   ''buttonPressed'':"buttonKill'' }
+
+        53w5
+
+'
+      objectReference: {fileID: 0}
     - target: {fileID: 2406121570435049176, guid: 6bc9dc72b6f54ce44b378d087e6e28e8,
         type: 3}
       propertyPath: m_AnchorMax.x

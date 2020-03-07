@@ -20,6 +20,18 @@ namespace NodeSystem.Blackboard
         [ShowIf("isInt")]
         public int Int;
 
+        public BlackBoardValue()
+        {
+        }
+
+        private BlackBoardValue(float f, bool b, int i, ValueType type)
+        {
+            Float = f;
+            Bool = b;
+            Int = i;
+            Type = type;
+        }
+
         private bool isFloat => Type == ValueType.Float;
         private bool isBool => Type == ValueType.Bool;
         private bool isInt => Type == ValueType.Int;
@@ -46,6 +58,11 @@ namespace NodeSystem.Blackboard
             Float,
             Bool,
             Int
+        }
+
+        public BlackBoardValue Copy()
+        {
+            return new BlackBoardValue(Float, Bool, Int, Type);
         }
     }
 }
