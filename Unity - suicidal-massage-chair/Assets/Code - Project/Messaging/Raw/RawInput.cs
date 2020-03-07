@@ -9,8 +9,8 @@
 /*
 OUTPUT
 {
-  'controllerCommand':'...'
-  'controllerValue':"...' 0..1-5
+  "controllerCommand":"..."
+  "controllerValue':"..." 0..1-5
 }
 
 InputParse
@@ -44,8 +44,8 @@ InfoParse
   
   For example
   {
-  'controllerCommand':'buttonKill'
-  'controllerValue':'1'
-}
+  	"controllerCommand": "buttonKill",
+  	"controllerValue": "1"
+  }
 
 */
