@@ -47,11 +47,11 @@ void readButtons() {
     //Serial.print(newSliderValue);
     //Serial.println();
   }
-  if (sliderTimer > debounceTime && sliderMoved) {
+  if (sliderTimer > buttonBounceTime && sliderMoved) {
     sliderMoved = false;
     //cmdMessenger.sendCmdStart(kSendInputValue);
     //cmdMessenger.sendCmdArg("sliderNumbers");
-    sendCommand( "ButtonSlider", newSliderValue);
+    sendCommand( "buttonSlider", newSliderValue);
     //    cmdMessenger.sendCmdStart(kSendInput);
     //    cmdMessenger.sendCmdArg(newSliderValue);
     //    cmdMessenger.sendCmdEnd();

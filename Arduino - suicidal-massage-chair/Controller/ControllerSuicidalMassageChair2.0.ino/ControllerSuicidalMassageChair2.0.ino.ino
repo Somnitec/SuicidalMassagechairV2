@@ -1,26 +1,26 @@
 /*
-OUTPUT
-{
+  OUTPUT
+  {
   "controllerCommand":"..."
   "controllerValue':"..." 0..1-5
-}
+  }
 
-InputParse
+  InputParse
   buttonKill, => bool
   buttonCustomA, => bool
   buttonCustomB, => bool
   buttonCustomC, => bool
   buttonSettings,  => bool
-  buttonThumbUp,
-  buttonThumbDown,
+  buttonThumbUpUp,
+  buttonThumbUpDown,
   buttonYes,
   buttonNo,
   buttonRepeat,
   buttonHorn,
   buttonLanguage,
-  buttonSlider => int 1..5 
-  
-InfoParse  
+  buttonSlider => int 1..5
+
+  InfoParse
   customScreenA => string
   customScreenB => string
   customScreenC => string
@@ -33,15 +33,15 @@ InfoParse
   yesLed  = bool
   noLed = bool
   reset
-  
+
   For example
   {
     "controllerCommand": "buttonKill",
     "controllerValue": "1"
   }
 
- 
- */
+
+*/
 
 
 #include <Bounce2.h>
@@ -55,7 +55,7 @@ InfoParse
 #define buttonLanguage 3
 #define LEDSettings 4
 #define buttonSettings 5
-#define buttonThumb 6
+#define buttonThumbUp 6
 #define buttonRepeat 7
 #define buttonNo 11
 #define LEDNo 10
@@ -64,7 +64,7 @@ InfoParse
 #define buttonHorn 14
 #define buttonKill 15
 #define sliderNumbers 24
-#define buttonCross 25
+#define buttonThumbDown 25
 #define volume0 21
 #define volume1 20
 #define sda0 18
@@ -73,8 +73,9 @@ InfoParse
 #define scl1 22
 
 //########SETTINGS
-int debounceTime = 100;
-int ledFadeTime = 100;
+int buttonBounceTime = 100;
+int buttonFadeTimeSettings = 100;
+int buttonBrightnessSettings = 255;
 //######
 
 
@@ -85,11 +86,11 @@ int buttons[] = {
   buttonCustomC,
   buttonLanguage,
   buttonSettings,
-  buttonThumb,
+  buttonThumbUp,
   buttonYes,
   buttonNo,
   buttonRepeat,
-  buttonCross,
+  buttonThumbDown,
   buttonHorn,
 };
 String buttonsString[] = {"buttonKill",
@@ -98,11 +99,11 @@ String buttonsString[] = {"buttonKill",
                           "buttonCustomC",
                           "buttonLanguage",
                           "buttonSettings",
-                          "buttonThumb",
+                          "buttonThumbUp",
                           "buttonYes",
                           "buttonNo",
                           "buttonRepeat",
-                          "buttonCross",
+                          "buttonThumbDown",
                           "buttonHorn"
                          };
 int buttonAmount = sizeof(buttons) / sizeof(buttons[0]);
@@ -112,6 +113,11 @@ Bounce *debouncedButtons = new Bounce[buttonAmount];
 int lastSliderValue = 0;
 
 boolean LEDSOn = true;
+
+bool    settingsLed = true;
+bool   yesLed  = true;
+bool   noLed = true;
+
 
 StaticJsonDocument<200> doc;
 
@@ -132,7 +138,7 @@ void setup() {
   for (int i = 0; i < buttonAmount; i++)
   {
     debouncedButtons[i].attach(buttons[i], INPUT_PULLUP);
-    debouncedButtons[i].interval(debounceTime);
+    debouncedButtons[i].interval(buttonBounceTime);
   }
 
   pinMode(sliderNumbers, INPUT);
@@ -144,11 +150,12 @@ void setup() {
   pinMode(13, OUTPUT);
   digitalWrite(13, HIGH);
 
-  sendCommand("test",random(100));
+  sendCommand("test", random(100));
 
 }
 
 void loop() {
   readSerial();
   readButtons();
+  ledStates();
 }
