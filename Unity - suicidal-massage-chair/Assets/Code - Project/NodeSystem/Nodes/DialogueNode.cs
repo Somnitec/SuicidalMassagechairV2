@@ -64,7 +64,7 @@ namespace NodeSystem.Nodes
 
         private void SendCustomButtonsToInputController()
         {
-            Events.Instance.Raise(new CustomButtonUpdate(
+            Events.Instance.Raise(new CustomButtonTextUpdate(
                 Data.Data.CustomButtonA,
                 Data.Data.CustomButtonB,
                 Data.Data.CustomButtonC
@@ -199,18 +199,6 @@ namespace NodeSystem.Nodes
         }
 
         #endregion
-    }
-
-    public class CustomButtonUpdate : Event
-    {
-        public readonly string CustomButtonTextA, CustomButtonTextB, CustomButtonTextC;
-
-        public CustomButtonUpdate(string dataCustomButtonA, string dataCustomButtonB, string dataCustomButtonC)
-        {
-            CustomButtonTextA = dataCustomButtonA;
-            CustomButtonTextB = dataCustomButtonB;
-            CustomButtonTextC = dataCustomButtonC;
-        }
     }
 
     public class InterruptedInput : Event
