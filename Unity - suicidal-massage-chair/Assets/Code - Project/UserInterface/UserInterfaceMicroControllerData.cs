@@ -25,6 +25,7 @@ public enum UserInputButton
     Settings = (1 << 14),
     Dutch = (1 << 15),
     English = (1 << 16),
+    Horn = (1 << 17),
     Positive = (Yes | ThumbUp),
     AnyButton = ~(Dutch | English), // Not dutch or english
 }

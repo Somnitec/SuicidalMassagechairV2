@@ -21,6 +21,5 @@ public class MessageConsole : MonoBehaviour
             return;
         
         tmPro.text = e.Text;
-        Debug.Log(e.Text);
     }
 }

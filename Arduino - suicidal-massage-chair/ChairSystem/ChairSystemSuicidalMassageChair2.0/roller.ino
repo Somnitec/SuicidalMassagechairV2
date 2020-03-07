@@ -65,29 +65,29 @@ void rollerRoutine() {
 
   //if ( movingToTarget) {
   //if ( roller_position_motor_direction != 0) {
-    if ( (roller_position_target - chair_position_target_range < roller_position_estimated &&
-          roller_position_target + chair_position_target_range > roller_position_estimated )
-       ) {
-      roller_position_motor_direction = 0;
-      Serial.println("found position");
-    }
-    else if (roller_position_target < roller_position_estimated && roller_position_motor_direction != -1) {
-      //roller_position_motor_direction = -1;
-      //digitalWrite(mssgdown, true);
-
-      Serial.println("have to move down");
-      //roller should move down
-    }
-    else if (roller_position_target > roller_position_estimated && roller_position_motor_direction != 1) {
-      //roller_position_motor_direction = 1;
-      //digitalWrite(mssgup, true);
-
-      Serial.println("have to move up");
-      //roller should move down
-    }
-    //}
+  if ( (roller_position_target - chair_position_target_range < roller_position_estimated &&
+        roller_position_target + chair_position_target_range > roller_position_estimated )
+     ) {
+    roller_position_motor_direction = 0;
+    Serial.println("found position");
   }
+  else if (roller_position_target < roller_position_estimated && roller_position_motor_direction != -1) {
+    //roller_position_motor_direction = -1;
+    //digitalWrite(mssgdown, true);
+
+    Serial.println("have to move down");
+    //roller should move down
+  }
+  else if (roller_position_target > roller_position_estimated && roller_position_motor_direction != 1) {
+    //roller_position_motor_direction = 1;
+    //digitalWrite(mssgup, true);
+
+    Serial.println("have to move up");
+    //roller should move down
+  }
+  //}
 }
+
 
 /*
   else {
