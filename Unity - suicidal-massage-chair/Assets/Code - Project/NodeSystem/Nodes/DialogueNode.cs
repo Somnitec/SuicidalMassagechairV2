@@ -67,13 +67,25 @@ public class DialogueNode : BaseNode
     
     private void HandleInput(UserInputUp e)
     {
-        Debug.Log($"OnFinished {name}");
+        if (logDebugInfo)
+            Debug.Log($"HandleInput {name}");
 
+        if(SpecialButton(e))
+            return;
+        
         if (ConnectedButtonPressed(e)) return;
 
         GoToAnyButtonPort(e);
     }
-    
+
+    private bool SpecialButton(UserInputUp userInputUp)
+    {
+        if (userInputUp.Button.HasFlag(UserInputButton.Kill))
+            return true;
+
+        return false;
+    }
+
     public override void OnNodeDisable()
     {
         if (logDebugInfo)
@@ -148,18 +160,6 @@ public class DialogueNode : BaseNode
     private NodePort GetButtonPort(int i)
     {
         return GetOutputPort($"Buttons {i}");
-    }
-
-    private void GoToNode(NodePort port)
-    {
-        if (!port.IsConnected)
-        {
-            Debug.LogWarning($"{port.fieldName} is not connected to anything for node {name}");
-            return;
-        }
-
-        var node = (BaseNode) port.Connection.node;
-        NodeGraph.PlayNode(node);
     }
 
     private void GoToAnyButtonPort(UserInputUp e)

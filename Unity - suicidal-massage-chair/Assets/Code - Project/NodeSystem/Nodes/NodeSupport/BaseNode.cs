@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 using UnityEngine;
+using XNode;
 
 
 public abstract class BaseNode : SerializableNode
@@ -29,7 +30,18 @@ public abstract class BaseNode : SerializableNode
         NodeGraph.NoMoreConnections();
         return true;
     }
+    
+    protected void GoToNode(NodePort port)
+    {
+        if (!port.IsConnected)
+        {
+            Debug.LogWarning($"Trying to go to next node via {port.fieldName} on node:{name}. However it is not connected to anything. :(");
+            return;
+        }
 
+        var node = (BaseNode) port.Connection.node;
+        NodeGraph.PlayNode(node);
+    }
 
     [ContextMenu("Set Current")]
     public void SetCurrent()

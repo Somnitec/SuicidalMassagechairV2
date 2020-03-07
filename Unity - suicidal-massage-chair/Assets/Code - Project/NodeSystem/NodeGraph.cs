@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using Framework;
+using NodeSystem.BlackBoard;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 using UnityEngine;
@@ -8,9 +9,10 @@ using UnityEngine;
 [CreateAssetMenu]
 public class NodeGraph : SerializedNodeGraph
 {
+    public BlackBoard BlackBoard;
     public BaseNode RootNode;
     public BaseNode Current;
-
+    
     [OdinSerialize,
      DictionaryDrawerSettings(
          DisplayMode = DictionaryDisplayOptions.OneLine, 

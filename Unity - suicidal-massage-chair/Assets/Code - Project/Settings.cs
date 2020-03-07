@@ -20,6 +20,14 @@ public class Settings : SerializedScriptableObject
     public bool ShowNodeDebugInfo = true;
     public bool LogDebugInfo = false;
     public bool ShowNodeData = true;
+    [ShowIf("ShowNodeData")]
+    public bool ShowNodeAudio = true;
+    [ShowIf("ShowNodeData")]
+    public bool ShowNodeText = true;
+    [ShowIf("ShowNodeData")]
+    public bool ShowNodeButtons = true;
+    [ShowIf("ShowNodeData")]
+    public bool ShowNodeFunctions = true;
     public Language Language = Language.Dutch;
 
     [Title("App setting")]

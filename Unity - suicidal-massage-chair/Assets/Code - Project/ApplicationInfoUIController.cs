@@ -17,9 +17,9 @@ public class ApplicationInfoUIController : MonoBehaviour
     {
         var text = $"Application info\n" +
                    $"State: {appMgr.State}\n" +
-                   $"TimeRemaining: {restartOnTimeOut.TimeRemaining}\n" +
-                   $"Node: {Graph.Current.name}\n" +
-                   $"Audio: {audMgr.Source.clip.name}\n" +
+                   $"TimeRemaining: {restartOnTimeOut.TimeRemaining:F}\n" +
+                   $"Node: {Graph.Current?.name}\n" +
+                   $"Audio: {audMgr.Source.clip?.name}\n" +
                    $"Audio Duration: {audMgr.ClipProgress}\n" +
                    $"Playing: {audMgr.Source.isPlaying}\n";
 
