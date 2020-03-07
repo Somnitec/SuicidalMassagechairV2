@@ -139,7 +139,7 @@ MonoBehaviour:
   ShowColors: 0
   ShowNodeDebugInfo: 0
   LogDebugInfo: 0
-  ShowNodeData: 1
+  ShowNodeData: 0
   ShowNodeAudio: 0
   ShowNodeText: 0
   ShowNodeButtons: 1
