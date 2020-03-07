@@ -159,7 +159,7 @@ void resetBasicState() {
   settingsLed = true;
   yesLed  = true;
   noLed = true;
-  writeToScreen(4, "");
+  writeToScreen(4, "nope");
 }
 
 void loop() {
