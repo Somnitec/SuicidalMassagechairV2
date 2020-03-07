@@ -2,9 +2,8 @@
 {
     public class RawInput
     {
-        public RawButtons buttonPressed;
-        public int slider;
-        public LanguageStick languageSet;
+        public string controllerCommand;
+        public string controllerValue; 
     }
 
     public enum RawButtons
@@ -36,25 +35,45 @@ OUTPUT
 }
 
 {
+  'controllerCommand':'...'
+  'controllerValue':"...' 0..1-5
+}
+
+{
   'buttonPressed':"buttonKill'
 }
 
-
-  buttonKill,
-  buttonCustomA,
-  buttonCustomB,
-  buttonCustomC,
-  buttonSettings,
-  buttonThumb,
+InputParse
+  buttonKill, => bool
+  buttonCustomA, => bool
+  buttonCustomB, => bool
+  buttonCustomC, => bool
+  buttonSettings,  => bool
+  buttonThumbUp,
+  buttonThumbDown,
   buttonYes,
   buttonNo,
   buttonRepeat,
-  buttonCross,
   buttonHorn,
-
+  languageSet
+  slider => int 1..5 
+  
+InfoParse  
+  customScreenA => string
+  customScreenB => string
+  customScreenC => string
+  clearScreen = bool
+  buttonBounceTime = int in MS
+  buttonFadeTimeSettings = int in MS
+  buttonBrightnessSettings = 0 .. 255
+  allLeds = bool
+  settingsLed = bool
+  yesLed  = bool
+  noLed = bool
+  reset
   
 {
-  'slider':['...']
+  '':['...']
 }
  1 - 5
 
