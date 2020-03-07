@@ -9,7 +9,7 @@ void readButtons() {
       {
         //Serial.print(buttonsString[i]);
         //Serial.println();
-        sendCommand( buttonsString[i], "BOOMBA");
+        sendCommand( buttonsString[i], true);
       }
     }
     else if (i == 4)
@@ -20,8 +20,7 @@ void readButtons() {
         //Serial.print(" = ");
         //Serial.print(debouncedButtons[i].read());
         //Serial.println();
-
-sendCommand( buttonsString[i],debouncedButtons[i].read());
+        sendCommand( buttonsString[i], debouncedButtons[i].read());
 
       }
     }
@@ -29,7 +28,7 @@ sendCommand( buttonsString[i],debouncedButtons[i].read());
     {
       //Serial.print(buttonsString[i]);
       //Serial.println();
-      sendCommand( buttonsString[i], "triggered");
+      sendCommand( buttonsString[i], true);
       //cmdMessenger.sendCmd(kSendInput, "triggered");
     }
   }
