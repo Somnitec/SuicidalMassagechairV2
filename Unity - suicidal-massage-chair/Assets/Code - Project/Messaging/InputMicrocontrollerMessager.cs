@@ -13,7 +13,7 @@ public class InputMicrocontrollerMessager : Messager
     protected override void OnMessageReceived(string message)
     {
         RawInput status = InputMessageParser.ParseMessage(message);
-        Debug.Log(status.buttonPressed);
+        Debug.Log($"Raw Input Received: {status.controllerCommand} {status.controllerValue}");
         Events.Instance.Raise(new InputUpdate());
     }
 }

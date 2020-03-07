@@ -3,44 +3,14 @@
     public class RawInput
     {
         public string controllerCommand;
-        public string controllerValue; 
-    }
-
-    public enum RawButtons
-    {
-        buttonKill,
-        buttonCustomA,
-        buttonCustomB,
-        buttonCustomC,
-        buttonSettings,
-        buttonThumb,
-        buttonYes,
-        buttonNo,
-        buttonRepeat,
-        buttonCross,
-        buttonHorn,
-    }
-
-    public enum LanguageStick
-    {
-      Up,
-      Down
+        public string controllerValue;
     }
 }
 /*
 OUTPUT
-
 {
-  'buttonPressed':'...'
-}
-
-{
-  'controllerCommand':'...'
-  'controllerValue':"...' 0..1-5
-}
-
-{
-  'buttonPressed':"buttonKill'
+  "controllerCommand":"..."
+  "controllerValue':"..." 0..1-5
 }
 
 InputParse
@@ -72,49 +42,10 @@ InfoParse
   noLed = bool
   reset
   
-{
-  '':['...']
-}
- 1 - 5
-
-  
-{
-  'languageSet':['...']
-}
- up, down
-
-INPUT
-
-{
-  'customScreenA':['...']
-}
- string
-
- ... A, B, C
-
-
-{ 
-  'clearScreens':[]
-}
-
-{
-  'buttonBrightnessSettings':[..]
-}
- int 0-255
- Settings, No, Yes
-
- {
-  'buttonFadeTimeSettings':[..]
-}
- int
- Settings, No, Yes
-
-{
-  'buttonBounceTime':[..]
-}
- int 
-
-
-
+  For example
+  {
+  	"controllerCommand": "buttonKill",
+  	"controllerValue": "1"
+  }
 
 */
