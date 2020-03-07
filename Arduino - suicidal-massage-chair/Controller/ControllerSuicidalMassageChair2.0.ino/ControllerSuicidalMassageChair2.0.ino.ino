@@ -154,6 +154,14 @@ void setup() {
 
 }
 
+void resetBasicState() {
+  LEDSOn = false;
+  settingsLed = true;
+  yesLed  = true;
+  noLed = true;
+  writeToScreen(4, "");
+}
+
 void loop() {
   readSerial();
   readButtons();

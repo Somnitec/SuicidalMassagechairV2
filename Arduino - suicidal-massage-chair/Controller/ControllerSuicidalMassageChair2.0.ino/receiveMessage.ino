@@ -109,11 +109,11 @@ void receiveMessage( String message) {
     sendCommand("noLed ", noLed  );
   }
 
-  else if (validateInput(F("reset "), 1)) {
-    String message    =  doc[F("reset ")][0];
+  else if (validateInput(F("reset"), 1)) {
+    String message    =  doc[F("reset")][0];
     
-    sendCommand("reset ", message  );
-    //do rest something
+    sendCommand("reset", message  );
+    resetBasicState();
   }
   /*
 
