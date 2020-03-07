@@ -10,8 +10,8 @@ void OnSetScreen() {
 const int characterwidth = 14;
 //3,screen,text;
 void writeToScreen(int screen, String text) {
-  Serial.println(text);
-  if(text=="")text=" ";
+  //Serial.println(text);
+  if(text=="")text=" ";//bugfix to prevent crashing on an empty string
 
   String text1 = text.substring(0 * characterwidth, 1 * characterwidth);
   String text2 = text.substring(1 * characterwidth, 2 * characterwidth);
@@ -43,11 +43,11 @@ void writeToScreen(int screen, String text) {
   oledWriteString(0, 5, 4 + mod, (char *)charBuf3, FONT_NORMAL, 0, 1);
   oledWriteString(0, 5, 5 + mod, (char *)charBuf4, FONT_NORMAL, 0, 1);
   oledWriteString(0, 5, 6 + mod, (char *)charBuf5, FONT_NORMAL, 0, 1);
-  Serial.println(text1);
-  Serial.println(text2);
-  Serial.println(text3);
-  Serial.println(text4);
-  Serial.println(text5);
+  //Serial.println(text1);
+  //Serial.println(text2);
+  //Serial.println(text3);
+  //Serial.println(text4);
+  //Serial.println(text5);
   //
   //cmdMessenger.sendCmd(kAcknowledge, "screen set");
   //delay(100);
