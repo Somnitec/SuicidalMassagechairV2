@@ -1,6 +1,6 @@
 bool readingMessage = false;
 String readString;
-int maxStringLength = 64;
+unsigned int maxStringLength = 64;
 String last_command = "";
 
 void readSerial() {

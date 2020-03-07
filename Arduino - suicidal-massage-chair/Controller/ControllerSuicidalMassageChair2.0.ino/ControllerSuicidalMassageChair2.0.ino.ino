@@ -1,78 +1,44 @@
 /*
-Protocol:
-
 OUTPUT
-
 {
-  'buttonPressed':'...'
+  "controllerCommand":"..."
+  "controllerValue':"..." 0..1-5
 }
 
-  buttonKill,
-  buttonCustomA,
-  buttonCustomB,
-  buttonCustomC,
-  buttonSettings,
-  buttonThumb,
+InputParse
+  buttonKill, => bool
+  buttonCustomA, => bool
+  buttonCustomB, => bool
+  buttonCustomC, => bool
+  buttonSettings,  => bool
+  buttonThumbUp,
+  buttonThumbDown,
   buttonYes,
   buttonNo,
   buttonRepeat,
-  buttonCross,
   buttonHorn,
-
+  languageSet
+  slider => int 1..5 
   
-{
-  'slider':['...']
-}
- 1 - 5
-
+InfoParse  
+  customScreenA => string
+  customScreenB => string
+  customScreenC => string
+  clearScreen = bool
+  buttonBounceTime = int in MS
+  buttonFadeTimeSettings = int in MS
+  buttonBrightnessSettings = 0 .. 255
+  allLeds = bool
+  settingsLed = bool
+  yesLed  = bool
+  noLed = bool
+  reset
   
-{
-  'languageSet':['...']
-}
- up, down
-
-INPUT
-
-{
-  'customScreenA':['...']
-}
- string
-
- ... A, B, C
-
-
-{ 
-  'clearScreens':[]
-}
-
-{
-  'buttonBrightnessSettings':[..]
-}
- int 0-255
- Settings, No, Yes
-
- {
-  'buttonFadeTimeSettings':[..]
-}
- int
- Settings, No, Yes
-
-{
-  'buttonBounceTime':[..]
-}
- int 
-
-
-
-
- IDEALLY:
- {
-    'settings':{
-        'button':['Settings'],
-        'brightness':[255]
-     }
- }
-      
+  For example
+  {
+    "controllerCommand": "buttonKill",
+    "controllerValue": "1"
+  }
 
  
  */
