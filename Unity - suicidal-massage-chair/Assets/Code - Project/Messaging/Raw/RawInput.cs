@@ -1,10 +1,14 @@
-﻿namespace Messaging.Raw
+﻿using UnityEngine;
+
+namespace Messaging.Raw
 {
     public class RawInput
     {
         public string controllerCommand;
         public string controllerValue;
     }
+
+    
 }
 /*
 OUTPUT
@@ -46,6 +50,11 @@ InfoParse
   {
   	"controllerCommand": "buttonKill",
   	"controllerValue": "1"
+  }
+  
+  {
+  	"controllerCommand": "customScreenA",
+  	"controllerValue": "Screen blablabalal"
   }
 
 */

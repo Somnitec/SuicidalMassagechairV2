@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Framework;
+using Messaging;
 using UnityEngine;
 
 [System.Serializable]
@@ -34,7 +35,7 @@ public class ChairMicroControllerArduino : AbstractChairMicroController
     private void send(List<string> msgs)
     {
         msgs.ForEach(msg =>
-            ChairMicrocontrollerMessager.Instance.SendMessageToArduino(msg)
+            ChairMicroControllerMessager.Instance.SendMessageToArduino(msg)
         );
     }
 

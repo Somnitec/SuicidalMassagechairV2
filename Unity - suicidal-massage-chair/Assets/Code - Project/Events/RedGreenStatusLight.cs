@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Messaging;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using static ChairMicroControllerState;
