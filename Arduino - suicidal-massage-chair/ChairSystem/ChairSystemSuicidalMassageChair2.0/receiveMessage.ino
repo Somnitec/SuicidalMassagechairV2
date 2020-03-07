@@ -152,7 +152,9 @@ void receiveMessage( String message) {
   }
 
   else if (validateInput( F("redgreen_statuslight"), 1)) {
+    
     redgreen_statuslight =  doc["redgreen_statuslight"][0];
+    digitalWrite(redgreen,redgreen_statuslight);
   }
 
   else if (validateInput( F("button_bounce_time"), 1)) {
