@@ -12,6 +12,14 @@ namespace Messaging
 
         public static UserInputButton? ParseButton(RawInput raw)
         {
+            if (raw == null || raw.controllerCommand == null || raw.controllerValue == null)
+            {
+                Debug.LogError("ParsingButton raw is null");
+                return null;
+            }
+            
+            Debug.Log($"{raw.controllerCommand} {raw.controllerValue}");
+            
             switch (raw.controllerCommand)
             {
                 case "buttonKill":

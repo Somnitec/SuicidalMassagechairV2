@@ -26,7 +26,6 @@ public class ChairMicroControllerArduino : AbstractChairMicroController
         Events.Instance.RemoveListener<ChairStateUpdate>(StatusUpdate);
     }
 
-
     protected override void Reset(ResetChair args)
     {
         send(args.SerializeToJson());
