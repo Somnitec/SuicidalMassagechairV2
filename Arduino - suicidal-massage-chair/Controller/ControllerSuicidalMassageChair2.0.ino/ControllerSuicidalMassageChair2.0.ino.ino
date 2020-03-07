@@ -17,8 +17,8 @@ InputParse
   buttonNo,
   buttonRepeat,
   buttonHorn,
-  languageSet
-  slider => int 1..5 
+  buttonLanguage,
+  buttonSlider => int 1..5 
   
 InfoParse  
   customScreenA => string
@@ -46,7 +46,7 @@ InfoParse
 
 #include <Bounce2.h>
 #include <ss_oled.h>
-//#include <elapsedMillis.h>
+#include <elapsedMillis.h>
 #include <ArduinoJson.h>
 
 #define buttonCustomA 0
@@ -151,27 +151,4 @@ void setup() {
 void loop() {
   readSerial();
   readButtons();
-}
-
-int sliderConversion(int input)
-{
-  //1 730
-  //    695
-  //2 660
-  //    570
-  //3 480
-  //    407
-  //4 335
-  //    293
-  //5 250
-  if (input > 695)
-    return 1;
-  else if (input > 570)
-    return 2;
-  else if (input > 407)
-    return 3;
-  else if (input > 293)
-    return 4;
-  else
-    return 5;
 }

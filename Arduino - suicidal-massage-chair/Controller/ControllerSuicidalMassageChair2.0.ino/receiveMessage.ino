@@ -56,11 +56,27 @@ void receiveMessage( String message) {
     printError(error.c_str());
     return;
   }
-
-
-
-
   if (validateInput(F("test"), 1)) {
     sendCommand("test","received");
   }
+  else if (validateInput(F("test"), 1)) {
+    sendCommand("test","received");
+  }
+
+
+
+/*
+  customScreenA => string
+  customScreenB => string
+  customScreenC => string
+  clearScreen = bool
+  buttonBounceTime = int in MS
+  buttonFadeTimeSettings = int in MS
+  buttonBrightnessSettings = 0 .. 255
+  allLeds = bool
+  settingsLed = bool
+  yesLed  = bool
+  noLed = bool
+  reset
+  */
 }
