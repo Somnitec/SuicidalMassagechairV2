@@ -1,4 +1,5 @@
-﻿using Messaging.Raw;
+﻿using Input;
+using Messaging.Raw;
 using UnityEngine;
 
 namespace Messaging
@@ -10,7 +11,7 @@ namespace Messaging
             return JsonUtility.FromJson<RawInput>(msg);
         }
 
-        public static UserInputButton? ParseButton(RawInput raw)
+        public static AllInputButtons? ParseButton(RawInput raw)
         {
             if (raw == null || raw.controllerCommand == null || raw.controllerValue == null)
             {
@@ -23,44 +24,44 @@ namespace Messaging
             switch (raw.controllerCommand)
             {
                 case "buttonKill":
-                    return UserInputButton.Kill;
+                    return AllInputButtons.Kill;
                 case "buttonCustomA":
-                    return UserInputButton.Custom1;
+                    return AllInputButtons.Custom1;
                 case "buttonCustomB":
-                    return UserInputButton.Custom2;
+                    return AllInputButtons.Custom2;
                 case "buttonCustomC":
-                    return UserInputButton.Custom3;
+                    return AllInputButtons.Custom3;
                 case "buttonSettings":
-                    return UserInputButton.Settings;
+                    return AllInputButtons.Settings;
                 case "buttonThumbUp":
-                    return UserInputButton.ThumbUp;
+                    return AllInputButtons.ThumbUp;
                 case "buttonThumbDown":
-                    return UserInputButton.ThumbDown;
+                    return AllInputButtons.ThumbDown;
                 case "buttonYes":
-                    return UserInputButton.Yes;
+                    return AllInputButtons.Yes;
                 case "buttonNo":
-                    return UserInputButton.No;
+                    return AllInputButtons.No;
                 case "buttonRepeat":
-                    return UserInputButton.Repeat;
+                    return AllInputButtons.Repeat;
                 case "buttonHorn":
-                    return UserInputButton.Horn;
+                    return AllInputButtons.Horn;
                 case "buttonLanguage":
                     Debug.Log($"{raw.controllerValue} {raw.controllerValue == "0"}");
-                    return raw.controllerValue == "1" ? UserInputButton.Dutch : UserInputButton.English;
+                    return raw.controllerValue == "1" ? AllInputButtons.Dutch : AllInputButtons.English;
                 case "buttonSlider":
                 {
                     switch (raw.controllerValue)
                     {
                         case "1":
-                            return UserInputButton.One;
+                            return AllInputButtons.One;
                         case "2":
-                            return UserInputButton.Two;
+                            return AllInputButtons.Two;
                         case "3":
-                            return UserInputButton.Three;
+                            return AllInputButtons.Three;
                         case "4":
-                            return UserInputButton.Four;
+                            return AllInputButtons.Four;
                         case "5":
-                            return UserInputButton.Five;
+                            return AllInputButtons.Five;
                     }
                     break;
                 }

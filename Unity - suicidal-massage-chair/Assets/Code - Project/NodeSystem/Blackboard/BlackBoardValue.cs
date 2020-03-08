@@ -24,9 +24,27 @@ namespace NodeSystem.Blackboard
         {
         }
 
-        private BlackBoardValue(float f, bool b, int i, ValueType type)
+        public BlackBoardValue(float value)
         {
-            Float = f;
+            Float = value;
+            Type = ValueType.Float;
+        }
+        
+        public BlackBoardValue(int value)
+        {
+            Int = value;
+            Type = ValueType.Int;
+        }
+        
+        public BlackBoardValue(bool value)
+        {
+            Bool = value;
+            Type = ValueType.Bool;
+        }
+
+        private BlackBoardValue(float value, bool b, int i, ValueType type)
+        {
+            Float = value;
             Bool = b;
             Int = i;
             Type = type;

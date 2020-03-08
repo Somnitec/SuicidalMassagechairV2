@@ -28,6 +28,16 @@ namespace NodeSystem.BlackBoard
         [HorizontalGroup(), HideLabel]
         public BlackBoardValue Value = new BlackBoardValue();
 
+        public BlackBoardTypeAndValue()
+        {
+        }
+
+        public BlackBoardTypeAndValue(BlackBoardValue.ValueType type, BlackBoardValue value)
+        {
+            Type = type;
+            Value = value;
+        }
+
         private void UpdateType()
         {
             Value.Type = Type;

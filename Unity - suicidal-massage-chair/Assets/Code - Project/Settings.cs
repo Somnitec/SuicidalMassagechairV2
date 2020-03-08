@@ -20,19 +20,31 @@ public class Settings : SerializedScriptableObject
     public bool ShowNodeDebugInfo = true;
     public bool LogDebugInfo = false;
     public bool ShowNodeData = true;
-    [ShowIf("ShowNodeData")]
+    [ShowIf("ShowNodeData"), Indent()]
     public bool ShowNodeAudio = true;
-    [ShowIf("ShowNodeData")]
+    [ShowIf("ShowNodeData"), Indent()]
     public bool ShowNodeText = true;
-    [ShowIf("ShowNodeData")]
+    [ShowIf("ShowNodeData"), Indent()]
     public bool ShowNodeButtons = true;
-    [ShowIf("ShowNodeData")]
+    [ShowIf("ShowNodeData"), Indent()]
     public bool ShowNodeFunctions = true;
-    public Language Language = Language.Dutch;
 
     [Title("App setting")]
+    public Language Language = Language.Dutch;
     public bool ResetChairOnStart = false;
     public float TimeOutTimeInSeconds = 600;
+    [InfoBox("The amount of interruptions initially needed before it goes to the Special Interrupted Node")]
+    public int InitialInterruptCountBeforeGoingToSpecialNode = 3;
+    [InfoBox("The amount of time initially needed before it goes to the Special TimeOut Node in seconds")]
+    public float InitialTimeOutBeforeGoingToSpecialNode = 10f;
+    public List<float> VolumeLevels = new List<float>()
+    {
+        0.2f,
+        0.4f,
+        0.6f,
+        0.8f,
+        1.0f,
+    };
 
     [Title("Restart", bold:false)]
     [InfoBox("This gets triggered every time the story ends and it restarts.")]
@@ -50,6 +62,21 @@ public class Settings : SerializedScriptableObject
     [InfoBox("This gets triggered after a person has pressed a button in the wait mode.")]
     [HideReferenceObjectPicker, HideLabel, InlineProperty]
     public FunctionList OnStart = new FunctionList();
+
+    [Title("Special Node Names")] 
+    public static readonly string KillNodeName = "Kill Node";
+    public static readonly string InteruptedNodeName = "Interrupted Node";
+    public static readonly string NoInputNodeName = "No Input Node";
+    public static readonly string SettingsNodeName = "Settings Node";
+    
+    [Title("Special Blackboard Names")] 
+    public static readonly string InterruptedCountBBName = "Interrupted Count";
+    public static readonly string InterruptionsHandledBBName = "Interruptions Handled";
+    public static readonly string InterruptionsBeforeGoingToNodeBBName = "Interruptions Before Going To Node";
+    public static readonly string NoInputCounterBBName =  "NoInput - Time Out Counter";
+    public static readonly string NoInputGoToNodeBBName =  "NoInput - Go To Node Time";
+    public static readonly string NoInputCanGotToNodeBBName = "NoInput - Can Go To Node";
+    public static readonly string MasterVolumeName = "MasterVolume";
 }
 
 public enum Language

@@ -34,14 +34,59 @@ namespace NodeSystem.Blackboard
 
         private BlackBoardValue ModifyValue(BlackBoardValue original, ModifyType type, BlackBoardValue modifier)
         {
-            modifier.Type = value.Type;
-
-            return modifier.Copy();
+            modifier.Type = original.Type;
+            
+            switch (type)
+            {
+                case ModifyType.Set:
+                    return modifier.Copy();
+                case ModifyType.Add:
+                {
+                    switch (original.Type)
+                    {
+                        case BlackBoardValue.ValueType.Int:
+                            var v = original.Copy();
+                            v.Int = original.Int + modifier.Int;
+                            return v;
+                        case BlackBoardValue.ValueType.Float:
+                            var v2 = original.Copy();
+                            v2.Float = original.Float + modifier.Float;
+                            return v2;
+                        default:
+                        case BlackBoardValue.ValueType.Bool:
+                            break;
+                    }
+                }
+                    break;
+                case ModifyType.Multiply:
+                {
+                    switch (original.Type)
+                    {
+                        case BlackBoardValue.ValueType.Int:
+                            var v = original.Copy();
+                            v.Int = original.Int * modifier.Int;
+                            return v;
+                        case BlackBoardValue.ValueType.Float:
+                            var v2 = original.Copy();
+                            v2.Float = original.Float * modifier.Float;
+                            return v2;
+                        default:
+                        case BlackBoardValue.ValueType.Bool:
+                            break;
+                    }
+                }
+                    break;
+            }
+            
+            Debug.LogError("Something strange happened in the Modifier class");
+            return original.Copy();
         }
     }
 
     public enum ModifyType
     {
         Set,
+        Add,
+        Multiply
     }
 }

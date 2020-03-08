@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using Framework;
+using Input;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using Event = Framework.Event;
@@ -44,7 +45,7 @@ public class ApplicationStateApplicationManager : SingletonMonoBehavior<Applicat
     {
         ChangeState(ApplicationState.Waiting);
 
-        Events.Instance.AddListener<UserInputUp>(StartStory);
+        Events.Instance.AddListener<AllInput>(StartStory);
         Waiting();
     }
 
@@ -58,11 +59,11 @@ public class ApplicationStateApplicationManager : SingletonMonoBehavior<Applicat
         );
     }
 
-    private void StartStory(UserInputUp e)
+    private void StartStory(AllInput e)
     {
         ChangeState(ApplicationState.Starting);
 
-        Events.Instance.RemoveListener<UserInputUp>(StartStory);
+        Events.Instance.RemoveListener<AllInput>(StartStory);
         StopAllCoroutines();
 
         StartCoroutine(_playingLogic.InvokeFunctionsCoroutine(settings.OnStart, PlayRootNode));

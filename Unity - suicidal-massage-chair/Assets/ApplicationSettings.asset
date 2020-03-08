@@ -30,7 +30,40 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: NodeScriptLine, Assembly-CSharp
+    - Name: TimeSec
+      Entry: 4
       Data: 0
+    - Name: Function
+      Entry: 7
+      Data: 2|ResetChair, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: NodeScriptLine, Assembly-CSharp
+    - Name: TimeSec
+      Entry: 4
+      Data: 5
+    - Name: Function
+      Entry: 7
+      Data: 3|RedGreenStatusLight, Assembly-CSharp
+    - Name: Status
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -42,10 +75,10 @@ MonoBehaviour:
       Data: 
     - Name: WaitingFunctions
       Entry: 7
-      Data: 2|FunctionList, Assembly-CSharp
+      Data: 4|FunctionList, Assembly-CSharp
     - Name: Functions
       Entry: 7
-      Data: 3|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
+      Data: 5|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
@@ -61,14 +94,32 @@ MonoBehaviour:
       Data: 
     - Name: OnStart
       Entry: 7
-      Data: 4|FunctionList, Assembly-CSharp
+      Data: 6|FunctionList, Assembly-CSharp
     - Name: Functions
       Entry: 7
-      Data: 5|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
+      Data: 7|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: NodeScriptLine, Assembly-CSharp
+    - Name: TimeSec
+      Entry: 4
       Data: 0
+    - Name: Function
+      Entry: 7
+      Data: 8|RedGreenStatusLight, Assembly-CSharp
+    - Name: Status
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -89,11 +140,13 @@ MonoBehaviour:
   ShowNodeDebugInfo: 0
   LogDebugInfo: 0
   ShowNodeData: 1
-  ShowNodeAudio: 0
-  ShowNodeText: 0
-  ShowNodeButtons: 1
-  ShowNodeFunctions: 1
-  Language: 1
+  ShowNodeAudio: 1
+  ShowNodeText: 1
+  ShowNodeButtons: 0
+  ShowNodeFunctions: 0
+  Language: 0
   ResetChairOnStart: 0
   TimeOutTimeInSeconds: 600
+  InitialInterruptCountBeforeGoingToSpecialNode: 1
+  InitialTimeOutBeforeGoingToSpecialNode: 10
   WaitingAudio: {fileID: 0}

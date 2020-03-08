@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.Audio;
+using UnityEngine.Serialization;
 
 public class AudioManager : SingletonMonoBehavior<AudioManager>
 {
@@ -9,6 +12,13 @@ public class AudioManager : SingletonMonoBehavior<AudioManager>
 
     public AudioListener Listener;
 
+    public AudioMixer Mixer;
+
+    [OnValueChanged("SetVolume")] [Range(0.001f, 1)]
+    public float Volume = 1.0f;
+    [ReadOnly, SerializeField]
+    private float decibel = 0f;
+    
     double clipDuration => (double) Source.clip.samples / Source.clip.frequency;
     public string ClipProgress => $"[{Source.time:F2}/{clipDuration:F2}]";
 
@@ -49,8 +59,25 @@ public class AudioManager : SingletonMonoBehavior<AudioManager>
 
     public void PlayEffect(AudioClip fx)
     {
-        if(fx == null) return;
+        if (fx == null) return;
 
         Source.PlayOneShot(fx);
+    }
+
+    [Button]
+    public void SetVolume(float settingsVolumeLevel)
+    {
+        Volume = Mathf.Clamp01(settingsVolumeLevel);
+
+        if (Mixer != null)
+        {
+            decibel = Mathf.Log10(Volume) * 20;
+            
+            var result = Mixer.SetFloat(Settings.MasterVolumeName, decibel);
+            if (!result)
+            {
+                Debug.LogError($"Cannot set volume of {Mixer}");
+            }
+        }
     }
 }

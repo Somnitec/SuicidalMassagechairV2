@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Framework;
+using Input;
 using Messaging.Raw;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
@@ -18,11 +19,10 @@ namespace Messaging
         {
             RawInput raw = InputMessageParser.ParseMessage(message);
             var optionalButton = InputMessageParser.ParseButton(raw);
-            if (optionalButton is UserInputButton button)
+            if (optionalButton is AllInputButtons button)
             {
-                // if (settings.LogDebugInfo)
-                    Debug.Log($"Received input {button.ToString()}");
-                Events.Instance.Raise(new UserInputUp(button));
+                Debug.Log($"Received input {button.ToString()}");
+                InputSender.Send(button);
             }
             else
             {

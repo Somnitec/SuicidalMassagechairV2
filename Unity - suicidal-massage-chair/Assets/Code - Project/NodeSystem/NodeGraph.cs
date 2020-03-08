@@ -1,6 +1,7 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using Framework;
+using Input;
 using NodeSystem.BlackBoard;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
@@ -52,14 +53,7 @@ public class NodeGraph : SerializedNodeGraph
     {
         RootNode = node;
     }
-
-    [PropertySpace]
-    [Button]
-    public void InputEvent(UserInputButton button)
-    {
-        Events.Instance.Raise(new UserInputUp(button));
-    }
-
+    
     [PropertySpace]
     [Button]
     public void PlayRoot()
@@ -72,7 +66,7 @@ public class NodeGraph : SerializedNodeGraph
     {
         if (!SpecialNodes.ContainsKey(key))
         {
-            Debug.LogError($"No Special node found for index {key}");
+            Debug.LogError($"No Special node found for key: {key}");
             return;
         }
 
@@ -89,6 +83,7 @@ public class NodeGraph : SerializedNodeGraph
             Debug.LogError($"No Go Back Node has been set");
             return;
         }
+        
         PlayNode(goBackNode);
         goBackNode = null;
     }

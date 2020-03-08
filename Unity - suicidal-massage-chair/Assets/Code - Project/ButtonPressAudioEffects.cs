@@ -1,4 +1,5 @@
 ﻿using Framework;
+using Input;
 using UnityEngine;
 
 public class ButtonPressAudioEffects : MonoBehaviour
@@ -8,10 +9,10 @@ public class ButtonPressAudioEffects : MonoBehaviour
 
     private void Start()
     {
-        Events.Instance.AddListener<UserInputUp>(HandleInput);
+        Events.Instance.AddListener<AllInput>(HandleInput);
     }
 
-    public void HandleInput(UserInputUp userInputUp)
+    public void HandleInput(AllInput allInput)
     {
         var index = Random.Range(0, settings.ClickSoundEffects.Count);
         var fx = settings.ClickSoundEffects[index];
