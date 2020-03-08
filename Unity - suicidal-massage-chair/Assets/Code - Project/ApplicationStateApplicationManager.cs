@@ -21,6 +21,8 @@ public class ApplicationStateApplicationManager : SingletonMonoBehavior<Applicat
             RestartApplication();
         else
             ChangeState(ApplicationState.Playing);
+        
+        
     }
 
     [Button]
@@ -32,9 +34,17 @@ public class ApplicationStateApplicationManager : SingletonMonoBehavior<Applicat
     private void RestartApplication(StoryFinished storyFinished)
     {
         ChangeState(ApplicationState.Restarting);
-        AudioManager.instance.Stop();
+        
+        AudioManager.Instance.Stop();
+        ResetValues();
 
         StartCoroutine(_playingLogic.InvokeFunctionsCoroutine(settings.RestartChair, StartWaiting, this));
+    }
+
+    private void ResetValues()
+    {
+        settings.Graph.Reset();
+        Events.Instance.Raise(new ResetValuesAfterRestart());
     }
 
     private void StartWaiting()
