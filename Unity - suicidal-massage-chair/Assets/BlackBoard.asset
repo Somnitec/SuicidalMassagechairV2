@@ -34,7 +34,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 4
+      Data: 6
     - Name: 
       Entry: 7
       Data: 
@@ -76,52 +76,16 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: InterruptedCount
+      Data: KillButtonPressed
     - Name: $v
       Entry: 7
       Data: 4|NodeSystem.BlackBoard.BlackBoardTypeAndValue, Assembly-CSharp
     - Name: Type
       Entry: 3
-      Data: 0
-    - Name: Value
-      Entry: 7
-      Data: 5|NodeSystem.Blackboard.BlackBoardValue, Assembly-CSharp
-    - Name: Type
-      Entry: 3
-      Data: 0
-    - Name: Float
-      Entry: 4
-      Data: 0
-    - Name: Bool
-      Entry: 5
-      Data: false
-    - Name: Int
-      Entry: 3
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 1
-      Data: KillButtonPressed
-    - Name: $v
-      Entry: 7
-      Data: 6|NodeSystem.BlackBoard.BlackBoardTypeAndValue, Assembly-CSharp
-    - Name: Type
-      Entry: 3
       Data: 1
     - Name: Value
       Entry: 7
-      Data: 7|NodeSystem.Blackboard.BlackBoardValue, Assembly-CSharp
+      Data: 5|NodeSystem.Blackboard.BlackBoardValue, Assembly-CSharp
     - Name: Type
       Entry: 3
       Data: 1
@@ -148,7 +112,43 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: routine completed
+      Data: empatic
+    - Name: $v
+      Entry: 7
+      Data: 6|NodeSystem.BlackBoard.BlackBoardTypeAndValue, Assembly-CSharp
+    - Name: Type
+      Entry: 3
+      Data: 2
+    - Name: Value
+      Entry: 7
+      Data: 7|NodeSystem.Blackboard.BlackBoardValue, Assembly-CSharp
+    - Name: Type
+      Entry: 3
+      Data: 2
+    - Name: Float
+      Entry: 4
+      Data: 0
+    - Name: Bool
+      Entry: 5
+      Data: false
+    - Name: Int
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Interruptions Before Going To Node
     - Name: $v
       Entry: 7
       Data: 8|NodeSystem.BlackBoard.BlackBoardTypeAndValue, Assembly-CSharp
@@ -161,6 +161,78 @@ MonoBehaviour:
     - Name: Type
       Entry: 3
       Data: 1
+    - Name: Float
+      Entry: 4
+      Data: 0
+    - Name: Bool
+      Entry: 5
+      Data: false
+    - Name: Int
+      Entry: 3
+      Data: 4
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Interrupted Count
+    - Name: $v
+      Entry: 7
+      Data: 10|NodeSystem.BlackBoard.BlackBoardTypeAndValue, Assembly-CSharp
+    - Name: Type
+      Entry: 3
+      Data: 2
+    - Name: Value
+      Entry: 7
+      Data: 11|NodeSystem.Blackboard.BlackBoardValue, Assembly-CSharp
+    - Name: Type
+      Entry: 3
+      Data: 2
+    - Name: Float
+      Entry: 4
+      Data: 0
+    - Name: Bool
+      Entry: 5
+      Data: false
+    - Name: Int
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Interruptions Handled
+    - Name: $v
+      Entry: 7
+      Data: 12|NodeSystem.BlackBoard.BlackBoardTypeAndValue, Assembly-CSharp
+    - Name: Type
+      Entry: 3
+      Data: 2
+    - Name: Value
+      Entry: 7
+      Data: 13|NodeSystem.Blackboard.BlackBoardValue, Assembly-CSharp
+    - Name: Type
+      Entry: 3
+      Data: 2
     - Name: Float
       Entry: 4
       Data: 0

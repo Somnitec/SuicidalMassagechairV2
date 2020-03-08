@@ -65,25 +65,25 @@ public abstract class BaseNode : SerializableNode
     [ContextMenu("Set Special/Kill")]
     public void SetKill()
     {
-        SetOrAddSpecialNode("Kill Node");
+        SetOrAddSpecialNode(Settings.KillNodeName);
     }
     
     [ContextMenu("Set Special/Interrupted")]
     public void SetInterrupted()
     {
-        SetOrAddSpecialNode("Interrupted Node");
+        SetOrAddSpecialNode(Settings.InteruptedNodeName);
     }
     
     [ContextMenu("Set Special/NoInput")]
     public void SetNoInput()
     {
-        SetOrAddSpecialNode("No Input Node");
+        SetOrAddSpecialNode(Settings.NoInputNodeName);
     }
     
     [ContextMenu("Set Special/Settings")]
     public void SetSettings()
     {
-        SetOrAddSpecialNode("Settings Node");
+        SetOrAddSpecialNode(Settings.SettingsNodeName);
     }
 
     private void SetOrAddSpecialNode(string name)

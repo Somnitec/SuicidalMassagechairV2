@@ -142,7 +142,7 @@ MonoBehaviour:
   ShowNodeData: 0
   ShowNodeAudio: 1
   ShowNodeText: 0
-  ShowNodeButtons: 1
+  ShowNodeButtons: 0
   ShowNodeFunctions: 0
   Language: 1
   ResetChairOnStart: 0

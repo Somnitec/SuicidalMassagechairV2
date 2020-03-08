@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using Framework;
 using NodeSystem.BlackBoard;
@@ -72,7 +72,7 @@ public class NodeGraph : SerializedNodeGraph
     {
         if (!SpecialNodes.ContainsKey(key))
         {
-            Debug.LogError($"No Special node found for index {key}");
+            Debug.LogError($"No Special node found for key: {key}");
             return;
         }
 
@@ -89,6 +89,7 @@ public class NodeGraph : SerializedNodeGraph
             Debug.LogError($"No Go Back Node has been set");
             return;
         }
+        
         PlayNode(goBackNode);
         goBackNode = null;
     }
