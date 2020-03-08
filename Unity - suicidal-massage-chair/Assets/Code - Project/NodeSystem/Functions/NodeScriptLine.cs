@@ -12,22 +12,25 @@ public struct NodeScriptLine
 {
     [TableColumnWidth(55, false), Min(0)] public float TimeSec;
     [InlineProperty]
-    public NodeScriptFunction Function;
+    public NodeScriptBaseFunction Function;
 }
 
-public class ScriptEvent : GenericEvents<NodeScriptFunction>
+public class ScriptEvent : GenericEvents<NodeScriptBaseFunction>
 {
 }
 
-public abstract class NodeScriptFunction
+public abstract class NodeScriptBaseFunction
 {
-    protected int True => 1;
-    protected int False => 0;
-
     public virtual void RaiseEvent()
     {
         ScriptEvent.Instance.Raise(this);
     }
+}
+
+public abstract class NodeScriptFunction : NodeScriptBaseFunction
+{
+    private static int True => 1;
+    private static int False => 0;
 
     public abstract List<string> SerializeToJson();
 

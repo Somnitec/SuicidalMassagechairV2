@@ -1,6 +1,7 @@
 ﻿
 using System;
 using System.Collections.Generic;
+using NodeSystem.Functions;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -10,6 +11,7 @@ public class Settings : SerializedScriptableObject
     [Title("Hookups")]
     public NodeGraph Graph;
     public ChairMicroControllerState Mock, Arduino;
+    public CompositeFunctionLibrary compositeFunctionLibrary;
     public String RepeatedMessage = "status";
 
     [Title("Sound Effects")]
