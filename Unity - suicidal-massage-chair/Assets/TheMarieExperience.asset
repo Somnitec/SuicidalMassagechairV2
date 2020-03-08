@@ -1721,7 +1721,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: Input
-        node: {fileID: -5703086309989648135}
+        node: {fileID: 667147004138992131}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -3226,7 +3226,7 @@ MonoBehaviour:
   m_Name: Go Back
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 552, y: -1448}
+  position: {x: 744, y: -1496}
   ports:
     keys:
     - Input
@@ -3238,12 +3238,6 @@ MonoBehaviour:
       connections:
       - fieldName: Output
         node: {fileID: 5475258057622951635}
-        reroutePoints: []
-      - fieldName: Output
-        node: {fileID: -5703086309989648135}
-        reroutePoints: []
-      - fieldName: Output
-        node: {fileID: 3831287604822212928}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -4199,67 +4193,6 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.647, g: 0.745, b: 0.957, a: 1}
   Buttons: 
---- !u!114 &-5703086309989648135
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea189d1b56414757976eca0f193086f0, type: 3}
-  m_Name: Variable Modify
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 264, y: -1320}
-  ports:
-    keys:
-    - Output
-    - Input
-    values:
-    - _fieldName: Output
-      _node: {fileID: -5703086309989648135}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: Input
-        node: {fileID: -6602942127579996291}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: Input
-      _node: {fileID: -5703086309989648135}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: OnAnyButton
-        node: {fileID: -7717035514121807602}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes: []
-  Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  Modifier:
-    Name: Interruptions Handled
-    Type: 0
-    ModifyingValue:
-      Type: 2
-      Float: 0
-      Bool: 0
-      Int: 3
 --- !u!114 &-5690415087482660534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5171,6 +5104,67 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.949, g: 0.549, b: 0.643, a: 1}
   Buttons: 
+--- !u!114 &-5348682116443663920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea189d1b56414757976eca0f193086f0, type: 3}
+  m_Name: Variable Modify
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 280, y: -1800}
+  ports:
+    keys:
+    - Output
+    - Input
+    values:
+    - _fieldName: Output
+      _node: {fileID: -5348682116443663920}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 5475258057622951635}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Input
+      _node: {fileID: -5348682116443663920}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: OnAnyButton
+        node: {fileID: 6203063996855124080}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  Modifier:
+    Name: Interruptions Before Going To Node
+    Type: 0
+    ModifyingValue:
+      Type: 2
+      Float: 0
+      Bool: 0
+      Int: 2
 --- !u!114 &-5312963164094768972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10369,10 +10363,10 @@ MonoBehaviour:
   - {fileID: 2721203014488041263}
   - {fileID: -6602942127579996291}
   - {fileID: -7717035514121807602}
-  - {fileID: -5703086309989648135}
   - {fileID: 5475258057622951635}
-  - {fileID: 3831287604822212928}
   - {fileID: -6837799431877547677}
+  - {fileID: -5348682116443663920}
+  - {fileID: 667147004138992131}
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
@@ -10417,8 +10411,8 @@ MonoBehaviour:
       Data: 
   BlackBoard: {fileID: 11400000, guid: 6e91e850ef5b058419e0213511aef8c7, type: 2}
   RootNode: {fileID: 4732577369696971334}
-  Current: {fileID: -6837799431877547677}
-  goBackNode: {fileID: 0}
+  Current: {fileID: -7717035514121807602}
+  goBackNode: {fileID: -6837799431877547677}
 --- !u!114 &65596093096334774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10986,6 +10980,67 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   Buttons: 
+--- !u!114 &667147004138992131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea189d1b56414757976eca0f193086f0, type: 3}
+  m_Name: Variable Modify
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 280, y: -1368}
+  ports:
+    keys:
+    - Output
+    - Input
+    values:
+    - _fieldName: Output
+      _node: {fileID: 667147004138992131}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 5475258057622951635}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Input
+      _node: {fileID: 667147004138992131}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: OnAnyButton
+        node: {fileID: -7717035514121807602}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  Modifier:
+    Name: Interruptions Before Going To Node
+    Type: 0
+    ModifyingValue:
+      Type: 2
+      Float: 0
+      Bool: 0
+      Int: 10
 --- !u!114 &952151569382984394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13994,67 +14049,6 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.949, g: 0.549, b: 0.643, a: 1}
   Buttons: 
---- !u!114 &3831287604822212928
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea189d1b56414757976eca0f193086f0, type: 3}
-  m_Name: Variable Modify
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 280, y: -1848}
-  ports:
-    keys:
-    - Output
-    - Input
-    values:
-    - _fieldName: Output
-      _node: {fileID: 3831287604822212928}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: Input
-        node: {fileID: -6602942127579996291}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: Input
-      _node: {fileID: 3831287604822212928}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: OnAnyButton
-        node: {fileID: 6203063996855124080}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes: []
-  Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  Modifier:
-    Name: Interruptions Handled
-    Type: 0
-    ModifyingValue:
-      Type: 2
-      Float: 0
-      Bool: 0
-      Int: 1
 --- !u!114 &3903082913656831692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16436,7 +16430,7 @@ MonoBehaviour:
   m_Name: Variable Modify
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 264, y: -1560}
+  position: {x: 520, y: -1560}
   ports:
     keys:
     - Output
@@ -16462,6 +16456,12 @@ MonoBehaviour:
       - fieldName: OnAnyButton
         node: {fileID: 2721203014488041263}
         reroutePoints: []
+      - fieldName: Output
+        node: {fileID: -5348682116443663920}
+        reroutePoints: []
+      - fieldName: Output
+        node: {fileID: 667147004138992131}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -16478,12 +16478,12 @@ MonoBehaviour:
   Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   Modifier:
     Name: Interruptions Handled
-    Type: 0
+    Type: 1
     ModifyingValue:
       Type: 2
       Float: 0
       Bool: 0
-      Int: 2
+      Int: 1
 --- !u!114 &5545151047441068190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17075,7 +17075,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: Input
-        node: {fileID: 3831287604822212928}
+        node: {fileID: -5348682116443663920}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
