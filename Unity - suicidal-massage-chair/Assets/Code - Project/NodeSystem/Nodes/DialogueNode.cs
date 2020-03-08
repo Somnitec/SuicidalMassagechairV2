@@ -75,7 +75,7 @@ public class DialogueNode : BaseNode
     {
         if (logDebugInfo)
             Debug.Log($"HandleInput {name}");
-
+        
         if (ConnectedButtonPressed(e)) return;
 
         if (SpecialButton(e)) return;
@@ -117,6 +117,7 @@ public class DialogueNode : BaseNode
     {
         Events.Instance.RemoveListener<UserInputUp>(OnInterrupted);
         Events.Instance.AddListener<UserInputUp>(HandleInput);
+        Events.Instance.Raise(new WaitingForInput());
     }
 
     private void ListenToInterruptedInput()
@@ -199,6 +200,10 @@ public class DialogueNode : BaseNode
     }
 
     #endregion
+}
+
+internal class WaitingForInput : Event
+{
 }
 
 public class InterruptedInput : Event

@@ -35,7 +35,9 @@ public class Settings : SerializedScriptableObject
     public float TimeOutTimeInSeconds = 600;
     [InfoBox("The amount of interruptions initially needed before it goes to the Special Interrupted Node")]
     public int InitialInterruptCountBeforeGoingToSpecialNode = 3;
-    
+    [InfoBox("The amount of time initially needed before it goes to the Special TimeOut Node in seconds")]
+    public float InitialTimeOutBeforeGoingToSpecialNode = 10f;
+
     [Title("Restart", bold:false)]
     [InfoBox("This gets triggered every time the story ends and it restarts.")]
     [HideReferenceObjectPicker, HideLabel, InlineProperty]
@@ -60,9 +62,12 @@ public class Settings : SerializedScriptableObject
     public static readonly string SettingsNodeName = "Settings Node";
     
     [Title("Special Blackboard Names")] 
-    public static readonly string InterruptedCountName = "Interrupted Count";
-    public static readonly string InterruptionsHandledName = "Interruptions Handled";
-    public static readonly string InterruptionsBeforeGoingToNodeName = "Interruptions Before Going To Node";
+    public static readonly string InterruptedCountBBName = "Interrupted Count";
+    public static readonly string InterruptionsHandledBBName = "Interruptions Handled";
+    public static readonly string InterruptionsBeforeGoingToNodeBBName = "Interruptions Before Going To Node";
+    public static readonly string NoInputCounterBBName =  "NoInput - Time Out Counter";
+    public static readonly string NoInputGoToNodeBBName =  "NoInput - Go To Node Time";
+    public static readonly string NoInputCanGotToNodeBBName = "NoInput - Can Go To Node";
 }
 
 public enum Language
