@@ -53,7 +53,7 @@ public class NodePlayingLogic
         }
 
         yield return ExecuteFunctions(funcs, coroutineRunner);
-        while (!AudioFinished || !FunctionsFinished)
+        while (!AudioFinished)
             yield return null;
 
         onFinished?.Invoke();
