@@ -34,7 +34,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 16
+      Data: 20
     - Name: 
       Entry: 7
       Data: 
@@ -590,6 +590,150 @@ MonoBehaviour:
     - Name: Value
       Entry: 7
       Data: 33|NodeSystem.Blackboard.BlackBoardValue, Assembly-CSharp
+    - Name: Type
+      Entry: 3
+      Data: 2
+    - Name: Float
+      Entry: 4
+      Data: 0
+    - Name: Bool
+      Entry: 5
+      Data: false
+    - Name: Int
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: settings before node
+    - Name: $v
+      Entry: 7
+      Data: 34|NodeSystem.BlackBoard.BlackBoardTypeAndValue, Assembly-CSharp
+    - Name: Type
+      Entry: 3
+      Data: 2
+    - Name: Value
+      Entry: 7
+      Data: 35|NodeSystem.Blackboard.BlackBoardValue, Assembly-CSharp
+    - Name: Type
+      Entry: 3
+      Data: 2
+    - Name: Float
+      Entry: 4
+      Data: 0
+    - Name: Bool
+      Entry: 5
+      Data: false
+    - Name: Int
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: settingshandlede
+    - Name: $v
+      Entry: 7
+      Data: 36|NodeSystem.BlackBoard.BlackBoardTypeAndValue, Assembly-CSharp
+    - Name: Type
+      Entry: 3
+      Data: 2
+    - Name: Value
+      Entry: 7
+      Data: 37|NodeSystem.Blackboard.BlackBoardValue, Assembly-CSharp
+    - Name: Type
+      Entry: 3
+      Data: 2
+    - Name: Float
+      Entry: 4
+      Data: 0
+    - Name: Bool
+      Entry: 5
+      Data: false
+    - Name: Int
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: noinputhandled
+    - Name: $v
+      Entry: 7
+      Data: 38|NodeSystem.BlackBoard.BlackBoardTypeAndValue, Assembly-CSharp
+    - Name: Type
+      Entry: 3
+      Data: 2
+    - Name: Value
+      Entry: 7
+      Data: 39|NodeSystem.Blackboard.BlackBoardValue, Assembly-CSharp
+    - Name: Type
+      Entry: 3
+      Data: 2
+    - Name: Float
+      Entry: 4
+      Data: 0
+    - Name: Bool
+      Entry: 5
+      Data: false
+    - Name: Int
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: noinputbeforenode
+    - Name: $v
+      Entry: 7
+      Data: 40|NodeSystem.BlackBoard.BlackBoardTypeAndValue, Assembly-CSharp
+    - Name: Type
+      Entry: 3
+      Data: 2
+    - Name: Value
+      Entry: 7
+      Data: 41|NodeSystem.Blackboard.BlackBoardValue, Assembly-CSharp
     - Name: Type
       Entry: 3
       Data: 2
