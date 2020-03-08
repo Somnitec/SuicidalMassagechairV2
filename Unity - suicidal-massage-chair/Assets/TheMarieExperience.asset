@@ -4844,10 +4844,10 @@ MonoBehaviour:
     SerializationNodes: []
   Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   Modifier:
-    Name: TimeInChair
+    Name: Interruptions Before Going To Node
     Type: 0
     ModifyingValue:
-      Type: 0
+      Type: 2
       Float: 0
       Bool: 0
       Int: 2
@@ -9719,8 +9719,8 @@ MonoBehaviour:
   - {fileID: 2402223245068922724}
   - {fileID: -5901530969184916472}
   - {fileID: 2613051793389196431}
-  - {fileID: 6704950907193982427}
   - {fileID: -6266312729297621883}
+  - {fileID: 6704950907193982427}
   - {fileID: 7327445449274755081}
   - {fileID: -3148387074904951723}
   serializationData:
@@ -10537,10 +10537,10 @@ MonoBehaviour:
     SerializationNodes: []
   Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   Modifier:
-    Name: TimeInChair
+    Name: Interruptions Before Going To Node
     Type: 0
     ModifyingValue:
-      Type: 0
+      Type: 2
       Float: 0
       Bool: 0
       Int: 10
@@ -13390,10 +13390,10 @@ MonoBehaviour:
     SerializationNodes: []
   Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   Comparison:
-    Name: TimeInChair
+    Name: Interruptions Handled
     Comparator: 4
     CompareValue:
-      Type: 0
+      Type: 2
       Float: 0
       Bool: 0
       Int: 1
@@ -14095,10 +14095,10 @@ MonoBehaviour:
     SerializationNodes: []
   Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   Comparison:
-    Name: TimeInChair
+    Name: Interruptions Handled
     Comparator: 4
     CompareValue:
-      Type: 0
+      Type: 2
       Float: 0
       Bool: 0
       Int: 0
@@ -14867,10 +14867,10 @@ MonoBehaviour:
     SerializationNodes: []
   Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   Modifier:
-    Name: TimeInChair
+    Name: Interruptions Handled
     Type: 1
     ModifyingValue:
-      Type: 0
+      Type: 2
       Float: 0
       Bool: 0
       Int: 1
