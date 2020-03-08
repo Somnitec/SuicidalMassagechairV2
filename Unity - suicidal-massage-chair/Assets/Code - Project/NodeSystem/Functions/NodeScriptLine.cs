@@ -21,7 +21,7 @@ public class ScriptEvent : GenericEvents<NodeScriptBaseFunction>
 
 public abstract class NodeScriptBaseFunction
 {
-    public virtual void RaiseEvent()
+    public virtual void RaiseEvent(MonoBehaviour coroutineRunner)
     {
         ScriptEvent.Instance.Raise(this);
     }

@@ -26,11 +26,11 @@ public class ChairButtonController : MonoBehaviour
 
     private void ResetChair()
     {
-        new ResetChair().RaiseEvent();
+        new ResetChair().RaiseEvent(this);
     }
 
     private void ChairPosition(float newTargetPosition)
     {
-        new ChairPosition(newTargetPosition).RaiseEvent();
+        new ChairPosition(newTargetPosition).RaiseEvent(this);
     }
 }
