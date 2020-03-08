@@ -148,19 +148,19 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: empatic
+      Data: routine completed
     - Name: $v
       Entry: 7
       Data: 8|NodeSystem.BlackBoard.BlackBoardTypeAndValue, Assembly-CSharp
     - Name: Type
       Entry: 3
-      Data: 2
+      Data: 1
     - Name: Value
       Entry: 7
       Data: 9|NodeSystem.Blackboard.BlackBoardValue, Assembly-CSharp
     - Name: Type
       Entry: 3
-      Data: 2
+      Data: 1
     - Name: Float
       Entry: 4
       Data: 0
