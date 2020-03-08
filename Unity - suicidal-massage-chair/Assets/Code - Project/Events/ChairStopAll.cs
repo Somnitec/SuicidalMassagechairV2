@@ -10,5 +10,6 @@ public class ChairStopAll : NodeScriptFunction
     public override List<string> SerializeToJson()
     {
         return ToList(ToJson("stopall",-1));
+        //we should do this manually instead, there is no stopall function in the microcontroller
     }
 }

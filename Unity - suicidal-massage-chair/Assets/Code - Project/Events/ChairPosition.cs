@@ -21,6 +21,6 @@ public class ChairPosition : NodeScriptFunction
 
     public override List<string> SerializeToJson()
     {
-        return ToList(ToJson("chair_position_estimated",(int)(10000f * NewPosition)));
+        return ToList(ToJson("chair_position_target",(int)(10000f * NewPosition)));
     }
 }
