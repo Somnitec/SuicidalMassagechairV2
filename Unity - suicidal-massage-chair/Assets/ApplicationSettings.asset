@@ -101,7 +101,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 7
       Data: NodeScriptLine, Assembly-CSharp
@@ -121,6 +121,24 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
+      Entry: 7
+      Data: NodeScriptLine, Assembly-CSharp
+    - Name: TimeSec
+      Entry: 4
+      Data: 0
+    - Name: Function
+      Entry: 7
+      Data: 9|AirPump, Assembly-CSharp
+    - Name: AirPumpOn
+      Entry: 5
+      Data: true
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
       Entry: 13
       Data: 
     - Name: 
@@ -131,10 +149,10 @@ MonoBehaviour:
       Data: 
     - Name: AfterStart
       Entry: 7
-      Data: 9|FunctionList, Assembly-CSharp
+      Data: 10|FunctionList, Assembly-CSharp
     - Name: Functions
       Entry: 7
-      Data: 10|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
+      Data: 11|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
@@ -147,7 +165,7 @@ MonoBehaviour:
       Data: 0
     - Name: Function
       Entry: 7
-      Data: 11|NodeSystem.Functions.CompositeFunction, Assembly-CSharp
+      Data: 12|NodeSystem.Functions.CompositeFunction, Assembly-CSharp
     - Name: key
       Entry: 1
       Data: BreathingBags
@@ -182,11 +200,11 @@ MonoBehaviour:
   ShowNodeDebugInfo: 0
   LogDebugInfo: 0
   ShowNodeData: 1
-  ShowNodeAudio: 0
+  ShowNodeAudio: 1
   ShowNodeText: 1
   ShowNodeButtons: 0
   ShowNodeFunctions: 1
-  Language: 0
+  Language: 1
   ResetChairOnStart: 0
   TimeOutTimeInSeconds: 600
   InitialInterruptCountBeforeGoingToSpecialNode: 1
