@@ -50,7 +50,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 4
+      Data: 5
     - Name: 
       Entry: 7
       Data: NodeScriptLine, Assembly-CSharp
@@ -59,28 +59,7 @@ MonoBehaviour:
       Data: 0
     - Name: Function
       Entry: 7
-      Data: 4|AirBag, Assembly-CSharp
-    - Name: AirBagsOn
-      Entry: 3
-      Data: 0
-    - Name: AirBagsOff
-      Entry: 3
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: NodeScriptLine, Assembly-CSharp
-    - Name: TimeSec
-      Entry: 4
-      Data: 2
-    - Name: Function
-      Entry: 7
-      Data: 5|RollerKneadingOn, Assembly-CSharp
+      Data: 4|FeetRollerOn, Assembly-CSharp
     - Name: On
       Entry: 5
       Data: true
@@ -95,13 +74,13 @@ MonoBehaviour:
       Data: NodeScriptLine, Assembly-CSharp
     - Name: TimeSec
       Entry: 4
-      Data: 3
+      Data: 0
     - Name: Function
       Entry: 7
-      Data: 6|ChairPosition, Assembly-CSharp
-    - Name: NewPosition
+      Data: 5|FeetRollerSpeed, Assembly-CSharp
+    - Name: Speed
       Entry: 4
-      Data: 0.4
+      Data: 0.5
     - Name: 
       Entry: 8
       Data: 
@@ -113,28 +92,49 @@ MonoBehaviour:
       Data: NodeScriptLine, Assembly-CSharp
     - Name: TimeSec
       Entry: 4
-      Data: 2
+      Data: 0
     - Name: Function
       Entry: 7
-      Data: 7|BackLightColor, Assembly-CSharp
-    - Name: Color
+      Data: 6|RollerPosition, Assembly-CSharp
+    - Name: NewPosition
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
       Entry: 7
-      Data: UnityEngine.Color, UnityEngine.CoreModule
-    - Name: 
+      Data: NodeScriptLine, Assembly-CSharp
+    - Name: TimeSec
       Entry: 4
-      Data: 0.9716981
-    - Name: 
-      Entry: 4
-      Data: 0
-    - Name: 
-      Entry: 4
-      Data: 0
-    - Name: 
+      Data: 5
+    - Name: Function
+      Entry: 7
+      Data: 7|RollerPosition, Assembly-CSharp
+    - Name: NewPosition
       Entry: 4
       Data: 1
     - Name: 
       Entry: 8
       Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: NodeScriptLine, Assembly-CSharp
+    - Name: TimeSec
+      Entry: 4
+      Data: 10
+    - Name: Function
+      Entry: 7
+      Data: 8|RollerPosition, Assembly-CSharp
+    - Name: NewPosition
+      Entry: 4
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -161,10 +161,10 @@ MonoBehaviour:
       Data: BreathingBags
     - Name: $v
       Entry: 7
-      Data: 8|FunctionList, Assembly-CSharp
+      Data: 9|FunctionList, Assembly-CSharp
     - Name: Functions
       Entry: 7
-      Data: 9|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
+      Data: 10|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
@@ -177,7 +177,7 @@ MonoBehaviour:
       Data: 0
     - Name: Function
       Entry: 7
-      Data: 10|AirPump, Assembly-CSharp
+      Data: 11|AirPump, Assembly-CSharp
     - Name: AirPumpOn
       Entry: 5
       Data: true
@@ -195,7 +195,7 @@ MonoBehaviour:
       Data: 0
     - Name: Function
       Entry: 7
-      Data: 11|AirBag, Assembly-CSharp
+      Data: 12|AirBag, Assembly-CSharp
     - Name: AirBagsOn
       Entry: 3
       Data: 8
@@ -216,7 +216,7 @@ MonoBehaviour:
       Data: 4
     - Name: Function
       Entry: 7
-      Data: 12|AirBag, Assembly-CSharp
+      Data: 13|AirBag, Assembly-CSharp
     - Name: AirBagsOn
       Entry: 3
       Data: 0

@@ -139,17 +139,17 @@ MonoBehaviour:
   - {fileID: 8300000, guid: b1ce4405a6fd3f44fbda5829a810290f, type: 3}
   - {fileID: 8300000, guid: f7cdea3c1e714564badc29550f3389d8, type: 3}
   ShowColors: 0
-  ShowNodeDebugInfo: 1
+  ShowNodeDebugInfo: 0
   LogDebugInfo: 0
   ShowNodeData: 1
   ShowNodeAudio: 1
   ShowNodeText: 0
   ShowNodeButtons: 0
   ShowNodeFunctions: 1
-  Language: 1
+  Language: 0
   ResetChairOnStart: 0
   TimeOutTimeInSeconds: 600
-  InitialInterruptCountBeforeGoingToSpecialNode: 3
+  InitialInterruptCountBeforeGoingToSpecialNode: 1
   InitialTimeOutBeforeGoingToSpecialNode: 10
   VolumeLevels:
   - 0.2
