@@ -20,7 +20,10 @@ public class ApplicationStateApplicationManager : SingletonMonoBehavior<Applicat
         if (settings.ResetChairOnStart)
             RestartApplication();
         else
+        {
+            ResetValues();
             ChangeState(ApplicationState.Playing);
+        }
         
         
     }
