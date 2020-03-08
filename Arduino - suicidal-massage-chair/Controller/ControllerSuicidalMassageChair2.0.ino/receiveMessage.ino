@@ -112,7 +112,6 @@ void receiveMessage( String message) {
     noLed    =  doc[F("noLed ")][0];
     sendCommand("noLed ", noLed  );
   }
-
   else if (validateInput(F("reset"), 1)) {
     String message    =  doc[F("reset")][0];
 

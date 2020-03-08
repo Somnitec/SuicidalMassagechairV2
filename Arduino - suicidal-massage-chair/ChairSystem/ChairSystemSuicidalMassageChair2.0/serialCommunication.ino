@@ -200,6 +200,10 @@ void receiveMessage( String message) {
     reset();
   }
 
+  else if (validateInput(F("recalibrate "), 1)) {
+    rollerCalibrationRoutine();
+  }
+
   else return incorrectMessage(message);
 
   sendAck();
