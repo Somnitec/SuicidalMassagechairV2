@@ -8,6 +8,7 @@ using NodeSystem.Blackboard;
 using NodeSystem.BlackBoard;
 using NodeSystem.Nodes;
 using Sirenix.OdinInspector;
+using UnityEngine;
 using XNode;
 
 
@@ -32,7 +33,11 @@ public class VariableComparisonNode : BaseNode
 
     protected override bool HasConnections()
     {
-        return TruePort.IsConnected || FalsePort.IsConnected;
+        var hasConnections = TruePort.IsConnected || FalsePort.IsConnected;
+        if(!hasConnections)
+            Debug.LogWarning("VariableModifyNode Has no connections");
+        
+        return hasConnections;
     }
 
     [Button]

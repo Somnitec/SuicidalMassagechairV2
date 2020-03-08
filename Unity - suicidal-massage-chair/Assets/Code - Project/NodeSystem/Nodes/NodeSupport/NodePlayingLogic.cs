@@ -91,7 +91,8 @@ public class NodePlayingLogic
             }
             
             timePassed = TimePassed(timeStarted);
-            Debug.Log($"Node Function: {nodeScriptLine.Function?.GetType().FullName} at {timePassed}");
+            if(SettingsHolder.Instance.Settings.LogDebugMessageInfo)
+                Debug.Log($"Node Function: {nodeScriptLine.Function?.GetType().FullName} at {timePassed}");
             nodeScriptLine.Function?.RaiseEvent(coroutineRunner);
         }
 

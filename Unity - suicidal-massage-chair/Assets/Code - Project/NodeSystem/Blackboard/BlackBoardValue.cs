@@ -82,5 +82,12 @@ namespace NodeSystem.Blackboard
         {
             return new BlackBoardValue(Float, Bool, Int, Type);
         }
+
+        public void Reset()
+        {
+            Float = 0;
+            Int = 0;
+            Bool = false;
+        }
     }
 }

@@ -34,7 +34,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 20
+      Data: 18
     - Name: 
       Entry: 7
       Data: 
@@ -44,6 +44,9 @@ MonoBehaviour:
     - Name: $v
       Entry: 7
       Data: 2|NodeSystem.BlackBoard.BlackBoardTypeAndValue, Assembly-CSharp
+    - Name: ResetOnRestart
+      Entry: 5
+      Data: true
     - Name: Type
       Entry: 3
       Data: 0
@@ -80,6 +83,9 @@ MonoBehaviour:
     - Name: $v
       Entry: 7
       Data: 4|NodeSystem.BlackBoard.BlackBoardTypeAndValue, Assembly-CSharp
+    - Name: ResetOnRestart
+      Entry: 5
+      Data: true
     - Name: Type
       Entry: 3
       Data: 0
@@ -116,6 +122,9 @@ MonoBehaviour:
     - Name: $v
       Entry: 7
       Data: 6|NodeSystem.BlackBoard.BlackBoardTypeAndValue, Assembly-CSharp
+    - Name: ResetOnRestart
+      Entry: 5
+      Data: true
     - Name: Type
       Entry: 3
       Data: 1
@@ -152,6 +161,9 @@ MonoBehaviour:
     - Name: $v
       Entry: 7
       Data: 8|NodeSystem.BlackBoard.BlackBoardTypeAndValue, Assembly-CSharp
+    - Name: ResetOnRestart
+      Entry: 5
+      Data: true
     - Name: Type
       Entry: 3
       Data: 1
@@ -188,6 +200,9 @@ MonoBehaviour:
     - Name: $v
       Entry: 7
       Data: 10|NodeSystem.BlackBoard.BlackBoardTypeAndValue, Assembly-CSharp
+    - Name: ResetOnRestart
+      Entry: 5
+      Data: true
     - Name: Type
       Entry: 3
       Data: 1
@@ -224,6 +239,9 @@ MonoBehaviour:
     - Name: $v
       Entry: 7
       Data: 12|NodeSystem.BlackBoard.BlackBoardTypeAndValue, Assembly-CSharp
+    - Name: ResetOnRestart
+      Entry: 5
+      Data: true
     - Name: Type
       Entry: 3
       Data: 2
@@ -241,7 +259,7 @@ MonoBehaviour:
       Data: false
     - Name: Int
       Entry: 3
-      Data: 5
+      Data: 14
     - Name: 
       Entry: 8
       Data: 
@@ -260,6 +278,9 @@ MonoBehaviour:
     - Name: $v
       Entry: 7
       Data: 14|NodeSystem.BlackBoard.BlackBoardTypeAndValue, Assembly-CSharp
+    - Name: ResetOnRestart
+      Entry: 5
+      Data: true
     - Name: Type
       Entry: 3
       Data: 2
@@ -296,6 +317,9 @@ MonoBehaviour:
     - Name: $v
       Entry: 7
       Data: 16|NodeSystem.BlackBoard.BlackBoardTypeAndValue, Assembly-CSharp
+    - Name: ResetOnRestart
+      Entry: 5
+      Data: true
     - Name: Type
       Entry: 3
       Data: 2
@@ -313,7 +337,7 @@ MonoBehaviour:
       Data: false
     - Name: Int
       Entry: 3
-      Data: 0
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -332,6 +356,9 @@ MonoBehaviour:
     - Name: $v
       Entry: 7
       Data: 18|NodeSystem.BlackBoard.BlackBoardTypeAndValue, Assembly-CSharp
+    - Name: ResetOnRestart
+      Entry: 5
+      Data: true
     - Name: Type
       Entry: 3
       Data: 2
@@ -349,7 +376,7 @@ MonoBehaviour:
       Data: false
     - Name: Int
       Entry: 3
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 8
       Data: 
@@ -368,6 +395,9 @@ MonoBehaviour:
     - Name: $v
       Entry: 7
       Data: 20|NodeSystem.BlackBoard.BlackBoardTypeAndValue, Assembly-CSharp
+    - Name: ResetOnRestart
+      Entry: 5
+      Data: true
     - Name: Type
       Entry: 3
       Data: 1
@@ -382,7 +412,7 @@ MonoBehaviour:
       Data: 0
     - Name: Bool
       Entry: 5
-      Data: false
+      Data: true
     - Name: Int
       Entry: 3
       Data: 0
@@ -404,6 +434,9 @@ MonoBehaviour:
     - Name: $v
       Entry: 7
       Data: 22|NodeSystem.BlackBoard.BlackBoardTypeAndValue, Assembly-CSharp
+    - Name: ResetOnRestart
+      Entry: 5
+      Data: true
     - Name: Type
       Entry: 3
       Data: 1
@@ -440,6 +473,9 @@ MonoBehaviour:
     - Name: $v
       Entry: 7
       Data: 24|NodeSystem.BlackBoard.BlackBoardTypeAndValue, Assembly-CSharp
+    - Name: ResetOnRestart
+      Entry: 5
+      Data: true
     - Name: Type
       Entry: 3
       Data: 1
@@ -454,7 +490,7 @@ MonoBehaviour:
       Data: 0
     - Name: Bool
       Entry: 5
-      Data: false
+      Data: true
     - Name: Int
       Entry: 3
       Data: 0
@@ -476,6 +512,9 @@ MonoBehaviour:
     - Name: $v
       Entry: 7
       Data: 26|NodeSystem.BlackBoard.BlackBoardTypeAndValue, Assembly-CSharp
+    - Name: ResetOnRestart
+      Entry: 5
+      Data: true
     - Name: Type
       Entry: 3
       Data: 0
@@ -487,7 +526,7 @@ MonoBehaviour:
       Data: 0
     - Name: Float
       Entry: 4
-      Data: 0
+      Data: 2.81455541
     - Name: Bool
       Entry: 5
       Data: false
@@ -512,6 +551,9 @@ MonoBehaviour:
     - Name: $v
       Entry: 7
       Data: 28|NodeSystem.BlackBoard.BlackBoardTypeAndValue, Assembly-CSharp
+    - Name: ResetOnRestart
+      Entry: 5
+      Data: true
     - Name: Type
       Entry: 3
       Data: 0
@@ -548,6 +590,9 @@ MonoBehaviour:
     - Name: $v
       Entry: 7
       Data: 30|NodeSystem.BlackBoard.BlackBoardTypeAndValue, Assembly-CSharp
+    - Name: ResetOnRestart
+      Entry: 5
+      Data: true
     - Name: Type
       Entry: 3
       Data: 1
@@ -584,6 +629,9 @@ MonoBehaviour:
     - Name: $v
       Entry: 7
       Data: 32|NodeSystem.BlackBoard.BlackBoardTypeAndValue, Assembly-CSharp
+    - Name: ResetOnRestart
+      Entry: 5
+      Data: true
     - Name: Type
       Entry: 3
       Data: 2
@@ -616,10 +664,13 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: settings before node
+      Data: setings handled
     - Name: $v
       Entry: 7
       Data: 34|NodeSystem.BlackBoard.BlackBoardTypeAndValue, Assembly-CSharp
+    - Name: ResetOnRestart
+      Entry: 5
+      Data: true
     - Name: Type
       Entry: 3
       Data: 2
@@ -652,10 +703,13 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: settingshandlede
+      Data: noinputhandled
     - Name: $v
       Entry: 7
       Data: 36|NodeSystem.BlackBoard.BlackBoardTypeAndValue, Assembly-CSharp
+    - Name: ResetOnRestart
+      Entry: 5
+      Data: true
     - Name: Type
       Entry: 3
       Data: 2
@@ -673,79 +727,7 @@ MonoBehaviour:
       Data: false
     - Name: Int
       Entry: 3
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 1
-      Data: noinputhandled
-    - Name: $v
-      Entry: 7
-      Data: 38|NodeSystem.BlackBoard.BlackBoardTypeAndValue, Assembly-CSharp
-    - Name: Type
-      Entry: 3
-      Data: 2
-    - Name: Value
-      Entry: 7
-      Data: 39|NodeSystem.Blackboard.BlackBoardValue, Assembly-CSharp
-    - Name: Type
-      Entry: 3
-      Data: 2
-    - Name: Float
-      Entry: 4
-      Data: 0
-    - Name: Bool
-      Entry: 5
-      Data: false
-    - Name: Int
-      Entry: 3
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 1
-      Data: noinputbeforenode
-    - Name: $v
-      Entry: 7
-      Data: 40|NodeSystem.BlackBoard.BlackBoardTypeAndValue, Assembly-CSharp
-    - Name: Type
-      Entry: 3
-      Data: 2
-    - Name: Value
-      Entry: 7
-      Data: 41|NodeSystem.Blackboard.BlackBoardValue, Assembly-CSharp
-    - Name: Type
-      Entry: 3
-      Data: 2
-    - Name: Float
-      Entry: 4
-      Data: 0
-    - Name: Bool
-      Entry: 5
-      Data: false
-    - Name: Int
-      Entry: 3
-      Data: 0
+      Data: 11
     - Name: 
       Entry: 8
       Data: 

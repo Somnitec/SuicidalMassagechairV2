@@ -1565,7 +1565,7 @@ MonoBehaviour:
   m_Name: Interupted3
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 40, y: -1112}
+  position: {x: -8, y: -1304}
   ports:
     keys:
     - Buttons
@@ -1587,10 +1587,7 @@ MonoBehaviour:
       _node: {fileID: -7717035514121807602}
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections:
-      - fieldName: Input
-        node: {fileID: 7079534767381322563}
-        reroutePoints: []
+      connections: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -1599,7 +1596,10 @@ MonoBehaviour:
       _node: {fileID: -7717035514121807602}
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: Input
+        node: {fileID: 7079534767381322563}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -1736,10 +1736,10 @@ MonoBehaviour:
       Data: 8|NodeSystem.Nodes.NodeTimeOutLogic, Assembly-CSharp
     - Name: HasTimeOut
       Entry: 5
-      Data: false
+      Data: true
     - Name: TimeOut
       Entry: 4
-      Data: 3
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -2630,7 +2630,7 @@ MonoBehaviour:
     SerializationNodes: []
   Color: {r: 0.596, g: 0.345, b: 0.235, a: 1}
   Comparison:
-    Name: noinputbeforenode
+    Name: noinputhandled
     Comparator: 4
     CompareValue:
       Type: 2
@@ -2694,8 +2694,8 @@ MonoBehaviour:
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
-      - fieldName: True
-        node: {fileID: -5049958076486866212}
+      - fieldName: False
+        node: {fileID: 3135012957498188974}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -4172,10 +4172,7 @@ MonoBehaviour:
       _node: {fileID: -5548674267027994304}
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections:
-      - fieldName: Input
-        node: {fileID: 1334840423105867892}
-        reroutePoints: []
+      connections: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -4184,7 +4181,10 @@ MonoBehaviour:
       _node: {fileID: -5548674267027994304}
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: Input
+        node: {fileID: 1334840423105867892}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -4309,10 +4309,10 @@ MonoBehaviour:
       Data: 8|NodeSystem.Nodes.NodeTimeOutLogic, Assembly-CSharp
     - Name: HasTimeOut
       Entry: 5
-      Data: false
+      Data: true
     - Name: TimeOut
       Entry: 4
-      Data: 3
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -4811,7 +4811,7 @@ MonoBehaviour:
   m_Name: Go Back
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 3899.2542, y: -1336.6359}
+  position: {x: 3912, y: -1448}
   ports:
     keys:
     - Input
@@ -4838,77 +4838,6 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   Color: {r: 0.596, g: 0.345, b: 0.235, a: 1}
---- !u!114 &-5049958076486866212
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75edc6708ebe44a4cac788b2c38f93c0, type: 3}
-  m_Name: Variable Comparison
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 1128, y: -1128}
-  ports:
-    keys:
-    - True
-    - False
-    - Input
-    values:
-    - _fieldName: True
-      _node: {fileID: -5049958076486866212}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: Input
-        node: {fileID: -6874817175593332051}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: False
-      _node: {fileID: -5049958076486866212}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: Input
-      _node: {fileID: -5049958076486866212}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: False
-        node: {fileID: 3135012957498188974}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes: []
-  Color: {r: 0.478, g: 0.573, b: 0.431, a: 1}
-  Comparison:
-    Name: TimeInChair
-    Comparator: 3
-    CompareValue:
-      Type: 0
-      Float: 2
-      Bool: 0
-      Int: 0
 --- !u!114 &-4683569803774926554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5340,7 +5269,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 3
+      Data: 4
     - Name: 
       Entry: 7
       Data: NodeScriptLine, Assembly-CSharp
@@ -5370,7 +5299,7 @@ MonoBehaviour:
       Data: 5|FeetRollerOn, Assembly-CSharp
     - Name: On
       Entry: 5
-      Data: false
+      Data: true
     - Name: 
       Entry: 8
       Data: 
@@ -5396,6 +5325,24 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
+      Entry: 7
+      Data: NodeScriptLine, Assembly-CSharp
+    - Name: TimeSec
+      Entry: 4
+      Data: 21
+    - Name: Function
+      Entry: 7
+      Data: 7|FeetRollerSpeed, Assembly-CSharp
+    - Name: Speed
+      Entry: 4
+      Data: 0.7
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
       Entry: 13
       Data: 
     - Name: 
@@ -5409,7 +5356,7 @@ MonoBehaviour:
       Data: 
     - Name: dutch
       Entry: 7
-      Data: 7|NodeData, Assembly-CSharp
+      Data: 8|NodeData, Assembly-CSharp
     - Name: AudioClip
       Entry: 10
       Data: 1
@@ -5427,14 +5374,14 @@ MonoBehaviour:
       Data: 3iforgothellemaltoputithier
     - Name: FunctionList
       Entry: 7
-      Data: 8|FunctionList, Assembly-CSharp
+      Data: 9|FunctionList, Assembly-CSharp
     - Name: Functions
       Entry: 7
-      Data: 9|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
+      Data: 10|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
-      Data: 3
+      Data: 4
     - Name: 
       Entry: 7
       Data: NodeScriptLine, Assembly-CSharp
@@ -5443,7 +5390,7 @@ MonoBehaviour:
       Data: 19
     - Name: Function
       Entry: 7
-      Data: 10|ChairPosition, Assembly-CSharp
+      Data: 11|ChairPosition, Assembly-CSharp
     - Name: NewPosition
       Entry: 4
       Data: 0
@@ -5461,10 +5408,10 @@ MonoBehaviour:
       Data: 23
     - Name: Function
       Entry: 7
-      Data: 11|FeetRollerOn, Assembly-CSharp
+      Data: 12|FeetRollerOn, Assembly-CSharp
     - Name: On
       Entry: 5
-      Data: false
+      Data: true
     - Name: 
       Entry: 8
       Data: 
@@ -5479,10 +5426,28 @@ MonoBehaviour:
       Data: 23
     - Name: Function
       Entry: 7
-      Data: 12|RollerPosition, Assembly-CSharp
+      Data: 13|RollerPosition, Assembly-CSharp
     - Name: NewPosition
       Entry: 4
       Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: NodeScriptLine, Assembly-CSharp
+    - Name: TimeSec
+      Entry: 4
+      Data: 23
+    - Name: Function
+      Entry: 7
+      Data: 14|FeetRollerSpeed, Assembly-CSharp
+    - Name: Speed
+      Entry: 4
+      Data: 0.7
     - Name: 
       Entry: 8
       Data: 
@@ -5506,13 +5471,13 @@ MonoBehaviour:
       Data: 
     - Name: playingLogic
       Entry: 7
-      Data: 13|NodePlayingLogic, Assembly-CSharp
+      Data: 15|NodePlayingLogic, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
     - Name: timeOutLogic
       Entry: 7
-      Data: 14|NodeSystem.Nodes.NodeTimeOutLogic, Assembly-CSharp
+      Data: 16|NodeSystem.Nodes.NodeTimeOutLogic, Assembly-CSharp
     - Name: HasTimeOut
       Entry: 5
       Data: false
@@ -6588,7 +6553,7 @@ MonoBehaviour:
     SerializationNodes: []
   Color: {r: 0.478, g: 0.573, b: 0.431, a: 1}
   Comparison:
-    Name: settings before node
+    Name: setings handled
     Comparator: 4
     CompareValue:
       Type: 2
@@ -6716,7 +6681,7 @@ MonoBehaviour:
       Data: 4|RollerKneadingOn, Assembly-CSharp
     - Name: On
       Entry: 5
-      Data: false
+      Data: true
     - Name: 
       Entry: 8
       Data: 
@@ -6810,7 +6775,7 @@ MonoBehaviour:
       Data: 10|RollerKneadingSpeed, Assembly-CSharp
     - Name: Speed
       Entry: 4
-      Data: 0
+      Data: 0.7
     - Name: 
       Entry: 8
       Data: 
@@ -6865,7 +6830,7 @@ MonoBehaviour:
   m_Name: Variable Modify
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1608, y: -1480}
+  position: {x: 1624, y: -1544}
   ports:
     keys:
     - Output
@@ -6912,7 +6877,7 @@ MonoBehaviour:
     SerializationNodes: []
   Color: {r: 0.478, g: 0.573, b: 0.431, a: 1}
   Modifier:
-    Name: settingshandlede
+    Name: setings handled
     Type: 1
     ModifyingValue:
       Type: 2
@@ -7695,7 +7660,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 4
+      Data: 3
     - Name: 
       Entry: 7
       Data: NodeScriptLine, Assembly-CSharp
@@ -7722,25 +7687,7 @@ MonoBehaviour:
       Data: 5
     - Name: Function
       Entry: 7
-      Data: 5|FeetRollerOn, Assembly-CSharp
-    - Name: On
-      Entry: 5
-      Data: false
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: NodeScriptLine, Assembly-CSharp
-    - Name: TimeSec
-      Entry: 4
-      Data: 5
-    - Name: Function
-      Entry: 7
-      Data: 6|FeetRollerSpeed, Assembly-CSharp
+      Data: 5|FeetRollerSpeed, Assembly-CSharp
     - Name: Speed
       Entry: 4
       Data: 1
@@ -7758,13 +7705,13 @@ MonoBehaviour:
       Data: 10
     - Name: Function
       Entry: 7
-      Data: 7|AirBag, Assembly-CSharp
+      Data: 6|AirBag, Assembly-CSharp
     - Name: AirBagsOn
       Entry: 3
       Data: 2
     - Name: AirBagsOff
       Entry: 3
-      Data: 0
+      Data: 5
     - Name: 
       Entry: 8
       Data: 
@@ -7785,7 +7732,7 @@ MonoBehaviour:
       Data: 
     - Name: dutch
       Entry: 7
-      Data: 8|NodeData, Assembly-CSharp
+      Data: 7|NodeData, Assembly-CSharp
     - Name: AudioClip
       Entry: 10
       Data: 1
@@ -7803,14 +7750,14 @@ MonoBehaviour:
       Data: 3iforgothellemaltoputithier
     - Name: FunctionList
       Entry: 7
-      Data: 9|FunctionList, Assembly-CSharp
+      Data: 8|FunctionList, Assembly-CSharp
     - Name: Functions
       Entry: 7
-      Data: 10|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
+      Data: 9|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
-      Data: 4
+      Data: 3
     - Name: 
       Entry: 7
       Data: NodeScriptLine, Assembly-CSharp
@@ -7819,13 +7766,13 @@ MonoBehaviour:
       Data: 10
     - Name: Function
       Entry: 7
-      Data: 11|AirBag, Assembly-CSharp
+      Data: 10|AirBag, Assembly-CSharp
     - Name: AirBagsOn
       Entry: 3
       Data: 2
     - Name: AirBagsOff
       Entry: 3
-      Data: 0
+      Data: 5
     - Name: 
       Entry: 8
       Data: 
@@ -7840,10 +7787,10 @@ MonoBehaviour:
       Data: 0
     - Name: Function
       Entry: 7
-      Data: 12|ButtVibration, Assembly-CSharp
+      Data: 11|ButtVibration, Assembly-CSharp
     - Name: On
       Entry: 5
-      Data: false
+      Data: true
     - Name: 
       Entry: 8
       Data: 
@@ -7858,25 +7805,7 @@ MonoBehaviour:
       Data: 5
     - Name: Function
       Entry: 7
-      Data: 13|FeetRollerOn, Assembly-CSharp
-    - Name: On
-      Entry: 5
-      Data: false
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: NodeScriptLine, Assembly-CSharp
-    - Name: TimeSec
-      Entry: 4
-      Data: 5
-    - Name: Function
-      Entry: 7
-      Data: 14|FeetRollerSpeed, Assembly-CSharp
+      Data: 12|FeetRollerSpeed, Assembly-CSharp
     - Name: Speed
       Entry: 4
       Data: 1
@@ -7903,13 +7832,13 @@ MonoBehaviour:
       Data: 
     - Name: playingLogic
       Entry: 7
-      Data: 15|NodePlayingLogic, Assembly-CSharp
+      Data: 13|NodePlayingLogic, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
     - Name: timeOutLogic
       Entry: 7
-      Data: 16|NodeSystem.Nodes.NodeTimeOutLogic, Assembly-CSharp
+      Data: 14|NodeSystem.Nodes.NodeTimeOutLogic, Assembly-CSharp
     - Name: HasTimeOut
       Entry: 5
       Data: false
@@ -8864,13 +8793,11 @@ MonoBehaviour:
   - {fileID: 6695243353364252648}
   - {fileID: -2318324507415779766}
   - {fileID: 3135012957498188974}
-  - {fileID: -5049958076486866212}
   - {fileID: -1703998994186205853}
   - {fileID: 5009779558881889836}
   - {fileID: -6976243038532886620}
   - {fileID: 1334840423105867892}
   - {fileID: 6114146954122495064}
-  - {fileID: 4641719102959769439}
   - {fileID: -5142984649613393667}
   serializationData:
     SerializedFormat: 2
@@ -8955,8 +8882,8 @@ MonoBehaviour:
       Data: 
   BlackBoard: {fileID: 11400000, guid: 6e91e850ef5b058419e0213511aef8c7, type: 2}
   RootNode: {fileID: 4732577369696971334}
-  Current: {fileID: -5142984649613393667}
-  goBackNode: {fileID: -5142984649613393667}
+  Current: {fileID: -1645576537967019624}
+  goBackNode: {fileID: 4732577369696971334}
 --- !u!114 &106402782884662346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9067,7 +8994,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 5
+      Data: 6
     - Name: 
       Entry: 7
       Data: NodeScriptLine, Assembly-CSharp
@@ -9115,6 +9042,18 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: NodeScriptLine, Assembly-CSharp
+    - Name: TimeSec
+      Entry: 4
+      Data: 0
+    - Name: Function
+      Entry: 6
       Data: 
     - Name: 
       Entry: 8
@@ -9212,7 +9151,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 5
+      Data: 6
     - Name: 
       Entry: 7
       Data: NodeScriptLine, Assembly-CSharp
@@ -9242,7 +9181,7 @@ MonoBehaviour:
       Data: 13|FeetRollerOn, Assembly-CSharp
     - Name: On
       Entry: 5
-      Data: false
+      Data: true
     - Name: 
       Entry: 8
       Data: 
@@ -9319,6 +9258,24 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
+      Entry: 7
+      Data: NodeScriptLine, Assembly-CSharp
+    - Name: TimeSec
+      Entry: 4
+      Data: 22
+    - Name: Function
+      Entry: 7
+      Data: 17|FeetRollerSpeed, Assembly-CSharp
+    - Name: Speed
+      Entry: 4
+      Data: 0.7
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
       Entry: 13
       Data: 
     - Name: 
@@ -9335,16 +9292,16 @@ MonoBehaviour:
       Data: 
     - Name: playingLogic
       Entry: 7
-      Data: 17|NodePlayingLogic, Assembly-CSharp
+      Data: 18|NodePlayingLogic, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
     - Name: timeOutLogic
       Entry: 7
-      Data: 18|NodeSystem.Nodes.NodeTimeOutLogic, Assembly-CSharp
+      Data: 19|NodeSystem.Nodes.NodeTimeOutLogic, Assembly-CSharp
     - Name: HasTimeOut
       Entry: 5
-      Data: false
+      Data: true
     - Name: TimeOut
       Entry: 4
       Data: 3
@@ -9536,7 +9493,7 @@ MonoBehaviour:
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
-      - fieldName: OnAnyButton
+      - fieldName: OnTimeOut
         node: {fileID: 2721203014488041263}
         reroutePoints: []
       _direction: 0
@@ -9921,7 +9878,7 @@ MonoBehaviour:
       - fieldName: OnAnyButton
         node: {fileID: -1645576537967019624}
         reroutePoints: []
-      - fieldName: OnAnyButton
+      - fieldName: OnTimeOut
         node: {fileID: -5548674267027994304}
         reroutePoints: []
       _direction: 0
@@ -10223,7 +10180,7 @@ MonoBehaviour:
   m_Name: Variable Comparison
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 584, y: -1160}
+  position: {x: 584, y: -1096}
   ports:
     keys:
     - True
@@ -10480,7 +10437,7 @@ MonoBehaviour:
   m_Name: Interupted2
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 24, y: -1576}
+  position: {x: 8, y: -1624}
   ports:
     keys:
     - Buttons
@@ -10502,10 +10459,7 @@ MonoBehaviour:
       _node: {fileID: 2721203014488041263}
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections:
-      - fieldName: Input
-        node: {fileID: 667147004138992131}
-        reroutePoints: []
+      connections: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -10514,7 +10468,10 @@ MonoBehaviour:
       _node: {fileID: 2721203014488041263}
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: Input
+        node: {fileID: 667147004138992131}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -10642,10 +10599,10 @@ MonoBehaviour:
       Data: 8|NodeSystem.Nodes.NodeTimeOutLogic, Assembly-CSharp
     - Name: HasTimeOut
       Entry: 5
-      Data: false
+      Data: true
     - Name: TimeOut
       Entry: 4
-      Data: 3
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -11034,7 +10991,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: Input
-        node: {fileID: -5049958076486866212}
+        node: {fileID: -6874817175593332051}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -11063,7 +11020,7 @@ MonoBehaviour:
     SerializationNodes: []
   Color: {r: 0.478, g: 0.573, b: 0.431, a: 1}
   Comparison:
-    Name: settings before node
+    Name: setings handled
     Comparator: 4
     CompareValue:
       Type: 2
@@ -12322,77 +12279,6 @@ MonoBehaviour:
       Float: 0
       Bool: 0
       Int: 1
---- !u!114 &4641719102959769439
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75edc6708ebe44a4cac788b2c38f93c0, type: 3}
-  m_Name: Variable Comparison
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 2968, y: -1080}
-  ports:
-    keys:
-    - True
-    - False
-    - Input
-    values:
-    - _fieldName: True
-      _node: {fileID: 4641719102959769439}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: Input
-        node: {fileID: 6695243353364252648}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: False
-      _node: {fileID: 4641719102959769439}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: Input
-      _node: {fileID: 4641719102959769439}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: False
-        node: {fileID: 6114146954122495064}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes: []
-  Color: {r: 0.596, g: 0.345, b: 0.235, a: 1}
-  Comparison:
-    Name: noinputbeforenode
-    Comparator: 3
-    CompareValue:
-      Type: 2
-      Float: 0
-      Bool: 0
-      Int: 2
 --- !u!114 &4682633200990584376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14028,7 +13914,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: Input
-        node: {fileID: 4641719102959769439}
+        node: {fileID: 6695243353364252648}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -14057,7 +13943,7 @@ MonoBehaviour:
     SerializationNodes: []
   Color: {r: 0.596, g: 0.345, b: 0.235, a: 1}
   Comparison:
-    Name: noinputbeforenode
+    Name: noinputhandled
     Comparator: 4
     CompareValue:
       Type: 2
@@ -14239,7 +14125,7 @@ MonoBehaviour:
       Data: true
     - Name: TimeOut
       Entry: 4
-      Data: 1
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -14486,8 +14372,8 @@ MonoBehaviour:
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
-      - fieldName: True
-        node: {fileID: 4641719102959769439}
+      - fieldName: False
+        node: {fileID: 6114146954122495064}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -14891,7 +14777,7 @@ MonoBehaviour:
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
-      - fieldName: OnAnyButton
+      - fieldName: OnTimeOut
         node: {fileID: -7717035514121807602}
         reroutePoints: []
       _direction: 0

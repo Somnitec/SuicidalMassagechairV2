@@ -21,6 +21,7 @@ public class Settings : SerializedScriptableObject
     public bool ShowColors = true; // TODO implement this
     public bool ShowNodeDebugInfo = true;
     public bool LogDebugInfo = false;
+    public bool LogDebugMessageInfo = false;
     public bool ShowNodeData = true;
     [ShowIf("ShowNodeData"), Indent()]
     public bool ShowNodeAudio = true;

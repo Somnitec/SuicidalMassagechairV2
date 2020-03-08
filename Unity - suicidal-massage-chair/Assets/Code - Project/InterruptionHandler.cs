@@ -17,6 +17,7 @@ public class InterruptionHandler : BlackBoardValueModifier
     {
         SetupBlackBoard();
         Events.Instance.AddListener<InterruptedInput>(HandleInterruption);
+        Events.Instance.AddListener<ResetValuesAfterRestart>(SetupBlackBoard);
     }
 
     private void OnDisable()
@@ -31,6 +32,11 @@ public class InterruptionHandler : BlackBoardValueModifier
         SetupBlackBoardValue(Settings.InterruptionsHandledBBName, 0);
         SetupBlackBoardValue(Settings.InterruptionsBeforeGoingToNodeBBName,
             settings.InitialInterruptCountBeforeGoingToSpecialNode);
+    }
+    
+    private void SetupBlackBoard(ResetValuesAfterRestart e)
+    {
+        SetupBlackBoard();
     }
 
     [Button]
