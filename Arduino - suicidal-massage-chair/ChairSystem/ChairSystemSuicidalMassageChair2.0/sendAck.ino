@@ -62,6 +62,8 @@ void doAck() {
     Serial.print(roller_move_time_up);
     Serial.print(F(",\n\t\"roller_move_time_down\":"));
     Serial.print(roller_move_time_down);
+    Serial.print(F(",\n\t\"kneading_position\":"));
+    Serial.print(kneading_position);
     Serial.print(F(",\n\t\"feet_roller_on\":"));
     Serial.print(feet_roller_on);
     Serial.print(F(",\n\t\"feet_roller_speed\":"));

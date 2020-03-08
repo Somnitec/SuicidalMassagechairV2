@@ -54,6 +54,8 @@ int roller_move_time_up = 15862; //is average measured value
 int roller_move_time_down = 14776; //is average measured value
 int roller_estimated_position;
 
+int kneading_position =0;//an unimplented variable to set the exact position of the kneaders on the spine
+
 bool feet_roller_on;
 int feet_roller_speed = 255;
 

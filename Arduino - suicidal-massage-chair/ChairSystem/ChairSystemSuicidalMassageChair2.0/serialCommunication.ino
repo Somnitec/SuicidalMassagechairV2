@@ -108,6 +108,10 @@ void receiveMessage( String message) {
   else if (validateInput( F("roller_move_time_down"), 1)) {
     roller_move_time_down =  doc["roller_move_time_down"][0];
   }
+ else if (validateInput( F("kneading_position"), 1)) {
+    kneading_position =  doc["kneading_position"][0];
+  }
+
 
 
   else if (validateInput( F("feet_roller_on"), 1)) {

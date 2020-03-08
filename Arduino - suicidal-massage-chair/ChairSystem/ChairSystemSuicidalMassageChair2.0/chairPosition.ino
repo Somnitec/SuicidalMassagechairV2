@@ -28,8 +28,8 @@ void chairPositionRoutine() {
                  chair_position_estimated < chair_position_target + chair_position_target_range  )
               ) {//stop when it is in range
     chair_position_motor_direction = 0;
-    if (chair_position_target == 0)chair_position_estimated = 0;
-    if (chair_position_target == 10000)chair_position_estimated = 10000;
+    if (chair_position_target == 0)chair_position_estimated = 0+chair_position_target;
+    if (chair_position_target == 10000)chair_position_estimated = 10000-chair_position_target;
     //Serial.println("positionReached");
     //found position
   }
