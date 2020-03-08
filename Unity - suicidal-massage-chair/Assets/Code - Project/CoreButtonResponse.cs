@@ -11,10 +11,10 @@ public class CoreButtonResponse : MonoBehaviour
 
     private void Start()
     {
-        Events.Instance.AddListener<UserInputUp>(HandleInput);
+        Events.Instance.AddListener<UserInputUp>(HandleInterruptingInput);
     }
 
-    public void HandleInput(UserInputUp userInputUp)
+    private void HandleInterruptingInput(UserInputUp userInputUp)
     {
         switch (userInputUp.Button)
         {
@@ -29,8 +29,16 @@ public class CoreButtonResponse : MonoBehaviour
                 break;
             case UserInputButton.Dutch:
                 SetLanguageAndRestart(Language.Dutch);
-                break;    
+                break;
+            case UserInputButton.Settings:
+                SettingsNode();
+                break;
         }
+    }
+
+    private void SettingsNode()
+    {
+        graph.PlaySpecialNode(Settings.SettingsNodeName);
     }
 
     private void SetLanguageAndRestart(Language language)
@@ -41,7 +49,7 @@ public class CoreButtonResponse : MonoBehaviour
 
     private void Kill()
     {
-        graph.PlaySpecialNode("KillNode");
+        graph.PlaySpecialNode(Settings.KillNodeName);
     }
 
     private void Repeat()

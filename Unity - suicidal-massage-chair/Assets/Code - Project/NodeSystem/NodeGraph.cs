@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using Framework;
 using NodeSystem.BlackBoard;
@@ -89,6 +89,7 @@ public class NodeGraph : SerializedNodeGraph
             Debug.LogError($"No Go Back Node has been set");
             return;
         }
+        
         PlayNode(goBackNode);
         goBackNode = null;
     }

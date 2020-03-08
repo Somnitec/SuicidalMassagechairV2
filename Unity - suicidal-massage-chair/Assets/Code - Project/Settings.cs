@@ -50,6 +50,12 @@ public class Settings : SerializedScriptableObject
     [InfoBox("This gets triggered after a person has pressed a button in the wait mode.")]
     [HideReferenceObjectPicker, HideLabel, InlineProperty]
     public FunctionList OnStart = new FunctionList();
+
+    [Title("Special Node Names")] 
+    public static readonly string KillNodeName = "Kill Node";
+    public static readonly string InteruptedNodeName = "Interrupted Node";
+    public static readonly string NoInputNodeName = "No Input Node";
+    public static readonly string SettingsNodeName = "Settings Node";
 }
 
 public enum Language
