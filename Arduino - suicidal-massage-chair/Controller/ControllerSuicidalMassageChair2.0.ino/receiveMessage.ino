@@ -1,6 +1,6 @@
 bool readingMessage = false;
 String readString;
-unsigned int maxStringLength = 64;
+unsigned int maxStringLength = 127;
 String last_command = "";
 
 void readSerial() {
@@ -77,7 +77,7 @@ void receiveMessage( String message) {
   }
   else if (validateInput(F("clearScreen"), 1)) {
     bool message =  doc[F("clearScreen")][0];
-    if (message) writeToScreen(4, message);
+    if (message) writeToScreen(4, String(message));
     sendCommand("clearScreen", message);
   }
   else if (validateInput(F("allLeds"), 1)) {
@@ -86,6 +86,10 @@ void receiveMessage( String message) {
   }
   else if (validateInput(F("buttonBounceTime"), 1)) {
     buttonBounceTime   =  doc[F("buttonBounceTime")][0];
+    for (int i = 0; i < buttonAmount; i++)
+    {
+      debouncedButtons[i].interval(buttonBounceTime);
+    }
     sendCommand("buttonBounceTime", buttonBounceTime );
   }
   else if (validateInput(F("buttonFadeTimeSettings"), 1)) {
@@ -111,7 +115,7 @@ void receiveMessage( String message) {
 
   else if (validateInput(F("reset"), 1)) {
     String message    =  doc[F("reset")][0];
-    
+
     sendCommand("reset", message  );
     resetBasicState();
   }
