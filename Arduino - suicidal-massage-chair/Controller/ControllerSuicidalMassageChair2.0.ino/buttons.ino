@@ -2,12 +2,17 @@ elapsedMillis sliderTimer;
 bool sliderMoved = false;
 
 void readButtons() {
+  for (int i = 0; i < buttonAmount; i++)//fixes a bug where customA and B buttons stopped working after screen reset
+  {
+    pinMode(buttons[i], INPUT_PULLUP);
+  }
+  
   for (int i = 0; i < buttonAmount; i++)
   {
     // Update the Bounce instance :
     debouncedButtons[i].update();
-    if (i == 0)
-    { //kill is NC
+    if (i == 0)//if kill is pressed, it's NC so different behavious from the others
+    { 
       if (debouncedButtons[i].rose())
       {
         //Serial.print(buttonsString[i]);
@@ -16,7 +21,7 @@ void readButtons() {
       }
     }
     else if (i == 4)
-    { //language is switch
+    { //if language switch if flipped
       if (debouncedButtons[i].rose() || debouncedButtons[i].fell())
       {
         //Serial.print(buttonsString[i]);
@@ -35,7 +40,7 @@ void readButtons() {
       //cmdMessenger.sendCmd(kSendInput, "triggered");
     }
   }
-  
+
 
   int newSliderValue = sliderConversion(analogRead(sliderNumbers));
   if (lastSliderValue != newSliderValue)
@@ -49,12 +54,7 @@ void readButtons() {
   }
   if (sliderTimer > buttonBounceTime && sliderMoved) {
     sliderMoved = false;
-    //cmdMessenger.sendCmdStart(kSendInputValue);
-    //cmdMessenger.sendCmdArg("sliderNumbers");
     sendCommand( "buttonSlider", newSliderValue);
-    //    cmdMessenger.sendCmdStart(kSendInput);
-    //    cmdMessenger.sendCmdArg(newSliderValue);
-    //    cmdMessenger.sendCmdEnd();
   }
 
 }

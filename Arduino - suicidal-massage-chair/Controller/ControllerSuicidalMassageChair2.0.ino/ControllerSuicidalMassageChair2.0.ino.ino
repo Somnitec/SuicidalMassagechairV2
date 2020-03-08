@@ -171,6 +171,7 @@ void setup() {
 
   sendCommand("started", String(millis()));
 
+sendCommand("buttonLanguage", digitalRead(buttonLanguage));
 }
 
 void resetBasicState() {
