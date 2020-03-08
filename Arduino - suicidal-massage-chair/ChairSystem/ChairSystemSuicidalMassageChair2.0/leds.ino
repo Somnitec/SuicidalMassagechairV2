@@ -5,6 +5,8 @@ float breathingTime = 5;
 
 
 elapsedMicros ledRefreshTimer;
+elapsedMicros ledFadeTimer;
+
 
 void doLeds() {
 
@@ -15,7 +17,7 @@ void doLeds() {
     CHSV hsv;  //pick random HSV
     CRGB rgb( backlight_color[0], backlight_color[1], backlight_color[2]);
     hsv=rgb2hsv_approximate(rgb);  //convert HSV to RGB
-    float brightnessNow = millis() % int(breathingTime * 1000) - int((breathingTime * 1000) / 2); //fmap(sin(millis() / 100), -1, 1, ledBreathMin, ledBreathMax);
+    float brightnessNow = millis() % long(breathingTime * 1000) - long((breathingTime * 1000) / 2); //fmap(sin(millis() / 100), -1, 1, ledBreathMin, ledBreathMax);
     brightnessNow = map(abs(brightnessNow), 0, (breathingTime * 1000) / 2, ledBreathMin, ledBreathMax);
     //Serial.print(ledRefreshTimer);//debugging
 

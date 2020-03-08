@@ -69,8 +69,8 @@ public class NodeGraph : SerializedNodeGraph
             Debug.LogError($"No Special node found for key: {key}");
             return;
         }
-
-        goBackNode = Current;
+        if(goBackNode == null)
+            goBackNode = Current;
 
         PlayNode(SpecialNodes[key]);
     }

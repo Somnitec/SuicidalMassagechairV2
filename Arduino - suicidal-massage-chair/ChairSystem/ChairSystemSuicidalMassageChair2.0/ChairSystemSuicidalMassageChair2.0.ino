@@ -11,7 +11,7 @@
 #define pounding 9
 #define feet 11
 
-#define vibration 13
+#define vibration 12
 #define outside 5
 #define legs 4
 #define arms 3
