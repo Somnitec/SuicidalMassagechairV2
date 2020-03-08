@@ -30,12 +30,13 @@
 //EDITABLE VARIABLES
 unsigned int blinkTime = 2000;
 
-int chair_position_estimated; //up: 0 - flat: 10000
+int chair_position_estimated; //up:10000 - flat :0
 int chair_position_target;  // 0 - 10000
+int chair_position_target_range = 10;//if estimated is within this range of the target, it's good eno
 int chair_position_motor_direction; //-1 down, 0 neutral, 1 up
 int chair_position_move_time_max;
-int chair_position_move_time_up;
-int chair_position_move_time_down;
+int chair_position_move_time_up = 15000;
+int chair_position_move_time_down = 12000;
 
 bool roller_kneading_on;
 int roller_kneading_speed = 255;
@@ -45,6 +46,7 @@ int roller_pounding_speed = 255;
 
 int roller_position_estimated;  //bottom: 0 - top: 10000
 int roller_position_target;  // 0 - 10000
+int roller_position_target_range = 10;//if estimated is within this range of the target, it's good enough
 int roller_position_motor_direction; //-1 down, 0 neutral, 1 up
 Bounce roller_sensor_top = Bounce();
 Bounce roller_sensor_bottom = Bounce();
@@ -55,19 +57,19 @@ int roller_estimated_position;
 bool feet_roller_on;
 int feet_roller_speed = 255;
 
-//bool airpump_on;
-//bool airbag_shoulders_on;
-//bool airbag_arms_on;
-//bool airbag_legs_on;
-//bool airbag_outside_on;
-int airbag_time_max;
+bool airpump_on;
+bool airbag_shoulders_on;
+bool airbag_arms_on;
+bool airbag_legs_on;
+bool airbag_outside_on;
+int airbag_time_max = 10000;
 
 //bool butt_vibration_on;
 
 bool backlight_on;
 int backlight_color[] = {0, 0, 0}; //rgb
 int backlight_LED[] = {0, 1, 2, 3}; //(led, color):
-int blacklight_program[] = {0, 1, 2,3}; //(program, speed, var1,var2)
+int blacklight_program[] = {0, 1, 2, 3}; //(program, speed, var1,var2)
 
 bool redgreen_statuslight;//0=red,1=green
 
@@ -141,32 +143,47 @@ void setup() {
   roller_sensor_bottom.interval(button_bounce_time);
 
 
-  moveRollerUp();
   //rollerCalibrationRoutine();
-  roller_position_target = 8000;
 
-  //sendAck();
+  last_command = "finished setup, now resetting";
+  doAck();
+  reset();
+
+}
+
+void reset() {
+  digitalWrite(redgreen_statuslight, LOW);
+  allAirbagsOff();
+  moveChairUp();
+  moveRollerUp();
+  last_command = "finished reset";
+  doAck();
 }
 
 
 
 void loop()
 {
-  //rollerRoutine();
+
+  readSerial();
+
+  rollerRoutine();
+  chairPositionRoutine();
+  airbagRoutine();
 
 
   //Blinking the led to see if code is still running
-  
-  
+
+
   if (millis() > blinkTimer + blinkTime)
   {
     digitalWrite(led, !digitalRead(led));
     blinkTimer = millis();
   }
 
-  readSerial();
 
   doLeds();
+  doAck() ;
 }
 
 void printError(String error) {

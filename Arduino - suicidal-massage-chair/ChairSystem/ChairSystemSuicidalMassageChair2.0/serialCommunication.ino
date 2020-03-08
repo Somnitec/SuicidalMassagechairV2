@@ -46,7 +46,10 @@ void receiveMessage( String message) {
     //just ack
   }
   else if (validateInput( F("chair_position_target"), 1)) {
-    chair_position_estimated =  doc["chair_position_target"][0];
+    chair_position_target =  doc["chair_position_target"][0];
+  }
+  else if (validateInput( F("chair_position_target_range"), 1)) {
+    roller_position_target_range =  doc["chair_position_target_range"][0];
   }
   else if (validateInput( F("chair_position_motor_direction"), 1)) {
     chair_position_motor_direction =  doc["chair_position_motor_direction"][0];
@@ -86,6 +89,9 @@ void receiveMessage( String message) {
     roller_position_target =  doc["roller_position_target"][0];
     movingToTarget = true;
   }
+  else if (validateInput( F("roller_position_target_range"), 1)) {
+    roller_position_target_range =  doc["roller_position_target_range"][0];
+  }
   else if (validateInput( F("roller_position_motor_direction"), 1)) {
     roller_position_motor_direction =  doc["roller_position_motor_direction"][0];
     movingToTarget = false;
@@ -114,19 +120,23 @@ void receiveMessage( String message) {
   }
 
   else if (validateInput( F("airpump_on"), 1)) {
-    digitalWrite(pump,  doc["airpump_on"][0]);
+    airpump_on =  doc["airpump_on"][0];
   }
   else if (validateInput( F("airbag_shoulders_on"), 1)) {
-    digitalWrite(shoulders, doc["airbag_shoulders_on"][0]);
+    airbag_shoulders_on = doc["airbag_shoulders_on"][0];
+    shoulderTimer=0;
   }
   else if (validateInput( F("airbag_arms_on"), 1)) {
-    digitalWrite(arms, doc["airbag_arms_on"][0]);
+    airbag_arms_on = doc["airbag_arms_on"][0];
+    armsTimer=0;
   }
   else if (validateInput( F("airbag_legs_on"), 1)) {
-    digitalWrite(legs, doc["airbag_legs_on"][0]);
+    airbag_legs_on = doc["airbag_legs_on"][0];
+    legsTimer=0;
   }
   else if (validateInput( F("airbag_outside_on"), 1)) {
-    digitalWrite(outside, doc["airbag_outside_on"][0]);
+    airbag_outside_on = doc["airbag_outside_on"][0];
+    outsideTimer=0;
   }
   else if (validateInput( F("airbag_time_max"), 1)) {
     airbag_time_max =  doc["airbag_time_max"][0];
@@ -181,6 +191,9 @@ void receiveMessage( String message) {
   }
   else if (validateInput( F("status"), 1)) {
     //cannot be set, so this simply send an ack
+  }
+  else if (validateInput( F("reset"), 1)) {
+    reset();
   }
 
   else return incorrectMessage(message);

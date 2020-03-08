@@ -1,8 +1,11 @@
-int chair_position_target_range = 100;//if estimated is within this range of the target, it's good enough
+//still to implement: direct motor overides
+
+
+
 //also makes sure that the sensors (supposedly) never really get pressed
-unsigned long startMovingTime = 0;
-long startPosition = 0;
-int previousMotorDirection = 0;
+elapsedMillis rollerStartTimer;
+long startRollerPosition = 0;
+int previousRollerMotorDirection = 0;
 
 
 
@@ -16,11 +19,56 @@ void rollerRoutine() {
   //looping to see if the target or sensors are hit
   //update estimated position
 
+
+
+  //reset position counter
+  if (previousRollerMotorDirection != roller_position_motor_direction) {
+    //Serial.println("direction changed");
+    rollerStartTimer = 0;
+    startRollerPosition = roller_position_estimated;
+    previousRollerMotorDirection = roller_position_motor_direction;
+  }
+
+  //estimating position
+  if (roller_position_motor_direction == 1) {
+    roller_position_estimated = startRollerPosition + map(rollerStartTimer, 0, roller_move_time_up, 0, 10000);
+  }
+  else if (roller_position_motor_direction == -1) {
+    roller_position_estimated = startRollerPosition - map(rollerStartTimer, 0, roller_move_time_down, 0, 10000);
+
+  }
+
+  //act on estimated position
+  /*if (roller_position_target == 0 || roller_position_target == 10000) {
+    //if the extremes are asked, go all the way to the sensor //not yet functional
+    }
+    else*/ if ( (roller_position_estimated > roller_position_target - roller_position_target_range  &&
+                 roller_position_estimated < roller_position_target + roller_position_target_range  )
+              ) {//stop when it is in range
+    if (roller_position_motor_direction != 0) {
+      last_command = "roller position reached";
+      sendAck();
+    }
+    roller_position_motor_direction = 0;
+
+    //found position
+  }
+  else if (roller_position_target < roller_position_estimated && roller_position_motor_direction != -1) {
+    roller_position_motor_direction = -1;
+
+    //roller should move down
+  }
+  else if (roller_position_target > roller_position_estimated && roller_position_motor_direction != 1) {
+    roller_position_motor_direction = 1;
+
+    //roller should move down
+  }
+
   //update sensors
   roller_sensor_top.update();
   roller_sensor_bottom.update();
 
-
+  //updating motors
   //if the sensor is hit, then stop moving immediatly
   if ( (roller_sensor_top.read() && roller_position_motor_direction == 1) ||
        (roller_sensor_bottom.read() && roller_position_motor_direction == -1 )) {
@@ -47,45 +95,6 @@ void rollerRoutine() {
     }
   }
 
-  //reset position counter
-  if (previousMotorDirection != roller_position_motor_direction) {
-    //Serial.println("direction changed");
-    startMovingTime = millis();
-    startPosition = roller_position_estimated;
-    previousMotorDirection = roller_position_motor_direction;
-  }
-  //estimating position
-  if (roller_position_motor_direction == 1) {
-    roller_position_estimated = startPosition + map(millis() - startMovingTime, 0, roller_move_time_up, 0, 10000);
-  }
-  else if (roller_position_motor_direction == -1) {
-    roller_position_estimated = startPosition - map(millis() - startMovingTime, 0, roller_move_time_down, 0, 10000);
-
-  }
-
-  //if ( movingToTarget) {
-  //if ( roller_position_motor_direction != 0) {
-  if ( (roller_position_target - chair_position_target_range < roller_position_estimated &&
-        roller_position_target + chair_position_target_range > roller_position_estimated )
-     ) {
-    roller_position_motor_direction = 0;
-    Serial.println("found position");
-  }
-  else if (roller_position_target < roller_position_estimated && roller_position_motor_direction != -1) {
-    //roller_position_motor_direction = -1;
-    //digitalWrite(mssgdown, true);
-
-    Serial.println("have to move down");
-    //roller should move down
-  }
-  else if (roller_position_target > roller_position_estimated && roller_position_motor_direction != 1) {
-    //roller_position_motor_direction = 1;
-    //digitalWrite(mssgup, true);
-
-    Serial.println("have to move up");
-    //roller should move down
-  }
-  //}
 }
 
 
@@ -103,14 +112,14 @@ void rollerRoutine() {
   else if (roller_position_target < roller_position_estimated && roller_position_motor_direction != -1) {
     roller_position_motor_direction = -1;
     //digitalWrite(mssgdown, true);
-    startMovingTime = millis();
+    rollerStartTimer = millis();
     Serial.println("have to move down");
     //roller should move down
   }
   else if (roller_position_target > roller_position_estimated && roller_position_motor_direction != 1) {
     roller_position_motor_direction = 1;
     //digitalWrite(mssgup, true);
-    startMovingTime = millis();
+    rollerStartTimer = millis();
     Serial.println("have to move down");
     //roller should move down
   }
@@ -118,13 +127,13 @@ void rollerRoutine() {
 
   //moving up estimator
   if (roller_position_motor_direction == 1) {
-  roller_position_estimated -= map(millis() - startMovingTime, 0, roller_move_time_up, 0, 10000);
+  roller_position_estimated -= map(millis() - rollerStartTimer, 0, roller_move_time_up, 0, 10000);
   }
 
 
   //moving down estimator
   if (roller_position_motor_direction == -1) {
-  roller_position_estimated += map(millis() - startMovingTime, 0, roller_move_time_down, 0, 10000);
+  roller_position_estimated += map(millis() - rollerStartTimer, 0, roller_move_time_down, 0, 10000);
   }
 
   //    roller_position_estimated; //up: 0 - flat: 10000
@@ -152,6 +161,8 @@ void moveRollerUp() {
   }
   digitalWrite(mssgup, false);
   roller_position_estimated = 10000;
+
+  roller_position_target = 9500;
 }
 
 
