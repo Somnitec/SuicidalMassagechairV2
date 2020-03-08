@@ -66,8 +66,8 @@ int airbag_time_max;
 
 bool backlight_on;
 int backlight_color[] = {0, 0, 0}; //rgb
-int backlight_LED[] = {0, 0}; //(led, color):
-int blacklight_program[] = {0, 1, 2, 3}; //(program, parameters....)
+int backlight_LED[] = {0, 1, 2, 3}; //(led, color):
+int blacklight_program[] = {0, 1, 2,3}; //(program, speed, var1,var2)
 
 bool redgreen_statuslight;//0=red,1=green
 
@@ -101,15 +101,13 @@ const int inputAmount = sizeof(inputs) / sizeof(inputs[0]);
 
 #define DATA_PIN    6
 #define LED_TYPE    WS2811
-#define COLOR_ORDER GRB
+#define COLOR_ORDER RGB
 #define NUM_LEDS    39
 CRGB leds[NUM_LEDS];
 #define BRIGHTNESS          128
 #define FRAMES_PER_SECOND  120
 
 int ledPos = 0;
-int ledBreathMin = 100;
-int ledBreathMax = 255;
 
 bool readingMessage = false;
 
@@ -121,7 +119,7 @@ StaticJsonDocument<200> doc;
 bool movingToTarget = true;//needed for roller
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(115200);
   while (!Serial);//leonardo fix?
 
 
@@ -146,7 +144,7 @@ void setup() {
   moveRollerUp();
   //rollerCalibrationRoutine();
   roller_position_target = 8000;
-  
+
   //sendAck();
 }
 
@@ -158,13 +156,17 @@ void loop()
 
 
   //Blinking the led to see if code is still running
+  
+  
   if (millis() > blinkTimer + blinkTime)
   {
     digitalWrite(led, !digitalRead(led));
     blinkTimer = millis();
   }
 
- readSerial();
+  readSerial();
+
+  doLeds();
 }
 
 void printError(String error) {

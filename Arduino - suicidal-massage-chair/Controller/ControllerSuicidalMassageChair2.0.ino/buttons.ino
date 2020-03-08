@@ -31,7 +31,7 @@ void readButtons() {
     {
       //Serial.print(buttonsString[i]);
       //Serial.println();
-      sendCommand( buttonsString[i], true);
+      sendCommand( buttonsString[i], String(true));
       //cmdMessenger.sendCmd(kSendInput, "triggered");
     }
   }

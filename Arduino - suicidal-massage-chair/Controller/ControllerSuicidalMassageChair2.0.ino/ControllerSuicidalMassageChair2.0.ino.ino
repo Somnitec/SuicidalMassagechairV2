@@ -106,11 +106,11 @@ String buttonsString[] = {"buttonKill",
                           "buttonThumbDown",
                           "buttonHorn"
                          };
-int buttonAmount = sizeof(buttons) / sizeof(buttons[0]);
-int LEDs[] = {LEDSettings, LEDNo, LEDYes, 13};
-int ledAmount = sizeof(buttons) / sizeof(buttons[0]);
+byte buttonAmount = sizeof(buttons) / sizeof(buttons[0]);
+byte  LEDs[] = {LEDSettings, LEDNo, LEDYes, 13};
+byte ledAmount = sizeof(buttons) / sizeof(buttons[0]);
 Bounce *debouncedButtons = new Bounce[buttonAmount];
-int lastSliderValue = 0;
+byte lastSliderValue = 0;
 
 boolean LEDSOn = true;
 
@@ -119,9 +119,9 @@ bool   yesLed  = true;
 bool   noLed = true;
 
 
-StaticJsonDocument<200> doc;
+StaticJsonDocument<100> doc;
 
-#define bufsize 250
+#define bufsize 50
 char charBuf1[bufsize];
 char charBuf2[bufsize];
 char charBuf3[bufsize];
@@ -143,14 +143,14 @@ void setup() {
 
   pinMode(sliderNumbers, INPUT);
 
-  writeToScreen(0, "...." );
-  writeToScreen(1, "....."  );
-  writeToScreen(2, "..." );
+  writeToScreen(0, F("...." ));
+  writeToScreen(1, F(".....")  );
+  writeToScreen(2, F("...") );
 
   pinMode(13, OUTPUT);
   digitalWrite(13, HIGH);
 
-  sendCommand("started", millis());
+  sendCommand("started", String(millis()));
 
 }
 
@@ -159,7 +159,7 @@ void resetBasicState() {
   settingsLed = true;
   yesLed  = true;
   noLed = true;
-  writeToScreen(4, "nope");
+  writeToScreen(4, F("nope"));
 }
 
 void loop() {
