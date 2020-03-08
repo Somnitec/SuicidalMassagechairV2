@@ -1,36 +1,37 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using Framework;
+using Input;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-public class CoreButtonResponse : MonoBehaviour
+public class SpecialButtonResponse : MonoBehaviour
 {
     private Settings settings => SettingsHolder.Instance.Settings;
     private NodeGraph graph => settings.Graph;
 
     private void Start()
     {
-        Events.Instance.AddListener<UserInputUp>(HandleInterruptingInput);
+        Events.Instance.AddListener<SpecialInput>(HandleSpecialInput);
     }
 
-    private void HandleInterruptingInput(UserInputUp userInputUp)
+    private void HandleSpecialInput(SpecialInput special)
     {
-        switch (userInputUp.Button)
+        switch (special.Input)
         {
-            case UserInputButton.Repeat:
+            case SpecialInputButtons.Repeat:
                 Repeat();
                 break;
-            case UserInputButton.Kill:
+            case SpecialInputButtons.Kill:
                 Kill();
                 break;
-            case UserInputButton.English:
+            case SpecialInputButtons.English:
                 SetLanguageAndRestart(Language.English);
                 break;
-            case UserInputButton.Dutch:
+            case SpecialInputButtons.Dutch:
                 SetLanguageAndRestart(Language.Dutch);
                 break;
-            case UserInputButton.Settings:
+            case SpecialInputButtons.Settings:
                 SettingsNode();
                 break;
         }
@@ -54,7 +55,6 @@ public class CoreButtonResponse : MonoBehaviour
 
     private void Repeat()
     {
-        Debug.Log("Repeat");
         settings.Graph.PlayNode(settings.Graph.Current);
     }
 }

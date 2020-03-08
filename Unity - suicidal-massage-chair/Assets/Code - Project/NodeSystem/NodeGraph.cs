@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Framework;
+using Input;
 using NodeSystem.BlackBoard;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
@@ -52,14 +53,7 @@ public class NodeGraph : SerializedNodeGraph
     {
         RootNode = node;
     }
-
-    [PropertySpace]
-    [Button]
-    public void InputEvent(UserInputButton button)
-    {
-        Events.Instance.Raise(new UserInputUp(button));
-    }
-
+    
     [PropertySpace]
     [Button]
     public void PlayRoot()

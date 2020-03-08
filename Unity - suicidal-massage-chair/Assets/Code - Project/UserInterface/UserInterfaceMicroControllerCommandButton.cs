@@ -1,14 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using Framework;
+using Input;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class UserInterfaceMicroControllerCommandButton : MonoBehaviour
 {
-    public UserInputButton UserInputButton;
+    [FormerlySerializedAs("UserInputButton")] public AllInputButtons allInputButtons;
 
     public void SendButtonToController()
     {
-        Events.Instance.Raise(new UserInputUp(UserInputButton));
+        InputSender.Send(allInputButtons);
     }
 }

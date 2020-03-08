@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Framework;
+using Input;
 using NodeSystem.Nodes;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -19,7 +20,7 @@ public class DialogueNode : BaseNode
     public NodePlayingLogic playingLogic = new NodePlayingLogic();
 
     [Output(dynamicPortList = true)] [ListDrawerSettings(ShowIndexLabels = false)]
-    public List<UserInputButton> Buttons = new List<UserInputButton>();
+    public List<NormalInputButtons> Buttons = new List<NormalInputButtons>();
 
     [Output] public Connection OnAnyButton;
 
@@ -71,24 +72,14 @@ public class DialogueNode : BaseNode
         ));
     }
 
-    private void HandleInput(UserInputUp e)
+    private void HandleInput(NormalInput e)
     {
         if (logDebugInfo)
             Debug.Log($"HandleInput {name}");
         
         if (ConnectedButtonPressed(e)) return;
 
-        if (SpecialButton(e)) return;
-
         GoToAnyButtonPort(e);
-    }
-
-    private bool SpecialButton(UserInputUp userInputUp)
-    {
-        if (userInputUp.Button.HasFlag(UserInputButton.Kill))
-            return true;
-
-        return false;
     }
 
     public override void OnNodeDisable()
@@ -115,26 +106,26 @@ public class DialogueNode : BaseNode
 
     private void WaitForInput()
     {
-        Events.Instance.RemoveListener<UserInputUp>(OnInterrupted);
-        Events.Instance.AddListener<UserInputUp>(HandleInput);
+        Events.Instance.RemoveListener<NormalInput>(OnInterrupted);
+        Events.Instance.AddListener<NormalInput>(HandleInput);
         Events.Instance.Raise(new WaitingForInput());
     }
 
     private void ListenToInterruptedInput()
     {
-        Events.Instance.AddListener<UserInputUp>(OnInterrupted);
+        Events.Instance.AddListener<NormalInput>(OnInterrupted);
     }
 
-    private void OnInterrupted(UserInputUp e)
+    private void OnInterrupted(NormalInput e)
     {
         if (logDebugInfo)
-            Debug.Log($"OnInterrupted {name} {e.Button}");
-        Events.Instance.Raise(new InterruptedInput(e.Button));
+            Debug.Log($"OnInterrupted {name} {e.Input}");
+        Events.Instance.Raise(new InterruptedInput(e.Input));
     }
 
     private void CleanUp()
     {
-        Events.Instance.RemoveListener<UserInputUp>(HandleInput);
+        Events.Instance.RemoveListener<NormalInput>(HandleInput);
         NodeFunctionRunner.Instance.StopAllCoroutines();
     }
 
@@ -168,28 +159,22 @@ public class DialogueNode : BaseNode
         return GetOutputPort($"Buttons {i}");
     }
 
-    private void GoToAnyButtonPort(UserInputUp e)
+    private void GoToAnyButtonPort(NormalInput e)
     {
         if (logDebugInfo)
-            Debug.Log($"Found Button in AnyButton {e.Button}");
-
-        if (!UserInputButton.AnyButton.HasFlag(e.Button))
-        {
-            Debug.Log($"Ignoring {e.Button}");
-            return;
-        }
+            Debug.Log($"Found Button in NormalInput {e.Input}");
 
         GoToNode(AnyButtonPort);
     }
 
-    private bool ConnectedButtonPressed(UserInputUp e)
+    private bool ConnectedButtonPressed(NormalInput e)
     {
         for (int i = 0; i < Buttons.Count; i++)
         {
-            if (Buttons[i].HasFlag(e.Button))
+            if (Buttons[i].HasFlag(e.Input))
             {
                 if (logDebugInfo)
-                    Debug.Log($"Found Button in Buttons {e.Button}");
+                    Debug.Log($"Found Button in Buttons {e.Input}");
 
                 GoToNode(GetButtonPort(i));
                 return true;
@@ -208,10 +193,10 @@ internal class WaitingForInput : Event
 
 public class InterruptedInput : Event
 {
-    public UserInputButton Button;
+    public NormalInputButtons Input;
 
-    public InterruptedInput(UserInputButton button)
+    public InterruptedInput(NormalInputButtons input)
     {
-        Button = button;
+        Input = input;
     }
 }

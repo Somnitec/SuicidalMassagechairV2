@@ -23,9 +23,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: -8994079771481405862}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -265,9 +265,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: -8554295189768476542}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -451,9 +451,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: -8448898358569378876}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -635,9 +635,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: -8392889451991938686}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -873,9 +873,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: -7846428968476788790}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -1054,9 +1054,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: -7770791189078705305}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -1242,9 +1242,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: -7717035514121807602}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -1426,9 +1426,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: -7590438613953989903}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -1469,8 +1469,8 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: Buttons 0
       _node: {fileID: -7590438613953989903}
-      _typeQualifiedName: UserInputButton, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
+      _typeQualifiedName: Input.NormalInputButtons, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
         node: {fileID: 7042135551006653560}
@@ -1481,8 +1481,8 @@ MonoBehaviour:
       _dynamic: 1
     - _fieldName: Buttons 1
       _node: {fileID: -7590438613953989903}
-      _typeQualifiedName: UserInputButton, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
+      _typeQualifiedName: Input.NormalInputButtons, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
         node: {fileID: -5571000456554445829}
@@ -1493,8 +1493,8 @@ MonoBehaviour:
       _dynamic: 1
     - _fieldName: Buttons 2
       _node: {fileID: -7590438613953989903}
-      _typeQualifiedName: UserInputButton, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
+      _typeQualifiedName: Input.NormalInputButtons, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
         node: {fileID: -5571000456554445829}
@@ -1505,8 +1505,8 @@ MonoBehaviour:
       _dynamic: 1
     - _fieldName: Buttons 3
       _node: {fileID: -7590438613953989903}
-      _typeQualifiedName: UserInputButton, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
+      _typeQualifiedName: Input.NormalInputButtons, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
         node: {fileID: 2133992958435680425}
@@ -1517,8 +1517,8 @@ MonoBehaviour:
       _dynamic: 1
     - _fieldName: Buttons 4
       _node: {fileID: -7590438613953989903}
-      _typeQualifiedName: UserInputButton, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
+      _typeQualifiedName: Input.NormalInputButtons, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
         node: {fileID: -101341086018554257}
@@ -1674,9 +1674,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: -7345050390076242110}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -1855,9 +1855,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: -7336868934079093662}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -2038,9 +2038,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: -7327097967632401089}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -2219,9 +2219,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: -7228031355817524702}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -2397,9 +2397,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: -7078719455784761792}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -2440,8 +2440,8 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: Buttons 0
       _node: {fileID: -7078719455784761792}
-      _typeQualifiedName: UserInputButton, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
+      _typeQualifiedName: Input.NormalInputButtons, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       connections: []
       _direction: 1
       _connectionType: 0
@@ -2449,8 +2449,8 @@ MonoBehaviour:
       _dynamic: 1
     - _fieldName: Buttons 1
       _node: {fileID: -7078719455784761792}
-      _typeQualifiedName: UserInputButton, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
+      _typeQualifiedName: Input.NormalInputButtons, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       connections: []
       _direction: 1
       _connectionType: 0
@@ -2598,9 +2598,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: -6837799431877547677}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -2811,9 +2811,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: -6266312729297621883}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -2823,10 +2823,7 @@ MonoBehaviour:
       _node: {fileID: -6266312729297621883}
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections:
-      - fieldName: Input
-        node: {fileID: 0}
-        reroutePoints: []
+      connections: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -2987,9 +2984,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: -6222638010856258188}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -3171,9 +3168,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: -6205505796161779793}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -3364,9 +3361,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: -6154199773289885947}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -3540,9 +3537,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: -5997860821628821780}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -3726,9 +3723,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: -5901530969184916472}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -3902,9 +3899,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: -5690415087482660534}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -4090,9 +4087,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: -5641851357586344885}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -4266,9 +4263,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: -5571000456554445829}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -4452,9 +4449,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: -5526141858756207580}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -4635,9 +4632,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: -5371570797472822275}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -4877,9 +4874,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: -5312963164094768972}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -5195,9 +5192,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: -4389871386844864069}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -5442,9 +5439,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: -3823995484323307970}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -5626,9 +5623,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: -3638098325038414586}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -5809,9 +5806,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: -3610547459773356572}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -5852,8 +5849,8 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: Buttons 0
       _node: {fileID: -3610547459773356572}
-      _typeQualifiedName: UserInputButton, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
+      _typeQualifiedName: Input.NormalInputButtons, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
         node: {fileID: 1041147522421350506}
@@ -5864,8 +5861,8 @@ MonoBehaviour:
       _dynamic: 1
     - _fieldName: Buttons 1
       _node: {fileID: -3610547459773356572}
-      _typeQualifiedName: UserInputButton, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
+      _typeQualifiedName: Input.NormalInputButtons, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
         node: {fileID: 1041147522421350506}
@@ -5876,8 +5873,8 @@ MonoBehaviour:
       _dynamic: 1
     - _fieldName: Buttons 2
       _node: {fileID: -3610547459773356572}
-      _typeQualifiedName: UserInputButton, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
+      _typeQualifiedName: Input.NormalInputButtons, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
         node: {fileID: 1041147522421350506}
@@ -6031,9 +6028,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: -3566505905932908605}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -6217,9 +6214,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: -3458681536859297886}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -6260,8 +6257,8 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: Buttons 0
       _node: {fileID: -3458681536859297886}
-      _typeQualifiedName: UserInputButton, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
+      _typeQualifiedName: Input.NormalInputButtons, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       connections: []
       _direction: 1
       _connectionType: 0
@@ -6412,9 +6409,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: -3363269784039383675}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -6455,8 +6452,8 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: Buttons 0
       _node: {fileID: -3363269784039383675}
-      _typeQualifiedName: UserInputButton, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
+      _typeQualifiedName: Input.NormalInputButtons, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
         node: {fileID: -6205505796161779793}
@@ -6467,8 +6464,8 @@ MonoBehaviour:
       _dynamic: 1
     - _fieldName: Buttons 1
       _node: {fileID: -3363269784039383675}
-      _typeQualifiedName: UserInputButton, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
+      _typeQualifiedName: Input.NormalInputButtons, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
         node: {fileID: -6205505796161779793}
@@ -6619,9 +6616,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: -3299548474966859825}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -6799,9 +6796,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: -3266370253258997241}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -6974,7 +6971,7 @@ MonoBehaviour:
   m_Name: Go Back
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 35.155396, y: -2388.0498}
+  position: {x: 104, y: -2552}
   ports:
     keys:
     - Input
@@ -7024,9 +7021,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: -2575359792057119683}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -7206,9 +7203,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: -2504659225492858953}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -7382,9 +7379,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: -2274233485018546175}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -7576,9 +7573,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: -2037516449181032992}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -7619,8 +7616,8 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: Buttons 0
       _node: {fileID: -2037516449181032992}
-      _typeQualifiedName: UserInputButton, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
+      _typeQualifiedName: Input.NormalInputButtons, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
         node: {fileID: -5312963164094768972}
@@ -7631,8 +7628,8 @@ MonoBehaviour:
       _dynamic: 1
     - _fieldName: Buttons 1
       _node: {fileID: -2037516449181032992}
-      _typeQualifiedName: UserInputButton, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
+      _typeQualifiedName: Input.NormalInputButtons, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
         node: {fileID: -5312963164094768972}
@@ -7643,8 +7640,8 @@ MonoBehaviour:
       _dynamic: 1
     - _fieldName: Buttons 2
       _node: {fileID: -2037516449181032992}
-      _typeQualifiedName: UserInputButton, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
+      _typeQualifiedName: Input.NormalInputButtons, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
         node: {fileID: -5312963164094768972}
@@ -7655,8 +7652,8 @@ MonoBehaviour:
       _dynamic: 1
     - _fieldName: Buttons 3
       _node: {fileID: -2037516449181032992}
-      _typeQualifiedName: UserInputButton, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
+      _typeQualifiedName: Input.NormalInputButtons, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
         node: {fileID: 7981594382699293725}
@@ -7667,8 +7664,8 @@ MonoBehaviour:
       _dynamic: 1
     - _fieldName: Buttons 4
       _node: {fileID: -2037516449181032992}
-      _typeQualifiedName: UserInputButton, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
+      _typeQualifiedName: Input.NormalInputButtons, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
         node: {fileID: 7981594382699293725}
@@ -7819,9 +7816,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: -1700308333204621207}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -8004,9 +8001,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: -1580948153590891576}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -8246,9 +8243,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: -1201324122032544533}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -8289,8 +8286,8 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: Buttons 0
       _node: {fileID: -1201324122032544533}
-      _typeQualifiedName: UserInputButton, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
+      _typeQualifiedName: Input.NormalInputButtons, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
         node: {fileID: -2274233485018546175}
@@ -8301,8 +8298,8 @@ MonoBehaviour:
       _dynamic: 1
     - _fieldName: Buttons 1
       _node: {fileID: -1201324122032544533}
-      _typeQualifiedName: UserInputButton, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
+      _typeQualifiedName: Input.NormalInputButtons, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
         node: {fileID: -2274233485018546175}
@@ -8313,8 +8310,8 @@ MonoBehaviour:
       _dynamic: 1
     - _fieldName: Buttons 2
       _node: {fileID: -1201324122032544533}
-      _typeQualifiedName: UserInputButton, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
+      _typeQualifiedName: Input.NormalInputButtons, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
         node: {fileID: -2274233485018546175}
@@ -8325,8 +8322,8 @@ MonoBehaviour:
       _dynamic: 1
     - _fieldName: Buttons 3
       _node: {fileID: -1201324122032544533}
-      _typeQualifiedName: UserInputButton, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
+      _typeQualifiedName: Input.NormalInputButtons, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
         node: {fileID: -5997860821628821780}
@@ -8337,8 +8334,8 @@ MonoBehaviour:
       _dynamic: 1
     - _fieldName: Buttons 4
       _node: {fileID: -1201324122032544533}
-      _typeQualifiedName: UserInputButton, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
+      _typeQualifiedName: Input.NormalInputButtons, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
         node: {fileID: -5997860821628821780}
@@ -8491,9 +8488,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: -1091343554348421386}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -8672,9 +8669,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: -971606948688147651}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -8857,9 +8854,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: -405076259388996453}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -9040,9 +9037,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: -101341086018554257}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -9101,8 +9098,8 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: Buttons 0
       _node: {fileID: -101341086018554257}
-      _typeQualifiedName: UserInputButton, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
+      _typeQualifiedName: Input.NormalInputButtons, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
         node: {fileID: 2133992958435680425}
@@ -9253,9 +9250,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: -89246422760205840}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -9434,9 +9431,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: -8031432521099503}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -9722,10 +9719,15 @@ MonoBehaviour:
   - {fileID: 2402223245068922724}
   - {fileID: -5901530969184916472}
   - {fileID: 2613051793389196431}
+  - {fileID: 6704950907193982427}
+  - {fileID: -6266312729297621883}
+  - {fileID: 7327445449274755081}
+  - {fileID: -3148387074904951723}
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 2402223245068922724}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -9744,7 +9746,19 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: No Input Node
+    - Name: $v
+      Entry: 10
       Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -9753,8 +9767,8 @@ MonoBehaviour:
       Data: 
   BlackBoard: {fileID: 11400000, guid: 6e91e850ef5b058419e0213511aef8c7, type: 2}
   RootNode: {fileID: 4732577369696971334}
-  Current: {fileID: -5571000456554445829}
-  goBackNode: {fileID: 0}
+  Current: {fileID: 2402223245068922724}
+  goBackNode: {fileID: -7770791189078705305}
 --- !u!114 &65596093096334774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9778,9 +9792,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: 65596093096334774}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -9977,9 +9991,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: 106402782884662346}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -10163,9 +10177,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: 160536016693736326}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -10553,9 +10567,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: 952151569382984394}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -10733,9 +10747,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: 1041147522421350506}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -10922,9 +10936,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: 1141414019056836269}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -11105,9 +11119,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: 1165554918314036783}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -11404,9 +11418,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: 2133992958435680425}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -11594,9 +11608,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: 2226828829978798018}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -11767,7 +11781,7 @@ MonoBehaviour:
   m_Name: NoInput
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -296, y: -2424}
+  position: {x: -280, y: -2392}
   ports:
     keys:
     - Buttons
@@ -11777,9 +11791,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: 2402223245068922724}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -11996,9 +12010,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: 2721203014488041263}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -12249,9 +12263,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: 2997809375468621211}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -12592,9 +12606,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: 3275923003541781711}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -12774,9 +12788,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: 3923096361612234210}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -12950,9 +12964,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: 4294519880033511022}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -13139,9 +13153,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: 4413015116208158534}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -13406,9 +13420,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: 4682633200990584376}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -13588,9 +13602,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: 4732577369696971334}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -13628,8 +13642,8 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: Buttons 0
       _node: {fileID: 4732577369696971334}
-      _typeQualifiedName: UserInputButton, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
+      _typeQualifiedName: Input.NormalInputButtons, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
         node: {fileID: 106402782884662346}
@@ -13782,9 +13796,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: 5111179798817576192}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -14114,9 +14128,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: 5363201879556412363}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -14154,8 +14168,8 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: Buttons 0
       _node: {fileID: 5363201879556412363}
-      _typeQualifiedName: UserInputButton, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
+      _typeQualifiedName: Input.NormalInputButtons, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
         node: {fileID: 9041604224590574684}
@@ -14166,8 +14180,8 @@ MonoBehaviour:
       _dynamic: 1
     - _fieldName: Buttons 1
       _node: {fileID: 5363201879556412363}
-      _typeQualifiedName: UserInputButton, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
+      _typeQualifiedName: Input.NormalInputButtons, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
         node: {fileID: 9041604224590574684}
@@ -14178,8 +14192,8 @@ MonoBehaviour:
       _dynamic: 1
     - _fieldName: Buttons 2
       _node: {fileID: 5363201879556412363}
-      _typeQualifiedName: UserInputButton, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
+      _typeQualifiedName: Input.NormalInputButtons, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
         node: {fileID: 9041604224590574684}
@@ -14335,9 +14349,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: 5391435612619162048}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -14592,9 +14606,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: 5458372892668278758}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -14883,9 +14897,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: 5545151047441068190}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -15066,9 +15080,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: 5587421710696698482}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -15254,9 +15268,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: 5678102674184325031}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -15575,9 +15589,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: 6203063996855124080}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -15754,9 +15768,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: 6499310106079996464}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -15940,9 +15954,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: 6560713244171051530}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -16114,7 +16128,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -280, y: -2472}
+  position: {x: -248, y: -2632}
   ports:
     keys:
     - Buttons
@@ -16124,9 +16138,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: 6704950907193982427}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -16148,10 +16162,7 @@ MonoBehaviour:
       _node: {fileID: 6704950907193982427}
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections:
-      - fieldName: Input
-        node: {fileID: 0}
-        reroutePoints: []
+      connections: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -16306,9 +16317,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: 6718934962484871127}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -16346,8 +16357,8 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: Buttons 0
       _node: {fileID: 6718934962484871127}
-      _typeQualifiedName: UserInputButton, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
+      _typeQualifiedName: Input.NormalInputButtons, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
         node: {fileID: 4294519880033511022}
@@ -16358,8 +16369,8 @@ MonoBehaviour:
       _dynamic: 1
     - _fieldName: Buttons 1
       _node: {fileID: 6718934962484871127}
-      _typeQualifiedName: UserInputButton, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
+      _typeQualifiedName: Input.NormalInputButtons, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
         node: {fileID: 4294519880033511022}
@@ -16370,8 +16381,8 @@ MonoBehaviour:
       _dynamic: 1
     - _fieldName: Buttons 2
       _node: {fileID: 6718934962484871127}
-      _typeQualifiedName: UserInputButton, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
+      _typeQualifiedName: Input.NormalInputButtons, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
         node: {fileID: 4294519880033511022}
@@ -16532,9 +16543,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: 7042135551006653560}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -16572,8 +16583,8 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: Buttons 0
       _node: {fileID: 7042135551006653560}
-      _typeQualifiedName: UserInputButton, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
+      _typeQualifiedName: Input.NormalInputButtons, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
         node: {fileID: -6205505796161779793}
@@ -16584,8 +16595,8 @@ MonoBehaviour:
       _dynamic: 1
     - _fieldName: Buttons 1
       _node: {fileID: 7042135551006653560}
-      _typeQualifiedName: UserInputButton, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
+      _typeQualifiedName: Input.NormalInputButtons, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
         node: {fileID: -101341086018554257}
@@ -16596,8 +16607,8 @@ MonoBehaviour:
       _dynamic: 1
     - _fieldName: Buttons 2
       _node: {fileID: 7042135551006653560}
-      _typeQualifiedName: UserInputButton, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
+      _typeQualifiedName: Input.NormalInputButtons, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
         node: {fileID: -101341086018554257}
@@ -16608,8 +16619,8 @@ MonoBehaviour:
       _dynamic: 1
     - _fieldName: Buttons 3
       _node: {fileID: 7042135551006653560}
-      _typeQualifiedName: UserInputButton, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
+      _typeQualifiedName: Input.NormalInputButtons, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
         node: {fileID: -6205505796161779793}
@@ -16620,8 +16631,8 @@ MonoBehaviour:
       _dynamic: 1
     - _fieldName: Buttons 4
       _node: {fileID: 7042135551006653560}
-      _typeQualifiedName: UserInputButton, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
+      _typeQualifiedName: Input.NormalInputButtons, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Input
         node: {fileID: 2133992958435680425}
@@ -16846,9 +16857,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: 7327445449274755081}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -17029,9 +17040,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: 0}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -17205,9 +17216,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: 0}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -17442,9 +17453,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: 7981594382699293725}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -17628,9 +17639,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: 8790188067921515153}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -17805,9 +17816,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: 8825632724882243287}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -17990,9 +18001,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: 9041604224590574684}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
@@ -18179,9 +18190,9 @@ MonoBehaviour:
     values:
     - _fieldName: Buttons
       _node: {fileID: 9062488457228335062}
-      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       connections: []
       _direction: 1
       _connectionType: 0
