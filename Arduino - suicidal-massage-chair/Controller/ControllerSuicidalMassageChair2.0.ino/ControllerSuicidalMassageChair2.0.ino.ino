@@ -45,7 +45,7 @@
 
 
 #include <Bounce2.h>
-#include <ss_oled.h>
+#include <U8g2lib.h>
 #include <elapsedMillis.h>
 #include <ArduinoJson.h>
 
@@ -121,13 +121,23 @@ bool   noLed = true;
 
 StaticJsonDocument<100> doc;
 
-#define bufsize 50
-char charBuf1[bufsize];
-char charBuf2[bufsize];
-char charBuf3[bufsize];
-char charBuf4[bufsize];
-char charBuf5[bufsize];
-char szTemp[32];
+
+U8G2_SH1106_128X64_NONAME_1_SW_I2C OLED0(U8G2_R0, /* clock=*/ 16, /* data=*/ 17, /* reset=*/ U8X8_PIN_NONE);   // All Boards without Reset of the Display
+U8G2_SH1106_128X64_NONAME_1_SW_I2C OLED1(U8G2_R0, /* clock=*/ 22, /* data=*/ 23, /* reset=*/ U8X8_PIN_NONE);   // All Boards without Reset of the Display
+U8G2_SH1106_128X64_NONAME_1_SW_I2C OLED2(U8G2_R0, /* clock=*/ 19, /* data=*/ 18, /* reset=*/ U8X8_PIN_NONE);   // All Boards without Reset of the Display
+
+#define STARTSPACE 11
+#define LINESPACE 16
+#define CHARACTERWIDTH 13
+#define LINESAMOUNT 5
+
+
+char charBuf1[CHARACTERWIDTH+1];
+char charBuf2[CHARACTERWIDTH+1];
+char charBuf3[CHARACTERWIDTH+1];
+char charBuf4[CHARACTERWIDTH+1];
+char charBuf5[CHARACTERWIDTH+1];
+char szTemp[CHARACTERWIDTH+1];
 
 void setup() {
   Serial.begin(115200);
@@ -142,6 +152,15 @@ void setup() {
   }
 
   pinMode(sliderNumbers, INPUT);
+
+  OLED0.begin();
+  OLED0.setFont(u8g2_font_courB12_tr   );
+  
+  OLED1.begin();
+  OLED1.setFont(u8g2_font_courB12_tr   );
+  
+  OLED2.begin();
+  OLED2.setFont(u8g2_font_courB12_tr   );
 
   writeToScreen(0, F("...." ));
   writeToScreen(1, F(".....")  );
