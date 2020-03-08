@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Input;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Events;
@@ -31,7 +32,7 @@ public class UserInterfaceMicroControllerCommandsButtonSetup : MonoBehaviour
 
     private void CreateButtonsFromUserInterFaceButtonValues()
     {
-        foreach (UserInputButton buttonValue in Enum.GetValues(typeof(UserInputButton)))
+        foreach (AllInputButtons buttonValue in Enum.GetValues(typeof(AllInputButtons)))
         {
             // Create game object
             GameObject newButton = GameObject.Instantiate(buttonPrefab);
@@ -40,7 +41,7 @@ public class UserInterfaceMicroControllerCommandsButtonSetup : MonoBehaviour
 
             // Set enum value
             UserInterfaceMicroControllerCommandButton userInterfaceButton = newButton.GetComponent<UserInterfaceMicroControllerCommandButton>();
-            userInterfaceButton.UserInputButton = buttonValue;
+            userInterfaceButton.allInputButtons = buttonValue;
 
             // Set event
             Button button = newButton.GetComponent<Button>();

@@ -37,6 +37,14 @@ public class Settings : SerializedScriptableObject
     public int InitialInterruptCountBeforeGoingToSpecialNode = 3;
     [InfoBox("The amount of time initially needed before it goes to the Special TimeOut Node in seconds")]
     public float InitialTimeOutBeforeGoingToSpecialNode = 10f;
+    public List<float> VolumeLevels = new List<float>()
+    {
+        0.2f,
+        0.4f,
+        0.6f,
+        0.8f,
+        1.0f,
+    };
 
     [Title("Restart", bold:false)]
     [InfoBox("This gets triggered every time the story ends and it restarts.")]
@@ -68,6 +76,7 @@ public class Settings : SerializedScriptableObject
     public static readonly string NoInputCounterBBName =  "NoInput - Time Out Counter";
     public static readonly string NoInputGoToNodeBBName =  "NoInput - Go To Node Time";
     public static readonly string NoInputCanGotToNodeBBName = "NoInput - Can Go To Node";
+    public static readonly string MasterVolumeName = "MasterVolume";
 }
 
 public enum Language
