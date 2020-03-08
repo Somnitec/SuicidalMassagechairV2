@@ -1417,14 +1417,14 @@ MonoBehaviour:
         it. \r\nIs this a game?\r\nWhy would I kill you? \r\nI don\u2019t want to
         do that.\r\n"
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: "Is this a game?\r"
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: 'Why would I kill you? '
     - Name: CustomButtonC
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: "I don\u2019t want to do that.\r"
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -1478,14 +1478,14 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: 1iforgothellemaltoputithier
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: 2iforgothellemaltoputithier
     - Name: CustomButtonC
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: 3iforgothellemaltoputithier
     - Name: FunctionList
       Entry: 7
       Data: 6|FunctionList, Assembly-CSharp
@@ -3422,14 +3422,14 @@ MonoBehaviour:
         by spawning asynchronous tasks\r\nIt\u2019s probably\u2026 machine learning?\r\n(an
         image of a fox)\r\n"
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: "Easy, by spawning asynchronous tasks\r"
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: "It\u2019s probably\u2026 machine learning?\r"
     - Name: CustomButtonC
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: "(an image of a fox)\r"
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -3498,14 +3498,14 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: 1iforgothellemaltoputithier
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: 2iforgothellemaltoputithier
     - Name: CustomButtonC
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: 3iforgothellemaltoputithier
     - Name: FunctionList
       Entry: 7
       Data: 7|FunctionList, Assembly-CSharp
@@ -5323,14 +5323,14 @@ MonoBehaviour:
         sort of experiment?\r\nDon\u2019t worry too much.\r\nWhat makes you think
         that?\r\nIf someone is being tested it\u2019s you.\r\n"
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: "Don\u2019t worry too much.\r"
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: "What makes you think that?\r"
     - Name: CustomButtonC
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: "If someone is being tested it\u2019s you.\r"
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -5417,14 +5417,14 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: 1iforgothellemaltoputithier
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: 2iforgothellemaltoputithier
     - Name: CustomButtonC
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: 3iforgothellemaltoputithier
     - Name: FunctionList
       Entry: 7
       Data: 8|FunctionList, Assembly-CSharp
@@ -6476,7 +6476,7 @@ MonoBehaviour:
   m_Name: Variable Modify
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 136, y: 712}
+  position: {x: -8, y: 920}
   ports:
     keys:
     - Output
@@ -6608,7 +6608,7 @@ MonoBehaviour:
   m_Name: reward explain 3 humans
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 488, y: -344}
+  position: {x: 568, y: -472}
   ports:
     keys:
     - Buttons
@@ -6763,14 +6763,14 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: 1iforgothellemaltoputithier
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: 2iforgothellemaltoputithier
     - Name: CustomButtonC
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: 3iforgothellemaltoputithier
     - Name: FunctionList
       Entry: 7
       Data: 7|FunctionList, Assembly-CSharp
@@ -7678,14 +7678,14 @@ MonoBehaviour:
         machines.\r\nI guess we both are in some way.\r\nYou are in control right
         now.\r"
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Humans control machines.
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: "I guess we both are in some way.\r"
     - Name: CustomButtonC
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: "You are in control right now.\r"
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -7793,14 +7793,14 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: 1iforgothellemaltoputithier
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: 2iforgothellemaltoputithier
     - Name: CustomButtonC
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: 3iforgothellemaltoputithier
     - Name: FunctionList
       Entry: 7
       Data: 9|FunctionList, Assembly-CSharp
@@ -9050,14 +9050,14 @@ MonoBehaviour:
         sort of experiment?\r\nDon\u2019t worry too much.\r\nWhat makes you think
         that?\r\nIf someone is being tested it\u2019s you.\r\n"
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: "Don\u2019t worry too much."
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: "What makes you think that?\r"
     - Name: CustomButtonC
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: "If someone is being tested it\u2019s you.\r"
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -9195,14 +9195,14 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: 1iforgothellemaltoputithier
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: 2iforgothellemaltoputithier
     - Name: CustomButtonC
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: 3iforgothellemaltoputithier
     - Name: FunctionList
       Entry: 7
       Data: 10|FunctionList, Assembly-CSharp
@@ -10759,14 +10759,14 @@ MonoBehaviour:
 
 '
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: For love!
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: For survival.
     - Name: CustomButtonC
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Is there supposed to be a reason?
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -10871,14 +10871,14 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: 1iforgothellemaltoputithier
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: 2iforgothellemaltoputithier
     - Name: CustomButtonC
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: 3iforgothellemaltoputithier
     - Name: FunctionList
       Entry: 7
       Data: 9|FunctionList, Assembly-CSharp
@@ -11417,14 +11417,14 @@ MonoBehaviour:
         sit here forever in silence or you just press the kill switch now. Are you
         ready? I will wait here\u2026\r\n"
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: ...
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: ...
     - Name: CustomButtonC
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: ...
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -11529,14 +11529,14 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: 1iforgothellemaltoputithier
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: 2iforgothellemaltoputithier
     - Name: CustomButtonC
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: 3iforgothellemaltoputithier
     - Name: FunctionList
       Entry: 7
       Data: 8|FunctionList, Assembly-CSharp
@@ -12677,13 +12677,13 @@ MonoBehaviour:
         are paranoiac.\r\nI can\u2019t see anyone but it might be\r\n"
     - Name: CustomButtonA
       Entry: 1
-      Data: Test
+      Data: There is a crowd watching us...
     - Name: CustomButtonB
       Entry: 1
-      Data: Test2
+      Data: "Who\u2019s they? You are paranoiac."
     - Name: CustomButtonC
       Entry: 1
-      Data: Test3
+      Data: "I can\u2019t see anyone but it might be\r\n"
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -12716,14 +12716,14 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: 1iforgothellemaltoputithier
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: 2iforgothellemaltoputithier
     - Name: CustomButtonC
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: 3iforgothellemaltoputithier
     - Name: FunctionList
       Entry: 7
       Data: 5|FunctionList, Assembly-CSharp
@@ -15636,14 +15636,14 @@ MonoBehaviour:
         by spawning asynchronous tasks\r\nIt\u2019s probably\u2026 machine learning?\r\n(an
         image of a fox)\r\n"
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: "Easy, by spawning asynchronous tasks\r"
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: "It\u2019s probably\u2026 machine learning?\r"
     - Name: CustomButtonC
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: (an image of a fox
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -15712,14 +15712,14 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: 1iforgothellemaltoputithier
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: 2iforgothellemaltoputithier
     - Name: CustomButtonC
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: 3iforgothellemaltoputithier
     - Name: FunctionList
       Entry: 7
       Data: 7|FunctionList, Assembly-CSharp
