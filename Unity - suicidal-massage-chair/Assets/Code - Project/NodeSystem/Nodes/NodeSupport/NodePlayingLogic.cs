@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using NodeSystem.Functions;
 using Sirenix.OdinInspector;
 using UnityEngine;
 

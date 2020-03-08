@@ -9767,8 +9767,8 @@ MonoBehaviour:
       Data: 
   BlackBoard: {fileID: 11400000, guid: 6e91e850ef5b058419e0213511aef8c7, type: 2}
   RootNode: {fileID: 4732577369696971334}
-  Current: {fileID: 2402223245068922724}
-  goBackNode: {fileID: -7770791189078705305}
+  Current: {fileID: 6704950907193982427}
+  goBackNode: {fileID: 2402223245068922724}
 --- !u!114 &65596093096334774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16128,7 +16128,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -248, y: -2632}
+  position: {x: -232, y: -2648}
   ports:
     keys:
     - Buttons
@@ -16179,7 +16179,8 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 8300000, guid: c161bb9f44aa6884aa1c2db93922ffa3, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -16192,8 +16193,8 @@ MonoBehaviour:
       Entry: 7
       Data: 1|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 0
     - Name: Text
       Entry: 6
       Data: 
@@ -16215,7 +16216,40 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: NodeScriptLine, Assembly-CSharp
+    - Name: TimeSec
+      Entry: 4
       Data: 0
+    - Name: Function
+      Entry: 7
+      Data: 4|NodeSystem.Functions.CompositeFunction, Assembly-CSharp
+    - Name: key
+      Entry: 1
+      Data: Easy Massage
+    - Name: loop
+      Entry: 5
+      Data: true
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: NodeScriptLine, Assembly-CSharp
+    - Name: TimeSec
+      Entry: 4
+      Data: 12
+    - Name: Function
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -16230,7 +16264,7 @@ MonoBehaviour:
       Data: 
     - Name: dutch
       Entry: 7
-      Data: 4|NodeData, Assembly-CSharp
+      Data: 5|NodeData, Assembly-CSharp
     - Name: AudioClip
       Entry: 6
       Data: 
@@ -16248,10 +16282,10 @@ MonoBehaviour:
       Data: 
     - Name: FunctionList
       Entry: 7
-      Data: 5|FunctionList, Assembly-CSharp
+      Data: 6|FunctionList, Assembly-CSharp
     - Name: Functions
       Entry: 7
-      Data: 6|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
+      Data: 7|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
@@ -16273,13 +16307,13 @@ MonoBehaviour:
       Data: 
     - Name: playingLogic
       Entry: 7
-      Data: 7|NodePlayingLogic, Assembly-CSharp
+      Data: 8|NodePlayingLogic, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
     - Name: timeOutLogic
       Entry: 7
-      Data: 8|NodeSystem.Nodes.NodeTimeOutLogic, Assembly-CSharp
+      Data: 9|NodeSystem.Nodes.NodeTimeOutLogic, Assembly-CSharp
     - Name: HasTimeOut
       Entry: 5
       Data: true

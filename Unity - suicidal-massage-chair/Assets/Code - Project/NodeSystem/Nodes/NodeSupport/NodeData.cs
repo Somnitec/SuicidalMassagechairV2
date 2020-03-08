@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
+using NodeSystem.Functions;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -34,32 +33,5 @@ public class NodeData
     private bool Validate(string input)
     {
         return input == null || input?.Length < 44;
-    }
-}
-
-public class FunctionList
-{
-    [TableList(AlwaysExpanded = true, HideToolbar = true)]
-    [HideLabel]
-    [FoldoutGroup("Chair Functions")]
-    [PropertyOrder(10)]
-    public List<NodeScriptLine> Functions = new List<NodeScriptLine>();
-
-    public float Duration => Functions.Max(f => f.TimeSec as float?) ?? 0;
-
-    [FoldoutGroup("Chair Functions")]
-    [HorizontalGroup("Chair Functions/Buttons")]
-    [Button]
-    public void Sort()
-    {
-        Functions = Functions.OrderBy(a => a.TimeSec).ToList();
-    }
-
-    [FoldoutGroup("Chair Functions")]
-    [HorizontalGroup("Chair Functions/Buttons")]
-    [Button]
-    private void Add()
-    {
-        Functions.Add(new NodeScriptLine());
     }
 }
