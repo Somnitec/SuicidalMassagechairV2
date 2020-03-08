@@ -21,10 +21,6 @@ public class ApplicationStateApplicationManager : SingletonMonoBehavior<Applicat
             RestartApplication();
         else
             ChangeState(ApplicationState.Playing);
-
-
-        // Example of using this event on the End node
-        // Events.Instance.Raise(new StoryFinished());
     }
 
     [Button]

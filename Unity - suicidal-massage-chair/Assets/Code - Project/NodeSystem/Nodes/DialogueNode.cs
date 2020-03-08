@@ -35,7 +35,8 @@ public class DialogueNode : BaseNode
     private bool logDebugInfo => settings.LogDebugInfo;
     private bool hasTimeOut => timeOutLogic.HasTimeOut;
 
-    private NodePort AnyButtonPort => GetOutputPort("OnAnyButton");
+    private NodePort anyButtonPort => GetOutputPort("OnAnyButton");
+    private NodePort timeOutPort => GetOutputPort("OnTimeOut");
 
     #endregion
 
@@ -135,12 +136,16 @@ public class DialogueNode : BaseNode
 
     protected override bool HasConnections()
     {
-        var onAnyButtonConnected = AnyButtonPort.IsConnected;
+        var onAnyButtonConnected = anyButtonPort.IsConnected;
+        var timeoutConnected = hasTimeOut && timeOutPort.IsConnected;
         var anyButtonsConnected = AnyButtonConnected();
-        if (logDebugInfo)
-            Debug.Log($"HasConnections {onAnyButtonConnected} {anyButtonsConnected}");
 
-        return onAnyButtonConnected || anyButtonsConnected;
+        var hasConnection = onAnyButtonConnected || anyButtonsConnected || timeoutConnected;
+
+        if(!hasConnection)
+            Debug.LogWarning("No Connections for DialogueNode");
+
+        return hasConnection;
     }
 
     private bool AnyButtonConnected()
@@ -164,7 +169,7 @@ public class DialogueNode : BaseNode
         if (logDebugInfo)
             Debug.Log($"Found Button in NormalInput {e.Input}");
 
-        GoToNode(AnyButtonPort);
+        GoToNode(anyButtonPort);
     }
 
     private bool ConnectedButtonPressed(NormalInput e)

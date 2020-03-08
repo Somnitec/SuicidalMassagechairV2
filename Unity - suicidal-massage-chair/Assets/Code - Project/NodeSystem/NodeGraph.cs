@@ -44,6 +44,7 @@ public class NodeGraph : SerializedNodeGraph
     [Button]
     public void NoMoreConnections()
     {
+        Debug.LogError("No more connections");
         Events.Instance.Raise(new StoryFinished());
     }
 

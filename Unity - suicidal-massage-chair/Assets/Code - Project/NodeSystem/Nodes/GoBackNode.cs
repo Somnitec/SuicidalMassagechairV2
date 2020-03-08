@@ -8,6 +8,7 @@ using NodeSystem.Blackboard;
 using NodeSystem.BlackBoard;
 using NodeSystem.Nodes;
 using Sirenix.OdinInspector;
+using UnityEngine;
 using XNode;
 
 
@@ -20,7 +21,12 @@ public class GoBackNode : BaseNode
 
     protected override bool HasConnections()
     {
-        return NodeGraph.HasGoBackNode;
+        var hasConnection = NodeGraph.HasGoBackNode;
+        
+        if(!hasConnection)
+            Debug.LogWarning("No Connections for GoBackNode");
+        
+        return hasConnection;
     }
 }
 
