@@ -1,6 +1,7 @@
 #include <FastLED.h>
 #include <Bounce2.h>
 #include <ArduinoJson.h>
+#include <elapsedMillis.h>
 
 //PINMAPPINGS
 #define pump A5
@@ -29,12 +30,13 @@
 //EDITABLE VARIABLES
 unsigned int blinkTime = 2000;
 
-int chair_position_estimated; //up: 0 - flat: 10000
+int chair_position_estimated; //up:10000 - flat :0
 int chair_position_target;  // 0 - 10000
+int chair_position_target_range = 10;//if estimated is within this range of the target, it's good eno
 int chair_position_motor_direction; //-1 down, 0 neutral, 1 up
 int chair_position_move_time_max;
-int chair_position_move_time_up;
-int chair_position_move_time_down;
+int chair_position_move_time_up = 15000;
+int chair_position_move_time_down = 12000;
 
 bool roller_kneading_on;
 int roller_kneading_speed = 255;
@@ -44,6 +46,7 @@ int roller_pounding_speed = 255;
 
 int roller_position_estimated;  //bottom: 0 - top: 10000
 int roller_position_target;  // 0 - 10000
+int roller_position_target_range = 10;//if estimated is within this range of the target, it's good enough
 int roller_position_motor_direction; //-1 down, 0 neutral, 1 up
 Bounce roller_sensor_top = Bounce();
 Bounce roller_sensor_bottom = Bounce();
@@ -51,22 +54,24 @@ int roller_move_time_up = 15862; //is average measured value
 int roller_move_time_down = 14776; //is average measured value
 int roller_estimated_position;
 
+int kneading_position =0;//an unimplented variable to set the exact position of the kneaders on the spine
+
 bool feet_roller_on;
 int feet_roller_speed = 255;
 
-//bool airpump_on;
-//bool airbag_shoulders_on;
-//bool airbag_arms_on;
-//bool airbag_legs_on;
-//bool airbag_outside_on;
-int airbag_time_max;
+bool airpump_on;
+bool airbag_shoulders_on;
+bool airbag_arms_on;
+bool airbag_legs_on;
+bool airbag_outside_on;
+int airbag_time_max = 10000;
 
 //bool butt_vibration_on;
 
 bool backlight_on;
 int backlight_color[] = {0, 0, 0}; //rgb
-int backlight_LED[] = {0, 0}; //(led, color):
-int blacklight_program[] = {0, 1, 2, 3}; //(program, parameters....)
+int backlight_LED[] = {0, 1, 2, 3}; //(led, color):
+int blacklight_program[] = {0, 1, 2, 3}; //(program, speed, var1,var2)
 
 bool redgreen_statuslight;//0=red,1=green
 
@@ -100,15 +105,13 @@ const int inputAmount = sizeof(inputs) / sizeof(inputs[0]);
 
 #define DATA_PIN    6
 #define LED_TYPE    WS2811
-#define COLOR_ORDER GRB
+#define COLOR_ORDER RGB
 #define NUM_LEDS    39
 CRGB leds[NUM_LEDS];
 #define BRIGHTNESS          128
 #define FRAMES_PER_SECOND  120
 
 int ledPos = 0;
-int ledBreathMin = 100;
-int ledBreathMax = 255;
 
 bool readingMessage = false;
 
@@ -120,7 +123,7 @@ StaticJsonDocument<200> doc;
 bool movingToTarget = true;//needed for roller
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(115200);
   while (!Serial);//leonardo fix?
 
 
@@ -142,31 +145,47 @@ void setup() {
   roller_sensor_bottom.interval(button_bounce_time);
 
 
-  moveRollerUp();
-
   //rollerCalibrationRoutine();
-  roller_position_target = 8000;
-  //sendAck();
+
+  last_command = "finished setup, now resetting";
+  doAck();
+  reset();
+
+}
+
+void reset() {
+  digitalWrite(redgreen_statuslight, LOW);
+  allAirbagsOff();
+  moveChairUp();
+  moveRollerUp();
+  last_command = "finished reset";
+  doAck();
 }
 
 
 
 void loop()
 {
-  //rollerRoutine();
 
+  readSerial();
 
-
+  rollerRoutine();
+  chairPositionRoutine();
+  airbagRoutine();
 
 
   //Blinking the led to see if code is still running
+
+
   if (millis() > blinkTimer + blinkTime)
   {
     digitalWrite(led, !digitalRead(led));
     blinkTimer = millis();
   }
 
- readSerial();
+
+  doLeds();
+  doAck() ;
 }
 
 void printError(String error) {
@@ -176,88 +195,9 @@ void printError(String error) {
 }
 
 
-void incorrectMessage(String mssg) {
-  Serial.print(F("{\n\t\"no useful message\":\""));
-  Serial.print(mssg);
-  Serial.println(F("\"\n}"));
-
-}
-
-String getCommand(String mssg) {
-  if (mssg.indexOf(':') == -1) return "";
-  else  return mssg.substring(mssg.indexOf('"') + 1 , mssg.lastIndexOf('"'));
-
-}
-
-int countValues(String mssg) {
-  if (mssg.indexOf(':') == -1)return 0;
-  else if ((bool)mssg.substring(mssg.indexOf(':') + 1 , mssg.lastIndexOf(',')).toInt())return 1;
-  else if (int firstBracket = mssg.indexOf('[')) {
-    if (mssg.indexOf(',') == -1)return 1;
-    int i = 1;
-    int index = 0;
-    while (index = mssg.indexOf(',', index)) {
-      i++;
-    }
-    return i;
-  }
-  else return 0;
-
-}
-bool validateInput(String command, int expectedArguments) {
-  if ( expectedArguments == 0) return false;//always get one argument (for now)
-  else {
-    for (int i = 0; i < expectedArguments; i++) {
-      String item = doc[command][i];
-      if (item.equals("null"))return false;
-    }
-  }
-  last_command = command;
-  return true;
-}
-/*
-  int getValue(String mssg) {
-  return mssg.substring(mssg.indexOf(':') + 1 , mssg.lastIndexOf(';')).toInt();
-  }*/
-
-bool checkForParameters(String mssg, String command, int amount) { //later expandable for multiple parameters
-  if (mssg.startsWith(command)) {
-    if (amount == 0)  return mssg.indexOf(':') == -1;
-    if (amount == 1)  return mssg.indexOf(':') != -1;
-    if (amount == 2)  return mssg.indexOf(':', mssg.indexOf(':')) != -1;
-    if (amount == 3)  return mssg.indexOf(':', mssg.indexOf(':', mssg.indexOf(':'))) != -1;
-  } else return false;
-}
-
-
 
 
 float fmap(float x, float in_min, float in_max, float out_min, float out_max)
 {
   return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
-}
-
-
-boolean isNumeric(String str) {
-  unsigned int stringLength = str.length();
-  if (stringLength == 0) {
-    return false;
-  }
-  boolean seenDecimal = false;
-  for (unsigned int i = 0; i < stringLength; ++i) {
-    if (isDigit(str.charAt(i))) {
-      continue;
-    } else if ( i == 0 && str.charAt(0) == ' -') {
-      continue;
-    }
-    if (str.charAt(i) == '.') {
-      if (seenDecimal) {
-        return false;
-      }
-      seenDecimal = true;
-      continue;
-    }
-    return false;
-  }
-  return true;
 }

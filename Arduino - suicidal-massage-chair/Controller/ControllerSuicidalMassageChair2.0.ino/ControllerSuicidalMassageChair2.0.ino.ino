@@ -45,7 +45,7 @@
 
 
 #include <Bounce2.h>
-#include <ss_oled.h>
+#include <U8g2lib.h>
 #include <elapsedMillis.h>
 #include <ArduinoJson.h>
 
@@ -106,11 +106,11 @@ String buttonsString[] = {"buttonKill",
                           "buttonThumbDown",
                           "buttonHorn"
                          };
-int buttonAmount = sizeof(buttons) / sizeof(buttons[0]);
-int LEDs[] = {LEDSettings, LEDNo, LEDYes, 13};
-int ledAmount = sizeof(buttons) / sizeof(buttons[0]);
+byte buttonAmount = sizeof(buttons) / sizeof(buttons[0]);
+byte  LEDs[] = {LEDSettings, LEDNo, LEDYes, 13};
+byte ledAmount = sizeof(buttons) / sizeof(buttons[0]);
 Bounce *debouncedButtons = new Bounce[buttonAmount];
-int lastSliderValue = 0;
+byte lastSliderValue = 0;
 
 boolean LEDSOn = true;
 
@@ -119,18 +119,28 @@ bool   yesLed  = true;
 bool   noLed = true;
 
 
-StaticJsonDocument<200> doc;
+StaticJsonDocument<100> doc;
 
-#define bufsize 250
-char charBuf1[bufsize];
-char charBuf2[bufsize];
-char charBuf3[bufsize];
-char charBuf4[bufsize];
-char charBuf5[bufsize];
-char szTemp[32];
+
+U8G2_SH1106_128X64_NONAME_1_SW_I2C OLED0(U8G2_R0, /* clock=*/ 16, /* data=*/ 17, /* reset=*/ U8X8_PIN_NONE);   // All Boards without Reset of the Display
+U8G2_SH1106_128X64_NONAME_1_SW_I2C OLED1(U8G2_R0, /* clock=*/ 22, /* data=*/ 23, /* reset=*/ U8X8_PIN_NONE);   // All Boards without Reset of the Display
+U8G2_SH1106_128X64_NONAME_1_SW_I2C OLED2(U8G2_R0, /* clock=*/ 19, /* data=*/ 18, /* reset=*/ U8X8_PIN_NONE);   // All Boards without Reset of the Display
+
+#define STARTSPACE 11
+#define LINESPACE 16
+#define CHARACTERWIDTH 13
+#define LINESAMOUNT 5
+
+
+char charBuf1[CHARACTERWIDTH+1];
+char charBuf2[CHARACTERWIDTH+1];
+char charBuf3[CHARACTERWIDTH+1];
+char charBuf4[CHARACTERWIDTH+1];
+char charBuf5[CHARACTERWIDTH+1];
+char szTemp[CHARACTERWIDTH+1];
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(115200);
 
   for (int i = 0; i < ledAmount; i++)
     pinMode(LEDs[i], OUTPUT);
@@ -143,15 +153,25 @@ void setup() {
 
   pinMode(sliderNumbers, INPUT);
 
-  writeToScreen(0, "...." );
-  writeToScreen(1, "....."  );
-  writeToScreen(2, "..." );
+  OLED0.begin();
+  OLED0.setFont(u8g2_font_courB12_tr   );
+  
+  OLED1.begin();
+  OLED1.setFont(u8g2_font_courB12_tr   );
+  
+  OLED2.begin();
+  OLED2.setFont(u8g2_font_courB12_tr   );
+
+  writeToScreen(0, F("...." ));
+  writeToScreen(1, F(".....")  );
+  writeToScreen(2, F("...") );
 
   pinMode(13, OUTPUT);
   digitalWrite(13, HIGH);
 
-  sendCommand("started", millis());
+  sendCommand("started", String(millis()));
 
+sendCommand("buttonLanguage", digitalRead(buttonLanguage));
 }
 
 void resetBasicState() {
@@ -159,7 +179,7 @@ void resetBasicState() {
   settingsLed = true;
   yesLed  = true;
   noLed = true;
-  writeToScreen(4, "nope");
+  writeToScreen(4, F("nope"));
 }
 
 void loop() {
