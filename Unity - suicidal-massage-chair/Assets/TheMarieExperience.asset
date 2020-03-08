@@ -1684,6 +1684,185 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.647, g: 0.745, b: 0.957, a: 1}
   Buttons: 04000000
+--- !u!114 &-7717035514121807602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e762170afb489d7498c4c2bde9052014, type: 3}
+  m_Name: Interupted3
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 40, y: -1320}
+  ports:
+    keys:
+    - Buttons
+    - OnAnyButton
+    - OnTimeOut
+    - Input
+    values:
+    - _fieldName: Buttons
+      _node: {fileID: -7717035514121807602}
+      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
+        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OnAnyButton
+      _node: {fileID: -7717035514121807602}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: -5703086309989648135}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OnTimeOut
+      _node: {fileID: -7717035514121807602}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Input
+      _node: {fileID: -7717035514121807602}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: False
+        node: {fileID: 4523438675981210794}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: Data
+      Entry: 7
+      Data: 0|NodeSystem.Nodes.NodeMultiLanguageData, Assembly-CSharp
+    - Name: english
+      Entry: 7
+      Data: 1|NodeData, Assembly-CSharp
+    - Name: AudioClip
+      Entry: 6
+      Data: 
+    - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 1
+      Data: 
+    - Name: FunctionList
+      Entry: 7
+      Data: 2|FunctionList, Assembly-CSharp
+    - Name: Functions
+      Entry: 7
+      Data: 3|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: dutch
+      Entry: 7
+      Data: 4|NodeData, Assembly-CSharp
+    - Name: AudioClip
+      Entry: 6
+      Data: 
+    - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 1
+      Data: 
+    - Name: FunctionList
+      Entry: 7
+      Data: 5|FunctionList, Assembly-CSharp
+    - Name: Functions
+      Entry: 7
+      Data: 6|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: playingLogic
+      Entry: 7
+      Data: 7|NodePlayingLogic, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: timeOutLogic
+      Entry: 7
+      Data: 8|NodeSystem.Nodes.NodeTimeOutLogic, Assembly-CSharp
+    - Name: HasTimeOut
+      Entry: 5
+      Data: false
+    - Name: TimeOut
+      Entry: 4
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+  Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  Buttons: 
 --- !u!114 &-7590438613953989903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2861,6 +3040,225 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.953, g: 0.647, b: 0.804, a: 1}
   Buttons: 0200000000100000
+--- !u!114 &-6837799431877547677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e762170afb489d7498c4c2bde9052014, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -312, y: -1240}
+  ports:
+    keys:
+    - Buttons
+    - OnAnyButton
+    - OnTimeOut
+    - Input
+    values:
+    - _fieldName: Buttons
+      _node: {fileID: -6837799431877547677}
+      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
+        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OnAnyButton
+      _node: {fileID: -6837799431877547677}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OnTimeOut
+      _node: {fileID: -6837799431877547677}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Input
+      _node: {fileID: -6837799431877547677}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: Data
+      Entry: 7
+      Data: 0|NodeSystem.Nodes.NodeMultiLanguageData, Assembly-CSharp
+    - Name: english
+      Entry: 7
+      Data: 1|NodeData, Assembly-CSharp
+    - Name: AudioClip
+      Entry: 6
+      Data: 
+    - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 1
+      Data: 
+    - Name: FunctionList
+      Entry: 7
+      Data: 2|FunctionList, Assembly-CSharp
+    - Name: Functions
+      Entry: 7
+      Data: 3|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: dutch
+      Entry: 7
+      Data: 4|NodeData, Assembly-CSharp
+    - Name: AudioClip
+      Entry: 6
+      Data: 
+    - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 1
+      Data: 
+    - Name: FunctionList
+      Entry: 7
+      Data: 5|FunctionList, Assembly-CSharp
+    - Name: Functions
+      Entry: 7
+      Data: 6|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: playingLogic
+      Entry: 7
+      Data: 7|NodePlayingLogic, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: timeOutLogic
+      Entry: 7
+      Data: 8|NodeSystem.Nodes.NodeTimeOutLogic, Assembly-CSharp
+    - Name: HasTimeOut
+      Entry: 5
+      Data: false
+    - Name: TimeOut
+      Entry: 4
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+  Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  Buttons: 
+--- !u!114 &-6602942127579996291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64c5e61486d4ee69fcb7c13df534653, type: 3}
+  m_Name: Go Back
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 552, y: -1448}
+  ports:
+    keys:
+    - Input
+    values:
+    - _fieldName: Input
+      _node: {fileID: -6602942127579996291}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: 5475258057622951635}
+        reroutePoints: []
+      - fieldName: Output
+        node: {fileID: -5703086309989648135}
+        reroutePoints: []
+      - fieldName: Output
+        node: {fileID: 3831287604822212928}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
 --- !u!114 &-6222638010856258188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3801,6 +4199,67 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.647, g: 0.745, b: 0.957, a: 1}
   Buttons: 
+--- !u!114 &-5703086309989648135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea189d1b56414757976eca0f193086f0, type: 3}
+  m_Name: Variable Modify
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 264, y: -1320}
+  ports:
+    keys:
+    - Output
+    - Input
+    values:
+    - _fieldName: Output
+      _node: {fileID: -5703086309989648135}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: -6602942127579996291}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Input
+      _node: {fileID: -5703086309989648135}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: OnAnyButton
+        node: {fileID: -7717035514121807602}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  Modifier:
+    Name: Interruptions Handled
+    Type: 0
+    ModifyingValue:
+      Type: 2
+      Float: 0
+      Bool: 0
+      Int: 3
 --- !u!114 &-5690415087482660534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9904,10 +10363,21 @@ MonoBehaviour:
   - {fileID: -7228031355817524702}
   - {fileID: 1697699098949911014}
   - {fileID: 5152439567106600264}
+  - {fileID: 5207510548505371999}
+  - {fileID: 6203063996855124080}
+  - {fileID: 4523438675981210794}
+  - {fileID: 2721203014488041263}
+  - {fileID: -6602942127579996291}
+  - {fileID: -7717035514121807602}
+  - {fileID: -5703086309989648135}
+  - {fileID: 5475258057622951635}
+  - {fileID: 3831287604822212928}
+  - {fileID: -6837799431877547677}
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 5207510548505371999}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -9926,7 +10396,19 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Interrupted Node
+    - Name: $v
+      Entry: 10
       Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -9935,7 +10417,7 @@ MonoBehaviour:
       Data: 
   BlackBoard: {fileID: 11400000, guid: 6e91e850ef5b058419e0213511aef8c7, type: 2}
   RootNode: {fileID: 4732577369696971334}
-  Current: {fileID: -1201324122032544533}
+  Current: {fileID: -6837799431877547677}
   goBackNode: {fileID: 0}
 --- !u!114 &65596093096334774
 MonoBehaviour:
@@ -12229,6 +12711,185 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.725, g: 0.863, b: 0.973, a: 1}
   Buttons: 
+--- !u!114 &2721203014488041263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e762170afb489d7498c4c2bde9052014, type: 3}
+  m_Name: Interupted2
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 24, y: -1576}
+  ports:
+    keys:
+    - Buttons
+    - OnAnyButton
+    - OnTimeOut
+    - Input
+    values:
+    - _fieldName: Buttons
+      _node: {fileID: 2721203014488041263}
+      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
+        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OnAnyButton
+      _node: {fileID: 2721203014488041263}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 5475258057622951635}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OnTimeOut
+      _node: {fileID: 2721203014488041263}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Input
+      _node: {fileID: 2721203014488041263}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: True
+        node: {fileID: 4523438675981210794}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: Data
+      Entry: 7
+      Data: 0|NodeSystem.Nodes.NodeMultiLanguageData, Assembly-CSharp
+    - Name: english
+      Entry: 7
+      Data: 1|NodeData, Assembly-CSharp
+    - Name: AudioClip
+      Entry: 6
+      Data: 
+    - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 1
+      Data: 
+    - Name: FunctionList
+      Entry: 7
+      Data: 2|FunctionList, Assembly-CSharp
+    - Name: Functions
+      Entry: 7
+      Data: 3|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: dutch
+      Entry: 7
+      Data: 4|NodeData, Assembly-CSharp
+    - Name: AudioClip
+      Entry: 6
+      Data: 
+    - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 1
+      Data: 
+    - Name: FunctionList
+      Entry: 7
+      Data: 5|FunctionList, Assembly-CSharp
+    - Name: Functions
+      Entry: 7
+      Data: 6|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: playingLogic
+      Entry: 7
+      Data: 7|NodePlayingLogic, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: timeOutLogic
+      Entry: 7
+      Data: 8|NodeSystem.Nodes.NodeTimeOutLogic, Assembly-CSharp
+    - Name: HasTimeOut
+      Entry: 5
+      Data: false
+    - Name: TimeOut
+      Entry: 4
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+  Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  Buttons: 
 --- !u!114 &2732974421499541876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13333,6 +13994,67 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.949, g: 0.549, b: 0.643, a: 1}
   Buttons: 
+--- !u!114 &3831287604822212928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea189d1b56414757976eca0f193086f0, type: 3}
+  m_Name: Variable Modify
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 280, y: -1848}
+  ports:
+    keys:
+    - Output
+    - Input
+    values:
+    - _fieldName: Output
+      _node: {fileID: 3831287604822212928}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: -6602942127579996291}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Input
+      _node: {fileID: 3831287604822212928}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: OnAnyButton
+        node: {fileID: 6203063996855124080}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  Modifier:
+    Name: Interruptions Handled
+    Type: 0
+    ModifyingValue:
+      Type: 2
+      Float: 0
+      Bool: 0
+      Int: 1
 --- !u!114 &3903082913656831692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14281,6 +15003,80 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.949, g: 0.549, b: 0.643, a: 1}
   Buttons: 
+--- !u!114 &4523438675981210794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75edc6708ebe44a4cac788b2c38f93c0, type: 3}
+  m_Name: Variable Comparison
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -328, y: -1592}
+  ports:
+    keys:
+    - True
+    - False
+    - Input
+    values:
+    - _fieldName: True
+      _node: {fileID: 4523438675981210794}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 2721203014488041263}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: False
+      _node: {fileID: 4523438675981210794}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: -7717035514121807602}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Input
+      _node: {fileID: 4523438675981210794}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: False
+        node: {fileID: 5207510548505371999}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  Comparison:
+    Name: Interruptions Handled
+    Comparator: 4
+    CompareValue:
+      Type: 2
+      Float: 0
+      Bool: 0
+      Int: 1
 --- !u!114 &4682633200990584376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14928,6 +15724,77 @@ MonoBehaviour:
       Float: 0
       Bool: 0
       Int: 0
+--- !u!114 &5207510548505371999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75edc6708ebe44a4cac788b2c38f93c0, type: 3}
+  m_Name: Interrupted1
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -328, y: -1848}
+  ports:
+    keys:
+    - True
+    - False
+    - Input
+    values:
+    - _fieldName: True
+      _node: {fileID: 5207510548505371999}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 6203063996855124080}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: False
+      _node: {fileID: 5207510548505371999}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 4523438675981210794}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Input
+      _node: {fileID: 5207510548505371999}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  Comparison:
+    Name: Interruptions Handled
+    Comparator: 4
+    CompareValue:
+      Type: 2
+      Float: 0
+      Bool: 0
+      Int: 0
 --- !u!114 &5363201879556412363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15556,6 +16423,67 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.984, g: 0.855, b: 0.725, a: 1}
   Buttons: 
+--- !u!114 &5475258057622951635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea189d1b56414757976eca0f193086f0, type: 3}
+  m_Name: Variable Modify
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 264, y: -1560}
+  ports:
+    keys:
+    - Output
+    - Input
+    values:
+    - _fieldName: Output
+      _node: {fileID: 5475258057622951635}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: -6602942127579996291}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Input
+      _node: {fileID: 5475258057622951635}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: OnAnyButton
+        node: {fileID: 2721203014488041263}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  Modifier:
+    Name: Interruptions Handled
+    Type: 0
+    ModifyingValue:
+      Type: 2
+      Float: 0
+      Bool: 0
+      Int: 2
 --- !u!114 &5545151047441068190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16109,6 +17037,185 @@ MonoBehaviour:
       Entry: 8
       Data: 
   Color: {r: 0.647, g: 0.745, b: 0.957, a: 1}
+  Buttons: 
+--- !u!114 &6203063996855124080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e762170afb489d7498c4c2bde9052014, type: 3}
+  m_Name: Interupted1
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 40, y: -1864}
+  ports:
+    keys:
+    - Buttons
+    - OnAnyButton
+    - OnTimeOut
+    - Input
+    values:
+    - _fieldName: Buttons
+      _node: {fileID: 6203063996855124080}
+      _typeQualifiedName: System.Collections.Generic.List`1[[UserInputButton, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
+        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OnAnyButton
+      _node: {fileID: 6203063996855124080}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 3831287604822212928}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OnTimeOut
+      _node: {fileID: 6203063996855124080}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Input
+      _node: {fileID: 6203063996855124080}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: True
+        node: {fileID: 5207510548505371999}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: Data
+      Entry: 7
+      Data: 0|NodeSystem.Nodes.NodeMultiLanguageData, Assembly-CSharp
+    - Name: english
+      Entry: 7
+      Data: 1|NodeData, Assembly-CSharp
+    - Name: AudioClip
+      Entry: 6
+      Data: 
+    - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 1
+      Data: 
+    - Name: FunctionList
+      Entry: 7
+      Data: 2|FunctionList, Assembly-CSharp
+    - Name: Functions
+      Entry: 7
+      Data: 3|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: dutch
+      Entry: 7
+      Data: 4|NodeData, Assembly-CSharp
+    - Name: AudioClip
+      Entry: 6
+      Data: 
+    - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 1
+      Data: 
+    - Name: FunctionList
+      Entry: 7
+      Data: 5|FunctionList, Assembly-CSharp
+    - Name: Functions
+      Entry: 7
+      Data: 6|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: playingLogic
+      Entry: 7
+      Data: 7|NodePlayingLogic, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: timeOutLogic
+      Entry: 7
+      Data: 8|NodeSystem.Nodes.NodeTimeOutLogic, Assembly-CSharp
+    - Name: HasTimeOut
+      Entry: 5
+      Data: false
+    - Name: TimeOut
+      Entry: 4
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+  Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   Buttons: 
 --- !u!114 &6204100601901162334
 MonoBehaviour:

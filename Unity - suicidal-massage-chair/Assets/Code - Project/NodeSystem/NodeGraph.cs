@@ -72,7 +72,7 @@ public class NodeGraph : SerializedNodeGraph
     {
         if (!SpecialNodes.ContainsKey(key))
         {
-            Debug.LogError($"No Special node found for index {key}");
+            Debug.LogError($"No Special node found for key: {key}");
             return;
         }
 

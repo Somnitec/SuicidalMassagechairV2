@@ -20,20 +20,22 @@ public class Settings : SerializedScriptableObject
     public bool ShowNodeDebugInfo = true;
     public bool LogDebugInfo = false;
     public bool ShowNodeData = true;
-    [ShowIf("ShowNodeData")]
+    [ShowIf("ShowNodeData"), Indent()]
     public bool ShowNodeAudio = true;
-    [ShowIf("ShowNodeData")]
+    [ShowIf("ShowNodeData"), Indent()]
     public bool ShowNodeText = true;
-    [ShowIf("ShowNodeData")]
+    [ShowIf("ShowNodeData"), Indent()]
     public bool ShowNodeButtons = true;
-    [ShowIf("ShowNodeData")]
+    [ShowIf("ShowNodeData"), Indent()]
     public bool ShowNodeFunctions = true;
-    public Language Language = Language.Dutch;
 
     [Title("App setting")]
+    public Language Language = Language.Dutch;
     public bool ResetChairOnStart = false;
     public float TimeOutTimeInSeconds = 600;
-
+    [InfoBox("The amount of interruptions initially needed before it goes to the Special Interrupted Node")]
+    public int InitialInterruptCountBeforeGoingToSpecialNode = 3;
+    
     [Title("Restart", bold:false)]
     [InfoBox("This gets triggered every time the story ends and it restarts.")]
     [HideReferenceObjectPicker, HideLabel, InlineProperty]
@@ -56,6 +58,11 @@ public class Settings : SerializedScriptableObject
     public static readonly string InteruptedNodeName = "Interrupted Node";
     public static readonly string NoInputNodeName = "No Input Node";
     public static readonly string SettingsNodeName = "Settings Node";
+    
+    [Title("Special Blackboard Names")] 
+    public static readonly string InterruptedCountName = "Interrupted Count";
+    public static readonly string InterruptionsHandledName = "Interruptions Handled";
+    public static readonly string InterruptionsBeforeGoingToNodeName = "Interruptions Before Going To Node";
 }
 
 public enum Language
