@@ -130,7 +130,7 @@ char charBuf5[bufsize];
 char szTemp[32];
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(115200);
 
   for (int i = 0; i < ledAmount; i++)
     pinMode(LEDs[i], OUTPUT);
