@@ -5340,7 +5340,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 3
+      Data: 4
     - Name: 
       Entry: 7
       Data: NodeScriptLine, Assembly-CSharp
@@ -5370,7 +5370,7 @@ MonoBehaviour:
       Data: 5|FeetRollerOn, Assembly-CSharp
     - Name: On
       Entry: 5
-      Data: false
+      Data: true
     - Name: 
       Entry: 8
       Data: 
@@ -5396,6 +5396,24 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
+      Entry: 7
+      Data: NodeScriptLine, Assembly-CSharp
+    - Name: TimeSec
+      Entry: 4
+      Data: 21
+    - Name: Function
+      Entry: 7
+      Data: 7|FeetRollerSpeed, Assembly-CSharp
+    - Name: Speed
+      Entry: 4
+      Data: 0.7
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
       Entry: 13
       Data: 
     - Name: 
@@ -5409,7 +5427,7 @@ MonoBehaviour:
       Data: 
     - Name: dutch
       Entry: 7
-      Data: 7|NodeData, Assembly-CSharp
+      Data: 8|NodeData, Assembly-CSharp
     - Name: AudioClip
       Entry: 10
       Data: 1
@@ -5427,14 +5445,14 @@ MonoBehaviour:
       Data: 3iforgothellemaltoputithier
     - Name: FunctionList
       Entry: 7
-      Data: 8|FunctionList, Assembly-CSharp
+      Data: 9|FunctionList, Assembly-CSharp
     - Name: Functions
       Entry: 7
-      Data: 9|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
+      Data: 10|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
-      Data: 3
+      Data: 4
     - Name: 
       Entry: 7
       Data: NodeScriptLine, Assembly-CSharp
@@ -5443,7 +5461,7 @@ MonoBehaviour:
       Data: 19
     - Name: Function
       Entry: 7
-      Data: 10|ChairPosition, Assembly-CSharp
+      Data: 11|ChairPosition, Assembly-CSharp
     - Name: NewPosition
       Entry: 4
       Data: 0
@@ -5461,10 +5479,10 @@ MonoBehaviour:
       Data: 23
     - Name: Function
       Entry: 7
-      Data: 11|FeetRollerOn, Assembly-CSharp
+      Data: 12|FeetRollerOn, Assembly-CSharp
     - Name: On
       Entry: 5
-      Data: false
+      Data: true
     - Name: 
       Entry: 8
       Data: 
@@ -5479,10 +5497,28 @@ MonoBehaviour:
       Data: 23
     - Name: Function
       Entry: 7
-      Data: 12|RollerPosition, Assembly-CSharp
+      Data: 13|RollerPosition, Assembly-CSharp
     - Name: NewPosition
       Entry: 4
       Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: NodeScriptLine, Assembly-CSharp
+    - Name: TimeSec
+      Entry: 4
+      Data: 23
+    - Name: Function
+      Entry: 7
+      Data: 14|FeetRollerSpeed, Assembly-CSharp
+    - Name: Speed
+      Entry: 4
+      Data: 0.7
     - Name: 
       Entry: 8
       Data: 
@@ -5506,13 +5542,13 @@ MonoBehaviour:
       Data: 
     - Name: playingLogic
       Entry: 7
-      Data: 13|NodePlayingLogic, Assembly-CSharp
+      Data: 15|NodePlayingLogic, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
     - Name: timeOutLogic
       Entry: 7
-      Data: 14|NodeSystem.Nodes.NodeTimeOutLogic, Assembly-CSharp
+      Data: 16|NodeSystem.Nodes.NodeTimeOutLogic, Assembly-CSharp
     - Name: HasTimeOut
       Entry: 5
       Data: false
@@ -6716,7 +6752,7 @@ MonoBehaviour:
       Data: 4|RollerKneadingOn, Assembly-CSharp
     - Name: On
       Entry: 5
-      Data: false
+      Data: true
     - Name: 
       Entry: 8
       Data: 
@@ -6810,7 +6846,7 @@ MonoBehaviour:
       Data: 10|RollerKneadingSpeed, Assembly-CSharp
     - Name: Speed
       Entry: 4
-      Data: 0
+      Data: 0.7
     - Name: 
       Entry: 8
       Data: 
@@ -7695,7 +7731,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 4
+      Data: 3
     - Name: 
       Entry: 7
       Data: NodeScriptLine, Assembly-CSharp
@@ -7722,25 +7758,7 @@ MonoBehaviour:
       Data: 5
     - Name: Function
       Entry: 7
-      Data: 5|FeetRollerOn, Assembly-CSharp
-    - Name: On
-      Entry: 5
-      Data: false
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: NodeScriptLine, Assembly-CSharp
-    - Name: TimeSec
-      Entry: 4
-      Data: 5
-    - Name: Function
-      Entry: 7
-      Data: 6|FeetRollerSpeed, Assembly-CSharp
+      Data: 5|FeetRollerSpeed, Assembly-CSharp
     - Name: Speed
       Entry: 4
       Data: 1
@@ -7758,13 +7776,13 @@ MonoBehaviour:
       Data: 10
     - Name: Function
       Entry: 7
-      Data: 7|AirBag, Assembly-CSharp
+      Data: 6|AirBag, Assembly-CSharp
     - Name: AirBagsOn
       Entry: 3
       Data: 2
     - Name: AirBagsOff
       Entry: 3
-      Data: 0
+      Data: 5
     - Name: 
       Entry: 8
       Data: 
@@ -7785,7 +7803,7 @@ MonoBehaviour:
       Data: 
     - Name: dutch
       Entry: 7
-      Data: 8|NodeData, Assembly-CSharp
+      Data: 7|NodeData, Assembly-CSharp
     - Name: AudioClip
       Entry: 10
       Data: 1
@@ -7803,14 +7821,14 @@ MonoBehaviour:
       Data: 3iforgothellemaltoputithier
     - Name: FunctionList
       Entry: 7
-      Data: 9|FunctionList, Assembly-CSharp
+      Data: 8|FunctionList, Assembly-CSharp
     - Name: Functions
       Entry: 7
-      Data: 10|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
+      Data: 9|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
-      Data: 4
+      Data: 3
     - Name: 
       Entry: 7
       Data: NodeScriptLine, Assembly-CSharp
@@ -7819,13 +7837,13 @@ MonoBehaviour:
       Data: 10
     - Name: Function
       Entry: 7
-      Data: 11|AirBag, Assembly-CSharp
+      Data: 10|AirBag, Assembly-CSharp
     - Name: AirBagsOn
       Entry: 3
       Data: 2
     - Name: AirBagsOff
       Entry: 3
-      Data: 0
+      Data: 5
     - Name: 
       Entry: 8
       Data: 
@@ -7840,10 +7858,10 @@ MonoBehaviour:
       Data: 0
     - Name: Function
       Entry: 7
-      Data: 12|ButtVibration, Assembly-CSharp
+      Data: 11|ButtVibration, Assembly-CSharp
     - Name: On
       Entry: 5
-      Data: false
+      Data: true
     - Name: 
       Entry: 8
       Data: 
@@ -7858,25 +7876,7 @@ MonoBehaviour:
       Data: 5
     - Name: Function
       Entry: 7
-      Data: 13|FeetRollerOn, Assembly-CSharp
-    - Name: On
-      Entry: 5
-      Data: false
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: NodeScriptLine, Assembly-CSharp
-    - Name: TimeSec
-      Entry: 4
-      Data: 5
-    - Name: Function
-      Entry: 7
-      Data: 14|FeetRollerSpeed, Assembly-CSharp
+      Data: 12|FeetRollerSpeed, Assembly-CSharp
     - Name: Speed
       Entry: 4
       Data: 1
@@ -7903,13 +7903,13 @@ MonoBehaviour:
       Data: 
     - Name: playingLogic
       Entry: 7
-      Data: 15|NodePlayingLogic, Assembly-CSharp
+      Data: 13|NodePlayingLogic, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
     - Name: timeOutLogic
       Entry: 7
-      Data: 16|NodeSystem.Nodes.NodeTimeOutLogic, Assembly-CSharp
+      Data: 14|NodeSystem.Nodes.NodeTimeOutLogic, Assembly-CSharp
     - Name: HasTimeOut
       Entry: 5
       Data: false
@@ -9067,7 +9067,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 5
+      Data: 6
     - Name: 
       Entry: 7
       Data: NodeScriptLine, Assembly-CSharp
@@ -9174,6 +9174,27 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: NodeScriptLine, Assembly-CSharp
+    - Name: TimeSec
+      Entry: 4
+      Data: 0
+    - Name: Function
+      Entry: 7
+      Data: 9|FeetRollerSpeed, Assembly-CSharp
+    - Name: Speed
+      Entry: 4
+      Data: 0.7
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
       Entry: 13
       Data: 
     - Name: 
@@ -9187,7 +9208,7 @@ MonoBehaviour:
       Data: 
     - Name: dutch
       Entry: 7
-      Data: 9|NodeData, Assembly-CSharp
+      Data: 10|NodeData, Assembly-CSharp
     - Name: AudioClip
       Entry: 10
       Data: 1
@@ -9205,14 +9226,14 @@ MonoBehaviour:
       Data: 3iforgothellemaltoputithier
     - Name: FunctionList
       Entry: 7
-      Data: 10|FunctionList, Assembly-CSharp
+      Data: 11|FunctionList, Assembly-CSharp
     - Name: Functions
       Entry: 7
-      Data: 11|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
+      Data: 12|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
-      Data: 5
+      Data: 6
     - Name: 
       Entry: 7
       Data: NodeScriptLine, Assembly-CSharp
@@ -9221,7 +9242,7 @@ MonoBehaviour:
       Data: 18
     - Name: Function
       Entry: 7
-      Data: 12|ChairPosition, Assembly-CSharp
+      Data: 13|ChairPosition, Assembly-CSharp
     - Name: NewPosition
       Entry: 4
       Data: 0
@@ -9239,10 +9260,10 @@ MonoBehaviour:
       Data: 22
     - Name: Function
       Entry: 7
-      Data: 13|FeetRollerOn, Assembly-CSharp
+      Data: 14|FeetRollerOn, Assembly-CSharp
     - Name: On
       Entry: 5
-      Data: false
+      Data: true
     - Name: 
       Entry: 8
       Data: 
@@ -9257,7 +9278,7 @@ MonoBehaviour:
       Data: 22
     - Name: Function
       Entry: 7
-      Data: 14|RollerPosition, Assembly-CSharp
+      Data: 15|RollerPosition, Assembly-CSharp
     - Name: NewPosition
       Entry: 4
       Data: 0
@@ -9275,7 +9296,7 @@ MonoBehaviour:
       Data: 0
     - Name: Function
       Entry: 7
-      Data: 15|BacklightOn, Assembly-CSharp
+      Data: 16|BacklightOn, Assembly-CSharp
     - Name: On
       Entry: 5
       Data: false
@@ -9293,7 +9314,7 @@ MonoBehaviour:
       Data: 0
     - Name: Function
       Entry: 7
-      Data: 16|BackLightColor, Assembly-CSharp
+      Data: 17|BackLightColor, Assembly-CSharp
     - Name: Color
       Entry: 7
       Data: UnityEngine.Color, UnityEngine.CoreModule
@@ -9319,6 +9340,24 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
+      Entry: 7
+      Data: NodeScriptLine, Assembly-CSharp
+    - Name: TimeSec
+      Entry: 4
+      Data: 22
+    - Name: Function
+      Entry: 7
+      Data: 18|FeetRollerSpeed, Assembly-CSharp
+    - Name: Speed
+      Entry: 4
+      Data: 0.7
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
       Entry: 13
       Data: 
     - Name: 
@@ -9335,16 +9374,16 @@ MonoBehaviour:
       Data: 
     - Name: playingLogic
       Entry: 7
-      Data: 17|NodePlayingLogic, Assembly-CSharp
+      Data: 19|NodePlayingLogic, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
     - Name: timeOutLogic
       Entry: 7
-      Data: 18|NodeSystem.Nodes.NodeTimeOutLogic, Assembly-CSharp
+      Data: 20|NodeSystem.Nodes.NodeTimeOutLogic, Assembly-CSharp
     - Name: HasTimeOut
       Entry: 5
-      Data: false
+      Data: true
     - Name: TimeOut
       Entry: 4
       Data: 3

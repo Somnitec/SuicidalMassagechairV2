@@ -175,18 +175,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
   Graph: {fileID: 11400000, guid: 208fc1b72ba06254e85f499519f40a6d, type: 2}
   Mock: {fileID: 11400000, guid: 2b0110cd53159fb4394c799a99beb3a5, type: 2}
   Arduino: {fileID: 11400000, guid: 1d31045ae3e113845895ddf3d8fb01d8, type: 2}
