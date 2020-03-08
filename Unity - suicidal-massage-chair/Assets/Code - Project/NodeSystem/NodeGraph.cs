@@ -91,8 +91,13 @@ public class NodeGraph : SerializedNodeGraph
 
     public void Reset()
     {
-        goBackNode = null;
+        ResetGoBackNode();
         BlackBoard.Reset();
+    }
+
+    public void ResetGoBackNode()
+    {
+        goBackNode = null;
     }
 }
 
