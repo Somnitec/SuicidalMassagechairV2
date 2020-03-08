@@ -18,12 +18,16 @@ namespace NodeSystem.Functions
         private Settings settings => SettingsHolder.Instance.Settings;
         private FunctionList functions => settings.compositeFunctionLibrary.Collection[key];
 
-        public override void RaiseEvent()
+        private MonoBehaviour coroutineRunner = NodeFunctionRunner.Instance;
+
+        public override void RaiseEvent(MonoBehaviour coroutineRunner)
         {
-            if(_nodePlayingLogic == null) _nodePlayingLogic = new NodePlayingLogic();
-            
-            NodeFunctionRunner.Instance.StartCoroutine(
-                _nodePlayingLogic.InvokeFunctionsCoroutine(functions, OnComplete));
+            if (_nodePlayingLogic == null) _nodePlayingLogic = new NodePlayingLogic();
+
+            this.coroutineRunner = coroutineRunner;
+
+            coroutineRunner.StartCoroutine(
+                _nodePlayingLogic.InvokeFunctionsCoroutine(functions, OnComplete, coroutineRunner));
         }
 
         private void OnComplete()
@@ -32,7 +36,7 @@ namespace NodeSystem.Functions
             if (loop)
             {
                 Debug.Log($"Looping {key}");
-                RaiseEvent();
+                RaiseEvent(coroutineRunner);
             }
         }
 

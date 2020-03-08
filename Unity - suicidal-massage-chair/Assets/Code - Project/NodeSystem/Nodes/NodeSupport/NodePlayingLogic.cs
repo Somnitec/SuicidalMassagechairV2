@@ -19,19 +19,23 @@ public class NodePlayingLogic
     private float now => Time.timeSinceLevelLoad;
     public string FunctionProgress => $"[{functionProgress:F2}/{functionDuration:F2}]";
 
-    public void PlayFunctionsAndAudio(Action onFinished, AudioClip clip, FunctionList funcs, string name)
+    public void PlayFunctionsAndAudio(Action onFinished, AudioClip clip, FunctionList funcs, string name, NodeFunctionRunner coroutineRunner)
     {
-        NodeFunctionRunner.Instance.StopAllCoroutines();
-        NodeFunctionRunner.Instance.StartCoroutine(
+        coroutineRunner.StopAllCoroutines();
+        coroutineRunner.StartCoroutine(
             InvokeFunctionsAndPlayAudioCoroutine(
                 name,
                 clip,
                 funcs,
-                onFinished));
+                onFinished,  
+                coroutineRunner));
     }
     
-    private IEnumerator InvokeFunctionsAndPlayAudioCoroutine(string name, AudioClip clip, FunctionList funcs,
-        Action onFinished)
+    private IEnumerator InvokeFunctionsAndPlayAudioCoroutine(string name,
+        AudioClip clip,
+        FunctionList funcs,
+        Action onFinished, 
+        MonoBehaviour coroutineRunner)
     {
         FunctionsFinished = false;
         AudioFinished = false;
@@ -48,23 +52,23 @@ public class NodePlayingLogic
             AudioManager.Instance.PlayClip(clip, () => AudioFinished = true);
         }
 
-        yield return ExecuteFunctions(funcs);
-        while (!AudioFinished || !FunctionsFinished)
+        yield return ExecuteFunctions(funcs, coroutineRunner);
+        while (!AudioFinished)
             yield return null;
 
         onFinished?.Invoke();
     }
 
-    public IEnumerator InvokeFunctionsCoroutine(FunctionList funcs, Action onFinished)
+    public IEnumerator InvokeFunctionsCoroutine(FunctionList funcs, Action onFinished, MonoBehaviour coroutineRunner)
     {
         FunctionsFinished = false;
 
-        yield return ExecuteFunctions(funcs);
+        yield return ExecuteFunctions(funcs, coroutineRunner);
 
         onFinished?.Invoke();
     }
 
-    private IEnumerator ExecuteFunctions(FunctionList funcs)
+    private IEnumerator ExecuteFunctions(FunctionList funcs, MonoBehaviour coroutineRunner)
     {
         float timeStarted = Time.timeSinceLevelLoad;
 
@@ -79,14 +83,16 @@ public class NodePlayingLogic
         foreach (var nodeScriptLine in funcs.Functions)
         {
             var timePassed = TimePassed(timeStarted);
-            if (timePassed - nodeScriptLine.TimeSec < 0)
+
+            if (timePassed < nodeScriptLine.TimeSec)
             {
                 var waitTime = nodeScriptLine.TimeSec - timePassed;
                 yield return new WaitForSeconds(waitTime);
             }
-
+            
+            timePassed = TimePassed(timeStarted);
             Debug.Log($"Node Function: {nodeScriptLine.Function?.GetType().FullName} at {timePassed}");
-            nodeScriptLine.Function?.RaiseEvent();
+            nodeScriptLine.Function?.RaiseEvent(coroutineRunner);
         }
 
         FunctionsFinished = true;

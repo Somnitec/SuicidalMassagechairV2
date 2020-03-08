@@ -96,7 +96,7 @@ public class DialogueNode : BaseNode
 
     private void PlayFunctionsAndAudio(Action onFinished)
     {
-        playingLogic.PlayFunctionsAndAudio(OnFinished, Data.Data.AudioClip, Data.Data.FunctionList, name);
+        playingLogic.PlayFunctionsAndAudio(OnFinished, Data.Data.AudioClip, Data.Data.FunctionList, name, NodeFunctionRunner.Instance);
     }
 
     private void StartTimeOut()

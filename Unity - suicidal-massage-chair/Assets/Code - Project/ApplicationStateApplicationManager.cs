@@ -38,7 +38,7 @@ public class ApplicationStateApplicationManager : SingletonMonoBehavior<Applicat
         ChangeState(ApplicationState.Restarting);
         AudioManager.instance.Stop();
 
-        StartCoroutine(_playingLogic.InvokeFunctionsCoroutine(settings.RestartChair, StartWaiting));
+        StartCoroutine(_playingLogic.InvokeFunctionsCoroutine(settings.RestartChair, StartWaiting, this));
     }
 
     private void StartWaiting()
@@ -55,8 +55,7 @@ public class ApplicationStateApplicationManager : SingletonMonoBehavior<Applicat
             Waiting,
             settings.WaitingAudio,
             settings.WaitingFunctions,
-            "Waiting"
-        );
+            "Waiting", NodeFunctionRunner.Instance);
     }
 
     private void StartStory(AllInput e)
@@ -66,7 +65,7 @@ public class ApplicationStateApplicationManager : SingletonMonoBehavior<Applicat
         Events.Instance.RemoveListener<AllInput>(StartStory);
         StopAllCoroutines();
 
-        StartCoroutine(_playingLogic.InvokeFunctionsCoroutine(settings.OnStart, PlayRootNode));
+        StartCoroutine(_playingLogic.InvokeFunctionsCoroutine(settings.OnStart, PlayRootNode, this));
     }
 
     public void PlayRootNode()
@@ -74,6 +73,13 @@ public class ApplicationStateApplicationManager : SingletonMonoBehavior<Applicat
         ChangeState(ApplicationState.Playing);
 
         settings.Graph.PlayRoot();
+        
+        StartCoroutine(_playingLogic.InvokeFunctionsCoroutine(settings.AfterStart, Empty, this));
+    }
+
+    private void Empty()
+    {
+        
     }
 
     private void ChangeState(ApplicationState state)
