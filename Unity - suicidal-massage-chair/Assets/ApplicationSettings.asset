@@ -130,44 +130,7 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: AfterStart
-      Entry: 7
-      Data: 9|FunctionList, Assembly-CSharp
-    - Name: Functions
-      Entry: 7
-      Data: 10|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: NodeScriptLine, Assembly-CSharp
-    - Name: TimeSec
-      Entry: 4
-      Data: 0
-    - Name: Function
-      Entry: 7
-      Data: 11|NodeSystem.Functions.CompositeFunction, Assembly-CSharp
-    - Name: key
-      Entry: 1
-      Data: BreathingBags
-    - Name: loop
-      Entry: 5
-      Data: true
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
+      Entry: 6
       Data: 
   Graph: {fileID: 11400000, guid: 208fc1b72ba06254e85f499519f40a6d, type: 2}
   Mock: {fileID: 11400000, guid: 2b0110cd53159fb4394c799a99beb3a5, type: 2}
@@ -182,7 +145,7 @@ MonoBehaviour:
   ShowNodeDebugInfo: 0
   LogDebugInfo: 0
   ShowNodeData: 1
-  ShowNodeAudio: 0
+  ShowNodeAudio: 1
   ShowNodeText: 1
   ShowNodeButtons: 0
   ShowNodeFunctions: 1
