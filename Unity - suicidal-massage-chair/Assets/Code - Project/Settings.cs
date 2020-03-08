@@ -50,21 +50,22 @@ public class Settings : SerializedScriptableObject
 
     [Title("Restart", bold:false)]
     [InfoBox("This gets triggered every time the story ends and it restarts.")]
-    [HideReferenceObjectPicker, HideLabel, InlineProperty]
     public FunctionList RestartChair = new FunctionList();
 
     [Title("Waiting for start", bold: false)]
     [InfoBox("This audio and functions play while waiting for any input.")]
     [HideReferenceObjectPicker, HideLabel, InlineProperty]
     public AudioClip WaitingAudio;
-    [HideReferenceObjectPicker, HideLabel, InlineProperty]
     public FunctionList WaitingFunctions = new FunctionList();
 
-    [Title("On Start", bold: false)]
-    [InfoBox("This gets triggered after a person has pressed a button in the wait mode.")]
-    [HideReferenceObjectPicker, HideLabel, InlineProperty]
+    [Title("Before Start", bold: false)]
+    [InfoBox("This gets triggered after a person has pressed a button in the wait mode. After this is complete, play root node.")]
     public FunctionList OnStart = new FunctionList();
 
+    [Title("After Start", bold: false)]
+    [InfoBox("This starts playing after the first node has been triggered.")]
+    public FunctionList AfterStart;
+    
     [Title("Special Node Names")] 
     public static readonly string KillNodeName = "Kill Node";
     public static readonly string InteruptedNodeName = "Interrupted Node";
