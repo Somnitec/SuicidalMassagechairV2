@@ -56,7 +56,7 @@ public class AudioManager : SingletonMonoBehavior<AudioManager>
 
     private IEnumerator WaitTillFinished(Action onFinished, float invokeOnFinishedFasterInSeconds)
     {
-        Debug.Log($" {Source.clip.name} {clipDuration} {Source.isPlaying}");
+        Debug.Log($" {Source.clip.name} {clipDuration:F2} {Source.isPlaying}");
         
         while (Source.isPlaying)
         {
