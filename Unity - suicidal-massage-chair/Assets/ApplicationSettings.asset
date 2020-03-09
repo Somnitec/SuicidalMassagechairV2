@@ -187,8 +187,8 @@ MonoBehaviour:
   ShowNodeText: 0
   ShowNodeButtons: 0
   ShowNodeFunctions: 1
-  Language: 0
-  ResetChairOnStart: 0
+  Language: 1
+  ResetChairOnStart: 1
   TimeOutTimeInSeconds: 600
   AllowInputFasterInSeconds: 2
   InitialInterruptCountBeforeGoingToSpecialNode: 1

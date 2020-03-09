@@ -1434,7 +1434,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 7
       Data: NodeScriptLine, Assembly-CSharp
@@ -1457,6 +1457,24 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
+      Entry: 7
+      Data: NodeScriptLine, Assembly-CSharp
+    - Name: TimeSec
+      Entry: 4
+      Data: 0
+    - Name: Function
+      Entry: 7
+      Data: 5|ChairPosition, Assembly-CSharp
+    - Name: NewPosition
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
       Entry: 13
       Data: 
     - Name: 
@@ -1470,7 +1488,7 @@ MonoBehaviour:
       Data: 
     - Name: dutch
       Entry: 7
-      Data: 5|NodeData, Assembly-CSharp
+      Data: 6|NodeData, Assembly-CSharp
     - Name: AudioClip
       Entry: 10
       Data: 1
@@ -1488,10 +1506,10 @@ MonoBehaviour:
       Data: 3iforgothellemaltoputithier
     - Name: FunctionList
       Entry: 7
-      Data: 6|FunctionList, Assembly-CSharp
+      Data: 7|FunctionList, Assembly-CSharp
     - Name: Functions
       Entry: 7
-      Data: 7|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
+      Data: 8|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
@@ -1504,7 +1522,7 @@ MonoBehaviour:
       Data: 0
     - Name: Function
       Entry: 7
-      Data: 8|AirBag, Assembly-CSharp
+      Data: 9|AirBag, Assembly-CSharp
     - Name: AirBagsOn
       Entry: 3
       Data: 13
@@ -1534,13 +1552,13 @@ MonoBehaviour:
       Data: 
     - Name: playingLogic
       Entry: 7
-      Data: 9|NodePlayingLogic, Assembly-CSharp
+      Data: 10|NodePlayingLogic, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
     - Name: timeOutLogic
       Entry: 7
-      Data: 10|NodeSystem.Nodes.NodeTimeOutLogic, Assembly-CSharp
+      Data: 11|NodeSystem.Nodes.NodeTimeOutLogic, Assembly-CSharp
     - Name: HasTimeOut
       Entry: 5
       Data: false
@@ -8884,7 +8902,7 @@ MonoBehaviour:
   BlackBoard: {fileID: 11400000, guid: 6e91e850ef5b058419e0213511aef8c7, type: 2}
   RootNode: {fileID: 4732577369696971334}
   Current: {fileID: 106402782884662346}
-  goBackNode: {fileID: 0}
+  goBackNode: {fileID: 9062488457228335062}
 --- !u!114 &106402782884662346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8995,7 +9013,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 6
+      Data: 5
     - Name: 
       Entry: 7
       Data: NodeScriptLine, Assembly-CSharp
@@ -9028,13 +9046,13 @@ MonoBehaviour:
       Data: UnityEngine.Color, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: 0
+      Data: 0.925027966
     - Name: 
       Entry: 4
       Data: 1
     - Name: 
       Entry: 4
-      Data: 0.96936965
+      Data: 0
     - Name: 
       Entry: 4
       Data: 0
@@ -9052,19 +9070,7 @@ MonoBehaviour:
       Data: NodeScriptLine, Assembly-CSharp
     - Name: TimeSec
       Entry: 4
-      Data: 4
-    - Name: Function
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: NodeScriptLine, Assembly-CSharp
-    - Name: TimeSec
-      Entry: 4
-      Data: 19
+      Data: 0
     - Name: Function
       Entry: 7
       Data: 6|ChairPosition, Assembly-CSharp
@@ -10761,28 +10767,10 @@ MonoBehaviour:
       Data: NodeScriptLine, Assembly-CSharp
     - Name: TimeSec
       Entry: 4
-      Data: 7
-    - Name: Function
-      Entry: 7
-      Data: 5|RollerPosition, Assembly-CSharp
-    - Name: NewPosition
-      Entry: 4
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: NodeScriptLine, Assembly-CSharp
-    - Name: TimeSec
-      Entry: 4
       Data: 0
     - Name: Function
       Entry: 7
-      Data: 6|RollerPoundingOn, Assembly-CSharp
+      Data: 5|RollerPoundingOn, Assembly-CSharp
     - Name: On
       Entry: 5
       Data: true
@@ -10800,10 +10788,28 @@ MonoBehaviour:
       Data: 0
     - Name: Function
       Entry: 7
-      Data: 7|RollerPoundingSpeed, Assembly-CSharp
+      Data: 6|RollerPoundingSpeed, Assembly-CSharp
     - Name: Speed
       Entry: 4
       Data: 0.2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: NodeScriptLine, Assembly-CSharp
+    - Name: TimeSec
+      Entry: 4
+      Data: 7
+    - Name: Function
+      Entry: 7
+      Data: 7|RollerPosition, Assembly-CSharp
+    - Name: NewPosition
+      Entry: 4
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
