@@ -8883,8 +8883,8 @@ MonoBehaviour:
       Data: 
   BlackBoard: {fileID: 11400000, guid: 6e91e850ef5b058419e0213511aef8c7, type: 2}
   RootNode: {fileID: 4732577369696971334}
-  Current: {fileID: 6203063996855124080}
-  goBackNode: {fileID: 106402782884662346}
+  Current: {fileID: 4732577369696971334}
+  goBackNode: {fileID: 0}
 --- !u!114 &106402782884662346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14148,7 +14148,7 @@ MonoBehaviour:
   m_Name: Go Back Consumer
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 106.12713, y: -982.8237}
+  position: {x: -24, y: -920}
   ports:
     keys:
     - Output
