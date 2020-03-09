@@ -8883,8 +8883,8 @@ MonoBehaviour:
       Data: 
   BlackBoard: {fileID: 11400000, guid: 6e91e850ef5b058419e0213511aef8c7, type: 2}
   RootNode: {fileID: 4732577369696971334}
-  Current: {fileID: -1645576537967019624}
-  goBackNode: {fileID: 4732577369696971334}
+  Current: {fileID: -6205505796161779793}
+  goBackNode: {fileID: 0}
 --- !u!114 &106402782884662346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9158,64 +9158,10 @@ MonoBehaviour:
       Data: NodeScriptLine, Assembly-CSharp
     - Name: TimeSec
       Entry: 4
-      Data: 18
-    - Name: Function
-      Entry: 7
-      Data: 12|ChairPosition, Assembly-CSharp
-    - Name: NewPosition
-      Entry: 4
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: NodeScriptLine, Assembly-CSharp
-    - Name: TimeSec
-      Entry: 4
-      Data: 22
-    - Name: Function
-      Entry: 7
-      Data: 13|FeetRollerOn, Assembly-CSharp
-    - Name: On
-      Entry: 5
-      Data: true
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: NodeScriptLine, Assembly-CSharp
-    - Name: TimeSec
-      Entry: 4
-      Data: 22
-    - Name: Function
-      Entry: 7
-      Data: 14|RollerPosition, Assembly-CSharp
-    - Name: NewPosition
-      Entry: 4
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: NodeScriptLine, Assembly-CSharp
-    - Name: TimeSec
-      Entry: 4
       Data: 0
     - Name: Function
       Entry: 7
-      Data: 15|BacklightOn, Assembly-CSharp
+      Data: 12|BacklightOn, Assembly-CSharp
     - Name: On
       Entry: 5
       Data: false
@@ -9233,7 +9179,7 @@ MonoBehaviour:
       Data: 0
     - Name: Function
       Entry: 7
-      Data: 16|BackLightColor, Assembly-CSharp
+      Data: 13|BackLightColor, Assembly-CSharp
     - Name: Color
       Entry: 7
       Data: UnityEngine.Color, UnityEngine.CoreModule
@@ -9252,6 +9198,60 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: NodeScriptLine, Assembly-CSharp
+    - Name: TimeSec
+      Entry: 4
+      Data: 18
+    - Name: Function
+      Entry: 7
+      Data: 14|ChairPosition, Assembly-CSharp
+    - Name: NewPosition
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: NodeScriptLine, Assembly-CSharp
+    - Name: TimeSec
+      Entry: 4
+      Data: 22
+    - Name: Function
+      Entry: 7
+      Data: 15|FeetRollerOn, Assembly-CSharp
+    - Name: On
+      Entry: 5
+      Data: true
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: NodeScriptLine, Assembly-CSharp
+    - Name: TimeSec
+      Entry: 4
+      Data: 22
+    - Name: Function
+      Entry: 7
+      Data: 16|RollerPosition, Assembly-CSharp
+    - Name: NewPosition
+      Entry: 4
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -9830,13 +9830,13 @@ MonoBehaviour:
     SerializationNodes: []
   Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   Comparison:
-    Name: InterruptedCount
+    Name: Interruptions Handled
     Comparator: 4
     CompareValue:
-      Type: 0
+      Type: 2
       Float: 2
       Bool: 0
-      Int: 0
+      Int: 2
 --- !u!114 &1334840423105867892
 MonoBehaviour:
   m_ObjectHideFlags: 0
