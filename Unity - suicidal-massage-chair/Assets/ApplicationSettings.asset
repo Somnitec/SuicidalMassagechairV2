@@ -130,7 +130,23 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: AfterStart
-      Entry: 6
+      Entry: 7
+      Data: 9|FunctionList, Assembly-CSharp
+    - Name: Functions
+      Entry: 7
+      Data: 10|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
       Data: 
   Graph: {fileID: 11400000, guid: 208fc1b72ba06254e85f499519f40a6d, type: 2}
   Mock: {fileID: 11400000, guid: 2b0110cd53159fb4394c799a99beb3a5, type: 2}
@@ -145,9 +161,9 @@ MonoBehaviour:
   ShowNodeDebugInfo: 0
   LogDebugInfo: 0
   LogDebugMessageInfo: 0
-  ShowNodeData: 0
-  ShowNodeAudio: 1
-  ShowNodeText: 1
+  ShowNodeData: 1
+  ShowNodeAudio: 0
+  ShowNodeText: 0
   ShowNodeButtons: 0
   ShowNodeFunctions: 1
   Language: 0

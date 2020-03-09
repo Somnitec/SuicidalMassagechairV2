@@ -7104,10 +7104,7 @@ MonoBehaviour:
       _node: {fileID: -1645576537967019624}
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections:
-      - fieldName: Input
-        node: {fileID: 1334840423105867892}
-        reroutePoints: []
+      connections: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -7116,7 +7113,10 @@ MonoBehaviour:
       _node: {fileID: -1645576537967019624}
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: Input
+        node: {fileID: 1334840423105867892}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -7241,10 +7241,10 @@ MonoBehaviour:
       Data: 8|NodeSystem.Nodes.NodeTimeOutLogic, Assembly-CSharp
     - Name: HasTimeOut
       Entry: 5
-      Data: false
+      Data: true
     - Name: TimeOut
       Entry: 4
-      Data: 3
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -8883,7 +8883,7 @@ MonoBehaviour:
       Data: 
   BlackBoard: {fileID: 11400000, guid: 6e91e850ef5b058419e0213511aef8c7, type: 2}
   RootNode: {fileID: 4732577369696971334}
-  Current: {fileID: -6205505796161779793}
+  Current: {fileID: 106402782884662346}
   goBackNode: {fileID: 0}
 --- !u!114 &106402782884662346
 MonoBehaviour:
@@ -9052,7 +9052,7 @@ MonoBehaviour:
       Data: NodeScriptLine, Assembly-CSharp
     - Name: TimeSec
       Entry: 4
-      Data: 0
+      Data: 4
     - Name: Function
       Entry: 6
       Data: 
@@ -9873,14 +9873,14 @@ MonoBehaviour:
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
-      - fieldName: OnAnyButton
-        node: {fileID: 6695243353364252648}
-        reroutePoints: []
-      - fieldName: OnAnyButton
-        node: {fileID: -1645576537967019624}
-        reroutePoints: []
       - fieldName: OnTimeOut
         node: {fileID: -5548674267027994304}
+        reroutePoints: []
+      - fieldName: OnTimeOut
+        node: {fileID: 6695243353364252648}
+        reroutePoints: []
+      - fieldName: OnTimeOut
+        node: {fileID: -1645576537967019624}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -14407,10 +14407,7 @@ MonoBehaviour:
       _node: {fileID: 6695243353364252648}
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections:
-      - fieldName: Input
-        node: {fileID: 1334840423105867892}
-        reroutePoints: []
+      connections: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -14419,7 +14416,10 @@ MonoBehaviour:
       _node: {fileID: 6695243353364252648}
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: Input
+        node: {fileID: 1334840423105867892}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -14544,10 +14544,10 @@ MonoBehaviour:
       Data: 8|NodeSystem.Nodes.NodeTimeOutLogic, Assembly-CSharp
     - Name: HasTimeOut
       Entry: 5
-      Data: false
+      Data: true
     - Name: TimeOut
       Entry: 4
-      Data: 3
+      Data: 0
     - Name: 
       Entry: 8
       Data: 

@@ -58,7 +58,7 @@ MonoBehaviour:
       Data: 0
     - Name: Float
       Entry: 4
-      Data: 2
+      Data: 0
     - Name: Bool
       Entry: 5
       Data: false
@@ -136,7 +136,7 @@ MonoBehaviour:
       Data: 1
     - Name: Float
       Entry: 4
-      Data: 2
+      Data: 0
     - Name: Bool
       Entry: 5
       Data: false
@@ -217,7 +217,7 @@ MonoBehaviour:
       Data: 0
     - Name: Bool
       Entry: 5
-      Data: true
+      Data: false
     - Name: Int
       Entry: 3
       Data: 0
@@ -259,7 +259,7 @@ MonoBehaviour:
       Data: false
     - Name: Int
       Entry: 3
-      Data: 14
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -337,7 +337,7 @@ MonoBehaviour:
       Data: false
     - Name: Int
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -376,7 +376,7 @@ MonoBehaviour:
       Data: false
     - Name: Int
       Entry: 3
-      Data: 2
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -412,7 +412,7 @@ MonoBehaviour:
       Data: 0
     - Name: Bool
       Entry: 5
-      Data: true
+      Data: false
     - Name: Int
       Entry: 3
       Data: 0
@@ -490,7 +490,7 @@ MonoBehaviour:
       Data: 0
     - Name: Bool
       Entry: 5
-      Data: true
+      Data: false
     - Name: Int
       Entry: 3
       Data: 0
@@ -526,7 +526,7 @@ MonoBehaviour:
       Data: 0
     - Name: Float
       Entry: 4
-      Data: 2.81455541
+      Data: 0
     - Name: Bool
       Entry: 5
       Data: false
@@ -565,7 +565,7 @@ MonoBehaviour:
       Data: 0
     - Name: Float
       Entry: 4
-      Data: 10
+      Data: 3
     - Name: Bool
       Entry: 5
       Data: false
@@ -607,7 +607,7 @@ MonoBehaviour:
       Data: 0
     - Name: Bool
       Entry: 5
-      Data: true
+      Data: false
     - Name: Int
       Entry: 3
       Data: 0
@@ -727,7 +727,7 @@ MonoBehaviour:
       Data: false
     - Name: Int
       Entry: 3
-      Data: 11
+      Data: 1
     - Name: 
       Entry: 8
       Data: 

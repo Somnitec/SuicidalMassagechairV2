@@ -50,9 +50,10 @@ public abstract class Messager : MessageListener
     [Button]
     public override void SendMessageToArduino(string message)
     {
-        if (!ArduinoConnected) return;
+        Debug.Log($"Sending to arduino[{(ArduinoConnected ? 0 : 1)}]{gameObject.name}: {message} ");
 
-        Debug.Log($"Sending to arduino: {message} {gameObject.name}");
+        if (!ArduinoConnected) return;
+        
         serialController.SendSerialMessage(message);
         MessagesSent++;
     }
@@ -60,12 +61,8 @@ public abstract class Messager : MessageListener
     [Button]
     public override void SendMessageToArduino(string param, int value)
     {
-        if (!ArduinoConnected) return;
-
         var message = MessageHelper.ToJson(param, value);
-        Debug.Log($"Sending to arduino: [{message}]");
-        serialController.SendSerialMessage(message);
-        MessagesSent++;
+        SendMessageToArduino(message);
     }
 
     [Button]

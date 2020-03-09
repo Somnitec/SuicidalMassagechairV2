@@ -94,10 +94,10 @@ public class NodePlayingLogic
         {
             var timePassed = TimePassed(timeStarted);
 
-            if (timePassed < nodeScriptLine.TimeSec)
+            while (timePassed < nodeScriptLine.TimeSec)
             {
-                var waitTime = nodeScriptLine.TimeSec - timePassed;
-                yield return new WaitForSeconds(waitTime);
+                yield return null;
+                timePassed = TimePassed(timeStarted);
             }
 
             timePassed = TimePassed(timeStarted);
