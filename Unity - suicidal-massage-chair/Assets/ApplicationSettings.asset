@@ -138,7 +138,28 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: NodeScriptLine, Assembly-CSharp
+    - Name: TimeSec
+      Entry: 4
       Data: 0
+    - Name: Function
+      Entry: 7
+      Data: 11|NodeSystem.Functions.CompositeFunction, Assembly-CSharp
+    - Name: key
+      Entry: 1
+      Data: BreathingBags
+    - Name: loop
+      Entry: 5
+      Data: true
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
