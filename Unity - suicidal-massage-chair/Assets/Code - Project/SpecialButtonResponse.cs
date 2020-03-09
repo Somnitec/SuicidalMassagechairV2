@@ -82,22 +82,35 @@ public class SpecialButtonResponse : MonoBehaviour
 
     private void SettingsNode()
     {
+        if (ApplicationStateApplicationManager.Instance.NotPlaying)
+            return;
+        
         graph.PlaySpecialNode(Settings.SettingsNodeName);
     }
 
     private void SetLanguageAndRestart(Language language)
     {
         settings.Language = language;
+        
+        if (ApplicationStateApplicationManager.Instance.NotPlaying)
+            return;
+        
         graph.PlayNode(graph.Current);
     }
 
     private void Kill()
     {
+        if (ApplicationStateApplicationManager.Instance.NotPlaying)
+            return;
+        
         graph.PlaySpecialNode(Settings.KillNodeName);
     }
 
     private void Repeat()
     {
+        if (ApplicationStateApplicationManager.Instance.NotPlaying)
+            return;
+        
         settings.Graph.PlayNode(settings.Graph.Current);
     }
 }

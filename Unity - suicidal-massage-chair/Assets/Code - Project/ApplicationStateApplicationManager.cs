@@ -12,6 +12,7 @@ public class ApplicationStateApplicationManager : SingletonMonoBehavior<Applicat
 
     private Settings settings => SettingsHolder.Instance.Settings;
     private NodePlayingLogic _playingLogic = new NodePlayingLogic();
+    public bool NotPlaying => State != ApplicationState.Playing;
 
     void Start()
     {
@@ -24,8 +25,6 @@ public class ApplicationStateApplicationManager : SingletonMonoBehavior<Applicat
             ResetValues();
             ChangeState(ApplicationState.Playing);
         }
-        
-        
     }
 
     [Button]
