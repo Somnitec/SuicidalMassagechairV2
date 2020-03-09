@@ -13,19 +13,19 @@ public class InputMessageSender : MonoBehaviour
         _messager = GetComponent<Messager>();
         Events.Instance.AddListener<CustomButtonTextUpdate>(SendCustomButtonText);
         Events.Instance.AddListener<NewNode>(SendReset);
-        Events.Instance.AddListener<StoryFinished>(SendReset);
+        Events.Instance.AddListener<ResetValuesAfterRestart>(SendReset);
+    }
+
+    private void SendReset(ResetValuesAfterRestart e)
+    {
+        Reset();
     }
 
     private void SendReset(NewNode newNode)
     {
         Reset();
     }
-    
-    private void SendReset(StoryFinished newNode)
-    {
-        Reset();
-    }
-    
+
     private void Reset()
     {
         _messager.SendMessageToArduino(MessageHelper.ToJson("reset", 1));
