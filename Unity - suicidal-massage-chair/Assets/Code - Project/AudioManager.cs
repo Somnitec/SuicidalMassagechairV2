@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.Serialization;
+using Debug = UnityEngine.Debug;
 
 public class AudioManager : SingletonMonoBehavior<AudioManager>
 {
@@ -35,8 +37,10 @@ public class AudioManager : SingletonMonoBehavior<AudioManager>
         Source.Stop();
     }
 
-    public void PlayClip(AudioClip clip, Action onFinished)
+    public void PlayClip(AudioClip clip, Action onFinished, float invokeOnFinishedFasterInSeconds)
     {
+        StopAllCoroutines();
+        
         if (clip == null)
         {
             onFinished.Invoke();
@@ -47,12 +51,24 @@ public class AudioManager : SingletonMonoBehavior<AudioManager>
         Source.clip = clip;
         Source.Play();
 
-        StartCoroutine(WaitTillFinished(onFinished));
+        StartCoroutine(WaitTillFinished(onFinished, invokeOnFinishedFasterInSeconds));
     }
 
-    private IEnumerator WaitTillFinished(Action onFinished)
+    private IEnumerator WaitTillFinished(Action onFinished, float invokeOnFinishedFasterInSeconds)
     {
-        yield return new WaitForSeconds((float) clipDuration);
+        Debug.Log($" {Source.clip.name} {clipDuration:F2} {Source.isPlaying}");
+        
+        while (Source.isPlaying)
+        {
+            if (Source.time + invokeOnFinishedFasterInSeconds > clipDuration)
+            {
+                Debug.Log($"Early Exit at {Source.time}/{clipDuration}");
+                break;
+            }
+            yield return null;
+        }
+        
+        yield return new WaitWhile (()=> Source.isPlaying);
 
         onFinished.Invoke();
     }

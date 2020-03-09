@@ -8,8 +8,8 @@ using NodeSystem.Blackboard;
 using NodeSystem.BlackBoard;
 using NodeSystem.Nodes;
 using Sirenix.OdinInspector;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
-using XNode;
 
 
 public class GoBackNode : BaseNode
@@ -29,4 +29,3 @@ public class GoBackNode : BaseNode
         return hasConnection;
     }
 }
-

@@ -16,11 +16,24 @@ namespace NodeSystem.BlackBoard
     public class BlackBoard : SerializedScriptableObject
     {
         public Dictionary<string, BlackBoardTypeAndValue> Values = new Dictionary<string, BlackBoardTypeAndValue>();
+
+        public void Reset()
+        {
+            foreach (var v in Values)
+            {
+                if (v.Value.ResetOnRestart)
+                {
+                    v.Value.Value.Reset();
+                }
+            }
+        }
     }
 
     [Serializable, InlineProperty, HideLabel, HideReferenceObjectPicker]
     public class BlackBoardTypeAndValue
     {
+        [HorizontalGroup(Width = 10), HideLabel]
+        public bool ResetOnRestart = true;
         [HorizontalGroup(Width = 0.5f), HideLabel]
         [OnValueChanged("UpdateType")]
         public BlackBoardValue.ValueType Type;

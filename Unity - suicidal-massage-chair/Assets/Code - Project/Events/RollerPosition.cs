@@ -13,6 +13,6 @@ public class RollerPosition : NodeScriptFunction
 
     public override List<string> SerializeToJson()
     {
-        return ToList(ToJson("roller_estimated_position",(int)(10000f * NewPosition)));
+        return ToList(ToJson("roller_position_target",(int)(10000f * NewPosition)));
     }
 }

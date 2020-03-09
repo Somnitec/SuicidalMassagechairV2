@@ -6,6 +6,7 @@ using NodeSystem.Blackboard;
 using NodeSystem.BlackBoard;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using Event = Framework.Event;
 
 public class NoInputTimeOutHandler : BlackBoardValueModifier
 {
@@ -18,9 +19,21 @@ public class NoInputTimeOutHandler : BlackBoardValueModifier
         Events.Instance.AddListener<WaitingForInput>(StartNoInputTimeout);
         Events.Instance.AddListener<AllInput>(StopWaiting);
         Events.Instance.AddListener<NewNode>(StopWaiting);
+        Events.Instance.AddListener<StoryFinished>(StopWaiting);
+        Events.Instance.AddListener<ResetValuesAfterRestart>(SetupBlackBoard);
+        SetupBlackBoard();
+    }
+    
+    private void SetupBlackBoard(ResetValuesAfterRestart e)
+    {
         SetupBlackBoard();
     }
 
+    private void StopWaiting(StoryFinished e)
+    {
+        StopWaiting();
+    }
+    
     private void StopWaiting(NewNode e)
     {
         StopWaiting();
@@ -75,6 +88,10 @@ public class NoInputTimeOutHandler : BlackBoardValueModifier
             yield return null;
         }
     }
+}
+
+internal class ResetValuesAfterRestart : Event
+{
 }
 
 public class BlackBoardValueModifier : MonoBehaviour

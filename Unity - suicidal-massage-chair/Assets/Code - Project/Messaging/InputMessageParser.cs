@@ -1,4 +1,5 @@
-﻿using Input;
+﻿using System;
+using Input;
 using Messaging.Raw;
 using UnityEngine;
 
@@ -8,7 +9,16 @@ namespace Messaging
     {
         public static RawInput ParseMessage(string msg)
         {
-            return JsonUtility.FromJson<RawInput>(msg);
+            try
+            {
+                return JsonUtility.FromJson<RawInput>(msg);
+            }
+            catch(ArgumentException e)
+            {
+                Debug.LogError($"JSON error for {msg} has exception: {e.Message}\n {e.StackTrace}");
+            }
+
+            return null;
         }
 
         public static AllInputButtons? ParseButton(RawInput raw)

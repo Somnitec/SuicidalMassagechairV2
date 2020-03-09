@@ -28,7 +28,7 @@
 //still available 0, 1, 6, 12 (?)
 
 //EDITABLE VARIABLES
-unsigned int blinkTime = 2000;
+
 
 int chair_position_estimated; //up:10000 - flat :0
 int chair_position_target;  // 0 - 10000
@@ -54,7 +54,7 @@ int roller_move_time_up = 15862; //is average measured value
 int roller_move_time_down = 14776; //is average measured value
 int roller_estimated_position;
 
-int kneading_position =0;//an unimplented variable to set the exact position of the kneaders on the spine
+int kneading_position = 0; //an unimplented variable to set the exact position of the kneaders on the spine
 
 bool feet_roller_on;
 int feet_roller_speed = 255;
@@ -94,7 +94,8 @@ String last_command = "";
 //status (sends ack)
 
 //UTILITY VARIABLES
-unsigned long blinkTimer = 0;
+elapsedMillis blinkTimer;
+unsigned int blinkTime = 1000;
 int led = 13;
 String readString;
 
@@ -155,9 +156,16 @@ void setup() {
 
 void reset() {
   digitalWrite(redgreen_statuslight, LOW);
+
+  digitalWrite(kneading, LOW);
+  digitalWrite(pounding, LOW);
+  digitalWrite(feet, LOW);
+
   allAirbagsOff();
-  moveChairUp();
-  moveRollerUp();
+  //moveChairUp();
+  //moveRollerUp();
+  chair_position_target=10000;
+  roller_position_target=0;
   last_command = "finished reset";
   doAck();
 }
@@ -177,10 +185,10 @@ void loop()
   //Blinking the led to see if code is still running
 
 
-  if (millis() > blinkTimer + blinkTime)
+  if (blinkTimer > blinkTime)
   {
+    blinkTimer = 0;
     digitalWrite(led, !digitalRead(led));
-    blinkTimer = millis();
   }
 
 

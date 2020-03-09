@@ -47,6 +47,7 @@ public class DialogueNode : BaseNode
         if (logDebugInfo)
             Debug.Log($"OnNodeEnable {name}");
 
+        AudioManager.Instance.Stop();
         ListenToInterruptedInput();
         PlayFunctionsAndAudio(OnFinished);
     }

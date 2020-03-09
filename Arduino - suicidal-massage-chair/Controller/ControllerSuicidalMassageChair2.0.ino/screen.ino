@@ -13,7 +13,7 @@ void OnSetScreen() {
 
 void writeToScreen(int screen, String text) {
 
-  if (screen > 3) text = " "; // could be done more cleanly
+  if (screen!=0 &&screen!=1&&screen!=2) text = " "; // could be done more cleanly
   //Serial.println(text);
   if (text == "")text = " "; //bugfix to prevent crashing on an empty string
 
@@ -30,7 +30,7 @@ void writeToScreen(int screen, String text) {
   text4.toCharArray(charBuf4, CHARACTERWIDTH+1) ;
   text5.toCharArray(charBuf5, CHARACTERWIDTH+1) ;
 
-  if (screen == 0) {
+  if (screen != 1&&screen != 2) {
     OLED0.firstPage();
     do {
       //52 characters right now
@@ -41,7 +41,7 @@ void writeToScreen(int screen, String text) {
       OLED0.drawStr( 0, 4 * LINESPACE + STARTSPACE, charBuf5);
     } while ( OLED0.nextPage() );
   }
-  if (screen == 1) {
+  if (screen != 0&&screen != 2) {
     OLED1.firstPage();
     do {
       //65 characters
@@ -52,7 +52,7 @@ void writeToScreen(int screen, String text) {
       OLED1.drawStr( 0, 4 * LINESPACE + STARTSPACE, charBuf5);
     } while ( OLED1.nextPage() );
   }
-  if (screen == 2) {
+  if (screen != 0&&screen != 1) {
     OLED2.firstPage();
     do {
       //65 characters

@@ -29,7 +29,7 @@ public class NodeGraph : SerializedNodeGraph
     
     private Settings settings => SettingsHolder.Instance.Settings;
     
-
+    
     [PropertySpace]
     [Button]
     public void PlayNode(BaseNode node)
@@ -44,7 +44,7 @@ public class NodeGraph : SerializedNodeGraph
     [Button]
     public void NoMoreConnections()
     {
-        Debug.LogError("No more connections");
+        Debug.LogError($"No more connections {Current.name}");
         Events.Instance.Raise(new StoryFinished());
     }
 
@@ -86,6 +86,17 @@ public class NodeGraph : SerializedNodeGraph
         }
         
         PlayNode(goBackNode);
+        goBackNode = null;
+    }
+
+    public void Reset()
+    {
+        ResetGoBackNode();
+        BlackBoard.Reset();
+    }
+
+    public void ResetGoBackNode()
+    {
         goBackNode = null;
     }
 }

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +19,8 @@ public class NodePlayingLogic
     private float now => Time.timeSinceLevelLoad;
     public string FunctionProgress => $"[{functionProgress:F2}/{functionDuration:F2}]";
 
-    public void PlayFunctionsAndAudio(Action onFinished, AudioClip clip, FunctionList funcs, string name, NodeFunctionRunner coroutineRunner)
+    public void PlayFunctionsAndAudio(Action onFinished, AudioClip clip, FunctionList funcs, string name,
+        NodeFunctionRunner coroutineRunner)
     {
         coroutineRunner.StopAllCoroutines();
         coroutineRunner.StartCoroutine(
@@ -27,14 +28,14 @@ public class NodePlayingLogic
                 name,
                 clip,
                 funcs,
-                onFinished,  
+                onFinished,
                 coroutineRunner));
     }
-    
+
     private IEnumerator InvokeFunctionsAndPlayAudioCoroutine(string name,
         AudioClip clip,
         FunctionList funcs,
-        Action onFinished, 
+        Action onFinished,
         MonoBehaviour coroutineRunner)
     {
         FunctionsFinished = false;
@@ -49,14 +50,23 @@ public class NodePlayingLogic
         }
         else
         {
-            AudioManager.Instance.PlayClip(clip, () => AudioFinished = true);
+            AudioManager.Instance.PlayClip(
+                clip,
+                OnAudioFinished,
+                SettingsHolder.Instance.Settings.AllowInputFasterInSeconds);
         }
 
-        yield return ExecuteFunctions(funcs, coroutineRunner);
+        coroutineRunner.StartCoroutine(ExecuteFunctions(funcs, coroutineRunner));
+
         while (!AudioFinished)
             yield return null;
 
         onFinished?.Invoke();
+    }
+
+    private void OnAudioFinished()
+    {
+        AudioFinished = true;
     }
 
     public IEnumerator InvokeFunctionsCoroutine(FunctionList funcs, Action onFinished, MonoBehaviour coroutineRunner)
@@ -89,9 +99,10 @@ public class NodePlayingLogic
                 var waitTime = nodeScriptLine.TimeSec - timePassed;
                 yield return new WaitForSeconds(waitTime);
             }
-            
+
             timePassed = TimePassed(timeStarted);
-            Debug.Log($"Node Function: {nodeScriptLine.Function?.GetType().FullName} at {timePassed}");
+            if (SettingsHolder.Instance.Settings.LogDebugMessageInfo)
+                Debug.Log($"Node Function: {nodeScriptLine.Function?.GetType().FullName} at {timePassed}");
             nodeScriptLine.Function?.RaiseEvent(coroutineRunner);
         }
 

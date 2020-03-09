@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using static ChairMicroControllerState;
 using static MessageHelper;
 
@@ -8,7 +9,16 @@ namespace Messaging
     {
         public static RawChairStatus ParseMessage(string msg)
         {
-            return JsonUtility.FromJson<RawChairStatus>(msg);
+            try
+            {
+                return JsonUtility.FromJson<RawChairStatus>(msg);
+            }
+            catch(ArgumentException e)
+            {
+                Debug.LogError($"JSON error for {msg} has exception: {e.Message}\n {e.StackTrace}");
+            }
+
+            return null;
         }
 
         public static void UpdateChairState(RawChairStatus raw, ChairMicroControllerState state)
@@ -56,12 +66,12 @@ namespace Messaging
 
         private static StatusLight ConvertToRedGreen(int value)
         {
-            return value == 0 ? StatusLight.Green : StatusLight.Red;
+            return value == 1 ? StatusLight.Green : StatusLight.Red;
         }
 
         public static int ConvertFromRedGreen(StatusLight value)
         {
-            return value == StatusLight.Green ? 0 : 1;
+            return value == StatusLight.Green ? 1 : 0;
         }
 
         private static float ConvertSpeed(int value, ChairMicroControllerState state)

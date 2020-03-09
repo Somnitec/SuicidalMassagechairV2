@@ -14,6 +14,7 @@ namespace Messaging
         protected override void OnMessageReceived(string message)
         {
             RawChairStatus status = ChairMessageParser.ParseMessage(message);
+            if(status == null) return;
             Events.Instance.Raise(new ChairStateUpdate(status));
         }
     }
