@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using static ChairMicroControllerState;
 using static MessageHelper;
 
@@ -8,7 +9,16 @@ namespace Messaging
     {
         public static RawChairStatus ParseMessage(string msg)
         {
-            return JsonUtility.FromJson<RawChairStatus>(msg);
+            try
+            {
+                return JsonUtility.FromJson<RawChairStatus>(msg);
+            }
+            catch(ArgumentException e)
+            {
+                Debug.LogError($"JSON error for {msg} has exception: {e.Message}\n {e.StackTrace}");
+            }
+
+            return null;
         }
 
         public static void UpdateChairState(RawChairStatus raw, ChairMicroControllerState state)

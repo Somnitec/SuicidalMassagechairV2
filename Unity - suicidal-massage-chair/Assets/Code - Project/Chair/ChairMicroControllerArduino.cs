@@ -21,7 +21,6 @@ public class ChairMicroControllerArduino : AbstractChairMicroController
 
     private void StatusUpdate(ChairStateUpdate e)
     {
-        Debug.Log($"Message received. Updating State of Arduino.");
         ChairMessageParser.UpdateChairState(e.state, this.state);
     }
 

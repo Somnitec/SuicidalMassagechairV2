@@ -18,6 +18,8 @@ namespace Messaging
         protected override void OnMessageReceived(string message)
         {
             RawInput raw = InputMessageParser.ParseMessage(message);
+            if (raw == null) return;
+            
             var optionalButton = InputMessageParser.ParseButton(raw);
             if (optionalButton is AllInputButtons button)
             {

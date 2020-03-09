@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.Serialization;
+using Debug = UnityEngine.Debug;
 
 public class AudioManager : SingletonMonoBehavior<AudioManager>
 {
@@ -37,6 +39,8 @@ public class AudioManager : SingletonMonoBehavior<AudioManager>
 
     public void PlayClip(AudioClip clip, Action onFinished)
     {
+        StopAllCoroutines();
+        
         if (clip == null)
         {
             onFinished.Invoke();
@@ -52,7 +56,9 @@ public class AudioManager : SingletonMonoBehavior<AudioManager>
 
     private IEnumerator WaitTillFinished(Action onFinished)
     {
-        yield return new WaitForSeconds((float) clipDuration);
+        Debug.Log($" {Source.clip.name} {clipDuration} {Source.isPlaying}");
+
+        yield return new WaitWhile (()=> Source.isPlaying);
 
         onFinished.Invoke();
     }
