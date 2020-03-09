@@ -67,6 +67,10 @@ public class NoInputTimeOutHandler : BlackBoardValueModifier
     private void StartNoInputTimeout(WaitingForInput e)
     {
         StopAllCoroutines();
+        
+        if (ApplicationStateApplicationManager.Instance.NotPlaying)
+            return;
+        
         StartCoroutine(NoInputTimeOutTracker());
     }
 
