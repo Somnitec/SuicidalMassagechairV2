@@ -8,6 +8,10 @@ using UnityEngine;
 public class ApplicationInfoUIController : MonoBehaviour
 {
     public TextMeshProUGUI Text;
+    public TextMeshProUGUI NodePlaying;
+    public TextMeshProUGUI StateText;
+
+    
 
     public NodeGraph Graph => SettingsHolder.Instance.Settings.Graph;
     private AudioManager audMgr => AudioManager.Instance;
@@ -16,10 +20,10 @@ public class ApplicationInfoUIController : MonoBehaviour
 
     void Update()
     {
+        
+        
         var text = $"Application info\n" +
-                   $"State: {appMgr.State}\n" +
                    $"TimeRemaining: {restartOnTimeOut.TimeRemaining:F}\n" +
-                   $"Node: {Graph.Current?.name}\n" +
                    $"Audio: {audMgr.Source.clip?.name}\n" +
                    $"Audio Duration: {audMgr.ClipProgress}\n" +
                    $"Playing: {audMgr.Source.isPlaying}\n";
@@ -32,5 +36,11 @@ public class ApplicationInfoUIController : MonoBehaviour
 
         if (Text != null)
             Text.text = text;
+        
+        if (NodePlaying != null)
+            NodePlaying.text = Graph.Current?.name;
+        
+        if (StateText != null)
+            StateText.text = appMgr.State.ToString();
     }
 }
