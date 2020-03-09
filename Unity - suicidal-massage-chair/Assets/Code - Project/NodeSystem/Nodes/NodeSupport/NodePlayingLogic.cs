@@ -49,7 +49,7 @@ public class NodePlayingLogic
         }
         else
         {
-            AudioManager.Instance.PlayClip(clip, () => AudioFinished = true);
+            AudioManager.Instance.PlayClip(clip, () => AudioFinished = true, SettingsHolder.Instance.Settings.AllowInputFasterInSeconds);
         }
 
         yield return ExecuteFunctions(funcs, coroutineRunner);

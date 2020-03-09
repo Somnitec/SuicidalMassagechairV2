@@ -66,12 +66,12 @@ namespace Messaging
 
         private static StatusLight ConvertToRedGreen(int value)
         {
-            return value == 0 ? StatusLight.Green : StatusLight.Red;
+            return value == 1 ? StatusLight.Green : StatusLight.Red;
         }
 
         public static int ConvertFromRedGreen(StatusLight value)
         {
-            return value == StatusLight.Green ? 0 : 1;
+            return value == StatusLight.Green ? 1 : 0;
         }
 
         private static float ConvertSpeed(int value, ChairMicroControllerState state)

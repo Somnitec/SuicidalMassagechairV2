@@ -37,7 +37,7 @@ public class AudioManager : SingletonMonoBehavior<AudioManager>
         Source.Stop();
     }
 
-    public void PlayClip(AudioClip clip, Action onFinished)
+    public void PlayClip(AudioClip clip, Action onFinished, float invokeOnFinishedFasterInSeconds)
     {
         StopAllCoroutines();
         
@@ -51,13 +51,23 @@ public class AudioManager : SingletonMonoBehavior<AudioManager>
         Source.clip = clip;
         Source.Play();
 
-        StartCoroutine(WaitTillFinished(onFinished));
+        StartCoroutine(WaitTillFinished(onFinished, invokeOnFinishedFasterInSeconds));
     }
 
-    private IEnumerator WaitTillFinished(Action onFinished)
+    private IEnumerator WaitTillFinished(Action onFinished, float invokeOnFinishedFasterInSeconds)
     {
         Debug.Log($" {Source.clip.name} {clipDuration} {Source.isPlaying}");
-
+        
+        while (Source.isPlaying)
+        {
+            if (Source.time + invokeOnFinishedFasterInSeconds > clipDuration)
+            {
+                Debug.Log($"Early Exit at {Source.time}/{clipDuration}");
+                break;
+            }
+            yield return null;
+        }
+        
         yield return new WaitWhile (()=> Source.isPlaying);
 
         onFinished.Invoke();

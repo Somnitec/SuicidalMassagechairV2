@@ -36,6 +36,8 @@ public class Settings : SerializedScriptableObject
     public Language Language = Language.Dutch;
     public bool ResetChairOnStart = false;
     public float TimeOutTimeInSeconds = 600;
+    [InfoBox("How much faster it will allow input before finishing the audio. Input error margin.")]
+    public float AllowInputFasterInSeconds = 2f;
     [InfoBox("The amount of interruptions initially needed before it goes to the Special Interrupted Node")]
     public int InitialInterruptCountBeforeGoingToSpecialNode = 3;
     [InfoBox("The amount of time initially needed before it goes to the Special TimeOut Node in seconds")]
