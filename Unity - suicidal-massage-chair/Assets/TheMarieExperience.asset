@@ -1913,7 +1913,7 @@ MonoBehaviour:
     SerializationNodes: []
   Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   Comparison:
-    Name: startselect
+    Name: startchoice
     Comparator: 4
     CompareValue:
       Type: 2
@@ -1984,7 +1984,7 @@ MonoBehaviour:
     SerializationNodes: []
   Color: {r: 0.596, g: 0.345, b: 0.235, a: 1}
   Comparison:
-    Name: noinputbeforenode
+    Name: TimeInChair
     Comparator: 4
     CompareValue:
       Type: 2
@@ -4843,7 +4843,7 @@ MonoBehaviour:
     SerializationNodes: []
   Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   Modifier:
-    Name: startselect
+    Name: startchoice
     Type: 0
     ModifyingValue:
       Type: 2
@@ -5486,7 +5486,7 @@ MonoBehaviour:
     SerializationNodes: []
   Color: {r: 0.478, g: 0.573, b: 0.431, a: 1}
   Comparison:
-    Name: settings before node
+    Name: TimeInChair
     Comparator: 4
     CompareValue:
       Type: 2
@@ -5735,10 +5735,10 @@ MonoBehaviour:
     SerializationNodes: []
   Color: {r: 0.478, g: 0.573, b: 0.431, a: 1}
   Modifier:
-    Name: settingshandlede
+    Name: TimeInChair
     Type: 1
     ModifyingValue:
-      Type: 2
+      Type: 0
       Float: 1
       Bool: 0
       Int: 1
@@ -7292,7 +7292,7 @@ MonoBehaviour:
       Data: 
   BlackBoard: {fileID: 11400000, guid: 6e91e850ef5b058419e0213511aef8c7, type: 2}
   RootNode: {fileID: 5946878964595440142}
-  Current: {fileID: -1645576537967019624}
+  Current: {fileID: -3638098325038414586}
   goBackNode: {fileID: 0}
 --- !u!114 &106402782884662346
 MonoBehaviour:
@@ -8782,7 +8782,7 @@ MonoBehaviour:
     SerializationNodes: []
   Color: {r: 0.478, g: 0.573, b: 0.431, a: 1}
   Comparison:
-    Name: settings before node
+    Name: TimeInChair
     Comparator: 4
     CompareValue:
       Type: 2
@@ -9739,7 +9739,7 @@ MonoBehaviour:
     SerializationNodes: []
   Color: {r: 0.596, g: 0.345, b: 0.235, a: 1}
   Comparison:
-    Name: noinputbeforenode
+    Name: TimeInChair
     Comparator: 3
     CompareValue:
       Type: 2
@@ -11556,7 +11556,7 @@ MonoBehaviour:
     SerializationNodes: []
   Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   Comparison:
-    Name: startselect
+    Name: startchoice
     Comparator: 4
     CompareValue:
       Type: 2
@@ -11630,7 +11630,7 @@ MonoBehaviour:
     SerializationNodes: []
   Color: {r: 0.596, g: 0.345, b: 0.235, a: 1}
   Comparison:
-    Name: noinputbeforenode
+    Name: TimeInChair
     Comparator: 4
     CompareValue:
       Type: 2
@@ -12108,7 +12108,7 @@ MonoBehaviour:
     SerializationNodes: []
   Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   Modifier:
-    Name: startselect
+    Name: startchoice
     Type: 0
     ModifyingValue:
       Type: 2
@@ -12913,7 +12913,7 @@ MonoBehaviour:
     SerializationNodes: []
   Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   Modifier:
-    Name: startselect
+    Name: startchoice
     Type: 0
     ModifyingValue:
       Type: 2
