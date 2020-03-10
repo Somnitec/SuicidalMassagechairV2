@@ -16,7 +16,7 @@ public class NodeData
     public string Text;
 
     [TextArea(1, 5)]
-    [ValidateInput("Validate", "Max length is 44 chars", InfoMessageType.Error)]
+    [ValidateInput("Validate", "Max length is 52 chars", InfoMessageType.Error)]
     [ShowIf("ShowButtons")]
     public string CustomButtonA, CustomButtonB, CustomButtonC = "";
 
@@ -32,6 +32,6 @@ public class NodeData
     
     private bool Validate(string input)
     {
-        return input == null || input?.Length < 44;
+        return input == null || input?.Length < 52;
     }
 }
