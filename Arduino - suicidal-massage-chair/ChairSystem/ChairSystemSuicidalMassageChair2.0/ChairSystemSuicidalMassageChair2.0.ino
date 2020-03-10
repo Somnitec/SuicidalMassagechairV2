@@ -193,7 +193,8 @@ void loop()
 
 
   doLeds();
-  doAck() ;
+
+  doAck();
 }
 
 void printError(String error) {

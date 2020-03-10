@@ -3,7 +3,13 @@ void sendAck() {
   queueAck = true;
 }
 
+elapsedMillis ackTimer;
+int maxAckInterval = 100;
+
 void doAck() {
+    if (ackTimer > maxAckInterval)
+  {
+    ackTimer = 0;
   if (queueAck) {
     queueAck = false;
 
@@ -28,9 +34,6 @@ void doAck() {
     Serial.print(F(",\n\t\"chair_position_target_range\":"));
     Serial.print(chair_position_target_range);
     Serial.print(F(",\n\t\"chair_position_motor_direction\":"));
-    /* if (digitalRead(chairup))chair_position_motor_direction = 1;
-      else if (digitalRead(chairdown))chair_position_motor_direction = -1;
-      else chair_position_motor_direction = 0;*/
     Serial.print(chair_position_motor_direction);
     Serial.print(F(",\n\t\"chair_position_move_time_max\":"));
     Serial.print(chair_position_move_time_max);
@@ -108,8 +111,11 @@ void doAck() {
     Serial.print(button_bounce_time);
     Serial.print(F(",\n\t\"maxStringLength\":"));
     Serial.print(maxStringLength);
+    Serial.print(F(",\n\t\"maxAckInterval\":"));
+    Serial.print(maxAckInterval);
     Serial.print(F(",\n\t\"ackTime\":"));
     Serial.print(millis() - timeCheck);
     Serial.println(F("\n}"));
+  }
   }
 }

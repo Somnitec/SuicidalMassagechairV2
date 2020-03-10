@@ -42,6 +42,9 @@ public class InterruptionHandler : BlackBoardValueModifier
     [Button]
     private void HandleInterruption(InterruptedInput e)
     {
+        if (ApplicationStateApplicationManager.Instance.NotPlaying)
+            return;
+        
         interruptedCount.Int++;
         
         if (interruptedCount.Int < interruptionsBeforeGoingToNode.Int) return;
