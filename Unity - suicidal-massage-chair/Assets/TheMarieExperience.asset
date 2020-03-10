@@ -1987,7 +1987,7 @@ MonoBehaviour:
     Name: TimeInChair
     Comparator: 4
     CompareValue:
-      Type: 2
+      Type: 0
       Float: 0
       Bool: 0
       Int: 0
@@ -4530,7 +4530,25 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: NodeScriptLine, Assembly-CSharp
+    - Name: TimeSec
+      Entry: 4
       Data: 0
+    - Name: Function
+      Entry: 7
+      Data: 4|ChairPosition, Assembly-CSharp
+    - Name: NewPosition
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -4545,7 +4563,7 @@ MonoBehaviour:
       Data: 
     - Name: dutch
       Entry: 7
-      Data: 4|NodeData, Assembly-CSharp
+      Data: 5|NodeData, Assembly-CSharp
     - Name: AudioClip
       Entry: 10
       Data: 1
@@ -4563,10 +4581,10 @@ MonoBehaviour:
       Data: 
     - Name: FunctionList
       Entry: 7
-      Data: 5|FunctionList, Assembly-CSharp
+      Data: 6|FunctionList, Assembly-CSharp
     - Name: Functions
       Entry: 7
-      Data: 6|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
+      Data: 7|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
@@ -4588,13 +4606,13 @@ MonoBehaviour:
       Data: 
     - Name: playingLogic
       Entry: 7
-      Data: 7|NodePlayingLogic, Assembly-CSharp
+      Data: 8|NodePlayingLogic, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
     - Name: timeOutLogic
       Entry: 7
-      Data: 8|NodeSystem.Nodes.NodeTimeOutLogic, Assembly-CSharp
+      Data: 9|NodeSystem.Nodes.NodeTimeOutLogic, Assembly-CSharp
     - Name: HasTimeOut
       Entry: 5
       Data: false
@@ -5489,7 +5507,7 @@ MonoBehaviour:
     Name: TimeInChair
     Comparator: 4
     CompareValue:
-      Type: 2
+      Type: 0
       Float: 0
       Bool: 0
       Int: 0
@@ -7253,6 +7271,9 @@ MonoBehaviour:
     SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 5587421710696698482}
+    - {fileID: 5207510548505371999}
+    - {fileID: -2318324507415779766}
+    - {fileID: -6976243038532886620}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -7271,7 +7292,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 4
     - Name: 
       Entry: 7
       Data: 
@@ -7281,6 +7302,42 @@ MonoBehaviour:
     - Name: $v
       Entry: 10
       Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Interrupted Node
+    - Name: $v
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Settings Node
+    - Name: $v
+      Entry: 10
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: No Input Node
+    - Name: $v
+      Entry: 10
+      Data: 3
     - Name: 
       Entry: 8
       Data: 
@@ -7399,7 +7456,25 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 0
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: NodeScriptLine, Assembly-CSharp
+    - Name: TimeSec
+      Entry: 4
+      Data: 10
+    - Name: Function
+      Entry: 7
+      Data: 4|FeetRollerOn, Assembly-CSharp
+    - Name: On
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -7414,7 +7489,7 @@ MonoBehaviour:
       Data: 
     - Name: dutch
       Entry: 7
-      Data: 4|NodeData, Assembly-CSharp
+      Data: 5|NodeData, Assembly-CSharp
     - Name: AudioClip
       Entry: 10
       Data: 1
@@ -7432,10 +7507,10 @@ MonoBehaviour:
       Data: 
     - Name: FunctionList
       Entry: 7
-      Data: 5|FunctionList, Assembly-CSharp
+      Data: 6|FunctionList, Assembly-CSharp
     - Name: Functions
       Entry: 7
-      Data: 6|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
+      Data: 7|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
@@ -7457,13 +7532,13 @@ MonoBehaviour:
       Data: 
     - Name: playingLogic
       Entry: 7
-      Data: 7|NodePlayingLogic, Assembly-CSharp
+      Data: 8|NodePlayingLogic, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
     - Name: timeOutLogic
       Entry: 7
-      Data: 8|NodeSystem.Nodes.NodeTimeOutLogic, Assembly-CSharp
+      Data: 9|NodeSystem.Nodes.NodeTimeOutLogic, Assembly-CSharp
     - Name: HasTimeOut
       Entry: 5
       Data: false
@@ -8785,7 +8860,7 @@ MonoBehaviour:
     Name: TimeInChair
     Comparator: 4
     CompareValue:
-      Type: 2
+      Type: 0
       Float: 0
       Bool: 0
       Int: 1
@@ -9742,7 +9817,7 @@ MonoBehaviour:
     Name: TimeInChair
     Comparator: 3
     CompareValue:
-      Type: 2
+      Type: 0
       Float: 0
       Bool: 0
       Int: 2
@@ -10046,7 +10121,43 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: NodeScriptLine, Assembly-CSharp
+    - Name: TimeSec
+      Entry: 4
       Data: 0
+    - Name: Function
+      Entry: 7
+      Data: 4|RollerPoundingOn, Assembly-CSharp
+    - Name: On
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: NodeScriptLine, Assembly-CSharp
+    - Name: TimeSec
+      Entry: 4
+      Data: 0
+    - Name: Function
+      Entry: 7
+      Data: 5|RollerPoundingSpeed, Assembly-CSharp
+    - Name: Speed
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -10061,7 +10172,7 @@ MonoBehaviour:
       Data: 
     - Name: dutch
       Entry: 7
-      Data: 4|NodeData, Assembly-CSharp
+      Data: 6|NodeData, Assembly-CSharp
     - Name: AudioClip
       Entry: 10
       Data: 1
@@ -10079,10 +10190,10 @@ MonoBehaviour:
       Data: 
     - Name: FunctionList
       Entry: 7
-      Data: 5|FunctionList, Assembly-CSharp
+      Data: 7|FunctionList, Assembly-CSharp
     - Name: Functions
       Entry: 7
-      Data: 6|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
+      Data: 8|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
@@ -10104,13 +10215,13 @@ MonoBehaviour:
       Data: 
     - Name: playingLogic
       Entry: 7
-      Data: 7|NodePlayingLogic, Assembly-CSharp
+      Data: 9|NodePlayingLogic, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
     - Name: timeOutLogic
       Entry: 7
-      Data: 8|NodeSystem.Nodes.NodeTimeOutLogic, Assembly-CSharp
+      Data: 10|NodeSystem.Nodes.NodeTimeOutLogic, Assembly-CSharp
     - Name: HasTimeOut
       Entry: 5
       Data: false
@@ -10638,7 +10749,25 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 0
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: NodeScriptLine, Assembly-CSharp
+    - Name: TimeSec
+      Entry: 4
+      Data: 10
+    - Name: Function
+      Entry: 7
+      Data: 4|ChairPosition, Assembly-CSharp
+    - Name: NewPosition
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -10653,7 +10782,7 @@ MonoBehaviour:
       Data: 
     - Name: dutch
       Entry: 7
-      Data: 4|NodeData, Assembly-CSharp
+      Data: 5|NodeData, Assembly-CSharp
     - Name: AudioClip
       Entry: 10
       Data: 1
@@ -10671,10 +10800,10 @@ MonoBehaviour:
       Data: 
     - Name: FunctionList
       Entry: 7
-      Data: 5|FunctionList, Assembly-CSharp
+      Data: 6|FunctionList, Assembly-CSharp
     - Name: Functions
       Entry: 7
-      Data: 6|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
+      Data: 7|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
@@ -10696,13 +10825,13 @@ MonoBehaviour:
       Data: 
     - Name: playingLogic
       Entry: 7
-      Data: 7|NodePlayingLogic, Assembly-CSharp
+      Data: 8|NodePlayingLogic, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
     - Name: timeOutLogic
       Entry: 7
-      Data: 8|NodeSystem.Nodes.NodeTimeOutLogic, Assembly-CSharp
+      Data: 9|NodeSystem.Nodes.NodeTimeOutLogic, Assembly-CSharp
     - Name: HasTimeOut
       Entry: 5
       Data: false
@@ -11633,7 +11762,7 @@ MonoBehaviour:
     Name: TimeInChair
     Comparator: 4
     CompareValue:
-      Type: 2
+      Type: 0
       Float: 0
       Bool: 0
       Int: 1
