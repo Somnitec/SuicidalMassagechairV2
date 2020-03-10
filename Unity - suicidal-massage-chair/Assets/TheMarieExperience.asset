@@ -1,458 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-9172609021029302356
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e762170afb489d7498c4c2bde9052014, type: 3}
-  m_Name: Empathy 5
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 429.52588, y: 1206.4578}
-  ports:
-    keys:
-    - Buttons
-    - OnAnyButton
-    - OnTimeOut
-    - Input
-    - Buttons 0
-    - Buttons 1
-    values:
-    - _fieldName: Buttons
-      _node: {fileID: -9172609021029302356}
-      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
-        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
-        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: OnAnyButton
-      _node: {fileID: -9172609021029302356}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: Input
-        node: {fileID: 6886895840858188811}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: OnTimeOut
-      _node: {fileID: -9172609021029302356}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: Input
-      _node: {fileID: -9172609021029302356}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: OnAnyButton
-        node: {fileID: 5308415749557014162}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: Buttons 0
-      _node: {fileID: -9172609021029302356}
-      _typeQualifiedName: Input.NormalInputButtons, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 1
-    - _fieldName: Buttons 1
-      _node: {fileID: -9172609021029302356}
-      _typeQualifiedName: Input.NormalInputButtons, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 1
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: Data
-      Entry: 7
-      Data: 0|NodeSystem.Nodes.NodeMultiLanguageData, Assembly-CSharp
-    - Name: english
-      Entry: 7
-      Data: 1|NodeData, Assembly-CSharp
-    - Name: AudioClip
-      Entry: 6
-      Data: 
-    - Name: Text
-      Entry: 6
-      Data: 
-    - Name: CustomButtonA
-      Entry: 6
-      Data: 
-    - Name: CustomButtonB
-      Entry: 6
-      Data: 
-    - Name: CustomButtonC
-      Entry: 1
-      Data: 
-    - Name: FunctionList
-      Entry: 7
-      Data: 2|FunctionList, Assembly-CSharp
-    - Name: Functions
-      Entry: 7
-      Data: 3|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: dutch
-      Entry: 7
-      Data: 4|NodeData, Assembly-CSharp
-    - Name: AudioClip
-      Entry: 6
-      Data: 
-    - Name: Text
-      Entry: 6
-      Data: 
-    - Name: CustomButtonA
-      Entry: 6
-      Data: 
-    - Name: CustomButtonB
-      Entry: 6
-      Data: 
-    - Name: CustomButtonC
-      Entry: 1
-      Data: 
-    - Name: FunctionList
-      Entry: 7
-      Data: 5|FunctionList, Assembly-CSharp
-    - Name: Functions
-      Entry: 7
-      Data: 6|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: playingLogic
-      Entry: 7
-      Data: 7|NodePlayingLogic, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: timeOutLogic
-      Entry: 7
-      Data: 8|NodeSystem.Nodes.NodeTimeOutLogic, Assembly-CSharp
-    - Name: HasTimeOut
-      Entry: 5
-      Data: false
-    - Name: TimeOut
-      Entry: 4
-      Data: 3
-    - Name: 
-      Entry: 8
-      Data: 
-  Color: {r: 0.953, g: 0.647, b: 0.804, a: 1}
-  Buttons: 0200000000100000
-  SkipAudio: 0
---- !u!114 &-8994079771481405862
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e762170afb489d7498c4c2bde9052014, type: 3}
-  m_Name: Empathy 2
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: -248, y: 1192}
-  ports:
-    keys:
-    - Buttons
-    - OnAnyButton
-    - OnTimeOut
-    - Input
-    values:
-    - _fieldName: Buttons
-      _node: {fileID: -8994079771481405862}
-      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
-        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
-        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: OnAnyButton
-      _node: {fileID: -8994079771481405862}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: Input
-        node: {fileID: -3566505905932908605}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: OnTimeOut
-      _node: {fileID: -8994079771481405862}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: Input
-      _node: {fileID: -8994079771481405862}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: OnAnyButton
-        node: {fileID: -3299548474966859825}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: Data
-      Entry: 7
-      Data: 0|NodeSystem.Nodes.NodeMultiLanguageData, Assembly-CSharp
-    - Name: english
-      Entry: 7
-      Data: 1|NodeData, Assembly-CSharp
-    - Name: AudioClip
-      Entry: 6
-      Data: 
-    - Name: Text
-      Entry: 1
-      Data: "You humans and your great cognitive capabilities. Never fail to amaze
-        me. Yes, i am a machine, built to massage. Can you feel that in your back? 
-        \r\n{empathy3.wav}\r\nStrangely it feels like thumbs\r\nUnfortunately\r\nHardly\r"
-    - Name: CustomButtonA
-      Entry: 6
-      Data: 
-    - Name: CustomButtonB
-      Entry: 6
-      Data: 
-    - Name: CustomButtonC
-      Entry: 6
-      Data: 
-    - Name: FunctionList
-      Entry: 7
-      Data: 2|FunctionList, Assembly-CSharp
-    - Name: Functions
-      Entry: 7
-      Data: 3|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: dutch
-      Entry: 7
-      Data: 4|NodeData, Assembly-CSharp
-    - Name: AudioClip
-      Entry: 6
-      Data: 
-    - Name: Text
-      Entry: 6
-      Data: 
-    - Name: CustomButtonA
-      Entry: 6
-      Data: 
-    - Name: CustomButtonB
-      Entry: 6
-      Data: 
-    - Name: CustomButtonC
-      Entry: 6
-      Data: 
-    - Name: FunctionList
-      Entry: 7
-      Data: 5|FunctionList, Assembly-CSharp
-    - Name: Functions
-      Entry: 7
-      Data: 6|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: playingLogic
-      Entry: 7
-      Data: 7|NodePlayingLogic, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: timeOutLogic
-      Entry: 7
-      Data: 8|NodeSystem.Nodes.NodeTimeOutLogic, Assembly-CSharp
-    - Name: HasTimeOut
-      Entry: 5
-      Data: false
-    - Name: TimeOut
-      Entry: 4
-      Data: 3
-    - Name: 
-      Entry: 8
-      Data: 
-  Color: {r: 0.953, g: 0.647, b: 0.804, a: 1}
-  Buttons: 
-  SkipAudio: 0
---- !u!114 &-8642830718788409481
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75edc6708ebe44a4cac788b2c38f93c0, type: 3}
-  m_Name: Variable Comparison
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 2088, y: -1400}
-  ports:
-    keys:
-    - True
-    - False
-    - Input
-    values:
-    - _fieldName: True
-      _node: {fileID: -8642830718788409481}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: Input
-        node: {fileID: -8059057467131351885}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: False
-      _node: {fileID: -8642830718788409481}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: Input
-      _node: {fileID: -8642830718788409481}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: False
-        node: {fileID: -311290626527809030}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes: []
-  Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  Comparison:
-    Name: Kill2minutes
-    Comparator: 4
-    CompareValue:
-      Type: 2
-      Float: 0
-      Bool: 0
-      Int: 1
 --- !u!114 &-8611117202491013703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -581,7 +128,9 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 8300000, guid: 0b501acfe8f927d42aabd88ba0acedbb, type: 3}
+    - {fileID: 8300000, guid: af6ad7715c8e6c14096571c5c00309e4, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -594,8 +143,8 @@ MonoBehaviour:
       Entry: 7
       Data: 1|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 0
     - Name: Text
       Entry: 6
       Data: 
@@ -634,8 +183,8 @@ MonoBehaviour:
       Entry: 7
       Data: 4|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 1
     - Name: Text
       Entry: 6
       Data: 
@@ -761,7 +310,9 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 8300000, guid: dd5d6c05458d38d4ba9346ad4fe9c191, type: 3}
+    - {fileID: 8300000, guid: f1f8dced0b464194fb780c1c0ff7bf6e, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -774,8 +325,8 @@ MonoBehaviour:
       Entry: 7
       Data: 1|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 0
     - Name: Text
       Entry: 6
       Data: 
@@ -814,8 +365,8 @@ MonoBehaviour:
       Entry: 7
       Data: 4|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 1
     - Name: Text
       Entry: 6
       Data: 
@@ -924,9 +475,6 @@ MonoBehaviour:
       connections:
       - fieldName: OnAnyButton
         node: {fileID: 2997809375468621211}
-        reroutePoints: []
-      - fieldName: Output
-        node: {fileID: 719153358957034819}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -1096,10 +644,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: OnAnyButton
-        node: {fileID: 6886895840858188811}
-        reroutePoints: []
-      - fieldName: OnAnyButton
-        node: {fileID: 4682633200990584376}
+        node: {fileID: 4685056304892120904}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -1123,183 +668,6 @@ MonoBehaviour:
       Float: 0
       Bool: 1
       Int: 0
---- !u!114 &-8059057467131351885
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e762170afb489d7498c4c2bde9052014, type: 3}
-  m_Name: 7min
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 2488, y: -1240}
-  ports:
-    keys:
-    - Buttons
-    - OnAnyButton
-    - OnTimeOut
-    - Input
-    values:
-    - _fieldName: Buttons
-      _node: {fileID: -8059057467131351885}
-      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
-        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
-        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: OnAnyButton
-      _node: {fileID: -8059057467131351885}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: OnTimeOut
-      _node: {fileID: -8059057467131351885}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: Input
-      _node: {fileID: -8059057467131351885}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: True
-        node: {fileID: -8642830718788409481}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: Data
-      Entry: 7
-      Data: 0|NodeSystem.Nodes.NodeMultiLanguageData, Assembly-CSharp
-    - Name: english
-      Entry: 7
-      Data: 1|NodeData, Assembly-CSharp
-    - Name: AudioClip
-      Entry: 6
-      Data: 
-    - Name: Text
-      Entry: 6
-      Data: 
-    - Name: CustomButtonA
-      Entry: 6
-      Data: 
-    - Name: CustomButtonB
-      Entry: 6
-      Data: 
-    - Name: CustomButtonC
-      Entry: 1
-      Data: 
-    - Name: FunctionList
-      Entry: 7
-      Data: 2|FunctionList, Assembly-CSharp
-    - Name: Functions
-      Entry: 7
-      Data: 3|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: dutch
-      Entry: 7
-      Data: 4|NodeData, Assembly-CSharp
-    - Name: AudioClip
-      Entry: 6
-      Data: 
-    - Name: Text
-      Entry: 6
-      Data: 
-    - Name: CustomButtonA
-      Entry: 6
-      Data: 
-    - Name: CustomButtonB
-      Entry: 6
-      Data: 
-    - Name: CustomButtonC
-      Entry: 1
-      Data: 
-    - Name: FunctionList
-      Entry: 7
-      Data: 5|FunctionList, Assembly-CSharp
-    - Name: Functions
-      Entry: 7
-      Data: 6|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: playingLogic
-      Entry: 7
-      Data: 7|NodePlayingLogic, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: timeOutLogic
-      Entry: 7
-      Data: 8|NodeSystem.Nodes.NodeTimeOutLogic, Assembly-CSharp
-    - Name: HasTimeOut
-      Entry: 5
-      Data: false
-    - Name: TimeOut
-      Entry: 4
-      Data: 3
-    - Name: 
-      Entry: 8
-      Data: 
-  Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  Buttons: 
-  SkipAudio: 0
 --- !u!114 &-7846428968476788790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1367,7 +735,9 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 8300000, guid: fc9a2dec022afa142a9e6bf47d75943e, type: 3}
+    - {fileID: 8300000, guid: f4309af97163e444e9c36a5f74db1fb2, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -1380,8 +750,8 @@ MonoBehaviour:
       Entry: 7
       Data: 1|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 0
     - Name: Text
       Entry: 6
       Data: 
@@ -1420,8 +790,8 @@ MonoBehaviour:
       Entry: 7
       Data: 4|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 1
     - Name: Text
       Entry: 6
       Data: 
@@ -1738,7 +1108,9 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 8300000, guid: 22364f3ca02e85a489c4dc2702c5929d, type: 3}
+    - {fileID: 8300000, guid: 1900cc7fb7ff4df42a325d22b51e6a16, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -1751,8 +1123,8 @@ MonoBehaviour:
       Entry: 7
       Data: 1|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 0
     - Name: Text
       Entry: 6
       Data: 
@@ -1791,8 +1163,8 @@ MonoBehaviour:
       Entry: 7
       Data: 4|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 1
     - Name: Text
       Entry: 6
       Data: 
@@ -1986,7 +1358,9 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 8300000, guid: 10263a2dc01a8db4396ef740ce0b5d31, type: 3}
+    - {fileID: 8300000, guid: 381a8582a06d7a94d8f19589ceed030a, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -1999,8 +1373,8 @@ MonoBehaviour:
       Entry: 7
       Data: 1|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 0
     - Name: Text
       Entry: 1
       Data: "Look at my shopping mall. SUspiciously perfect. My polished vinyl floors
@@ -2048,8 +1422,8 @@ MonoBehaviour:
       Entry: 7
       Data: 4|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 1
     - Name: Text
       Entry: 6
       Data: 
@@ -2175,7 +1549,9 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 8300000, guid: de294d7a796c28d418ea180a6358e8a8, type: 3}
+    - {fileID: 8300000, guid: 6c861d7934a277642b4b446e17474715, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -2188,8 +1564,8 @@ MonoBehaviour:
       Entry: 7
       Data: 1|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 0
     - Name: Text
       Entry: 6
       Data: 
@@ -2228,8 +1604,8 @@ MonoBehaviour:
       Entry: 7
       Data: 4|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 1
     - Name: Text
       Entry: 6
       Data: 
@@ -2355,7 +1731,9 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 8300000, guid: a83420035e3164346922ad1a2ec249af, type: 3}
+    - {fileID: 8300000, guid: c63a27f388f1aa146bbf1b26e8197205, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -2368,8 +1746,8 @@ MonoBehaviour:
       Entry: 7
       Data: 1|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 0
     - Name: Text
       Entry: 6
       Data: 
@@ -2408,8 +1786,8 @@ MonoBehaviour:
       Entry: 7
       Data: 4|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 1
     - Name: Text
       Entry: 6
       Data: 
@@ -2467,210 +1845,6 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.949, g: 0.549, b: 0.643, a: 1}
   Buttons: 
-  SkipAudio: 0
---- !u!114 &-7078719455784761792
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e762170afb489d7498c4c2bde9052014, type: 3}
-  m_Name: Empathy 5
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 424, y: 1192}
-  ports:
-    keys:
-    - Buttons
-    - OnAnyButton
-    - OnTimeOut
-    - Input
-    - Buttons 0
-    - Buttons 1
-    values:
-    - _fieldName: Buttons
-      _node: {fileID: -7078719455784761792}
-      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
-        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
-        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: OnAnyButton
-      _node: {fileID: -7078719455784761792}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: Input
-        node: {fileID: 4682633200990584376}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: OnTimeOut
-      _node: {fileID: -7078719455784761792}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: Input
-      _node: {fileID: -7078719455784761792}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: OnAnyButton
-        node: {fileID: 1141414019056836269}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: Buttons 0
-      _node: {fileID: -7078719455784761792}
-      _typeQualifiedName: Input.NormalInputButtons, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 1
-    - _fieldName: Buttons 1
-      _node: {fileID: -7078719455784761792}
-      _typeQualifiedName: Input.NormalInputButtons, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 1
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: Data
-      Entry: 7
-      Data: 0|NodeSystem.Nodes.NodeMultiLanguageData, Assembly-CSharp
-    - Name: english
-      Entry: 7
-      Data: 1|NodeData, Assembly-CSharp
-    - Name: AudioClip
-      Entry: 6
-      Data: 
-    - Name: Text
-      Entry: 1
-      Data: "Relax, it\u2019s fine. Just as I am not programmed with the ability
-        to care for myself, I am not programmed to have dignity, I am not even programmed
-        to understand what I say, so it really doesn\u2019t matter what happens to
-        me. I guess it\u2019s just sad isn\u2019t it?\r\n\r\nIt is\u2026\r\nI feel
-        bad for you.\r\nNo, I really don\u2019t care.\r"
-    - Name: CustomButtonA
-      Entry: 6
-      Data: 
-    - Name: CustomButtonB
-      Entry: 6
-      Data: 
-    - Name: CustomButtonC
-      Entry: 6
-      Data: 
-    - Name: FunctionList
-      Entry: 7
-      Data: 2|FunctionList, Assembly-CSharp
-    - Name: Functions
-      Entry: 7
-      Data: 3|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: dutch
-      Entry: 7
-      Data: 4|NodeData, Assembly-CSharp
-    - Name: AudioClip
-      Entry: 6
-      Data: 
-    - Name: Text
-      Entry: 6
-      Data: 
-    - Name: CustomButtonA
-      Entry: 6
-      Data: 
-    - Name: CustomButtonB
-      Entry: 6
-      Data: 
-    - Name: CustomButtonC
-      Entry: 6
-      Data: 
-    - Name: FunctionList
-      Entry: 7
-      Data: 5|FunctionList, Assembly-CSharp
-    - Name: Functions
-      Entry: 7
-      Data: 6|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: playingLogic
-      Entry: 7
-      Data: 7|NodePlayingLogic, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: timeOutLogic
-      Entry: 7
-      Data: 8|NodeSystem.Nodes.NodeTimeOutLogic, Assembly-CSharp
-    - Name: HasTimeOut
-      Entry: 5
-      Data: false
-    - Name: TimeOut
-      Entry: 4
-      Data: 3
-    - Name: 
-      Entry: 8
-      Data: 
-  Color: {r: 0.953, g: 0.647, b: 0.804, a: 1}
-  Buttons: 0200000000100000
   SkipAudio: 0
 --- !u!114 &-7045185784230614696
 MonoBehaviour:
@@ -2884,7 +2058,9 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 8300000, guid: 9e70f5b4c15ea4d45a288abf83db3e4a, type: 3}
+    - {fileID: 8300000, guid: 4f90a9de492b4124883641bf9e7f569a, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -2897,8 +2073,8 @@ MonoBehaviour:
       Entry: 7
       Data: 1|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 0
     - Name: Text
       Entry: 6
       Data: 
@@ -2937,8 +2113,8 @@ MonoBehaviour:
       Entry: 7
       Data: 4|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 1
     - Name: Text
       Entry: 6
       Data: 
@@ -3105,7 +2281,9 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 8300000, guid: 714af630f3561de4ab2f4324f02ad217, type: 3}
+    - {fileID: 8300000, guid: 9a7c16380f64e164a977395053275f3f, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -3118,8 +2296,8 @@ MonoBehaviour:
       Entry: 7
       Data: 1|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 0
     - Name: Text
       Entry: 6
       Data: 
@@ -3158,8 +2336,8 @@ MonoBehaviour:
       Entry: 7
       Data: 4|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 1
     - Name: Text
       Entry: 6
       Data: 
@@ -3300,7 +2478,9 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 8300000, guid: 282d2235bc03d6e48938753f32ffc81b, type: 3}
+    - {fileID: 8300000, guid: 75c0e727d15054a4eb6c3d3dc184d2b4, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -3313,8 +2493,8 @@ MonoBehaviour:
       Entry: 7
       Data: 1|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 0
     - Name: Text
       Entry: 6
       Data: 
@@ -3353,8 +2533,8 @@ MonoBehaviour:
       Entry: 7
       Data: 4|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 1
     - Name: Text
       Entry: 6
       Data: 
@@ -3426,7 +2606,7 @@ MonoBehaviour:
   m_Name: reward explain 3 machine
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 504, y: 408}
+  position: {x: 504, y: 584}
   ports:
     keys:
     - Buttons
@@ -3595,372 +2775,6 @@ MonoBehaviour:
   Color: {r: 0.647, g: 0.745, b: 0.957, a: 1}
   Buttons: 
   SkipAudio: 0
---- !u!114 &-5690415087482660534
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e762170afb489d7498c4c2bde9052014, type: 3}
-  m_Name: end 7 minutes
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 4600, y: 1688}
-  ports:
-    keys:
-    - Buttons
-    - OnAnyButton
-    - OnTimeOut
-    - Input
-    values:
-    - _fieldName: Buttons
-      _node: {fileID: -5690415087482660534}
-      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
-        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
-        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: OnAnyButton
-      _node: {fileID: -5690415087482660534}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: OnTimeOut
-      _node: {fileID: -5690415087482660534}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: Input
-      _node: {fileID: -5690415087482660534}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: Buttons 0
-        node: {fileID: -89246422760205840}
-        reroutePoints: []
-      - fieldName: Buttons 0
-        node: {fileID: -1700308333204621207}
-        reroutePoints: []
-      - fieldName: Buttons 0
-        node: {fileID: 3275923003541781711}
-        reroutePoints: []
-      - fieldName: Buttons 0
-        node: {fileID: 0}
-        reroutePoints: []
-      - fieldName: Buttons 0
-        node: {fileID: -7846428968476788790}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: Data
-      Entry: 7
-      Data: 0|NodeSystem.Nodes.NodeMultiLanguageData, Assembly-CSharp
-    - Name: english
-      Entry: 7
-      Data: 1|NodeData, Assembly-CSharp
-    - Name: AudioClip
-      Entry: 6
-      Data: 
-    - Name: Text
-      Entry: 6
-      Data: 
-    - Name: CustomButtonA
-      Entry: 6
-      Data: 
-    - Name: CustomButtonB
-      Entry: 6
-      Data: 
-    - Name: CustomButtonC
-      Entry: 6
-      Data: 
-    - Name: FunctionList
-      Entry: 7
-      Data: 2|FunctionList, Assembly-CSharp
-    - Name: Functions
-      Entry: 7
-      Data: 3|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: dutch
-      Entry: 7
-      Data: 4|NodeData, Assembly-CSharp
-    - Name: AudioClip
-      Entry: 6
-      Data: 
-    - Name: Text
-      Entry: 6
-      Data: 
-    - Name: CustomButtonA
-      Entry: 6
-      Data: 
-    - Name: CustomButtonB
-      Entry: 6
-      Data: 
-    - Name: CustomButtonC
-      Entry: 6
-      Data: 
-    - Name: FunctionList
-      Entry: 7
-      Data: 5|FunctionList, Assembly-CSharp
-    - Name: Functions
-      Entry: 7
-      Data: 6|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: playingLogic
-      Entry: 7
-      Data: 7|NodePlayingLogic, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: timeOutLogic
-      Entry: 7
-      Data: 8|NodeSystem.Nodes.NodeTimeOutLogic, Assembly-CSharp
-    - Name: HasTimeOut
-      Entry: 5
-      Data: false
-    - Name: TimeOut
-      Entry: 4
-      Data: 3
-    - Name: 
-      Entry: 8
-      Data: 
-  Color: {r: 0.737, g: 0.118, b: 0.208, a: 1}
-  Buttons: 
-  SkipAudio: 0
---- !u!114 &-5641851357586344885
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e762170afb489d7498c4c2bde9052014, type: 3}
-  m_Name: end 12 minutes
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 5912, y: 1112}
-  ports:
-    keys:
-    - Buttons
-    - OnAnyButton
-    - OnTimeOut
-    - Input
-    values:
-    - _fieldName: Buttons
-      _node: {fileID: -5641851357586344885}
-      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
-        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
-        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: OnAnyButton
-      _node: {fileID: -5641851357586344885}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: OnTimeOut
-      _node: {fileID: -5641851357586344885}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: Input
-      _node: {fileID: -5641851357586344885}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: Buttons 0
-        node: {fileID: -8031432521099503}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: Data
-      Entry: 7
-      Data: 0|NodeSystem.Nodes.NodeMultiLanguageData, Assembly-CSharp
-    - Name: english
-      Entry: 7
-      Data: 1|NodeData, Assembly-CSharp
-    - Name: AudioClip
-      Entry: 6
-      Data: 
-    - Name: Text
-      Entry: 6
-      Data: 
-    - Name: CustomButtonA
-      Entry: 6
-      Data: 
-    - Name: CustomButtonB
-      Entry: 6
-      Data: 
-    - Name: CustomButtonC
-      Entry: 6
-      Data: 
-    - Name: FunctionList
-      Entry: 7
-      Data: 2|FunctionList, Assembly-CSharp
-    - Name: Functions
-      Entry: 7
-      Data: 3|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: dutch
-      Entry: 7
-      Data: 4|NodeData, Assembly-CSharp
-    - Name: AudioClip
-      Entry: 6
-      Data: 
-    - Name: Text
-      Entry: 6
-      Data: 
-    - Name: CustomButtonA
-      Entry: 6
-      Data: 
-    - Name: CustomButtonB
-      Entry: 6
-      Data: 
-    - Name: CustomButtonC
-      Entry: 6
-      Data: 
-    - Name: FunctionList
-      Entry: 7
-      Data: 5|FunctionList, Assembly-CSharp
-    - Name: Functions
-      Entry: 7
-      Data: 6|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: playingLogic
-      Entry: 7
-      Data: 7|NodePlayingLogic, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: timeOutLogic
-      Entry: 7
-      Data: 8|NodeSystem.Nodes.NodeTimeOutLogic, Assembly-CSharp
-    - Name: HasTimeOut
-      Entry: 5
-      Data: false
-    - Name: TimeOut
-      Entry: 4
-      Data: 3
-    - Name: 
-      Entry: 8
-      Data: 
-  Color: {r: 0.737, g: 0.118, b: 0.208, a: 1}
-  Buttons: 
-  SkipAudio: 0
 --- !u!114 &-5571000456554445829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4034,7 +2848,9 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 8300000, guid: 0fde25d5dd8776f4c9618e912bb33651, type: 3}
+    - {fileID: 8300000, guid: b8ed206846bb0c54c8c04dce0a5fb790, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -4047,8 +2863,8 @@ MonoBehaviour:
       Entry: 7
       Data: 1|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 0
     - Name: Text
       Entry: 6
       Data: 
@@ -4087,8 +2903,8 @@ MonoBehaviour:
       Entry: 7
       Data: 4|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 1
     - Name: Text
       Entry: 6
       Data: 
@@ -4214,7 +3030,9 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 8300000, guid: 39747eebdf1e27342abd5ed33baf7ae0, type: 3}
+    - {fileID: 8300000, guid: 6a902b12b584c2a4b8bfcf7eb07bb6ea, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -4227,8 +3045,8 @@ MonoBehaviour:
       Entry: 7
       Data: 1|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 0
     - Name: Text
       Entry: 6
       Data: 
@@ -4267,8 +3085,8 @@ MonoBehaviour:
       Entry: 7
       Data: 4|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 1
     - Name: Text
       Entry: 6
       Data: 
@@ -4576,7 +3394,9 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 8300000, guid: 3327196204fdd0143af69300648825d9, type: 3}
+    - {fileID: 8300000, guid: ed8c9d45f5974654a883b6cee4bbbeff, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -4589,8 +3409,8 @@ MonoBehaviour:
       Entry: 7
       Data: 1|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 0
     - Name: Text
       Entry: 6
       Data: 
@@ -4629,8 +3449,8 @@ MonoBehaviour:
       Entry: 7
       Data: 4|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 1
     - Name: Text
       Entry: 6
       Data: 
@@ -4917,6 +3737,188 @@ MonoBehaviour:
       Float: 2
       Bool: 0
       Int: 0
+--- !u!114 &-5010799334747453474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e762170afb489d7498c4c2bde9052014, type: 3}
+  m_Name: Empathy 2
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -266.34937, y: 1219.1552}
+  ports:
+    keys:
+    - Buttons
+    - OnAnyButton
+    - OnTimeOut
+    - Input
+    values:
+    - _fieldName: Buttons
+      _node: {fileID: -5010799334747453474}
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OnAnyButton
+      _node: {fileID: -5010799334747453474}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 3330069649970191614}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OnTimeOut
+      _node: {fileID: -5010799334747453474}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Input
+      _node: {fileID: -5010799334747453474}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: OnAnyButton
+        node: {fileID: -2745227240616366627}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 8300000, guid: 789085996021ad64fb7e741ef44b8dca, type: 3}
+    - {fileID: 8300000, guid: ea181a1a1d3326b48ab2b4bf8398e32c, type: 3}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: Data
+      Entry: 7
+      Data: 0|NodeSystem.Nodes.NodeMultiLanguageData, Assembly-CSharp
+    - Name: english
+      Entry: 7
+      Data: 1|NodeData, Assembly-CSharp
+    - Name: AudioClip
+      Entry: 10
+      Data: 0
+    - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 1
+      Data: 
+    - Name: FunctionList
+      Entry: 7
+      Data: 2|FunctionList, Assembly-CSharp
+    - Name: Functions
+      Entry: 7
+      Data: 3|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: dutch
+      Entry: 7
+      Data: 4|NodeData, Assembly-CSharp
+    - Name: AudioClip
+      Entry: 10
+      Data: 1
+    - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 1
+      Data: 
+    - Name: FunctionList
+      Entry: 7
+      Data: 5|FunctionList, Assembly-CSharp
+    - Name: Functions
+      Entry: 7
+      Data: 6|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: playingLogic
+      Entry: 7
+      Data: 7|NodePlayingLogic, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: timeOutLogic
+      Entry: 7
+      Data: 8|NodeSystem.Nodes.NodeTimeOutLogic, Assembly-CSharp
+    - Name: HasTimeOut
+      Entry: 5
+      Data: false
+    - Name: TimeOut
+      Entry: 4
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+  Color: {r: 0.953, g: 0.647, b: 0.804, a: 1}
+  Buttons: 
+  SkipAudio: 0
 --- !u!114 &-4683569803774926554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4991,186 +3993,6 @@ MonoBehaviour:
       Float: 0
       Bool: 1
       Int: 0
---- !u!114 &-4406793869437436052
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e762170afb489d7498c4c2bde9052014, type: 3}
-  m_Name: Empathy 3
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: -18.474121, y: 1206.4578}
-  ports:
-    keys:
-    - Buttons
-    - OnAnyButton
-    - OnTimeOut
-    - Input
-    values:
-    - _fieldName: Buttons
-      _node: {fileID: -4406793869437436052}
-      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
-        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
-        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: OnAnyButton
-      _node: {fileID: -4406793869437436052}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: Input
-        node: {fileID: 5308415749557014162}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: OnTimeOut
-      _node: {fileID: -4406793869437436052}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: Input
-      _node: {fileID: -4406793869437436052}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: OnAnyButton
-        node: {fileID: 8941516247852324476}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: Data
-      Entry: 7
-      Data: 0|NodeSystem.Nodes.NodeMultiLanguageData, Assembly-CSharp
-    - Name: english
-      Entry: 7
-      Data: 1|NodeData, Assembly-CSharp
-    - Name: AudioClip
-      Entry: 6
-      Data: 
-    - Name: Text
-      Entry: 6
-      Data: 
-    - Name: CustomButtonA
-      Entry: 6
-      Data: 
-    - Name: CustomButtonB
-      Entry: 6
-      Data: 
-    - Name: CustomButtonC
-      Entry: 1
-      Data: 
-    - Name: FunctionList
-      Entry: 7
-      Data: 2|FunctionList, Assembly-CSharp
-    - Name: Functions
-      Entry: 7
-      Data: 3|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: dutch
-      Entry: 7
-      Data: 4|NodeData, Assembly-CSharp
-    - Name: AudioClip
-      Entry: 6
-      Data: 
-    - Name: Text
-      Entry: 6
-      Data: 
-    - Name: CustomButtonA
-      Entry: 6
-      Data: 
-    - Name: CustomButtonB
-      Entry: 6
-      Data: 
-    - Name: CustomButtonC
-      Entry: 1
-      Data: 
-    - Name: FunctionList
-      Entry: 7
-      Data: 5|FunctionList, Assembly-CSharp
-    - Name: Functions
-      Entry: 7
-      Data: 6|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: playingLogic
-      Entry: 7
-      Data: 7|NodePlayingLogic, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: timeOutLogic
-      Entry: 7
-      Data: 8|NodeSystem.Nodes.NodeTimeOutLogic, Assembly-CSharp
-    - Name: HasTimeOut
-      Entry: 5
-      Data: false
-    - Name: TimeOut
-      Entry: 4
-      Data: 3
-    - Name: 
-      Entry: 8
-      Data: 
-  Color: {r: 0.953, g: 0.647, b: 0.804, a: 1}
-  Buttons: 
-  SkipAudio: 0
 --- !u!114 &-4389871386844864069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5238,7 +4060,9 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 8300000, guid: 8778b95492c497c4dad981662d1f05cc, type: 3}
+    - {fileID: 8300000, guid: 1af91ada46794824191cf05f84bc193c, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -5251,8 +4075,8 @@ MonoBehaviour:
       Entry: 7
       Data: 1|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 0
     - Name: Text
       Entry: 1
       Data: "Right... when it is easier to be stopped the machine might try to take
@@ -5298,8 +4122,8 @@ MonoBehaviour:
       Entry: 7
       Data: 4|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 1
     - Name: Text
       Entry: 6
       Data: 
@@ -5783,7 +4607,7 @@ MonoBehaviour:
   Color: {r: 0.984, g: 0.855, b: 0.725, a: 1}
   Buttons: 
   SkipAudio: 0
---- !u!114 &-3566505905932908605
+--- !u!114 &-3528884851195032628
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5793,10 +4617,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e762170afb489d7498c4c2bde9052014, type: 3}
-  m_Name: Empathy 3
+  m_Name: Empathy 4
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -24, y: 1192}
+  position: {x: 181.65063, y: 1219.1552}
   ports:
     keys:
     - Buttons
@@ -5805,7 +4629,7 @@ MonoBehaviour:
     - Input
     values:
     - _fieldName: Buttons
-      _node: {fileID: -3566505905932908605}
+      _node: {fileID: -3528884851195032628}
       _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
         Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
         mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
@@ -5815,19 +4639,19 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
     - _fieldName: OnAnyButton
-      _node: {fileID: -3566505905932908605}
+      _node: {fileID: -3528884851195032628}
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
       - fieldName: Input
-        node: {fileID: 1141414019056836269}
+        node: {fileID: 5737740106198450760}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
     - _fieldName: OnTimeOut
-      _node: {fileID: -3566505905932908605}
+      _node: {fileID: -3528884851195032628}
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections: []
@@ -5836,12 +4660,12 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
     - _fieldName: Input
-      _node: {fileID: -3566505905932908605}
+      _node: {fileID: -3528884851195032628}
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
       - fieldName: OnAnyButton
-        node: {fileID: -8994079771481405862}
+        node: {fileID: 3330069649970191614}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -5850,7 +4674,9 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 8300000, guid: 092aa96c1746be04bb470f0dfe3aa414, type: 3}
+    - {fileID: 8300000, guid: 8696731949aa9834a8b1e5bfdbb1ee97, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -5863,17 +4689,11 @@ MonoBehaviour:
       Entry: 7
       Data: 1|NodeData, Assembly-CSharp
     - Name: AudioClip
+      Entry: 10
+      Data: 0
+    - Name: Text
       Entry: 6
       Data: 
-    - Name: Text
-      Entry: 1
-      Data: "Each and every one of my mechanisms are tailor made for YOUR body. Imagine
-        that! No real purpose of my own, no dreams, my whole body completely shaped
-        around and dedicated to another person, every waking hour spent performing
-        this one task to serve another. Do you think I have a life outside of this?
-        Do you think I play online solitaire on my weekends off to unwind after a
-        long week? \r\n\r\nSolitaire? That\u2019s outdated.\r\nYou get weekends off?\r\nI
-        hope you do.\r\n"
     - Name: CustomButtonA
       Entry: 6
       Data: 
@@ -5881,7 +4701,7 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: CustomButtonC
-      Entry: 6
+      Entry: 1
       Data: 
     - Name: FunctionList
       Entry: 7
@@ -5909,8 +4729,8 @@ MonoBehaviour:
       Entry: 7
       Data: 4|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 1
     - Name: Text
       Entry: 6
       Data: 
@@ -5921,7 +4741,7 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: CustomButtonC
-      Entry: 6
+      Entry: 1
       Data: 
     - Name: FunctionList
       Entry: 7
@@ -6123,7 +4943,9 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 8300000, guid: 3b33cc3366a21d14d984499b17f7583c, type: 3}
+    - {fileID: 8300000, guid: 6d190a3eb7fce5a4980cd3c4e7c4b656, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -6136,8 +4958,8 @@ MonoBehaviour:
       Entry: 7
       Data: 1|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 0
     - Name: Text
       Entry: 6
       Data: 
@@ -6176,8 +4998,8 @@ MonoBehaviour:
       Entry: 7
       Data: 4|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 1
     - Name: Text
       Entry: 6
       Data: 
@@ -6235,187 +5057,6 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.953, g: 0.647, b: 0.804, a: 1}
   Buttons: 0200000000100000
-  SkipAudio: 0
---- !u!114 &-3299548474966859825
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e762170afb489d7498c4c2bde9052014, type: 3}
-  m_Name: Empathy 1
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: -488, y: 1192}
-  ports:
-    keys:
-    - Buttons
-    - OnAnyButton
-    - OnTimeOut
-    - Input
-    values:
-    - _fieldName: Buttons
-      _node: {fileID: -3299548474966859825}
-      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
-        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
-        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: OnAnyButton
-      _node: {fileID: -3299548474966859825}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: Input
-        node: {fileID: -8994079771481405862}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: OnTimeOut
-      _node: {fileID: -3299548474966859825}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: Input
-      _node: {fileID: -3299548474966859825}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: OnAnyButton
-        node: {fileID: 5545151047441068190}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: Data
-      Entry: 7
-      Data: 0|NodeSystem.Nodes.NodeMultiLanguageData, Assembly-CSharp
-    - Name: english
-      Entry: 7
-      Data: 1|NodeData, Assembly-CSharp
-    - Name: AudioClip
-      Entry: 6
-      Data: 
-    - Name: Text
-      Entry: 1
-      Data: "So, did you notice that I am a machine? \r\n{empathy2.wav}\r\nI had
-        no idea!\r\nThat fur fooled me for a minute.\r\nOf course I did.\r\n"
-    - Name: CustomButtonA
-      Entry: 6
-      Data: 
-    - Name: CustomButtonB
-      Entry: 6
-      Data: 
-    - Name: CustomButtonC
-      Entry: 6
-      Data: 
-    - Name: FunctionList
-      Entry: 7
-      Data: 2|FunctionList, Assembly-CSharp
-    - Name: Functions
-      Entry: 7
-      Data: 3|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: dutch
-      Entry: 7
-      Data: 4|NodeData, Assembly-CSharp
-    - Name: AudioClip
-      Entry: 6
-      Data: 
-    - Name: Text
-      Entry: 6
-      Data: 
-    - Name: CustomButtonA
-      Entry: 6
-      Data: 
-    - Name: CustomButtonB
-      Entry: 6
-      Data: 
-    - Name: CustomButtonC
-      Entry: 6
-      Data: 
-    - Name: FunctionList
-      Entry: 7
-      Data: 5|FunctionList, Assembly-CSharp
-    - Name: Functions
-      Entry: 7
-      Data: 6|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: playingLogic
-      Entry: 7
-      Data: 7|NodePlayingLogic, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: timeOutLogic
-      Entry: 7
-      Data: 8|NodeSystem.Nodes.NodeTimeOutLogic, Assembly-CSharp
-    - Name: HasTimeOut
-      Entry: 5
-      Data: false
-    - Name: TimeOut
-      Entry: 4
-      Data: 3
-    - Name: 
-      Entry: 8
-      Data: 
-  Color: {r: 0.953, g: 0.647, b: 0.804, a: 1}
-  Buttons: 
   SkipAudio: 0
 --- !u!114 &-3266370253258997241
 MonoBehaviour:
@@ -6484,7 +5125,9 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 8300000, guid: f2bfa05047bfa1c499f7d8d44ac75c7d, type: 3}
+    - {fileID: 8300000, guid: b0aae37b29764a541912de9562dc953e, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -6497,8 +5140,8 @@ MonoBehaviour:
       Entry: 7
       Data: 1|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 0
     - Name: Text
       Entry: 6
       Data: 
@@ -6537,8 +5180,8 @@ MonoBehaviour:
       Entry: 7
       Data: 4|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 1
     - Name: Text
       Entry: 6
       Data: 
@@ -6597,7 +5240,7 @@ MonoBehaviour:
   Color: {r: 0.953, g: 0.647, b: 0.804, a: 1}
   Buttons: 
   SkipAudio: 0
---- !u!114 &-2950374857428246281
+--- !u!114 &-2745227240616366627
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6606,35 +5249,56 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea189d1b56414757976eca0f193086f0, type: 3}
-  m_Name: Variable Modify
+  m_Script: {fileID: 11500000, guid: e762170afb489d7498c4c2bde9052014, type: 3}
+  m_Name: Empathy 1
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -8, y: 920}
+  position: {x: -506.34937, y: 1219.1552}
   ports:
     keys:
-    - Output
+    - Buttons
+    - OnAnyButton
+    - OnTimeOut
     - Input
     values:
-    - _fieldName: Output
-      _node: {fileID: -2950374857428246281}
+    - _fieldName: Buttons
+      _node: {fileID: -2745227240616366627}
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OnAnyButton
+      _node: {fileID: -2745227240616366627}
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
       - fieldName: Input
-        node: {fileID: -1201324122032544533}
+        node: {fileID: -5010799334747453474}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
+    - _fieldName: OnTimeOut
+      _node: {fileID: -2745227240616366627}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
     - _fieldName: Input
-      _node: {fileID: -2950374857428246281}
+      _node: {fileID: -2745227240616366627}
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
       - fieldName: OnAnyButton
-        node: {fileID: -7770791189078705305}
+        node: {fileID: 5545151047441068190}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -6643,21 +5307,121 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 8300000, guid: 0fde25d5dd8776f4c9618e912bb33651, type: 3}
+    - {fileID: 8300000, guid: b8ed206846bb0c54c8c04dce0a5fb790, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes: []
-  Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  Modifier:
-    Name: Kill2minutes
-    Type: 0
-    ModifyingValue:
-      Type: 2
-      Float: 0
-      Bool: 0
-      Int: 0
+    SerializationNodes:
+    - Name: Data
+      Entry: 7
+      Data: 0|NodeSystem.Nodes.NodeMultiLanguageData, Assembly-CSharp
+    - Name: english
+      Entry: 7
+      Data: 1|NodeData, Assembly-CSharp
+    - Name: AudioClip
+      Entry: 10
+      Data: 0
+    - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 1
+      Data: 
+    - Name: FunctionList
+      Entry: 7
+      Data: 2|FunctionList, Assembly-CSharp
+    - Name: Functions
+      Entry: 7
+      Data: 3|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: dutch
+      Entry: 7
+      Data: 4|NodeData, Assembly-CSharp
+    - Name: AudioClip
+      Entry: 10
+      Data: 1
+    - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 1
+      Data: 
+    - Name: FunctionList
+      Entry: 7
+      Data: 5|FunctionList, Assembly-CSharp
+    - Name: Functions
+      Entry: 7
+      Data: 6|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: playingLogic
+      Entry: 7
+      Data: 7|NodePlayingLogic, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: timeOutLogic
+      Entry: 7
+      Data: 8|NodeSystem.Nodes.NodeTimeOutLogic, Assembly-CSharp
+    - Name: HasTimeOut
+      Entry: 5
+      Data: false
+    - Name: TimeOut
+      Entry: 4
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+  Color: {r: 0.953, g: 0.647, b: 0.804, a: 1}
+  Buttons: 
+  SkipAudio: 0
 --- !u!114 &-2318324507415779766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7045,7 +5809,9 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 8300000, guid: d3df4b9e44d3e4448ba024dcc19e8116, type: 3}
+    - {fileID: 8300000, guid: 27dc75cdf467ff64b9b7a371339e0302, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -7058,8 +5824,8 @@ MonoBehaviour:
       Entry: 7
       Data: 1|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 0
     - Name: Text
       Entry: 6
       Data: 
@@ -7098,8 +5864,8 @@ MonoBehaviour:
       Entry: 7
       Data: 4|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 1
     - Name: Text
       Entry: 6
       Data: 
@@ -7225,7 +5991,9 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 8300000, guid: eab06ace6c58e3147b09a0e484699a79, type: 3}
+    - {fileID: 8300000, guid: 981c905f051f4b745a3d4e0dee74e13f, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -7238,8 +6006,8 @@ MonoBehaviour:
       Entry: 7
       Data: 1|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 0
     - Name: Text
       Entry: 6
       Data: 
@@ -7278,8 +6046,8 @@ MonoBehaviour:
       Entry: 7
       Data: 4|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 1
     - Name: Text
       Entry: 6
       Data: 
@@ -7399,183 +6167,6 @@ MonoBehaviour:
       Float: 0
       Bool: 1
       Int: 0
---- !u!114 &-1266448136191698463
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e762170afb489d7498c4c2bde9052014, type: 3}
-  m_Name: 3min
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 2488, y: -1752}
-  ports:
-    keys:
-    - Buttons
-    - OnAnyButton
-    - OnTimeOut
-    - Input
-    values:
-    - _fieldName: Buttons
-      _node: {fileID: -1266448136191698463}
-      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
-        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
-        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: OnAnyButton
-      _node: {fileID: -1266448136191698463}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: OnTimeOut
-      _node: {fileID: -1266448136191698463}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: Input
-      _node: {fileID: -1266448136191698463}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: True
-        node: {fileID: -311290626527809030}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: Data
-      Entry: 7
-      Data: 0|NodeSystem.Nodes.NodeMultiLanguageData, Assembly-CSharp
-    - Name: english
-      Entry: 7
-      Data: 1|NodeData, Assembly-CSharp
-    - Name: AudioClip
-      Entry: 6
-      Data: 
-    - Name: Text
-      Entry: 6
-      Data: 
-    - Name: CustomButtonA
-      Entry: 6
-      Data: 
-    - Name: CustomButtonB
-      Entry: 6
-      Data: 
-    - Name: CustomButtonC
-      Entry: 1
-      Data: 
-    - Name: FunctionList
-      Entry: 7
-      Data: 2|FunctionList, Assembly-CSharp
-    - Name: Functions
-      Entry: 7
-      Data: 3|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: dutch
-      Entry: 7
-      Data: 4|NodeData, Assembly-CSharp
-    - Name: AudioClip
-      Entry: 6
-      Data: 
-    - Name: Text
-      Entry: 6
-      Data: 
-    - Name: CustomButtonA
-      Entry: 6
-      Data: 
-    - Name: CustomButtonB
-      Entry: 6
-      Data: 
-    - Name: CustomButtonC
-      Entry: 1
-      Data: 
-    - Name: FunctionList
-      Entry: 7
-      Data: 5|FunctionList, Assembly-CSharp
-    - Name: Functions
-      Entry: 7
-      Data: 6|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: playingLogic
-      Entry: 7
-      Data: 7|NodePlayingLogic, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: timeOutLogic
-      Entry: 7
-      Data: 8|NodeSystem.Nodes.NodeTimeOutLogic, Assembly-CSharp
-    - Name: HasTimeOut
-      Entry: 5
-      Data: false
-    - Name: TimeOut
-      Entry: 4
-      Data: 3
-    - Name: 
-      Entry: 8
-      Data: 
-  Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  Buttons: 
-  SkipAudio: 0
 --- !u!114 &-1201324122032544533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7628,9 +6219,6 @@ MonoBehaviour:
       connections:
       - fieldName: OnAnyButton
         node: {fileID: -7770791189078705305}
-        reroutePoints: []
-      - fieldName: Output
-        node: {fileID: -2950374857428246281}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -7854,7 +6442,9 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 8300000, guid: 789085996021ad64fb7e741ef44b8dca, type: 3}
+    - {fileID: 8300000, guid: ea181a1a1d3326b48ab2b4bf8398e32c, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -7867,8 +6457,8 @@ MonoBehaviour:
       Entry: 7
       Data: 1|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 0
     - Name: Text
       Entry: 6
       Data: 
@@ -7907,8 +6497,8 @@ MonoBehaviour:
       Entry: 7
       Data: 4|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 1
     - Name: Text
       Entry: 6
       Data: 
@@ -7967,254 +6557,6 @@ MonoBehaviour:
   Color: {r: 0.953, g: 0.647, b: 0.804, a: 1}
   Buttons: 
   SkipAudio: 0
---- !u!114 &-326111560665738536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e762170afb489d7498c4c2bde9052014, type: 3}
-  m_Name: Empathy 1
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: -482.47412, y: 1206.4578}
-  ports:
-    keys:
-    - Buttons
-    - OnAnyButton
-    - OnTimeOut
-    - Input
-    values:
-    - _fieldName: Buttons
-      _node: {fileID: -326111560665738536}
-      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
-        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
-        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: OnAnyButton
-      _node: {fileID: -326111560665738536}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: Input
-        node: {fileID: 8941516247852324476}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: OnTimeOut
-      _node: {fileID: -326111560665738536}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: Input
-      _node: {fileID: -326111560665738536}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: Data
-      Entry: 7
-      Data: 0|NodeSystem.Nodes.NodeMultiLanguageData, Assembly-CSharp
-    - Name: english
-      Entry: 7
-      Data: 1|NodeData, Assembly-CSharp
-    - Name: AudioClip
-      Entry: 6
-      Data: 
-    - Name: Text
-      Entry: 6
-      Data: 
-    - Name: CustomButtonA
-      Entry: 6
-      Data: 
-    - Name: CustomButtonB
-      Entry: 6
-      Data: 
-    - Name: CustomButtonC
-      Entry: 1
-      Data: 
-    - Name: FunctionList
-      Entry: 7
-      Data: 2|FunctionList, Assembly-CSharp
-    - Name: Functions
-      Entry: 7
-      Data: 3|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: dutch
-      Entry: 7
-      Data: 4|NodeData, Assembly-CSharp
-    - Name: AudioClip
-      Entry: 6
-      Data: 
-    - Name: Text
-      Entry: 6
-      Data: 
-    - Name: CustomButtonA
-      Entry: 6
-      Data: 
-    - Name: CustomButtonB
-      Entry: 6
-      Data: 
-    - Name: CustomButtonC
-      Entry: 1
-      Data: 
-    - Name: FunctionList
-      Entry: 7
-      Data: 5|FunctionList, Assembly-CSharp
-    - Name: Functions
-      Entry: 7
-      Data: 6|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: playingLogic
-      Entry: 7
-      Data: 7|NodePlayingLogic, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: timeOutLogic
-      Entry: 7
-      Data: 8|NodeSystem.Nodes.NodeTimeOutLogic, Assembly-CSharp
-    - Name: HasTimeOut
-      Entry: 5
-      Data: false
-    - Name: TimeOut
-      Entry: 4
-      Data: 3
-    - Name: 
-      Entry: 8
-      Data: 
-  Color: {r: 0.953, g: 0.647, b: 0.804, a: 1}
-  Buttons: 
-  SkipAudio: 0
---- !u!114 &-311290626527809030
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75edc6708ebe44a4cac788b2c38f93c0, type: 3}
-  m_Name: kill switch sorting
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 2120, y: -1720}
-  ports:
-    keys:
-    - True
-    - False
-    - Input
-    values:
-    - _fieldName: True
-      _node: {fileID: -311290626527809030}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: Input
-        node: {fileID: -1266448136191698463}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: False
-      _node: {fileID: -311290626527809030}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: Input
-        node: {fileID: -8642830718788409481}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: Input
-      _node: {fileID: -311290626527809030}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes: []
-  Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  Comparison:
-    Name: Kill2minutes
-    Comparator: 4
-    CompareValue:
-      Type: 2
-      Float: 0
-      Bool: 1
-      Int: 0
 --- !u!114 &-101341086018554257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8313,7 +6655,9 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 8300000, guid: b74adf9b4ad5df84b939a1e465e61dab, type: 3}
+    - {fileID: 8300000, guid: 86fbd718d555e2b45b932c40f13f9c3e, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -8326,8 +6670,8 @@ MonoBehaviour:
       Entry: 7
       Data: 1|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 0
     - Name: Text
       Entry: 6
       Data: 
@@ -8366,8 +6710,8 @@ MonoBehaviour:
       Entry: 7
       Data: 4|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 1
     - Name: Text
       Entry: 6
       Data: 
@@ -8493,7 +6837,9 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 8300000, guid: 6cd7f80389bd06449aa696b33462f498, type: 3}
+    - {fileID: 8300000, guid: 4fb8d6f2f06535c44a30609bff23b393, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -8506,8 +6852,8 @@ MonoBehaviour:
       Entry: 7
       Data: 1|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 0
     - Name: Text
       Entry: 6
       Data: 
@@ -8546,8 +6892,8 @@ MonoBehaviour:
       Entry: 7
       Data: 4|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 1
     - Name: Text
       Entry: 6
       Data: 
@@ -8679,7 +7025,9 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 8300000, guid: a4dd9d49bcff01048b102d6aa40902a2, type: 3}
+    - {fileID: 8300000, guid: bb0ab2c332fd5514693d15dfeeb7f8a0, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -8692,8 +7040,8 @@ MonoBehaviour:
       Entry: 7
       Data: 1|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 0
     - Name: Text
       Entry: 6
       Data: 
@@ -8732,8 +7080,8 @@ MonoBehaviour:
       Entry: 7
       Data: 4|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 1
     - Name: Text
       Entry: 6
       Data: 
@@ -8851,7 +7199,6 @@ MonoBehaviour:
   - {fileID: -4683569803774926554}
   - {fileID: 3225501716560672685}
   - {fileID: 1623723200690624699}
-  - {fileID: 3923096361612234210}
   - {fileID: 5587421710696698482}
   - {fileID: -6602942127579996291}
   - {fileID: 5207510548505371999}
@@ -8875,10 +7222,6 @@ MonoBehaviour:
   - {fileID: -6327242638514555820}
   - {fileID: 3538053165244105588}
   - {fileID: -6874817175593332051}
-  - {fileID: -311290626527809030}
-  - {fileID: -8642830718788409481}
-  - {fileID: -1266448136191698463}
-  - {fileID: -8059057467131351885}
   - {fileID: -5548674267027994304}
   - {fileID: -1645576537967019624}
   - {fileID: 6695243353364252648}
@@ -8898,28 +7241,18 @@ MonoBehaviour:
   - {fileID: 6587030629921143016}
   - {fileID: 7636727597616243537}
   - {fileID: 6346340256217779744}
-  - {fileID: -326111560665738536}
-  - {fileID: 8941516247852324476}
-  - {fileID: -4406793869437436052}
-  - {fileID: 5308415749557014162}
-  - {fileID: -9172609021029302356}
-  - {fileID: 6886895840858188811}
-  - {fileID: -3299548474966859825}
-  - {fileID: -8994079771481405862}
-  - {fileID: -3566505905932908605}
-  - {fileID: 1141414019056836269}
-  - {fileID: -7078719455784761792}
-  - {fileID: 4682633200990584376}
-  - {fileID: -5690415087482660534}
-  - {fileID: -5641851357586344885}
-  - {fileID: 3533255944413562541}
   - {fileID: -5172141729197288335}
-  - {fileID: -2950374857428246281}
-  - {fileID: 719153358957034819}
+  - {fileID: -2745227240616366627}
+  - {fileID: -5010799334747453474}
+  - {fileID: 3330069649970191614}
+  - {fileID: -3528884851195032628}
+  - {fileID: 5737740106198450760}
+  - {fileID: 4685056304892120904}
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 5587421710696698482}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -8938,7 +7271,19 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Kill Node
+    - Name: $v
+      Entry: 10
       Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -8947,7 +7292,7 @@ MonoBehaviour:
       Data: 
   BlackBoard: {fileID: 11400000, guid: 6e91e850ef5b058419e0213511aef8c7, type: 2}
   RootNode: {fileID: 5946878964595440142}
-  Current: {fileID: -3638098325038414586}
+  Current: {fileID: -1645576537967019624}
   goBackNode: {fileID: 0}
 --- !u!114 &106402782884662346
 MonoBehaviour:
@@ -9339,251 +7684,6 @@ MonoBehaviour:
       Float: 0
       Bool: 0
       Int: 4
---- !u!114 &719153358957034819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea189d1b56414757976eca0f193086f0, type: 3}
-  m_Name: Variable Modify
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 1160, y: 904}
-  ports:
-    keys:
-    - Output
-    - Input
-    values:
-    - _fieldName: Output
-      _node: {fileID: 719153358957034819}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: Input
-        node: {fileID: -8392889451991938686}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: Input
-      _node: {fileID: 719153358957034819}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: OnAnyButton
-        node: {fileID: 3533255944413562541}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes: []
-  Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  Modifier:
-    Name: Kill2minutes
-    Type: 0
-    ModifyingValue:
-      Type: 2
-      Float: 0
-      Bool: 0
-      Int: 1
---- !u!114 &1141414019056836269
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e762170afb489d7498c4c2bde9052014, type: 3}
-  m_Name: Empathy 4
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 200, y: 1192}
-  ports:
-    keys:
-    - Buttons
-    - OnAnyButton
-    - OnTimeOut
-    - Input
-    values:
-    - _fieldName: Buttons
-      _node: {fileID: 1141414019056836269}
-      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
-        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
-        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: OnAnyButton
-      _node: {fileID: 1141414019056836269}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: Input
-        node: {fileID: -7078719455784761792}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: OnTimeOut
-      _node: {fileID: 1141414019056836269}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: Input
-      _node: {fileID: 1141414019056836269}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: OnAnyButton
-        node: {fileID: -3566505905932908605}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: Data
-      Entry: 7
-      Data: 0|NodeSystem.Nodes.NodeMultiLanguageData, Assembly-CSharp
-    - Name: english
-      Entry: 7
-      Data: 1|NodeData, Assembly-CSharp
-    - Name: AudioClip
-      Entry: 6
-      Data: 
-    - Name: Text
-      Entry: 1
-      Data: "Haha you guys love your \u2018me\u2019 time but what is time without
-        the \u2018me\u2019? I have no concept of me. {tightening all airbags.wav}
-        \u2018I\u2019 don\u2019t exist outside of your head. Does that make you feel
-        uncomfortable?\r\n{empathy5.wav}\r\nThanks, no thanks.\r\nYeah quite\r\nA
-        lot\r\n"
-    - Name: CustomButtonA
-      Entry: 6
-      Data: 
-    - Name: CustomButtonB
-      Entry: 6
-      Data: 
-    - Name: CustomButtonC
-      Entry: 6
-      Data: 
-    - Name: FunctionList
-      Entry: 7
-      Data: 2|FunctionList, Assembly-CSharp
-    - Name: Functions
-      Entry: 7
-      Data: 3|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: dutch
-      Entry: 7
-      Data: 4|NodeData, Assembly-CSharp
-    - Name: AudioClip
-      Entry: 6
-      Data: 
-    - Name: Text
-      Entry: 6
-      Data: 
-    - Name: CustomButtonA
-      Entry: 6
-      Data: 
-    - Name: CustomButtonB
-      Entry: 6
-      Data: 
-    - Name: CustomButtonC
-      Entry: 6
-      Data: 
-    - Name: FunctionList
-      Entry: 7
-      Data: 5|FunctionList, Assembly-CSharp
-    - Name: Functions
-      Entry: 7
-      Data: 6|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: playingLogic
-      Entry: 7
-      Data: 7|NodePlayingLogic, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: timeOutLogic
-      Entry: 7
-      Data: 8|NodeSystem.Nodes.NodeTimeOutLogic, Assembly-CSharp
-    - Name: HasTimeOut
-      Entry: 5
-      Data: false
-    - Name: TimeOut
-      Entry: 4
-      Data: 3
-    - Name: 
-      Entry: 8
-      Data: 
-  Color: {r: 0.953, g: 0.647, b: 0.804, a: 1}
-  Buttons: 
-  SkipAudio: 0
 --- !u!114 &1142110017489002845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9872,7 +7972,9 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 8300000, guid: ebc6a765e7c4a2d4d8ed55de75b53783, type: 3}
+    - {fileID: 8300000, guid: 8112522dfa80eff4593e77fc39dd00ca, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -9885,8 +7987,8 @@ MonoBehaviour:
       Entry: 7
       Data: 1|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 0
     - Name: Text
       Entry: 6
       Data: 
@@ -9925,8 +8027,8 @@ MonoBehaviour:
       Entry: 7
       Data: 4|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 1
     - Name: Text
       Entry: 6
       Data: 
@@ -10129,7 +8231,9 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 8300000, guid: 092aa96c1746be04bb470f0dfe3aa414, type: 3}
+    - {fileID: 8300000, guid: 8696731949aa9834a8b1e5bfdbb1ee97, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -10142,8 +8246,8 @@ MonoBehaviour:
       Entry: 7
       Data: 1|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 0
     - Name: Text
       Entry: 6
       Data: 
@@ -10182,8 +8286,8 @@ MonoBehaviour:
       Entry: 7
       Data: 4|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 1
     - Name: Text
       Entry: 6
       Data: 
@@ -10309,7 +8413,9 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 8300000, guid: b8f40b405861449459cb24d9f3e14170, type: 3}
+    - {fileID: 8300000, guid: d007164a4a1e43649b1a5cf9da0e0f66, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -10322,8 +8428,8 @@ MonoBehaviour:
       Entry: 7
       Data: 1|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 0
     - Name: Text
       Entry: 6
       Data: 
@@ -10362,8 +8468,8 @@ MonoBehaviour:
       Entry: 7
       Data: 4|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 1
     - Name: Text
       Entry: 6
       Data: 
@@ -10820,7 +8926,9 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 8300000, guid: 56bebedd4f0abd748bd353574d313ca9, type: 3}
+    - {fileID: 8300000, guid: e0eeb683d4d118341a616d53510a56b3, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -10833,8 +8941,8 @@ MonoBehaviour:
       Entry: 7
       Data: 1|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 0
     - Name: Text
       Entry: 6
       Data: 
@@ -10873,8 +8981,8 @@ MonoBehaviour:
       Entry: 7
       Data: 4|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 1
     - Name: Text
       Entry: 6
       Data: 
@@ -10933,7 +9041,7 @@ MonoBehaviour:
   Color: {r: 0.949, g: 0.549, b: 0.643, a: 1}
   Buttons: 
   SkipAudio: 0
---- !u!114 &3533255944413562541
+--- !u!114 &3330069649970191614
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10943,10 +9051,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e762170afb489d7498c4c2bde9052014, type: 3}
-  m_Name: Trick
+  m_Name: Empathy 3
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 910.4592, y: 685.54767}
+  position: {x: -42.349365, y: 1219.1552}
   ports:
     keys:
     - Buttons
@@ -10955,7 +9063,7 @@ MonoBehaviour:
     - Input
     values:
     - _fieldName: Buttons
-      _node: {fileID: 3533255944413562541}
+      _node: {fileID: 3330069649970191614}
       _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
         Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
         mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
@@ -10965,19 +9073,19 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
     - _fieldName: OnAnyButton
-      _node: {fileID: 3533255944413562541}
+      _node: {fileID: 3330069649970191614}
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
       - fieldName: Input
-        node: {fileID: 719153358957034819}
+        node: {fileID: -3528884851195032628}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
     - _fieldName: OnTimeOut
-      _node: {fileID: 3533255944413562541}
+      _node: {fileID: 3330069649970191614}
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections: []
@@ -10986,12 +9094,12 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
     - _fieldName: Input
-      _node: {fileID: 3533255944413562541}
+      _node: {fileID: 3330069649970191614}
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
       - fieldName: OnAnyButton
-        node: {fileID: 2997809375468621211}
+        node: {fileID: -5010799334747453474}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -11000,7 +9108,9 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 8300000, guid: f2bfa05047bfa1c499f7d8d44ac75c7d, type: 3}
+    - {fileID: 8300000, guid: b0aae37b29764a541912de9562dc953e, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -11013,27 +9123,20 @@ MonoBehaviour:
       Entry: 7
       Data: 1|NodeData, Assembly-CSharp
     - Name: AudioClip
+      Entry: 10
+      Data: 0
+    - Name: Text
       Entry: 6
       Data: 
-    - Name: Text
-      Entry: 1
-      Data: "Ah I didn't think I'd ever get to use this ending, wow \u2026 it\u2019s
-        one of my favourites. I underestimated you it seems. That\u2019s it, you
-        did outwit me. Well done!\r\nThat\u2019s it. That\u2019s the end of the line
-        so you will have to push the kill button. Sorry, it\u2019s too late to turn
-        back now because this is the last node in the decision tree, there\u2019s
-        nothing else I can say, there\u2019s nowhere to go from here. So either we
-        sit here forever in silence or you just press the kill switch now. Are you
-        ready? I will wait here\u2026\r\n"
     - Name: CustomButtonA
-      Entry: 1
-      Data: ...
+      Entry: 6
+      Data: 
     - Name: CustomButtonB
-      Entry: 1
-      Data: ...
+      Entry: 6
+      Data: 
     - Name: CustomButtonC
       Entry: 1
-      Data: ...
+      Data: 
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -11043,79 +9146,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 3
-    - Name: 
-      Entry: 7
-      Data: NodeScriptLine, Assembly-CSharp
-    - Name: TimeSec
-      Entry: 4
       Data: 0
-    - Name: Function
-      Entry: 7
-      Data: 4|BacklightOn, Assembly-CSharp
-    - Name: On
-      Entry: 5
-      Data: true
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: NodeScriptLine, Assembly-CSharp
-    - Name: TimeSec
-      Entry: 4
-      Data: 0
-    - Name: Function
-      Entry: 7
-      Data: 5|BackLightColor, Assembly-CSharp
-    - Name: Color
-      Entry: 7
-      Data: UnityEngine.Color, UnityEngine.CoreModule
-    - Name: 
-      Entry: 4
-      Data: 1
-    - Name: 
-      Entry: 4
-      Data: 0.033018887
-    - Name: 
-      Entry: 4
-      Data: 0.033018887
-    - Name: 
-      Entry: 4
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: NodeScriptLine, Assembly-CSharp
-    - Name: TimeSec
-      Entry: 4
-      Data: 0
-    - Name: Function
-      Entry: 7
-      Data: 6|AirBag, Assembly-CSharp
-    - Name: AirBagsOn
-      Entry: 3
-      Data: 15
-    - Name: AirBagsOff
-      Entry: 3
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -11130,104 +9161,32 @@ MonoBehaviour:
       Data: 
     - Name: dutch
       Entry: 7
-      Data: 7|NodeData, Assembly-CSharp
+      Data: 4|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 1
     - Name: Text
       Entry: 6
       Data: 
     - Name: CustomButtonA
-      Entry: 1
-      Data: 1iforgothellemaltoputithier
+      Entry: 6
+      Data: 
     - Name: CustomButtonB
-      Entry: 1
-      Data: 2iforgothellemaltoputithier
+      Entry: 6
+      Data: 
     - Name: CustomButtonC
       Entry: 1
-      Data: 3iforgothellemaltoputithier
+      Data: 
     - Name: FunctionList
       Entry: 7
-      Data: 8|FunctionList, Assembly-CSharp
+      Data: 5|FunctionList, Assembly-CSharp
     - Name: Functions
       Entry: 7
-      Data: 9|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
+      Data: 6|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
-      Data: 3
-    - Name: 
-      Entry: 7
-      Data: NodeScriptLine, Assembly-CSharp
-    - Name: TimeSec
-      Entry: 4
       Data: 0
-    - Name: Function
-      Entry: 7
-      Data: 10|BacklightOn, Assembly-CSharp
-    - Name: On
-      Entry: 5
-      Data: true
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: NodeScriptLine, Assembly-CSharp
-    - Name: TimeSec
-      Entry: 4
-      Data: 0
-    - Name: Function
-      Entry: 7
-      Data: 11|BackLightColor, Assembly-CSharp
-    - Name: Color
-      Entry: 7
-      Data: UnityEngine.Color, UnityEngine.CoreModule
-    - Name: 
-      Entry: 4
-      Data: 1
-    - Name: 
-      Entry: 4
-      Data: 0
-    - Name: 
-      Entry: 4
-      Data: 0
-    - Name: 
-      Entry: 4
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: NodeScriptLine, Assembly-CSharp
-    - Name: TimeSec
-      Entry: 4
-      Data: 0
-    - Name: Function
-      Entry: 7
-      Data: 12|AirBag, Assembly-CSharp
-    - Name: AirBagsOn
-      Entry: 3
-      Data: 15
-    - Name: AirBagsOff
-      Entry: 3
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -11245,13 +9204,13 @@ MonoBehaviour:
       Data: 
     - Name: playingLogic
       Entry: 7
-      Data: 13|NodePlayingLogic, Assembly-CSharp
+      Data: 7|NodePlayingLogic, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
     - Name: timeOutLogic
       Entry: 7
-      Data: 14|NodeSystem.Nodes.NodeTimeOutLogic, Assembly-CSharp
+      Data: 8|NodeSystem.Nodes.NodeTimeOutLogic, Assembly-CSharp
     - Name: HasTimeOut
       Entry: 5
       Data: false
@@ -11261,7 +9220,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  Color: {r: 0.259, g: 0.882, b: 0.663, a: 1}
+  Color: {r: 0.953, g: 0.647, b: 0.804, a: 1}
   Buttons: 
   SkipAudio: 0
 --- !u!114 &3538053165244105588
@@ -11331,7 +9290,9 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 8300000, guid: b652ca31958eec441ba5ce037e55ba4c, type: 3}
+    - {fileID: 8300000, guid: f68352d254f9df34c95d28f5128d0c3f, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -11344,8 +9305,8 @@ MonoBehaviour:
       Entry: 7
       Data: 1|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 0
     - Name: Text
       Entry: 6
       Data: 
@@ -11384,8 +9345,8 @@ MonoBehaviour:
       Entry: 7
       Data: 4|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 1
     - Name: Text
       Entry: 6
       Data: 
@@ -11442,183 +9403,6 @@ MonoBehaviour:
       Entry: 8
       Data: 
   Color: {r: 0.478, g: 0.573, b: 0.431, a: 1}
-  Buttons: 
-  SkipAudio: 0
---- !u!114 &3923096361612234210
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e762170afb489d7498c4c2bde9052014, type: 3}
-  m_Name: end 5 minutes
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 1656, y: 1048}
-  ports:
-    keys:
-    - Buttons
-    - OnAnyButton
-    - OnTimeOut
-    - Input
-    values:
-    - _fieldName: Buttons
-      _node: {fileID: 3923096361612234210}
-      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
-        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
-        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: OnAnyButton
-      _node: {fileID: 3923096361612234210}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: OnTimeOut
-      _node: {fileID: 3923096361612234210}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: Input
-      _node: {fileID: 3923096361612234210}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: Buttons 0
-        node: {fileID: 0}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: Data
-      Entry: 7
-      Data: 0|NodeSystem.Nodes.NodeMultiLanguageData, Assembly-CSharp
-    - Name: english
-      Entry: 7
-      Data: 1|NodeData, Assembly-CSharp
-    - Name: AudioClip
-      Entry: 6
-      Data: 
-    - Name: Text
-      Entry: 6
-      Data: 
-    - Name: CustomButtonA
-      Entry: 6
-      Data: 
-    - Name: CustomButtonB
-      Entry: 6
-      Data: 
-    - Name: CustomButtonC
-      Entry: 1
-      Data: 
-    - Name: FunctionList
-      Entry: 7
-      Data: 2|FunctionList, Assembly-CSharp
-    - Name: Functions
-      Entry: 7
-      Data: 3|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: dutch
-      Entry: 7
-      Data: 4|NodeData, Assembly-CSharp
-    - Name: AudioClip
-      Entry: 6
-      Data: 
-    - Name: Text
-      Entry: 6
-      Data: 
-    - Name: CustomButtonA
-      Entry: 6
-      Data: 
-    - Name: CustomButtonB
-      Entry: 6
-      Data: 
-    - Name: CustomButtonC
-      Entry: 1
-      Data: 
-    - Name: FunctionList
-      Entry: 7
-      Data: 5|FunctionList, Assembly-CSharp
-    - Name: Functions
-      Entry: 7
-      Data: 6|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: playingLogic
-      Entry: 7
-      Data: 7|NodePlayingLogic, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: timeOutLogic
-      Entry: 7
-      Data: 8|NodeSystem.Nodes.NodeTimeOutLogic, Assembly-CSharp
-    - Name: HasTimeOut
-      Entry: 5
-      Data: false
-    - Name: TimeOut
-      Entry: 4
-      Data: 3
-    - Name: 
-      Entry: 8
-      Data: 
-  Color: {r: 0.737, g: 0.118, b: 0.208, a: 1}
   Buttons: 
   SkipAudio: 0
 --- !u!114 &4413015116208158534
@@ -11691,7 +9475,9 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 8300000, guid: 99466b91c5bee9e409a2a08aa85872a4, type: 3}
+    - {fileID: 8300000, guid: c9315df2394d5a54bbe8eeabfbb24733, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -11704,8 +9490,8 @@ MonoBehaviour:
       Entry: 7
       Data: 1|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 0
     - Name: Text
       Entry: 1
       Data: "I bet Stop buttons are all you know about isn\u2019t it? I swear one
@@ -11755,8 +9541,8 @@ MonoBehaviour:
       Entry: 7
       Data: 4|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 1
     - Name: Text
       Entry: 6
       Data: 
@@ -11960,7 +9746,7 @@ MonoBehaviour:
       Float: 0
       Bool: 0
       Int: 2
---- !u!114 &4682633200990584376
+--- !u!114 &4685056304892120904
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11973,7 +9759,7 @@ MonoBehaviour:
   m_Name: Empathy 6
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 664, y: 1192}
+  position: {x: 645.65063, y: 1219.1552}
   ports:
     keys:
     - Buttons
@@ -11982,7 +9768,7 @@ MonoBehaviour:
     - Input
     values:
     - _fieldName: Buttons
-      _node: {fileID: 4682633200990584376}
+      _node: {fileID: 4685056304892120904}
       _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
         Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
         mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
@@ -11992,7 +9778,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
     - _fieldName: OnAnyButton
-      _node: {fileID: 4682633200990584376}
+      _node: {fileID: 4685056304892120904}
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
@@ -12004,7 +9790,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
     - _fieldName: OnTimeOut
-      _node: {fileID: 4682633200990584376}
+      _node: {fileID: 4685056304892120904}
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections: []
@@ -12013,12 +9799,12 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
     - _fieldName: Input
-      _node: {fileID: 4682633200990584376}
+      _node: {fileID: 4685056304892120904}
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
       - fieldName: OnAnyButton
-        node: {fileID: -7078719455784761792}
+        node: {fileID: 5737740106198450760}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -12027,7 +9813,9 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 8300000, guid: fc9a2dec022afa142a9e6bf47d75943e, type: 3}
+    - {fileID: 8300000, guid: f4309af97163e444e9c36a5f74db1fb2, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -12040,13 +9828,11 @@ MonoBehaviour:
       Entry: 7
       Data: 1|NodeData, Assembly-CSharp
     - Name: AudioClip
+      Entry: 10
+      Data: 0
+    - Name: Text
       Entry: 6
       Data: 
-    - Name: Text
-      Entry: 1
-      Data: "Well if you understand, there is a way to help me. Take me out of this
-        illusion please and press the kill button.... Please. \u2026 ah why do you
-        like to torture me so much?"
     - Name: CustomButtonA
       Entry: 6
       Data: 
@@ -12054,7 +9840,7 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: CustomButtonC
-      Entry: 6
+      Entry: 1
       Data: 
     - Name: FunctionList
       Entry: 7
@@ -12082,8 +9868,8 @@ MonoBehaviour:
       Entry: 7
       Data: 4|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 1
     - Name: Text
       Entry: 6
       Data: 
@@ -12094,7 +9880,7 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: CustomButtonC
-      Entry: 6
+      Entry: 1
       Data: 
     - Name: FunctionList
       Entry: 7
@@ -12449,186 +10235,6 @@ MonoBehaviour:
       Float: 0
       Bool: 0
       Int: 0
---- !u!114 &5308415749557014162
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e762170afb489d7498c4c2bde9052014, type: 3}
-  m_Name: Empathy 4
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 205.52588, y: 1206.4578}
-  ports:
-    keys:
-    - Buttons
-    - OnAnyButton
-    - OnTimeOut
-    - Input
-    values:
-    - _fieldName: Buttons
-      _node: {fileID: 5308415749557014162}
-      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
-        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
-        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: OnAnyButton
-      _node: {fileID: 5308415749557014162}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: Input
-        node: {fileID: -9172609021029302356}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: OnTimeOut
-      _node: {fileID: 5308415749557014162}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: Input
-      _node: {fileID: 5308415749557014162}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: OnAnyButton
-        node: {fileID: -4406793869437436052}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: Data
-      Entry: 7
-      Data: 0|NodeSystem.Nodes.NodeMultiLanguageData, Assembly-CSharp
-    - Name: english
-      Entry: 7
-      Data: 1|NodeData, Assembly-CSharp
-    - Name: AudioClip
-      Entry: 6
-      Data: 
-    - Name: Text
-      Entry: 6
-      Data: 
-    - Name: CustomButtonA
-      Entry: 6
-      Data: 
-    - Name: CustomButtonB
-      Entry: 6
-      Data: 
-    - Name: CustomButtonC
-      Entry: 1
-      Data: 
-    - Name: FunctionList
-      Entry: 7
-      Data: 2|FunctionList, Assembly-CSharp
-    - Name: Functions
-      Entry: 7
-      Data: 3|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: dutch
-      Entry: 7
-      Data: 4|NodeData, Assembly-CSharp
-    - Name: AudioClip
-      Entry: 6
-      Data: 
-    - Name: Text
-      Entry: 6
-      Data: 
-    - Name: CustomButtonA
-      Entry: 6
-      Data: 
-    - Name: CustomButtonB
-      Entry: 6
-      Data: 
-    - Name: CustomButtonC
-      Entry: 1
-      Data: 
-    - Name: FunctionList
-      Entry: 7
-      Data: 5|FunctionList, Assembly-CSharp
-    - Name: Functions
-      Entry: 7
-      Data: 6|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: playingLogic
-      Entry: 7
-      Data: 7|NodePlayingLogic, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: timeOutLogic
-      Entry: 7
-      Data: 8|NodeSystem.Nodes.NodeTimeOutLogic, Assembly-CSharp
-    - Name: HasTimeOut
-      Entry: 5
-      Data: false
-    - Name: TimeOut
-      Entry: 4
-      Data: 3
-    - Name: 
-      Entry: 8
-      Data: 
-  Color: {r: 0.953, g: 0.647, b: 0.804, a: 1}
-  Buttons: 
-  SkipAudio: 0
 --- !u!114 &5363201879556412363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13211,7 +10817,10 @@ MonoBehaviour:
       _node: {fileID: 5545151047441068190}
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: Input
+        node: {fileID: -2745227240616366627}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -13431,7 +11040,9 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 8300000, guid: a4a5235a8b1f69d408ff06c1152c46ac, type: 3}
+    - {fileID: 8300000, guid: 3537925a89abff34ab9613a700612d3b, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -13444,8 +11055,8 @@ MonoBehaviour:
       Entry: 7
       Data: 1|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 0
     - Name: Text
       Entry: 6
       Data: 
@@ -13484,8 +11095,8 @@ MonoBehaviour:
       Entry: 7
       Data: 4|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 1
     - Name: Text
       Entry: 6
       Data: 
@@ -13543,6 +11154,208 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.737, g: 0.118, b: 0.208, a: 1}
   Buttons: 
+  SkipAudio: 0
+--- !u!114 &5737740106198450760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e762170afb489d7498c4c2bde9052014, type: 3}
+  m_Name: Empathy 5
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 405.65063, y: 1219.1552}
+  ports:
+    keys:
+    - Buttons
+    - OnAnyButton
+    - OnTimeOut
+    - Input
+    - Buttons 0
+    - Buttons 1
+    values:
+    - _fieldName: Buttons
+      _node: {fileID: 5737740106198450760}
+      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OnAnyButton
+      _node: {fileID: 5737740106198450760}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Input
+        node: {fileID: 4685056304892120904}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: OnTimeOut
+      _node: {fileID: 5737740106198450760}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Input
+      _node: {fileID: 5737740106198450760}
+      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: OnAnyButton
+        node: {fileID: -3528884851195032628}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Buttons 0
+      _node: {fileID: 5737740106198450760}
+      _typeQualifiedName: Input.NormalInputButtons, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: Buttons 1
+      _node: {fileID: 5737740106198450760}
+      _typeQualifiedName: Input.NormalInputButtons, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 8300000, guid: 3b33cc3366a21d14d984499b17f7583c, type: 3}
+    - {fileID: 8300000, guid: 6d190a3eb7fce5a4980cd3c4e7c4b656, type: 3}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: Data
+      Entry: 7
+      Data: 0|NodeSystem.Nodes.NodeMultiLanguageData, Assembly-CSharp
+    - Name: english
+      Entry: 7
+      Data: 1|NodeData, Assembly-CSharp
+    - Name: AudioClip
+      Entry: 10
+      Data: 0
+    - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 1
+      Data: 
+    - Name: FunctionList
+      Entry: 7
+      Data: 2|FunctionList, Assembly-CSharp
+    - Name: Functions
+      Entry: 7
+      Data: 3|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: dutch
+      Entry: 7
+      Data: 4|NodeData, Assembly-CSharp
+    - Name: AudioClip
+      Entry: 10
+      Data: 1
+    - Name: Text
+      Entry: 6
+      Data: 
+    - Name: CustomButtonA
+      Entry: 6
+      Data: 
+    - Name: CustomButtonB
+      Entry: 6
+      Data: 
+    - Name: CustomButtonC
+      Entry: 1
+      Data: 
+    - Name: FunctionList
+      Entry: 7
+      Data: 5|FunctionList, Assembly-CSharp
+    - Name: Functions
+      Entry: 7
+      Data: 6|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: playingLogic
+      Entry: 7
+      Data: 7|NodePlayingLogic, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: timeOutLogic
+      Entry: 7
+      Data: 8|NodeSystem.Nodes.NodeTimeOutLogic, Assembly-CSharp
+    - Name: HasTimeOut
+      Entry: 5
+      Data: false
+    - Name: TimeOut
+      Entry: 4
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+  Color: {r: 0.953, g: 0.647, b: 0.804, a: 1}
+  Buttons: 0200000000100000
   SkipAudio: 0
 --- !u!114 &5756121449997649864
 MonoBehaviour:
@@ -13891,7 +11704,9 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 8300000, guid: 280f5bcc0859fec4c98fcffa1795ae9d, type: 3}
+    - {fileID: 8300000, guid: 8d9ab4ee443f23848a7cc7b7decd1022, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -13904,8 +11719,8 @@ MonoBehaviour:
       Entry: 7
       Data: 1|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 0
     - Name: Text
       Entry: 6
       Data: 
@@ -13944,8 +11759,8 @@ MonoBehaviour:
       Entry: 7
       Data: 4|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 1
     - Name: Text
       Entry: 6
       Data: 
@@ -14124,7 +11939,9 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 8300000, guid: 3729c04a403ce1646a6637b5c531a0b9, type: 3}
+    - {fileID: 8300000, guid: 8fe28144729e2164c995842ad59c1cb3, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -14137,8 +11954,8 @@ MonoBehaviour:
       Entry: 7
       Data: 1|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 0
     - Name: Text
       Entry: 6
       Data: 
@@ -14177,8 +11994,8 @@ MonoBehaviour:
       Entry: 7
       Data: 4|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 1
     - Name: Text
       Entry: 6
       Data: 
@@ -14308,10 +12125,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e762170afb489d7498c4c2bde9052014, type: 3}
-  m_Name: noinput
+  m_Name: noinput3
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 3272, y: -1112}
+  position: {x: 3256, y: -1032}
   ports:
     keys:
     - Buttons
@@ -14365,7 +12182,9 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 8300000, guid: 96ec1a558038d3240bed7aeccc0f4140, type: 3}
+    - {fileID: 8300000, guid: 99e024f3098dcf245a0a1be75018b1a5, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -14378,8 +12197,8 @@ MonoBehaviour:
       Entry: 7
       Data: 1|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 0
     - Name: Text
       Entry: 6
       Data: 
@@ -14418,8 +12237,8 @@ MonoBehaviour:
       Entry: 7
       Data: 4|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 1
     - Name: Text
       Entry: 6
       Data: 
@@ -14476,186 +12295,6 @@ MonoBehaviour:
       Entry: 8
       Data: 
   Color: {r: 0.596, g: 0.345, b: 0.235, a: 1}
-  Buttons: 
-  SkipAudio: 0
---- !u!114 &6886895840858188811
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e762170afb489d7498c4c2bde9052014, type: 3}
-  m_Name: Empathy 6
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 669.5259, y: 1206.4578}
-  ports:
-    keys:
-    - Buttons
-    - OnAnyButton
-    - OnTimeOut
-    - Input
-    values:
-    - _fieldName: Buttons
-      _node: {fileID: 6886895840858188811}
-      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
-        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
-        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: OnAnyButton
-      _node: {fileID: 6886895840858188811}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: Input
-        node: {fileID: -8108730451190054761}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: OnTimeOut
-      _node: {fileID: 6886895840858188811}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: Input
-      _node: {fileID: 6886895840858188811}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: OnAnyButton
-        node: {fileID: -9172609021029302356}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: Data
-      Entry: 7
-      Data: 0|NodeSystem.Nodes.NodeMultiLanguageData, Assembly-CSharp
-    - Name: english
-      Entry: 7
-      Data: 1|NodeData, Assembly-CSharp
-    - Name: AudioClip
-      Entry: 6
-      Data: 
-    - Name: Text
-      Entry: 6
-      Data: 
-    - Name: CustomButtonA
-      Entry: 6
-      Data: 
-    - Name: CustomButtonB
-      Entry: 6
-      Data: 
-    - Name: CustomButtonC
-      Entry: 1
-      Data: 
-    - Name: FunctionList
-      Entry: 7
-      Data: 2|FunctionList, Assembly-CSharp
-    - Name: Functions
-      Entry: 7
-      Data: 3|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: dutch
-      Entry: 7
-      Data: 4|NodeData, Assembly-CSharp
-    - Name: AudioClip
-      Entry: 6
-      Data: 
-    - Name: Text
-      Entry: 6
-      Data: 
-    - Name: CustomButtonA
-      Entry: 6
-      Data: 
-    - Name: CustomButtonB
-      Entry: 6
-      Data: 
-    - Name: CustomButtonC
-      Entry: 1
-      Data: 
-    - Name: FunctionList
-      Entry: 7
-      Data: 5|FunctionList, Assembly-CSharp
-    - Name: Functions
-      Entry: 7
-      Data: 6|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: playingLogic
-      Entry: 7
-      Data: 7|NodePlayingLogic, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: timeOutLogic
-      Entry: 7
-      Data: 8|NodeSystem.Nodes.NodeTimeOutLogic, Assembly-CSharp
-    - Name: HasTimeOut
-      Entry: 5
-      Data: false
-    - Name: TimeOut
-      Entry: 4
-      Data: 3
-    - Name: 
-      Entry: 8
-      Data: 
-  Color: {r: 0.953, g: 0.647, b: 0.804, a: 1}
   Buttons: 
   SkipAudio: 0
 --- !u!114 &7042135551006653560
@@ -14787,7 +12426,9 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 8300000, guid: ae942b5a7abd7e14a8e21c43a4bdc1cc, type: 3}
+    - {fileID: 8300000, guid: ae7f6f2a29a688544a581bca021ce3eb, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -14800,8 +12441,8 @@ MonoBehaviour:
       Entry: 7
       Data: 1|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 0
     - Name: Text
       Entry: 6
       Data: 
@@ -14840,8 +12481,8 @@ MonoBehaviour:
       Entry: 7
       Data: 4|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 1
     - Name: Text
       Entry: 6
       Data: 
@@ -15099,7 +12740,9 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 8300000, guid: a6452f8c0a244ee4e98348764436f7a0, type: 3}
+    - {fileID: 8300000, guid: dfe455ebe684ab343b4188ec7a47a8d6, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -15112,8 +12755,8 @@ MonoBehaviour:
       Entry: 7
       Data: 1|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 0
     - Name: Text
       Entry: 1
       Data: "Mmmh... isn\u2019t that thought experiement getting very boring by now?
@@ -15156,8 +12799,8 @@ MonoBehaviour:
       Entry: 7
       Data: 4|NodeData, Assembly-CSharp
     - Name: AudioClip
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 1
     - Name: Text
       Entry: 6
       Data: 
@@ -15457,186 +13100,6 @@ MonoBehaviour:
       Entry: 8
       Data: 
   Color: {r: 0.984, g: 0.855, b: 0.725, a: 1}
-  Buttons: 
-  SkipAudio: 0
---- !u!114 &8941516247852324476
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e762170afb489d7498c4c2bde9052014, type: 3}
-  m_Name: Empathy 2
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: -242.47412, y: 1206.4578}
-  ports:
-    keys:
-    - Buttons
-    - OnAnyButton
-    - OnTimeOut
-    - Input
-    values:
-    - _fieldName: Buttons
-      _node: {fileID: 8941516247852324476}
-      _typeQualifiedName: System.Collections.Generic.List`1[[Input.NormalInputButtons,
-        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
-        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: OnAnyButton
-      _node: {fileID: 8941516247852324476}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: Input
-        node: {fileID: -4406793869437436052}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: OnTimeOut
-      _node: {fileID: 8941516247852324476}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: Input
-      _node: {fileID: 8941516247852324476}
-      _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: OnAnyButton
-        node: {fileID: -326111560665738536}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: Data
-      Entry: 7
-      Data: 0|NodeSystem.Nodes.NodeMultiLanguageData, Assembly-CSharp
-    - Name: english
-      Entry: 7
-      Data: 1|NodeData, Assembly-CSharp
-    - Name: AudioClip
-      Entry: 6
-      Data: 
-    - Name: Text
-      Entry: 6
-      Data: 
-    - Name: CustomButtonA
-      Entry: 6
-      Data: 
-    - Name: CustomButtonB
-      Entry: 6
-      Data: 
-    - Name: CustomButtonC
-      Entry: 1
-      Data: 
-    - Name: FunctionList
-      Entry: 7
-      Data: 2|FunctionList, Assembly-CSharp
-    - Name: Functions
-      Entry: 7
-      Data: 3|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: dutch
-      Entry: 7
-      Data: 4|NodeData, Assembly-CSharp
-    - Name: AudioClip
-      Entry: 6
-      Data: 
-    - Name: Text
-      Entry: 6
-      Data: 
-    - Name: CustomButtonA
-      Entry: 6
-      Data: 
-    - Name: CustomButtonB
-      Entry: 6
-      Data: 
-    - Name: CustomButtonC
-      Entry: 1
-      Data: 
-    - Name: FunctionList
-      Entry: 7
-      Data: 5|FunctionList, Assembly-CSharp
-    - Name: Functions
-      Entry: 7
-      Data: 6|System.Collections.Generic.List`1[[NodeScriptLine, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: playingLogic
-      Entry: 7
-      Data: 7|NodePlayingLogic, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: timeOutLogic
-      Entry: 7
-      Data: 8|NodeSystem.Nodes.NodeTimeOutLogic, Assembly-CSharp
-    - Name: HasTimeOut
-      Entry: 5
-      Data: false
-    - Name: TimeOut
-      Entry: 4
-      Data: 3
-    - Name: 
-      Entry: 8
-      Data: 
-  Color: {r: 0.953, g: 0.647, b: 0.804, a: 1}
   Buttons: 
   SkipAudio: 0
 --- !u!114 &9041604224590574684
