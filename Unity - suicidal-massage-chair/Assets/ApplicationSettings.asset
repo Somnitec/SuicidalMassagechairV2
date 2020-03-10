@@ -185,7 +185,7 @@ MonoBehaviour:
   ShowNodeData: 1
   ShowNodeAudio: 1
   ShowNodeText: 1
-  ShowNodeButtons: 0
+  ShowNodeButtons: 1
   ShowNodeFunctions: 0
   Language: 0
   ResetChairOnStart: 0
@@ -199,4 +199,4 @@ MonoBehaviour:
   - 0.6
   - 0.8
   - 1
-  WaitingAudio: {fileID: 8300000, guid: 3f322c5d23f42d2458e308b5b0316493, type: 3}
+  WaitingAudio: {fileID: 8300000, guid: bd23be1d456b09c45a11df6dfe53734d, type: 3}
