@@ -28,9 +28,6 @@ void doAck() {
     Serial.print(F(",\n\t\"chair_position_target_range\":"));
     Serial.print(chair_position_target_range);
     Serial.print(F(",\n\t\"chair_position_motor_direction\":"));
-    /* if (digitalRead(chairup))chair_position_motor_direction = 1;
-      else if (digitalRead(chairdown))chair_position_motor_direction = -1;
-      else chair_position_motor_direction = 0;*/
     Serial.print(chair_position_motor_direction);
     Serial.print(F(",\n\t\"chair_position_move_time_max\":"));
     Serial.print(chair_position_move_time_max);
