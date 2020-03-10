@@ -3,7 +3,13 @@ void sendAck() {
   queueAck = true;
 }
 
+elapsedMillis ackTimer;
+int maxAckInterval = 100;
+
 void doAck() {
+    if (ackTimer > maxAckInterval)
+  {
+    ackTimer = 0;
   if (queueAck) {
     queueAck = false;
 
@@ -105,8 +111,11 @@ void doAck() {
     Serial.print(button_bounce_time);
     Serial.print(F(",\n\t\"maxStringLength\":"));
     Serial.print(maxStringLength);
+    Serial.print(F(",\n\t\"maxAckInterval\":"));
+    Serial.print(maxAckInterval);
     Serial.print(F(",\n\t\"ackTime\":"));
     Serial.print(millis() - timeCheck);
     Serial.println(F("\n}"));
+  }
   }
 }

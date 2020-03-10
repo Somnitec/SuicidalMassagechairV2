@@ -193,7 +193,12 @@ void loop()
 
 
   doLeds();
-  doAck() ;
+
+  if (blinkTimer > blinkTime)
+  {
+    blinkTimer = 0;
+    digitalWrite(led, !digitalRead(led));
+  }
 }
 
 void printError(String error) {

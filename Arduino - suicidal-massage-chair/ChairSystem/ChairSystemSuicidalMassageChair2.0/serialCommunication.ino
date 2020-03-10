@@ -108,7 +108,7 @@ void receiveMessage( String message) {
   else if (validateInput( F("roller_move_time_down"), 1)) {
     roller_move_time_down =  doc["roller_move_time_down"][0];
   }
- else if (validateInput( F("kneading_position"), 1)) {
+  else if (validateInput( F("kneading_position"), 1)) {
     kneading_position =  doc["kneading_position"][0];
   }
 
@@ -128,19 +128,19 @@ void receiveMessage( String message) {
   }
   else if (validateInput( F("airbag_shoulders_on"), 1)) {
     airbag_shoulders_on = doc["airbag_shoulders_on"][0];
-    shoulderTimer=0;
+    shoulderTimer = 0;
   }
   else if (validateInput( F("airbag_arms_on"), 1)) {
     airbag_arms_on = doc["airbag_arms_on"][0];
-    armsTimer=0;
+    armsTimer = 0;
   }
   else if (validateInput( F("airbag_legs_on"), 1)) {
     airbag_legs_on = doc["airbag_legs_on"][0];
-    legsTimer=0;
+    legsTimer = 0;
   }
   else if (validateInput( F("airbag_outside_on"), 1)) {
     airbag_outside_on = doc["airbag_outside_on"][0];
-    outsideTimer=0;
+    outsideTimer = 0;
   }
   else if (validateInput( F("airbag_time_max"), 1)) {
     airbag_time_max =  doc["airbag_time_max"][0];
@@ -204,6 +204,10 @@ void receiveMessage( String message) {
     rollerCalibrationRoutine();
   }
 
+  else if (validateInput( F("maxAckInterval"), 1)) {
+
+    maxAckInterval =  doc["maxAckInterval"][0];
+  }
   else return incorrectMessage(message);
 
   sendAck();
