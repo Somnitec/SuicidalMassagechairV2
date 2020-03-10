@@ -183,16 +183,16 @@ MonoBehaviour:
   LogDebugInfo: 0
   LogDebugMessageInfo: 0
   ShowNodeData: 1
-  ShowNodeAudio: 0
-  ShowNodeText: 0
-  ShowNodeButtons: 0
-  ShowNodeFunctions: 1
-  Language: 1
-  ResetChairOnStart: 1
+  ShowNodeAudio: 1
+  ShowNodeText: 1
+  ShowNodeButtons: 1
+  ShowNodeFunctions: 0
+  Language: 0
+  ResetChairOnStart: 0
   TimeOutTimeInSeconds: 600
   AllowInputFasterInSeconds: 2
-  InitialInterruptCountBeforeGoingToSpecialNode: 2
-  InitialTimeOutBeforeGoingToSpecialNode: 3
+  InitialInterruptCountBeforeGoingToSpecialNode: 1
+  InitialTimeOutBeforeGoingToSpecialNode: 10
   VolumeLevels:
   - 0.2
   - 0.4
