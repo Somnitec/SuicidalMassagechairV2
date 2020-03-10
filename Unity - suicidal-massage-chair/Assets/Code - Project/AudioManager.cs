@@ -21,7 +21,7 @@ public class AudioManager : SingletonMonoBehavior<AudioManager>
     [ReadOnly, SerializeField]
     private float decibel = 0f;
     
-    double clipDuration => (double) Source.clip.samples / Source.clip.frequency;
+    double clipDuration => (Source.clip != null) ? (double) Source.clip.samples / Source.clip.frequency : 0.0;
     public string ClipProgress => $"[{Source.time:F2}/{clipDuration:F2}]";
 
     void Start()
