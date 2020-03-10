@@ -24,6 +24,8 @@ public class DialogueNode : BaseNode
 
     [Output] public Connection OnAnyButton;
 
+    [HideInInspector] public bool SkipAudio = false;
+    
     [SerializeField, InlineProperty, HideReferenceObjectPicker, HideLabel]
     private NodeTimeOutLogic timeOutLogic = new NodeTimeOutLogic();
 
@@ -48,6 +50,13 @@ public class DialogueNode : BaseNode
             Debug.Log($"OnNodeEnable {name}");
 
         AudioManager.Instance.Stop();
+        
+        if (SkipAudio)
+        {
+            OnFinished();
+            return;
+        }
+        
         ListenToInterruptedInput();
         PlayFunctionsAndAudio(OnFinished);
     }

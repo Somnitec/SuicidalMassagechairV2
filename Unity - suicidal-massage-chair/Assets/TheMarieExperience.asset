@@ -181,6 +181,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.953, g: 0.647, b: 0.804, a: 1}
   Buttons: 
+  SkipAudio: 0
 --- !u!114 &-8642830718788409481
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -499,6 +500,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.725, g: 0.863, b: 0.973, a: 1}
   Buttons: 
+  SkipAudio: 0
 --- !u!114 &-8448898358569378876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -683,6 +685,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.949, g: 0.549, b: 0.643, a: 1}
   Buttons: 
+  SkipAudio: 0
 --- !u!114 &-8392889451991938686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -860,6 +863,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.647, g: 0.745, b: 0.957, a: 1}
   Buttons: 
+  SkipAudio: 0
 --- !u!114 &-8108730451190054761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1135,6 +1139,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   Buttons: 
+  SkipAudio: 0
 --- !u!114 &-7846428968476788790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1316,6 +1321,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.953, g: 0.647, b: 0.804, a: 1}
   Buttons: 
+  SkipAudio: 0
 --- !u!114 &-7770791189078705305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1552,6 +1558,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.647, g: 0.745, b: 0.957, a: 1}
   Buttons: 
+  SkipAudio: 0
 --- !u!114 &-7717035514121807602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1745,6 +1752,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   Buttons: 
+  SkipAudio: 0
 --- !u!114 &-7590438613953989903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2001,6 +2009,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.725, g: 0.976, b: 0.91, a: 1}
   Buttons: 0200000000040000090000000008000000100000
+  SkipAudio: 0
 --- !u!114 &-7345050390076242110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2182,6 +2191,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.949, g: 0.549, b: 0.643, a: 1}
   Buttons: 
+  SkipAudio: 0
 --- !u!114 &-7327097967632401089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2363,6 +2373,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.949, g: 0.549, b: 0.643, a: 1}
   Buttons: 
+  SkipAudio: 0
 --- !u!114 &-7078719455784761792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2566,6 +2577,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.953, g: 0.647, b: 0.804, a: 1}
   Buttons: 0200000000100000
+  SkipAudio: 0
 --- !u!114 &-6976243038532886620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2860,6 +2872,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.478, g: 0.573, b: 0.431, a: 1}
   Buttons: 
+  SkipAudio: 0
 --- !u!114 &-6602942127579996291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2900,6 +2913,7 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  GoBackInWaitMode: 0
 --- !u!114 &-6327242638514555820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3134,6 +3148,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.478, g: 0.573, b: 0.431, a: 1}
   Buttons: 
+  SkipAudio: 0
 --- !u!114 &-6205505796161779793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3330,6 +3345,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.949, g: 0.549, b: 0.643, a: 1}
   Buttons: 
+  SkipAudio: 0
 --- !u!114 &-5997860821628821780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3587,6 +3603,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.647, g: 0.745, b: 0.957, a: 1}
   Buttons: 
+  SkipAudio: 0
 --- !u!114 &-5690415087482660534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3775,6 +3792,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.737, g: 0.118, b: 0.208, a: 1}
   Buttons: 
+  SkipAudio: 0
 --- !u!114 &-5641851357586344885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3951,6 +3969,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.737, g: 0.118, b: 0.208, a: 1}
   Buttons: 
+  SkipAudio: 0
 --- !u!114 &-5571000456554445829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4137,6 +4156,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.953, g: 0.647, b: 0.804, a: 1}
   Buttons: 
+  SkipAudio: 0
 --- !u!114 &-5548674267027994304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4318,6 +4338,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.596, g: 0.345, b: 0.235, a: 1}
   Buttons: 
+  SkipAudio: 0
 --- !u!114 &-5526141858756207580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4501,6 +4522,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.647, g: 0.745, b: 0.957, a: 1}
   Buttons: 
+  SkipAudio: 0
 --- !u!114 &-5371570797472822275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4682,6 +4704,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.949, g: 0.549, b: 0.643, a: 1}
   Buttons: 
+  SkipAudio: 0
 --- !u!114 &-5348682116443663920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4838,6 +4861,7 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   Color: {r: 0.596, g: 0.345, b: 0.235, a: 1}
+  GoBackInWaitMode: 1
 --- !u!114 &-4683569803774926554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5098,6 +5122,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.647, g: 0.745, b: 0.957, a: 1}
   Buttons: 
+  SkipAudio: 0
 --- !u!114 &-4093810458675170543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5489,6 +5514,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.976, g: 0.792, b: 0.729, a: 1}
   Buttons: 
+  SkipAudio: 0
 --- !u!114 &-3638098325038414586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5669,6 +5695,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.984, g: 0.855, b: 0.725, a: 1}
   Buttons: 
+  SkipAudio: 0
 --- !u!114 &-3566505905932908605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5854,6 +5881,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.953, g: 0.647, b: 0.804, a: 1}
   Buttons: 
+  SkipAudio: 0
 --- !u!114 &-3363269784039383675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6063,6 +6091,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.953, g: 0.647, b: 0.804, a: 1}
   Buttons: 0200000000100000
+  SkipAudio: 0
 --- !u!114 &-3299548474966859825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6243,6 +6272,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.953, g: 0.647, b: 0.804, a: 1}
   Buttons: 
+  SkipAudio: 0
 --- !u!114 &-3266370253258997241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6428,6 +6458,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.953, g: 0.647, b: 0.804, a: 1}
   Buttons: 
+  SkipAudio: 0
 --- !u!114 &-2950374857428246281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6817,6 +6848,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.647, g: 0.745, b: 0.957, a: 1}
   Buttons: 
+  SkipAudio: 0
 --- !u!114 &-1703998994186205853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7069,6 +7101,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.725, g: 0.863, b: 0.973, a: 1}
   Buttons: 
+  SkipAudio: 0
 --- !u!114 &-1645576537967019624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7250,6 +7283,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.596, g: 0.345, b: 0.235, a: 1}
   Buttons: 
+  SkipAudio: 0
 --- !u!114 &-1481332359296528327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7525,6 +7559,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   Buttons: 
+  SkipAudio: 0
 --- !u!114 &-1201324122032544533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7850,6 +7885,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.647, g: 0.745, b: 0.957, a: 1}
   Buttons: 0904000002100000
+  SkipAudio: 0
 --- !u!114 &-1091343554348421386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8031,6 +8067,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.953, g: 0.647, b: 0.804, a: 1}
   Buttons: 
+  SkipAudio: 0
 --- !u!114 &-311290626527809030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8316,6 +8353,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.725, g: 0.863, b: 0.973, a: 1}
   Buttons: 00040000
+  SkipAudio: 0
 --- !u!114 &-89246422760205840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8497,6 +8535,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.992, g: 0.659, b: 0.498, a: 1}
   Buttons: 
+  SkipAudio: 0
 --- !u!114 &-8031432521099503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8689,6 +8728,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.259, g: 0.882, b: 0.663, a: 1}
   Buttons: 
+  SkipAudio: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8884,7 +8924,7 @@ MonoBehaviour:
   BlackBoard: {fileID: 11400000, guid: 6e91e850ef5b058419e0213511aef8c7, type: 2}
   RootNode: {fileID: 4732577369696971334}
   Current: {fileID: 6203063996855124080}
-  goBackNode: {fileID: 106402782884662346}
+  goBackNode: {fileID: 0}
 --- !u!114 &106402782884662346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9299,6 +9339,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.976, g: 0.792, b: 0.729, a: 1}
   Buttons: 
+  SkipAudio: 0
 --- !u!114 &256593990906897579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9751,6 +9792,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.953, g: 0.647, b: 0.804, a: 1}
   Buttons: 
+  SkipAudio: 0
 --- !u!114 &1142110017489002845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10156,6 +10198,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.992, g: 0.659, b: 0.498, a: 1}
   Buttons: 
+  SkipAudio: 0
 --- !u!114 &2186320375185327136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10416,6 +10459,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.953, g: 0.647, b: 0.804, a: 1}
   Buttons: 
+  SkipAudio: 0
 --- !u!114 &2721203014488041263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10600,6 +10644,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   Buttons: 
+  SkipAudio: 0
 --- !u!114 &2997809375468621211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10945,6 +10990,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.647, g: 0.745, b: 0.957, a: 1}
   Buttons: 
+  SkipAudio: 0
 --- !u!114 &3135012957498188974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11271,6 +11317,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.949, g: 0.549, b: 0.643, a: 1}
   Buttons: 
+  SkipAudio: 0
 --- !u!114 &3533255944413562541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11603,6 +11650,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.259, g: 0.882, b: 0.663, a: 1}
   Buttons: 
+  SkipAudio: 0
 --- !u!114 &3538053165244105588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11828,6 +11876,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.478, g: 0.573, b: 0.431, a: 1}
   Buttons: 
+  SkipAudio: 0
 --- !u!114 &3923096361612234210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12004,6 +12053,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.737, g: 0.118, b: 0.208, a: 1}
   Buttons: 
+  SkipAudio: 0
 --- !u!114 &4413015116208158534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12197,6 +12247,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.647, g: 0.745, b: 0.957, a: 1}
   Buttons: 
+  SkipAudio: 0
 --- !u!114 &4523438675981210794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12452,6 +12503,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.953, g: 0.647, b: 0.804, a: 1}
   Buttons: 
+  SkipAudio: 0
 --- !u!114 &4732577369696971334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12665,6 +12717,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.976, g: 0.792, b: 0.729, a: 1}
   Buttons: 09140000
+  SkipAudio: 0
 --- !u!114 &5009779558881889836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12705,6 +12758,7 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   Color: {r: 0.478, g: 0.573, b: 0.431, a: 1}
+  GoBackInWaitMode: 0
 --- !u!114 &5207510548505371999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13000,6 +13054,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.647, g: 0.745, b: 0.957, a: 1}
   Buttons: 01000000090000000b000000
+  SkipAudio: 0
 --- !u!114 &5420291624225964059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13295,6 +13350,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.984, g: 0.855, b: 0.725, a: 1}
   Buttons: 
+  SkipAudio: 0
 --- !u!114 &5475258057622951635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13545,6 +13601,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.992, g: 0.659, b: 0.498, a: 1}
   Buttons: 
+  SkipAudio: 0
 --- !u!114 &5587421710696698482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13733,6 +13790,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.737, g: 0.118, b: 0.208, a: 1}
   Buttons: 
+  SkipAudio: 0
 --- !u!114 &5756121449997649864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14123,6 +14181,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   Buttons: 
+  SkipAudio: 0
 --- !u!114 &6346340256217779744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14360,6 +14419,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.725, g: 0.863, b: 0.973, a: 1}
   Buttons: 
+  SkipAudio: 0
 --- !u!114 &6695243353364252648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14541,6 +14601,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.596, g: 0.345, b: 0.235, a: 1}
   Buttons: 
+  SkipAudio: 0
 --- !u!114 &7042135551006653560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14786,6 +14847,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.725, g: 0.976, b: 0.91, a: 1}
   Buttons: 0900000002000000000400000008000000100000
+  SkipAudio: 0
 --- !u!114 &7079534767381322563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15101,6 +15163,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.725, g: 0.976, b: 0.91, a: 1}
   Buttons: 
+  SkipAudio: 0
 --- !u!114 &8825632724882243287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15283,6 +15346,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.984, g: 0.855, b: 0.725, a: 1}
   Buttons: 
+  SkipAudio: 0
 --- !u!114 &9041604224590574684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15472,6 +15536,7 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.647, g: 0.745, b: 0.957, a: 1}
   Buttons: 
+  SkipAudio: 0
 --- !u!114 &9062488457228335062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15732,3 +15797,4 @@ MonoBehaviour:
       Data: 
   Color: {r: 0.647, g: 0.745, b: 0.957, a: 1}
   Buttons: 
+  SkipAudio: 0

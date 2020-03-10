@@ -1,10 +1,14 @@
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class GoBackNode : BaseNode
 {
+    [InfoBox("Skip the audio and go straight to input mode")]
+    public bool GoBackInWaitMode = false;
+    
     public override void OnNodeEnable()
     {
-        NodeGraph.PlayGoBackNode();
+        NodeGraph.PlayGoBackNode(GoBackInWaitMode);
     }
 
     protected override bool HasConnections()

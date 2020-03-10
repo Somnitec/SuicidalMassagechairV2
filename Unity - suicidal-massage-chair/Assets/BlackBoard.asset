@@ -565,7 +565,7 @@ MonoBehaviour:
       Data: 0
     - Name: Float
       Entry: 4
-      Data: 3
+      Data: 10
     - Name: Bool
       Entry: 5
       Data: false
@@ -607,7 +607,7 @@ MonoBehaviour:
       Data: 0
     - Name: Bool
       Entry: 5
-      Data: false
+      Data: true
     - Name: Int
       Entry: 3
       Data: 0
@@ -727,7 +727,7 @@ MonoBehaviour:
       Data: false
     - Name: Int
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: 
       Entry: 8
       Data: 

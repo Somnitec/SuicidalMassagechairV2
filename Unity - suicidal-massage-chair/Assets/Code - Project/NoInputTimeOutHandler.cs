@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using Framework;
 using Input;
@@ -61,7 +61,7 @@ public class NoInputTimeOutHandler : BlackBoardValueModifier
 
     private void OnDisable()
     {
-        Events.Instance.AddListener<WaitingForInput>(StartNoInputTimeout);
+        Events.Instance.RemoveListener<WaitingForInput>(StartNoInputTimeout);
     }
 
     private void StartNoInputTimeout(WaitingForInput e)
@@ -78,13 +78,18 @@ public class NoInputTimeOutHandler : BlackBoardValueModifier
     {
         noInputCounter.Float = 0f;
         noInputCanGoToSpecial.Bool = true;
-        Debug.Log("StartWaitingNoInput");
+        Debug.Log($"StartWaitingNoInput{noInputCanGoToSpecial.Bool}");
         while (true)
         {
             noInputCounter.Float += Time.deltaTime;
 
+            Debug.Log($"noInputCounter {noInputCanGoToSpecial.Bool} {noInputCounter.Float}");
+
+            
             if (noInputCanGoToSpecial.Bool && noInputCounter.Float >= noInputTimeout.Float)
             {
+                Debug.Log($"PlaySpecialNode{noInputCanGoToSpecial.Bool}");
+
                 graph.PlaySpecialNode(Settings.NoInputNodeName);
                 noInputCanGoToSpecial.Bool = false;
             }

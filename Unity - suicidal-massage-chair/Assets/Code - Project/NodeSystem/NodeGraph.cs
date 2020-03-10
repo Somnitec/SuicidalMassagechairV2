@@ -32,13 +32,19 @@ public class NodeGraph : SerializedNodeGraph
     
     [PropertySpace]
     [Button]
-    public void PlayNode(BaseNode node)
+    public void PlayNode(BaseNode node, bool goBackInWaitMode = false)
     {
         if (settings.LogDebugInfo) Debug.Log($"Playing {node.name}");
         Current?.OnNodeDisable();
         Current = node;
-        Current?.OnNodeEnable();
+
+        if (Current is DialogueNode current)
+        {
+            Debug.Log($"DialogueNode");
+            current.SkipAudio = goBackInWaitMode;
+        }
         Events.Instance.Raise(new NewNode());
+        Current?.OnNodeEnable();
     }
 
     [Button]
@@ -77,7 +83,7 @@ public class NodeGraph : SerializedNodeGraph
     }
 
     [Button]
-    public void PlayGoBackNode()
+    public void PlayGoBackNode(bool goBackInWaitMode)
     {
         if (!HasGoBackNode)
         {
@@ -85,9 +91,11 @@ public class NodeGraph : SerializedNodeGraph
             return;
         }
         
-        PlayNode(goBackNode);
+        PlayNode(goBackNode, goBackInWaitMode);
         goBackNode = null;
     }
+
+
 
     public void Reset()
     {
