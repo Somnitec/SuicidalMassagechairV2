@@ -5,6 +5,7 @@ int previousChairMotorDirection = 0;
 
 void chairPositionRoutine() {
 
+
   //estimating position
   if (chair_position_motor_direction == 1) {
     chair_position_estimated = startChairPosition + map(chairPositionTimer, 0, chair_position_move_time_up, 0, 10000);
@@ -13,6 +14,7 @@ void chairPositionRoutine() {
     chair_position_estimated = startChairPosition - map(chairPositionTimer, 0, chair_position_move_time_down, 0, 10000);
 
   }
+
 
   //checking if position or endpoint is reached
   if ( (chair_position_estimated > chair_position_target - chair_position_target_range  &&
@@ -24,22 +26,13 @@ void chairPositionRoutine() {
     //Serial.println("positionReached");
     //found position
   }
-  else if (chair_position_target < chair_position_estimated && chair_position_motor_direction != -1) {
+  else if (chair_position_target < chair_position_estimated){// && chair_position_motor_direction != -1) {
     chair_position_motor_direction = -1;
     //chair should move down
   }
-  else if (chair_position_target > chair_position_estimated && chair_position_motor_direction != 1) {
+  else if (chair_position_target > chair_position_estimated){// && chair_position_motor_direction != 1) {
     chair_position_motor_direction = 1;
     //chair should move down
-  }
-
-
-  //reset position counter if direction is changed
-  if (previousChairMotorDirection != chair_position_motor_direction) {
-    //Serial.println("direction changed");
-    chairPositionTimer = 0;
-    startChairPosition = chair_position_estimated;
-    previousChairMotorDirection = chair_position_motor_direction;
   }
 
 
@@ -54,6 +47,16 @@ void chairPositionRoutine() {
     digitalWrite(chairup, LOW);
     digitalWrite(chairdown, LOW);
   }
+
+  //reset position counter if direction is changed
+  if (previousChairMotorDirection != chair_position_motor_direction) {
+    //Serial.println("direction changed");
+    chairPositionTimer = 0;
+    startChairPosition = chair_position_estimated;
+    previousChairMotorDirection = chair_position_motor_direction;
+  }
+
+
 
 
 }

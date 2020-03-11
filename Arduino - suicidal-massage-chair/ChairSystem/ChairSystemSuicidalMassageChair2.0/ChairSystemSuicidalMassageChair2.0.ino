@@ -147,7 +147,7 @@ void setup() {
 
 
   //rollerCalibrationRoutine();
-
+  moveRollerUp();
   last_command = "finished setup, now resetting";
   doAck();
   reset();
@@ -164,8 +164,8 @@ void reset() {
   allAirbagsOff();
   //moveChairUp();
   //moveRollerUp();
-  chair_position_target=10000;
-  roller_position_target=0;
+  chair_position_target = 10000;
+  roller_position_target = 9500;
   last_command = "finished reset";
   doAck();
 }
