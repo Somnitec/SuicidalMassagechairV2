@@ -939,13 +939,13 @@ MonoBehaviour:
       Data: 
     - Name: CustomButtonA
       Entry: 1
-      Data: ...
+      Data: I'm not the helping kind.
     - Name: CustomButtonB
       Entry: 1
-      Data: ...
+      Data: I'm not the helping kind.
     - Name: CustomButtonC
       Entry: 1
-      Data: ...
+      Data: I'm not the helping kind.
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -979,13 +979,13 @@ MonoBehaviour:
       Data: 
     - Name: CustomButtonA
       Entry: 1
-      Data: ...
+      Data: Ik ben niet behulpzaam.
     - Name: CustomButtonB
       Entry: 1
-      Data: ...
+      Data: Ik ben niet behulpzaam.
     - Name: CustomButtonC
       Entry: 1
-      Data: ...
+      Data: Ik ben niet behulpzaam.
     - Name: FunctionList
       Entry: 7
       Data: 5|FunctionList, Assembly-CSharp
@@ -1045,7 +1045,7 @@ MonoBehaviour:
   m_Name: Reward explain 1
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -8, y: 136}
+  position: {x: -136, y: 136}
   ports:
     keys:
     - Buttons
@@ -1428,8 +1428,6 @@ MonoBehaviour:
     - Buttons 0
     - Buttons 1
     - Buttons 2
-    - Buttons 3
-    - Buttons 4
     values:
     - _fieldName: Buttons
       _node: {fileID: -7590438613953989903}
@@ -1502,30 +1500,6 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 1
     - _fieldName: Buttons 2
-      _node: {fileID: -7590438613953989903}
-      _typeQualifiedName: Input.NormalInputButtons, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: Input
-        node: {fileID: -5571000456554445829}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 1
-    - _fieldName: Buttons 3
-      _node: {fileID: -7590438613953989903}
-      _typeQualifiedName: Input.NormalInputButtons, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: Input
-        node: {fileID: 2133992958435680425}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 1
-    - _fieldName: Buttons 4
       _node: {fileID: -7590438613953989903}
       _typeQualifiedName: Input.NormalInputButtons, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
@@ -1662,7 +1636,7 @@ MonoBehaviour:
       Entry: 8
       Data: 
   Color: {r: 0.725, g: 0.976, b: 0.91, a: 1}
-  Buttons: 0200000000040000090000000008000000100000
+  Buttons: 020000001100000000100000
   SkipAudio: 0
 --- !u!114 &-7345050390076242110
 MonoBehaviour:
@@ -2638,13 +2612,7 @@ MonoBehaviour:
       - fieldName: Buttons 0
         node: {fileID: 7042135551006653560}
         reroutePoints: []
-      - fieldName: Buttons 3
-        node: {fileID: 7042135551006653560}
-        reroutePoints: []
       - fieldName: Buttons 0
-        node: {fileID: -3363269784039383675}
-        reroutePoints: []
-      - fieldName: Buttons 1
         node: {fileID: -3363269784039383675}
         reroutePoints: []
       - fieldName: True
@@ -2652,6 +2620,9 @@ MonoBehaviour:
         reroutePoints: []
       - fieldName: False
         node: {fileID: 2186320375185327136}
+        reroutePoints: []
+      - fieldName: Buttons 0
+        node: {fileID: 7519350714114083785}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -2970,7 +2941,7 @@ MonoBehaviour:
   m_Name: Empathy 1
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 3096, y: 1112}
+  position: {x: 3032, y: 1272}
   ports:
     keys:
     - Buttons
@@ -3015,9 +2986,6 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: Buttons 1
-        node: {fileID: -7590438613953989903}
-        reroutePoints: []
-      - fieldName: Buttons 2
         node: {fileID: -7590438613953989903}
         reroutePoints: []
       - fieldName: True
@@ -4761,7 +4729,6 @@ MonoBehaviour:
     - OnTimeOut
     - Input
     - Buttons 0
-    - Buttons 1
     values:
     - _fieldName: Buttons
       _node: {fileID: -3363269784039383675}
@@ -4807,18 +4774,6 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
     - _fieldName: Buttons 0
-      _node: {fileID: -3363269784039383675}
-      _typeQualifiedName: Input.NormalInputButtons, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: Input
-        node: {fileID: -6205505796161779793}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 1
-    - _fieldName: Buttons 1
       _node: {fileID: -3363269784039383675}
       _typeQualifiedName: Input.NormalInputButtons, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
@@ -4946,7 +4901,7 @@ MonoBehaviour:
       Entry: 8
       Data: 
   Color: {r: 0.953, g: 0.647, b: 0.804, a: 1}
-  Buttons: 0200000000100000
+  Buttons: 42000000
   SkipAudio: 0
 --- !u!114 &-3325783878285098060
 MonoBehaviour:
@@ -5037,13 +4992,13 @@ MonoBehaviour:
       Data: 
     - Name: CustomButtonA
       Entry: 1
-      Data: ...
+      Data: I am not the helping kind.
     - Name: CustomButtonB
       Entry: 1
-      Data: ...
+      Data: I am not the helping kind.
     - Name: CustomButtonC
       Entry: 1
-      Data: ...
+      Data: I am not the helping kind.
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -5077,13 +5032,13 @@ MonoBehaviour:
       Data: 
     - Name: CustomButtonA
       Entry: 1
-      Data: ...
+      Data: Ik ben niet behulpzaam.
     - Name: CustomButtonB
       Entry: 1
-      Data: ...
+      Data: Ik ben niet behulpzaam.
     - Name: CustomButtonC
       Entry: 1
-      Data: ...
+      Data: Ik ben niet behulpzaam.
     - Name: FunctionList
       Entry: 7
       Data: 5|FunctionList, Assembly-CSharp
@@ -5143,7 +5098,7 @@ MonoBehaviour:
   m_Name: Empathy 3
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 3560, y: 1112}
+  position: {x: 3528, y: 1320}
   ports:
     keys:
     - Buttons
@@ -6085,13 +6040,13 @@ MonoBehaviour:
       Data: 
     - Name: CustomButtonA
       Entry: 1
-      Data: ...
+      Data: You do.
     - Name: CustomButtonB
       Entry: 1
-      Data: ...
+      Data: You do.
     - Name: CustomButtonC
       Entry: 1
-      Data: ...
+      Data: You do.
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -6125,13 +6080,13 @@ MonoBehaviour:
       Data: 
     - Name: CustomButtonA
       Entry: 1
-      Data: ...
+      Data: Inderdaad.
     - Name: CustomButtonB
       Entry: 1
-      Data: ...
+      Data: Inderdaad.
     - Name: CustomButtonC
       Entry: 1
-      Data: ...
+      Data: Inderdaad.
     - Name: FunctionList
       Entry: 7
       Data: 5|FunctionList, Assembly-CSharp
@@ -6434,7 +6389,7 @@ MonoBehaviour:
   m_Name: Reward explain 2
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 232, y: 72}
+  position: {x: 136, y: 88}
   ports:
     keys:
     - Buttons
@@ -6627,7 +6582,7 @@ MonoBehaviour:
       Entry: 8
       Data: 
   Color: {r: 0.647, g: 0.745, b: 0.957, a: 1}
-  Buttons: 0904000002100000
+  Buttons: 1d00000042000000
   SkipAudio: 0
 --- !u!114 &-1091343554348421386
 MonoBehaviour:
@@ -6642,7 +6597,7 @@ MonoBehaviour:
   m_Name: Empathy 2
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 3336, y: 1272}
+  position: {x: 3272, y: 1288}
   ports:
     keys:
     - Buttons
@@ -6869,16 +6824,10 @@ MonoBehaviour:
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
-      - fieldName: Buttons 4
-        node: {fileID: -7590438613953989903}
-        reroutePoints: []
       - fieldName: OnAnyButton
         node: {fileID: -7590438613953989903}
         reroutePoints: []
       - fieldName: Buttons 1
-        node: {fileID: 7042135551006653560}
-        reroutePoints: []
-      - fieldName: Buttons 2
         node: {fileID: 7042135551006653560}
         reroutePoints: []
       - fieldName: True
@@ -6889,6 +6838,9 @@ MonoBehaviour:
         reroutePoints: []
       - fieldName: True
         node: {fileID: 5420291624225964059}
+        reroutePoints: []
+      - fieldName: Buttons 2
+        node: {fileID: -7590438613953989903}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -7022,7 +6974,7 @@ MonoBehaviour:
       Entry: 8
       Data: 
   Color: {r: 0.725, g: 0.863, b: 0.973, a: 1}
-  Buttons: 00040000
+  Buttons: 10000000
   SkipAudio: 0
 --- !u!114 &-89246422760205840
 MonoBehaviour:
@@ -8267,14 +8219,11 @@ MonoBehaviour:
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
-      - fieldName: Buttons 3
-        node: {fileID: -7590438613953989903}
-        reroutePoints: []
-      - fieldName: Buttons 4
-        node: {fileID: 7042135551006653560}
-        reroutePoints: []
       - fieldName: Buttons 0
         node: {fileID: -101341086018554257}
+        reroutePoints: []
+      - fieldName: Buttons 2
+        node: {fileID: 7042135551006653560}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -10239,8 +10188,6 @@ MonoBehaviour:
     - Input
     - OnTimeOut
     - Buttons 0
-    - Buttons 1
-    - Buttons 2
     values:
     - _fieldName: Buttons
       _node: {fileID: 5363201879556412363}
@@ -10286,30 +10233,6 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
     - _fieldName: Buttons 0
-      _node: {fileID: 5363201879556412363}
-      _typeQualifiedName: Input.NormalInputButtons, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: Input
-        node: {fileID: 9041604224590574684}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 1
-    - _fieldName: Buttons 1
-      _node: {fileID: 5363201879556412363}
-      _typeQualifiedName: Input.NormalInputButtons, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: Input
-        node: {fileID: 9041604224590574684}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 1
-    - _fieldName: Buttons 2
       _node: {fileID: 5363201879556412363}
       _typeQualifiedName: Input.NormalInputButtons, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
@@ -10437,7 +10360,7 @@ MonoBehaviour:
       Entry: 8
       Data: 
   Color: {r: 0.647, g: 0.745, b: 0.957, a: 1}
-  Buttons: 01000000090000000b000000
+  Buttons: 03000000
   SkipAudio: 0
 --- !u!114 &5420291624225964059
 MonoBehaviour:
@@ -11866,7 +11789,7 @@ MonoBehaviour:
   m_Name: Logic 2
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 3336, y: 8}
+  position: {x: 3336, y: 136}
   ports:
     keys:
     - Buttons
@@ -12301,8 +12224,6 @@ MonoBehaviour:
     - Buttons 0
     - Buttons 1
     - Buttons 2
-    - Buttons 3
-    - Buttons 4
     values:
     - _fieldName: Buttons
       _node: {fileID: 7042135551006653560}
@@ -12369,30 +12290,6 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 1
     - _fieldName: Buttons 2
-      _node: {fileID: 7042135551006653560}
-      _typeQualifiedName: Input.NormalInputButtons, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: Input
-        node: {fileID: -101341086018554257}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 1
-    - _fieldName: Buttons 3
-      _node: {fileID: 7042135551006653560}
-      _typeQualifiedName: Input.NormalInputButtons, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: Input
-        node: {fileID: -6205505796161779793}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 1
-    - _fieldName: Buttons 4
       _node: {fileID: 7042135551006653560}
       _typeQualifiedName: Input.NormalInputButtons, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
@@ -12520,7 +12417,7 @@ MonoBehaviour:
       Entry: 8
       Data: 
   Color: {r: 0.725, g: 0.976, b: 0.91, a: 1}
-  Buttons: 0900000002000000000400000008000000100000
+  Buttons: 290000001200000040000000
   SkipAudio: 0
 --- !u!114 &7079534767381322563
 MonoBehaviour:
@@ -12596,7 +12493,7 @@ MonoBehaviour:
   m_Name: Variable Comparison
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 2344, y: 856}
+  position: {x: 2152, y: 920}
   ports:
     keys:
     - True
@@ -12619,7 +12516,10 @@ MonoBehaviour:
       _node: {fileID: 7101174355736686292}
       _typeQualifiedName: Connection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: Input
+        node: {fileID: 7327445449274755081}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -12861,7 +12761,6 @@ MonoBehaviour:
     - OnTimeOut
     - Input
     - Buttons 0
-    - Buttons 1
     values:
     - _fieldName: Buttons
       _node: {fileID: 7519350714114083785}
@@ -12910,16 +12809,10 @@ MonoBehaviour:
       _node: {fileID: 7519350714114083785}
       _typeQualifiedName: Input.NormalInputButtons, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 1
-    - _fieldName: Buttons 1
-      _node: {fileID: 7519350714114083785}
-      _typeQualifiedName: Input.NormalInputButtons, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: Input
+        node: {fileID: -6205505796161779793}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -13040,7 +12933,7 @@ MonoBehaviour:
       Entry: 8
       Data: 
   Color: {r: 0.953, g: 0.647, b: 0.804, a: 1}
-  Buttons: 0200000000100000
+  Buttons: 42000000
   SkipAudio: 0
 --- !u!114 &7636727597616243537
 MonoBehaviour:
@@ -13334,12 +13227,6 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: Buttons 0
-        node: {fileID: 5363201879556412363}
-        reroutePoints: []
-      - fieldName: Buttons 1
-        node: {fileID: 5363201879556412363}
-        reroutePoints: []
-      - fieldName: Buttons 2
         node: {fileID: 5363201879556412363}
         reroutePoints: []
       _direction: 0
