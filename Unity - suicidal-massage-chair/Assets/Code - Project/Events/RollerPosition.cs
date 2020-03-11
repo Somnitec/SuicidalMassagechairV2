@@ -8,7 +8,7 @@ using UnityEngine;
 
 public class RollerPosition : NodeScriptFunction
 {
-    [InfoBox("0 is up and 1 is down")][Range(0,1)]
+    [InfoBox("0 is down and 1 is up")][Range(0,1)]
     public float NewPosition;
 
     public override List<string> SerializeToJson()

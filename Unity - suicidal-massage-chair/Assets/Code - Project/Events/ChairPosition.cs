@@ -9,7 +9,7 @@ using UnityEngine;
 public class ChairPosition : NodeScriptFunction
 {
     // 0 is down and 1 is up
-   [Range(0,1)]
+    [InfoBox("0 is flat and 1 is upright")][Range(0,1)]
     public float NewPosition;
     
     public ChairPosition() { }

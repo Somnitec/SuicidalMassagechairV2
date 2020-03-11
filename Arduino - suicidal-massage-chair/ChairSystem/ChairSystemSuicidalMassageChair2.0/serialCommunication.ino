@@ -47,6 +47,7 @@ void receiveMessage( String message) {
   }
   else if (validateInput( F("chair_position_target"), 1)) {
     chair_position_target =  doc["chair_position_target"][0];
+    chairNewInput = true;
   }
   else if (validateInput( F("chair_position_target_range"), 1)) {
     roller_position_target_range =  doc["chair_position_target_range"][0];
