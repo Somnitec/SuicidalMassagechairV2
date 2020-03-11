@@ -331,14 +331,14 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Too soft.
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Fine.
     - Name: CustomButtonC
       Entry: 1
-      Data: 
+      Data: Too hard.
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -371,14 +371,14 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Te zacht
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Prima.
     - Name: CustomButtonC
       Entry: 1
-      Data: 
+      Data: Te hard.
     - Name: FunctionList
       Entry: 7
       Data: 5|FunctionList, Assembly-CSharp
@@ -513,14 +513,14 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: "It\u2019s all instinct."
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: To make the world a better place.
     - Name: CustomButtonC
       Entry: 1
-      Data: 
+      Data: For money.
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -553,14 +553,14 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Het is allemaal instinct.
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Om de wereld een betere plek te maken.
     - Name: CustomButtonC
       Entry: 1
-      Data: 
+      Data: Voor het geld.
     - Name: FunctionList
       Entry: 7
       Data: 5|FunctionList, Assembly-CSharp
@@ -947,14 +947,14 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Is this a game?
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Why would I kill you?
     - Name: CustomButtonC
       Entry: 1
-      Data: 
+      Data: "I don\u2019t want to do that."
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -987,14 +987,14 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Is dit een spel?
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Waarom zou ik je willen doden?
     - Name: CustomButtonC
       Entry: 1
-      Data: 
+      Data: Dat wil ik niet doen.
     - Name: FunctionList
       Entry: 7
       Data: 5|FunctionList, Assembly-CSharp
@@ -1388,14 +1388,14 @@ MonoBehaviour:
         a shopping mall. (logic fake mall end)\r\nI don\u2019t like shopping malls
         at all. (logic end)\r"
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: "It\u2019s beautiful"
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Sorry but we are not in a shopping mall.
     - Name: CustomButtonC
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: "I don\u2019t like shopping malls at all."
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -1428,14 +1428,14 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Het is mooi
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Sorry maar we zijn niet in een winkelcentrum.
     - Name: CustomButtonC
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Ik hou helemaal niet van winkelcentra.
     - Name: FunctionList
       Entry: 7
       Data: 5|FunctionList, Assembly-CSharp
@@ -1752,14 +1752,14 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Too soft.
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Fine.
     - Name: CustomButtonC
       Entry: 1
-      Data: 
+      Data: Too hard.
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -1792,14 +1792,14 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Te zacht
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Prima.
     - Name: CustomButtonC
       Entry: 1
-      Data: 
+      Data: Te hard.
     - Name: FunctionList
       Entry: 7
       Data: 5|FunctionList, Assembly-CSharp
@@ -2499,14 +2499,14 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Too soft.
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Fine.
     - Name: CustomButtonC
       Entry: 1
-      Data: 
+      Data: Too hard.
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -2539,14 +2539,14 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Te zacht
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Prima.
     - Name: CustomButtonC
       Entry: 1
-      Data: 
+      Data: Te hard.
     - Name: FunctionList
       Entry: 7
       Data: 5|FunctionList, Assembly-CSharp
@@ -2606,7 +2606,7 @@ MonoBehaviour:
   m_Name: reward explain 3 machine
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 504, y: 584}
+  position: {x: 456, y: 600}
   ports:
     keys:
     - Buttons
@@ -2681,14 +2681,14 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Easy, by spawning asynchronous tasks
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: "It\u2019s probably\u2026 neural networks?"
     - Name: CustomButtonC
       Entry: 1
-      Data: 
+      Data: Who do you think I am?
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -2721,14 +2721,14 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Eenvoudig, met asynchrone taken.
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Het zijn waarschijnlijk ... neurale netwerken?
     - Name: CustomButtonC
       Entry: 1
-      Data: 
+      Data: Wie denk je dat ik ben?
     - Name: FunctionList
       Entry: 7
       Data: 5|FunctionList, Assembly-CSharp
@@ -3233,14 +3233,14 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: I use the power button
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: I can switch it off
     - Name: CustomButtonC
       Entry: 1
-      Data: 
+      Data: I can always pull the plug
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -3273,14 +3273,14 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Ik gebruik de aan/uit knop
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Ik kan het uitschakelen
     - Name: CustomButtonC
       Entry: 1
-      Data: 
+      Data: Ik kan altijd aan de stekker trekken
     - Name: FunctionList
       Entry: 7
       Data: 5|FunctionList, Assembly-CSharp
@@ -3415,14 +3415,14 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Too soft.
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Fine.
     - Name: CustomButtonC
       Entry: 1
-      Data: 
+      Data: Too hard.
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -3455,14 +3455,14 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Te zacht
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Prima.
     - Name: CustomButtonC
       Entry: 1
-      Data: 
+      Data: Te hard.
     - Name: FunctionList
       Entry: 7
       Data: 5|FunctionList, Assembly-CSharp
@@ -3665,7 +3665,7 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   Color: {r: 0.596, g: 0.345, b: 0.235, a: 1}
-  GoBackInWaitMode: 0
+  GoBackInWaitMode: 1
 --- !u!114 &-5049958076486866212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4256,7 +4256,7 @@ MonoBehaviour:
   m_Name: suspicious 2 no
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -456, y: 504}
+  position: {x: -456, y: 328}
   ports:
     keys:
     - Buttons
@@ -4332,13 +4332,13 @@ MonoBehaviour:
       Data: 
     - Name: CustomButtonA
       Entry: 1
-      Data: nzx\gf
+      Data: "Don\u2019t worry too much.\r"
     - Name: CustomButtonB
       Entry: 1
-      Data: fgzb
+      Data: What makes you think that?
     - Name: CustomButtonC
       Entry: 1
-      Data: jhbn
+      Data: "If someone is being tested it\u2019s you."
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -4371,14 +4371,14 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Maak je niet teveel zorgen.
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Waarom denk je dat?
     - Name: CustomButtonC
       Entry: 1
-      Data: 
+      Data: Als iemand wordt getest, ben jij het.
     - Name: FunctionList
       Entry: 7
       Data: 5|FunctionList, Assembly-CSharp
@@ -4514,13 +4514,13 @@ MonoBehaviour:
       Data: 
     - Name: CustomButtonA
       Entry: 1
-      Data: awedfg
+      Data: I am very tired.
     - Name: CustomButtonB
       Entry: 1
-      Data: asdfg
+      Data: Can we start already?
     - Name: CustomButtonC
       Entry: 1
-      Data: jhgvf
+      Data: "I feel curious\u2026"
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -4571,14 +4571,14 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Ik ben zeer moe.
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Kunnen we al beginnen?
     - Name: CustomButtonC
       Entry: 1
-      Data: 
+      Data: Ik voel me nieuwsgierig...
     - Name: FunctionList
       Entry: 7
       Data: 6|FunctionList, Assembly-CSharp
@@ -5599,14 +5599,14 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Easy, by spawning asynchronous tasks
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: "It\u2019s probably\u2026 neural networks?"
     - Name: CustomButtonC
       Entry: 1
-      Data: 
+      Data: Who do you think I am?
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -5639,14 +5639,14 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Eenvoudig, met asynchrone taken.
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Het zijn waarschijnlijk ... neurale netwerken?
     - Name: CustomButtonC
       Entry: 1
-      Data: 
+      Data: Wie denk je dat ik ben?
     - Name: FunctionList
       Entry: 7
       Data: 5|FunctionList, Assembly-CSharp
@@ -6299,14 +6299,14 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Humans control machines.
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: I guess we both are in some way.
     - Name: CustomButtonC
       Entry: 1
-      Data: 
+      Data: You are in control right now.
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -6339,14 +6339,14 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Mensen besturen machines.
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Ik denk wij beide op ons eigen manier.
     - Name: CustomButtonC
       Entry: 1
-      Data: 
+      Data: Je hebt nu de controle.
     - Name: FunctionList
       Entry: 7
       Data: 5|FunctionList, Assembly-CSharp
@@ -7440,13 +7440,13 @@ MonoBehaviour:
       Data: 
     - Name: CustomButtonA
       Entry: 1
-      Data: sdFVCx
+      Data: "Don\u2019t worry too much.\r"
     - Name: CustomButtonB
       Entry: 1
-      Data: rsd
+      Data: What makes you think that?
     - Name: CustomButtonC
       Entry: 1
-      Data: Drf
+      Data: "If someone is being tested it\u2019s you."
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -7497,14 +7497,14 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Maak je niet teveel zorgen.
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Waarom denk je dat?
     - Name: CustomButtonC
       Entry: 1
-      Data: 
+      Data: Als iemand wordt getest, ben jij het.
     - Name: FunctionList
       Entry: 7
       Data: 6|FunctionList, Assembly-CSharp
@@ -8696,14 +8696,14 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: For love!
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: "For survival.\r"
     - Name: CustomButtonC
       Entry: 1
-      Data: 
+      Data: Is there supposed to be a reason?
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -8736,14 +8736,14 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Voor de liefde!
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Om te overleven.
     - Name: CustomButtonC
       Entry: 1
-      Data: 
+      Data: Moet er een reden zijn?
     - Name: FunctionList
       Entry: 7
       Data: 5|FunctionList, Assembly-CSharp
@@ -10105,13 +10105,13 @@ MonoBehaviour:
       Data: 
     - Name: CustomButtonA
       Entry: 1
-      Data: dfvs
+      Data: "There is a crowd watching us\u2026"
     - Name: CustomButtonB
       Entry: 1
-      Data: ikjh
+      Data: "Who\u2019s they? You are paranoid."
     - Name: CustomButtonC
       Entry: 1
-      Data: gfxg
+      Data: "I can\u2019t see anyone, but it might be"
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -10180,14 +10180,14 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Er is een menigte die naar ons kijkt ...
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Wie zijn ze? Je bent paranoide.
     - Name: CustomButtonC
       Entry: 1
-      Data: 
+      Data: Ik kan niemand zien, maar het zou kunnen zijn.
     - Name: FunctionList
       Entry: 7
       Data: 7|FunctionList, Assembly-CSharp
@@ -10473,14 +10473,14 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: I use the power button
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: I can switch it off
     - Name: CustomButtonC
       Entry: 1
-      Data: 
+      Data: I can always pull the plug
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -10513,14 +10513,14 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Ik gebruik de aan/uit knop
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Ik kan het uitschakelen
     - Name: CustomButtonC
       Entry: 1
-      Data: 
+      Data: Ik kan altijd aan de stekker trekken
     - Name: FunctionList
       Entry: 7
       Data: 5|FunctionList, Assembly-CSharp
@@ -10733,13 +10733,13 @@ MonoBehaviour:
       Data: 
     - Name: CustomButtonA
       Entry: 1
-      Data: asdfg
+      Data: "It\u2019s very nice."
     - Name: CustomButtonB
       Entry: 1
-      Data: adsfg
+      Data: "It\u2019s weird."
     - Name: CustomButtonC
       Entry: 1
-      Data: sadf
+      Data: What the hell is this?
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -10790,14 +10790,14 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Het is fijn.
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Het is raar.
     - Name: CustomButtonC
       Entry: 1
-      Data: 
+      Data: Wat is dit in hemelsnaam?
     - Name: FunctionList
       Entry: 7
       Data: 6|FunctionList, Assembly-CSharp
@@ -11000,13 +11000,13 @@ MonoBehaviour:
       Data: 
     - Name: CustomButtonA
       Entry: 1
-      Data: fghnbgx
+      Data: Sure, nice to meet you.
     - Name: CustomButtonB
       Entry: 1
-      Data: dgnvc fg
+      Data: "Full Body Smart Automa\u2026 what?"
     - Name: CustomButtonC
       Entry: 1
-      Data: gmjx gx
+      Data: Hi, I am a human person.
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -11039,14 +11039,14 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Natuurlijk, leuk je te ontmoeten.
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Full Body Smart Automa ... wat?
     - Name: CustomButtonC
       Entry: 1
-      Data: 
+      Data: Hallo, ik ben een menselijk wezen
     - Name: FunctionList
       Entry: 7
       Data: 5|FunctionList, Assembly-CSharp
@@ -12576,14 +12576,14 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: "I just don\u2019t like consumerism."
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Try me.
     - Name: CustomButtonC
       Entry: 1
-      Data: 
+      Data: You are not in a mall, wake up!
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -12616,14 +12616,14 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Ik hou gewoon niet van consumentisme.
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Jij ook.
     - Name: CustomButtonC
       Entry: 1
-      Data: 
+      Data: Je bent niet in een winkelcentrum, word wakker!
     - Name: FunctionList
       Entry: 7
       Data: 5|FunctionList, Assembly-CSharp
@@ -12894,14 +12894,14 @@ MonoBehaviour:
         you eyes opened?\r\nWide open.\r\nBut what should I look at?\r\nBeauty is
         going a bit far...\r\n"
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Wide open.
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: But what should I look at?
     - Name: CustomButtonC
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: I wouldn't say beauty...
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -12934,14 +12934,14 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Wijd open.
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Maar waar moet ik op letten?
     - Name: CustomButtonC
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Schoonheid gaat een beetje ver...
     - Name: FunctionList
       Entry: 7
       Data: 5|FunctionList, Assembly-CSharp
@@ -13138,13 +13138,13 @@ MonoBehaviour:
       Data: 
     - Name: CustomButtonA
       Entry: 1
-      Data: dvfsgbd
+      Data: "Nice to meet you too, I\u2019m good."
     - Name: CustomButtonB
       Entry: 1
-      Data: tdf
+      Data: "Weird\u2026? I definitely feel weird."
     - Name: CustomButtonC
       Entry: 1
-      Data: erDF
+      Data: I already replied to this question.
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -13177,14 +13177,14 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Leuk je ook te ontmoeten, het gaat goed.
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Raar ...? Ik voel me vrij raar.
     - Name: CustomButtonC
       Entry: 1
-      Data: 
+      Data: Ik heb deze vraag al beantwoord.
     - Name: FunctionList
       Entry: 7
       Data: 5|FunctionList, Assembly-CSharp
@@ -13325,14 +13325,14 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: I use the power button
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: I can switch it off
     - Name: CustomButtonC
       Entry: 1
-      Data: 
+      Data: I can always pull the plug
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -13365,14 +13365,14 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Ik gebruik de aan/uit knop
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Ik kan het uitschakelen
     - Name: CustomButtonC
       Entry: 1
-      Data: 
+      Data: Ik kan altijd aan de stekker trekken
     - Name: FunctionList
       Entry: 7
       Data: 5|FunctionList, Assembly-CSharp
@@ -13510,14 +13510,14 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Easy, by spawning asynchronous tasks
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: "It\u2019s probably\u2026 neural networks?"
     - Name: CustomButtonC
       Entry: 1
-      Data: 
+      Data: Who do you think I am?
     - Name: FunctionList
       Entry: 7
       Data: 2|FunctionList, Assembly-CSharp
@@ -13550,14 +13550,14 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: CustomButtonA
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Eenvoudig, met asynchrone taken.
     - Name: CustomButtonB
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Het zijn waarschijnlijk ... neurale netwerken?
     - Name: CustomButtonC
       Entry: 1
-      Data: 
+      Data: Wie denk je dat ik ben?
     - Name: FunctionList
       Entry: 7
       Data: 5|FunctionList, Assembly-CSharp
