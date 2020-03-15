@@ -200,3 +200,6 @@ MonoBehaviour:
   - 0.8
   - 1
   WaitingAudio: {fileID: 8300000, guid: bd23be1d456b09c45a11df6dfe53734d, type: 3}
+  WaitingCustomButtonA: Please take off you shoes
+  WaitingCustomButtonB: Put on the headphones
+  WaitingCustomButtonC: And Press any button to start

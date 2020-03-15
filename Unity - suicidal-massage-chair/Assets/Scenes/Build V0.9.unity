@@ -266,21 +266,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1433932005999721451, guid: 6bc9dc72b6f54ce44b378d087e6e28e8,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1433932006243623925, guid: 6bc9dc72b6f54ce44b378d087e6e28e8,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1433932006315047156, guid: 6bc9dc72b6f54ce44b378d087e6e28e8,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1939523460320809351, guid: 6bc9dc72b6f54ce44b378d087e6e28e8,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -661,6 +646,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5823920796044433359, guid: 6bc9dc72b6f54ce44b378d087e6e28e8,
+        type: 3}
+      propertyPath: m_text
+      value: "\u200B"
+      objectReference: {fileID: 0}
     - target: {fileID: 6123988772268047129, guid: 6bc9dc72b6f54ce44b378d087e6e28e8,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -796,6 +786,11 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7688101120393015514, guid: 6bc9dc72b6f54ce44b378d087e6e28e8,
+        type: 3}
+      propertyPath: m_text
+      value: "\u200B"
+      objectReference: {fileID: 0}
     - target: {fileID: 8418445311624360464, guid: 6bc9dc72b6f54ce44b378d087e6e28e8,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -826,11 +821,6 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8441633053022913096, guid: 6bc9dc72b6f54ce44b378d087e6e28e8,
-        type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 96ec1a558038d3240bed7aeccc0f4140, type: 3}
     - target: {fileID: 8608352093877698868, guid: 6bc9dc72b6f54ce44b378d087e6e28e8,
         type: 3}
       propertyPath: m_AnchorMin.y

@@ -60,7 +60,8 @@ public class Settings : SerializedScriptableObject
     [HideReferenceObjectPicker, HideLabel, InlineProperty]
     public AudioClip WaitingAudio;
     public FunctionList WaitingFunctions = new FunctionList();
-
+    public string WaitingCustomButtonA, WaitingCustomButtonB, WaitingCustomButtonC;
+    
     [Title("Before Start", bold: false)]
     [InfoBox("This gets triggered after a person has pressed a button in the wait mode. After this is complete, play root node.")]
     public FunctionList OnStart = new FunctionList();
@@ -83,6 +84,7 @@ public class Settings : SerializedScriptableObject
     public static readonly string NoInputGoToNodeBBName =  "NoInput - Go To Node Time";
     public static readonly string NoInputCanGotToNodeBBName = "NoInput - Can Go To Node";
     public static readonly string MasterVolumeName = "MasterVolume";
+    
 }
 
 public enum Language

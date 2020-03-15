@@ -52,7 +52,13 @@ public class ApplicationStateApplicationManager : SingletonMonoBehavior<Applicat
     private void StartWaiting()
     {
         ChangeState(ApplicationState.Waiting);
-
+        
+        Events.Instance.Raise(new CustomButtonTextUpdate(
+            settings.WaitingCustomButtonA,
+            settings.WaitingCustomButtonB,
+            settings.WaitingCustomButtonC
+        ));
+        
         Events.Instance.AddListener<AllInput>(StartStory);
         Waiting();
     }
