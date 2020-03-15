@@ -49,8 +49,6 @@ public class DialogueNode : BaseNode
         if (logDebugInfo)
             Debug.Log($"OnNodeEnable {name}");
 
-        AudioManager.Instance.Stop();
-        
         if (SkipAudio)
         {
             OnFinished();
@@ -98,6 +96,7 @@ public class DialogueNode : BaseNode
         if (logDebugInfo)
             Debug.Log($"OnNodeDisable {name}");
 
+        // AudioManager.Instance.Stop();
         CleanUp();
     }
 

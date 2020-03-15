@@ -11,6 +11,8 @@ using Debug = UnityEngine.Debug;
 public class AudioManager : SingletonMonoBehavior<AudioManager>
 {
     public AudioSource Source;
+    public AudioSource Source2;
+    public AudioSource SourceFx;
 
     public AudioListener Listener;
 
@@ -18,11 +20,13 @@ public class AudioManager : SingletonMonoBehavior<AudioManager>
 
     [OnValueChanged("SetVolume")] [Range(0.001f, 1)]
     public float Volume = 1.0f;
-    [ReadOnly, SerializeField]
-    private float decibel = 0f;
-    
+
+    [ReadOnly, SerializeField] private float decibel = 0f;
+
     double clipDuration => (Source.clip != null) ? (double) Source.clip.samples / Source.clip.frequency : 0.0;
-    public string ClipProgress => $"[{Source.time:F2}/{clipDuration:F2}]";
+    public string ClipProgress => $"[{sourcePlaying?.time:F2}/{clipDuration:F2}]";
+
+    private AudioSource sourcePlaying;
 
     void Start()
     {
@@ -34,13 +38,15 @@ public class AudioManager : SingletonMonoBehavior<AudioManager>
 
     public void Stop()
     {
+        // Change this to fade out?
         Source.Stop();
+        Source2.Stop();
     }
 
     public void PlayClip(AudioClip clip, Action onFinished, float invokeOnFinishedFasterInSeconds)
     {
         StopAllCoroutines();
-        
+
         if (clip == null)
         {
             onFinished.Invoke();
@@ -48,26 +54,71 @@ public class AudioManager : SingletonMonoBehavior<AudioManager>
         }
 
         // TODO crossfade if still playing
-        Source.clip = clip;
-        Source.Play();
+        if (sourcePlaying != null && sourcePlaying.isPlaying)
+            CrossFade(clip, 0.2f);
+        else
+        {
+            sourcePlaying = Source;
+            sourcePlaying.clip = clip;
+            sourcePlaying.volume = 1;
+            sourcePlaying.Play();
+        }
 
         StartCoroutine(WaitTillFinished(onFinished, invokeOnFinishedFasterInSeconds));
     }
 
+    private void CrossFade(AudioClip clip, float fadeDuration)
+    {
+        StartCoroutine(CrossFadeCoroutine(clip, fadeDuration));
+    }
+
+    private IEnumerator CrossFadeCoroutine(AudioClip clip, float fadeDuration)
+    {
+        AudioSource oldSource = sourcePlaying;
+        AudioSource newSource = Source == sourcePlaying ? Source2 : Source;
+
+        float timeStarted = Time.timeSinceLevelLoad;
+        float progress = 0;
+
+        newSource.clip = clip;
+        newSource.volume = 0;
+        newSource.Play();
+
+        while (progress < fadeDuration)
+        {
+            progress = Time.timeSinceLevelLoad - timeStarted;
+
+            float progressFraction = progress / fadeDuration;
+
+            oldSource.volume = Mathf.Lerp(1, 0, progressFraction);
+            newSource.volume = Mathf.Lerp(0, 1, progressFraction);
+
+            Debug.Log($"XFade {progress} {progressFraction} {fadeDuration} {Mathf.Lerp(1, 0, progress)} { Mathf.Lerp(0, 1, progress)}");
+            
+            yield return null;
+        }
+
+        oldSource.volume = 0;
+        oldSource.Stop();
+        newSource.volume = 1;
+        sourcePlaying = newSource;
+    }
+
     private IEnumerator WaitTillFinished(Action onFinished, float invokeOnFinishedFasterInSeconds)
     {
-        Debug.Log($" {Source.clip.name} {clipDuration:F2} {Source.isPlaying}");
-        
-        while (Source.isPlaying)
+        Debug.Log($" {Source.clip.name} {clipDuration:F2} {sourcePlaying.isPlaying}");
+
+        while (sourcePlaying.isPlaying)
         {
-            if (Source.time + invokeOnFinishedFasterInSeconds > clipDuration)
+            if (sourcePlaying.time + invokeOnFinishedFasterInSeconds > clipDuration)
             {
                 break;
             }
+
             yield return null;
         }
-        
-        yield return new WaitWhile (()=> Source.isPlaying);
+
+        yield return new WaitWhile(() => sourcePlaying.isPlaying);
 
         onFinished.Invoke();
     }
@@ -76,7 +127,7 @@ public class AudioManager : SingletonMonoBehavior<AudioManager>
     {
         if (fx == null) return;
 
-        Source.PlayOneShot(fx);
+        SourceFx.PlayOneShot(fx);
     }
 
     [Button]
@@ -87,7 +138,7 @@ public class AudioManager : SingletonMonoBehavior<AudioManager>
         if (Mixer != null)
         {
             decibel = Mathf.Log10(Volume) * 20;
-            
+
             var result = Mixer.SetFloat(Settings.MasterVolumeName, decibel);
             if (!result)
             {
