@@ -42,6 +42,7 @@ public class NodeGraph : SerializedNodeGraph
         {
             Debug.Log($"DialogueNode");
             current.SkipAudio = goBackInWaitMode;
+            Events.Instance.Raise(new NewDialogueNode());
         }
         Events.Instance.Raise(new NewNode());
         Current?.OnNodeEnable();
@@ -107,6 +108,10 @@ public class NodeGraph : SerializedNodeGraph
     {
         goBackNode = null;
     }
+}
+
+public class NewDialogueNode : Event
+{
 }
 
 public class NewNode : Event

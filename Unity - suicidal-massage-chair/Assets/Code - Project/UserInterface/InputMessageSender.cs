@@ -12,7 +12,7 @@ public class InputMessageSender : MonoBehaviour
     {
         _messager = GetComponent<Messager>();
         Events.Instance.AddListener<CustomButtonTextUpdate>(SendCustomButtonText);
-        Events.Instance.AddListener<NewNode>(SendReset);
+        Events.Instance.AddListener<NewDialogueNode>(SendReset);
         Events.Instance.AddListener<ResetValuesAfterRestart>(SendReset);
     }
 
@@ -21,7 +21,7 @@ public class InputMessageSender : MonoBehaviour
         Reset();
     }
 
-    private void SendReset(NewNode newNode)
+    private void SendReset(NewDialogueNode newNode)
     {
         Reset();
     }

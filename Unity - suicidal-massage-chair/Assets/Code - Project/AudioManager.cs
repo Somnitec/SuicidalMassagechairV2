@@ -62,7 +62,6 @@ public class AudioManager : SingletonMonoBehavior<AudioManager>
         {
             if (Source.time + invokeOnFinishedFasterInSeconds > clipDuration)
             {
-                Debug.Log($"Early Exit at {Source.time}/{clipDuration}");
                 break;
             }
             yield return null;

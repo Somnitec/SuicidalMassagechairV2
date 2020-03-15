@@ -32,10 +32,8 @@ namespace NodeSystem.Functions
 
         private void OnComplete()
         {
-            Debug.Log($"Composite {key} completed");
             if (loop)
             {
-                Debug.Log($"Looping {key}");
                 RaiseEvent(coroutineRunner);
             }
         }
