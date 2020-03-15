@@ -183,7 +183,7 @@ MonoBehaviour:
   LogDebugInfo: 0
   LogDebugMessageInfo: 0
   ShowNodeData: 1
-  ShowNodeAudio: 1
+  ShowNodeAudio: 0
   ShowNodeText: 0
   ShowNodeButtons: 1
   ShowNodeFunctions: 1
