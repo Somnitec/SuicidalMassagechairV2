@@ -31,7 +31,7 @@ namespace NodeSystem.Blackboard
                 case Comparator.LargerThan:
                     return CompareTo(value, compareValue) == 1;
                 case Comparator.LargerOrEquals:
-                    return CompareTo(value, compareValue) == -1 || Equals(value, compareValue);
+                    return CompareTo(value, compareValue) == 1 || Equals(value, compareValue);
                 case Comparator.SmallerThan:
                     return CompareTo(value, compareValue) == -1;
                 case Comparator.SmallerOrEquals:

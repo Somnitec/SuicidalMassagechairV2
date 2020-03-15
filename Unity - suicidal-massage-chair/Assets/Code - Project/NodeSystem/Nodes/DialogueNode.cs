@@ -129,7 +129,7 @@ public class DialogueNode : BaseNode
 
     private void OnInterrupted(NormalInput e)
     {
-        if (logDebugInfo)
+        // if (logDebugInfo)
             Debug.Log($"OnInterrupted {name} {e.Input}");
         Events.Instance.Raise(new InterruptedInput(e.Input));
     }
@@ -137,6 +137,7 @@ public class DialogueNode : BaseNode
     private void CleanUp()
     {
         Events.Instance.RemoveListener<NormalInput>(HandleInput);
+        Events.Instance.RemoveListener<NormalInput>(OnInterrupted);
         NodeFunctionRunner.Instance.StopAllCoroutines();
     }
 

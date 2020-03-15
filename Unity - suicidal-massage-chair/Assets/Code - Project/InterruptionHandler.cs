@@ -47,6 +47,8 @@ public class InterruptionHandler : BlackBoardValueModifier
         
         interruptedCount.Int++;
         
+        Debug.Log($"Interrupted {interruptedCount.Int} of {interruptionsBeforeGoingToNode.Int}");
+        
         if (interruptedCount.Int < interruptionsBeforeGoingToNode.Int) return;
         
         graph.PlaySpecialNode(Settings.InteruptedNodeName);
